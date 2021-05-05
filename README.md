@@ -8,6 +8,7 @@ It includes a) brain and associated date (each within a folder named after their
 It includes: 
 * The script for the analysis of the evolutionary history of brain in primates (data cleaning and merging; "DataCleaningMerging")
 * The script(s) for running the analysis on the cluster ("RunClusterX") 
+* The script with all necessary functions to make RunClusterX work ("Function").
 * The scripts for extracting and plotting results from cluster run ("EvolutionaryHistoryResults") 
 * The script for conducting the PGLS analysis to deepen results from contrasting competitive vs non-competitive scenarios ("PGLSdirectionSelection") 
 * The script for running the diversification analysis ("DiversificationAnalysis")
