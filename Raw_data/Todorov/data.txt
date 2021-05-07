@@ -1,0 +1,44 @@
+Species	Brainvol	Body.weight	Neo	Hippocampus.total	HP.HS.fibers	Hippocampus.retrocomm.	Subiculum	CA1	CA2	CA3	Hilus	Fascia.dentata	Terrestriality	Diurnality	X.Fruit	Group.size	HR.size.avg	Diet_cat_dec	Soc_sys_dec	Mat_sys_dec	Soc_gr_sz_dec	Group_dunbar	GroupF_dunbar
+Alouatta_seniculus	49009	6400	31660	1319.79	315.03	1004.76	117.67	362.93	56.59	236.05	67.88	163.64	0	1	40.03333	7.872727	22	Fol	Polygynandry	Harem Polygyny	6.97	7.8	2.4
+Aotus_trivirgatus	16195	830	9950	538.8	133.49	405.31	27.43	150.16	20.83	97.14	33.52	76.23	0	0	65	3.8	10	Frug	Pair	Monogamy	3.51	2.9	1
+Ateles_geoffroyi	101034	8000	70856	1366.01	370.37	995.64	72.63	388.3	51.79	263.35	69.29	150.28	0	1	69.5	31	168	Frug	Polygynandry	Polygynandry	28.02	31	12
+Avahi_laniger	9798	1285	4813	526.25	67.7	458.55	48.13	178.89	15.29	112.49	24.93	78.82	0	0	0	2.5	1.5	Fol	Pair	Monogamy	2.67	2.5	1
+Avahi_occidentalis	9124	860	4443	475.58	56.15	419.43	41.61	175.41	9.13	90.39	30.86	72.03	0	0	0	2	0.7	Fol	Pair	Monogamy	NA	2.5	1
+Callicebus_moloch	17944	900	11163	588.29	101.92	486.37	42.71	174.88	22.9	129.11	37.33	79.44	0	1	54	3.5	9.25	Frug	Pair	Monogamy	3.37	3.5	1
+Callimico_goeldii	10510	480	6476	280.9	49.34	231.56	17.57	83.53	7.84	60.81	12.08	49.73	0	1	26	4.5	100	Om	Pair	Monogamy	6.5	8	2
+Callithrix_jacchus	7241	280	4371	221.12	40.63	180.49	11.48	73.07	7.49	42.82	12.29	33.34	0	1	20.6	8.4	4.6	Frug	Pair	Polyandry	7.88	9.5	4
+Callithrix_pygmaea	4302	120	2535	122.34	22.84	99.5	7.45	38.83	4.11	26.95	4.49	17.67	0	1	1	5.4	0.5	Om	Pair	Polyandry	5.63	5.63	NA
+Cebus_albifrons	66939	3100	46429	890.4	313.85	576.55	43.85	210.19	30.29	146.01	35.87	110.34	0	1	NA	25	207.5	Om	Polygynandry	Polygynandry	21.13	19.8	7.3
+Cercopithecus_ascanius	63505	3400	45166	1189	249.6	939.4	77.57	362.05	23.02	240.6	85.7	150.46	0	1	40.2	29	34	Frug	Polygyny	Harem Polygyny	26.29	31.3	9.5
+Cercopithecus_mitis	70564	6300	49933	1366.39	379.53	986.86	77.48	378.84	30.44	288.47	86.05	125.58	0	1	50	27	48.5	Frug	Polygynandry	Harem Polygyny	21.28	20.7	NA
+Cheirogaleus_major	6373	450	2938	347.35	45.57	301.78	18.9	107.42	8.32	92.66	13.22	61.26	0	0	NA	4	4.4	Om	Solitary	Spatial Polygyny	5.5	1.4	NA
+Cheirogaleus_medius	2961	117	1221	174.36	23.75	150.61	9.97	54.4	4.72	44.89	6.19	30.44	0	0	67.5	4	4	Om	Solitary	Monogamy	2	2.1	1.3
+Daubentonia_madagascariensis	42611	2800	22127	1776.1	328.2	1447.9	100.01	577.11	35.54	316.55	94.14	324.55	0	0	0	1	103	Om	Solitary	Spatial Polygyny	1.75	1	NA
+Erythrocebus_patas	103167	7800	77141	1590.53	504.92	1085.61	76.65	345.54	39.46	327.74	101.09	195.13	1	1	17.5	25	3200	Om	Polygyny	Harem Polygyny	26.52	34.8	14
+Eulemur_fulvus_fulvus	22106	1400	12207	752.1	96.46	655.64	62.23	258.65	19.52	171.72	37.46	106.06	0	1	64.4	11.5	13.5	Frug/Fol	Polygynandry	Polygynandry	10.08	10.08	NA
+Galago_senegalensis	4512	186	2139	260.78	15.47	245.31	23.14	99.58	5.96	52.43	13.48	50.72	0	0	NA	3.5	NA	Om	Solitary	Spatial Polygyny	1	2.5	NA
+Galagoides_demidoff	3203	81	1568	152.24	21.76	130.48	13.4	53.7	3.08	28.64	7	24.66	0	0	19	4	1.3	Om	Solitary	Spatial Polygyny	2.25	2.8	NA
+Gorilla_gorilla_gorilla	470359	105000	341444	4780.48	1475.05	3305.43	191.7	1405.57	130.65	951.51	210.02	415.98	1	1	47	10.5	1770	Fol	Polygyny	Harem Polygyny	10.05	13.5	NA
+Homo_sapiens	1251847	65000	1006525	10287.38	2853.78	7433.6	821.76	2793.05	229.52	2357.63	397.17	834.47	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Hylobates_lar	97505	5700	65800	2672.56	444.65	2227.91	139.39	866.51	76.73	547	226.25	372.03	0	1	63.7	4.4	48	Frug	Pair	Monogamy	3.51	4.5	1
+Indri_indri	36285	6250	20114	1529.38	358.58	1170.8	98.11	477.66	35.77	336.04	57.87	165.35	0	1	18.085	4	27.25	Fol	Pair	Monogamy	3.28	3.1	1
+Lagothrix_lagotricha	95503	5200	65873	1585.69	458.9	1126.79	78.34	400.11	49.57	332.56	73.93	192.28	0	1	66.7	31.9	700	Om	Polygynandry	Polygynandry	20.31	31.8	11.2
+Lepilemur_ruficaudatus	7175	915	3282	392.28	72.73	319.55	31.58	128.48	7.28	78.29	12.62	61.3	0	0	NA	1.5	0.8	Fol	Solitary	Spatial Polygyny	NA	2	1
+Lophocebus_albigena	97603	7900	68733	1464.21	426.37	1037.84	73.47	395.87	38.15	304.2	69.9	156.25	0	1	41	15.5	225	Frug	Polygynandry	Polygynandry	15.68	16.2	7
+Loris_tardigradus	6269	322	3524	191.14	24.56	166.58	12.96	57.6	4.87	49.81	8	33.34	0	0	0	2.5	5.9	Om	Solitary	Spatial Polygyny	2	2.5	1
+Microcebus_murinus	1680	54	740	100.35	12.38	87.97	5.99	30.45	2.33	23.82	4.48	20.9	0	0	5.7	NA	2.5	Om	Solitary	Spatial Polygyny	5.1	5.1	NA
+Miopithecus_talapoin	37776	1200	26427	704.87	190.75	514.12	41.31	183.4	15.31	134.6	51.91	87.59	0	1	NA	NA	NA	Om	Polygynandry	Polygynandry	68.38	64	27
+Nasalis_larvatus	92797	14000	62685	1965.93	518.83	1447.1	113.27	546.36	69.39	370.1	142.29	205.69	0	1	18.3	12.7	220	Fol	Polygynandry	Harem Polygyny	9.94	12.7	5.4
+Nycticebus_coucang	11755	800	6192	565.77	67.06	498.71	52.63	178.14	17.34	135.76	23.62	91.22	0	0	22.5	2	8.8	Om	Solitary	Spatial Polygyny	1	2	1
+Otolemur_crassicaudatus	9668	850	4723	460.88	73.43	387.45	42.22	164.58	9.6	78.22	28.14	64.69	0	0	21	2.5	8.5	Om	Solitary	Spatial Polygyny	2.25	2.4	1
+Pan_troglodytes_troglodytes	382103	46000	291592	3778.69	1015.23	2763.46	266.58	1166.33	85.7	622.88	235.43	386.54	1	1	66.1	40.7	1983.333	Frug	Polygynandry	Polygynandry	42.71	42.71	NA
+Papio_anubis	190957	25000	140142	3397.9	1318.88	2079.02	156.72	800.97	66.37	564.35	178.36	312.25	1	1	38	83.3	2581.3	Frug	Polygynandry	Polygynandry	47.05	39.9	11.4
+Perodicticus_potto	13212	1150	6683	607.01	78.69	528.32	48.35	197.36	16.3	139.69	26.62	100	0	0	67	2	28	Om	Solitary	Spatial Polygyny	1.25	2	1
+Piliocolobus_badius	73818	7000	50906	1670.84	221.64	1449.2	129.2	615.79	38.44	323.72	156.77	185.28	0	1	24.1	34.1	55.5	Fol	Polygynandry	Polygynandry	29.18	34.1	13.2
+Pithecia_irrorata	32867	1500	21028	834.26	188.08	646.18	41.63	259.52	31.78	154.43	56.38	102.44	0	1	55	3.75	24.9	NA	NA	NA	NA	3.75	NA
+Propithecus_verreauxi	25194	3480	13170	1042.96	160.88	882.08	72.19	361.75	18.7	217.12	70.93	141.39	0	1	37.024	5.5	6.5	Fol	Polygynandry	Polygynandry	5.92	6.5	2.4
+Pygathrix_nemaeus	72530	7500	48763	2295.41	445.75	1849.66	117.14	786.6	44.48	420.73	227.64	253.07	0	1	25.5	15.5	NA	Fol	Polygynandry	Harem Polygyny	21.45	9	2.3
+Saguinus_midas	9569	340	5883	280.26	53.55	226.71	15.85	78.04	10.95	68.92	13.97	38.98	0	1	56.1	5.9	36.8	Om	Pair	Polyandry	5	4	1
+Saguinus_oedipus	9537	380	5894	262.09	53.1	208.99	23.45	85.42	9.66	49.77	9.14	31.55	0	1	NA	5.8	13.9	Om	Pair	Polyandry	6.3	6	NA
+Saimiri_sciureus	22572	660	15541	351.44	103.06	248.38	17.58	79.82	13.7	66.43	21.07	49.78	0	1	31	23	97.5	Om	Polygynandry	Polygynandry	37.81	23	7.9
+Varecia_variegata_variegata	29713	3000	15293	1403.65	226.7	1176.95	80.15	410.99	26.84	304.87	118.25	235.85	0	1	78.8	5.8	72.734	Frug	Pair	Monogamy	5.93	6	NA

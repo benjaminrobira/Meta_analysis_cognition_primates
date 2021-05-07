@@ -1,0 +1,145 @@
+Taxon	 CRC (Ref 51) 	 AnAge (Ref 52) 	 PanTheria (Ref 53) 	 Female (Ref 54) 	 Male (Ref 54) 	 Female (Ref 50) 	 Male (Ref 50) 	 Female (Ref 55) 	 Male (Ref 55) 	 Final Body Weight (g) 	 Female Body Weight 
+Alouatta_caraya	 5 750 	 5 463 	 5 577 	 5 410 	 8 280 	 5 700 	 6 700 			 5 597 	 4 240 
+Alouatta_palliata	 5 500 	 7 000 	 6 577 	 5 600 	 7 160 	 5 700 	 7 400 			 6 359 	 6 600 
+Alouatta_pigra				 6 290 	 11 590 					 8 940 	 -   
+Alouatta_seniculus	 5 801 	 6 543 	 6 398 	 6 020 	 7 620 	 6 400 	 8 100 			 6 247 	 5 081 
+Aotus_azarai	 1 060 	 1 230 	 930 							 1 073 	 -   
+Aotus_lemurinus		 874 	 866 	 920 	 890 					 870 	 703 
+Aotus_trivirgatus	 900 	 800 	 912 	 930 	 920 	 1 000 	 920 			 871 	 933 
+Arctocebus_calabarensis	 203 	 258 	 258 			 310 	 320 			 239 	 346 
+Ateles_belzebuth	 5 000 	 7 535 	 6 692 							 6 409 	 8 484 
+Ateles_fusciceps		 7 000 	 9 068 			 9 100 	 8 900 			 8 034 	 -   
+Ateles_geoffroyi	 5 285 	 7 268 	 7 582 	 6 700 	 8 380 	 5 800 	 6 200 			 6 712 	 7 609 
+Ateles_paniscus	 6 783 	 7 888 	 8 697 	 8 590 	 9 450 	 5 800 	 6 600 			 7 790 	 -   
+Avahi_laniger						 1 300 	 1 300 			 1 300 	 -   
+Avahi_occidentalis								 777 	 814 	 796 	 -   
+Brachyteles_arachnoides				 8 380 	 9 610 	 9 500 	 9 500 			 9 248 	 -   
+Hoolock_hoolock		 6 875 	 6 699 	 6 500 	 6 900 	 6 500 	 6 900 			 6 787 	 6 350 
+Cacajao_calvus		 3 165 	 3 421 	 2 880 	 3 450 					 3 293 	 -   
+Callicebus_moloch	 889 	 804 	 958 	 990 	 1 080 	 1 050 	 1 100 			 884 	 -   
+Callicebus_torquatus				 1 310 	 1 100 	 1 100 	 1 100 			 1 153 	 -   
+Callimico_goeldii	 503 	 555 	 558 			 530 	 650 			 539 	 485 
+Callithrix_argentata	 357 	 343 	 383 							 361 	 -   
+Callithrix_geoffroyi		 342 	 342 							 342 	 -   
+Callithrix_jacchus		 255 	 290 	 240 	 210 	 290 	 310 			 273 	 -   
+Callithrix_penicillata		 307 	 340 							 323 	 312 
+Callithrix_pygmaea	 130 	 124 	 124 	 120 	 110 					 126 	 79 
+Cebus_albifrons	 2 629 	 2 468 	 2 510 			 2 600 	 2 600 			 2 536 	 1 944 
+Cebus_apella	 2 606 	 2 643 	 2 758 	 2 450 	 3 370 	 2 100 	 2 860 			 2 669 	 2 489 
+Cebus_capucinus	 2 733 	 2 655 	 3 006 			 2 700 	 3 800 			 2 798 	 2 437 
+Cebus_olivaceus	 2 600 	 2 553 	 2 788 	 1 590 	 2 230 	 2 300 	 2 900 			 2 647 	 2 202 
+Cercocebus_agilis		 8 000 	 7 106 							 7 553 	 -   
+Cercocebus_torquatus_atys		 8 600 	 6 941 			 5 500 	 10 200 			 7 771 	 -   
+Cercocebus_galeritus				 5 470 	 10 180 	 5 500 	 10 200 			 7 838 	 -   
+Cercocebus_torquatus	 7 933 	 9 493 	 7 293 	 6 330 	 11 410 	 5 500 	 8 000 			 8 240 	 -   
+Chlorocebus_pygerythrus				 3 260 	 4 580 	 3 000 	 5 400 			 4 060 	 3 576 
+Cercopithecus_ascanius	 5 225 	 3 705 	 3 540 	 2 960 	 3 710 	 2 900 	 4 200 			 4 157 	 2 901 
+Cercopithecus_campbelli	 4 100 	 3 600 	 3 628 			 3 600 	 3 600 			 3 776 	 2 544 
+Cercopithecus_cephus	 3 520 	 3 585 	 3 445 	 2 880 	 4 090 	 2 900 	 4 100 			 3 517 	 -   
+Cercopithecus_diana	 4 650 	 4 550 	 4 359 							 4 520 	 -   
+Cercopithecus_lhoesti		 4 700 	 5 307 	 4 700 	 8 500 	 4 700 	 8 500 			 5 004 	 -   
+Cercopithecus_mitis	 4 965 	 9 000 	 5 041 	 3 930 	 5 850 	 4 400 	 7 600 			 6 335 	 4 628 
+Cercopithecus_mona	 4 920 	 4 500 	 3 980 	 2 500 	 4 400 	 2 500 	 4 400 			 4 467 	 1 920 
+Cercopithecus_neglectus	 5 500 	 5 945 	 5 325 	 3 960 	 6 320 	 3 960 	 7 000 			 5 590 	 4 458 
+Cercopithecus_nictitans	 4 813 	 5 465 	 5 257 	 4 280 	 6 730 	 4 200 	 6 600 			 5 178 	 -   
+Cercopithecus_pogonias	 3 606 	 3 580 	 3 578 	 3 020 	 4 500 	 3 000 	 4 500 			 3 588 	 -   
+Cheirogaleus_major	 450 	 395 	 446 			 400 	 400 			 430 	 -   
+Cheirogaleus_medius	 181 		 197 			 180 	 180 			 189 	 -   
+Chiropotes_satanas		 2 943 	 2 967 	 2 660 	 2 880 	 3 000 	 3 000 			 2 955 	 -   
+Chlorocebus_aethiops	 3 328 	 5 620 	 3 696 			 3 560 	 4 750 			 4 214 	 4 082 
+Colobus_angolensis		 8 625 	 8 990 	 7 770 	 9 620 	 9 000 	 10 700 			 8 808 	 7 850 
+Piliocolobus_badius				 6 770 	 9 350 	 5 800 	 10 500 			 8 105 	 7 133 
+Colobus_guereza	 10 281 	 9 950 	 9 926 	 7 830 	 9 330 	 9 250 	 11 800 			 10 052 	 7 506 
+Colobus_polykomos	 9 033 	 9 525 	 8 797 	 8 300 	 9 900 	 8 400 	 10 400 			 9 119 	 6 709 
+Colobus_satanas				 9 500 	 12 000 	 9 500 	 12 000 			 10 750 	 -   
+Procolobus_verus				 4 100 	 4 600 	 3 600 	 3 800 			 4 025 	 3 707 
+Daubentonia_madagascariensis	 2 800 	 2 278 	 2 731 			 2 800 	 2 800 			 2 603 	 -   
+Erythrocebus_patas		 7 750 	 7 966 	 5 900 	 11 100 	 5 600 	 10 000 			 7 858 	 4 900 
+Eulemur_coronatus		 2 500 	 1 700 							 2 100 	 -   
+Eulemur_fulvus_fulvus	 1 470 	 3 150 	 2 377 			 1 900 	 2 500 			 2 332 	 2 333 
+Eulemur_macaco_macaco	 2 040 	 2 500 	 2 470 			 2 500 	 2 500 			 2 337 	 -   
+Eulemur_mongoz	 1 600 	 2 060 	 1 771 			 1 800 	 1 800 			 1 810 	 -   
+Eulemur_rubriventer	 1 400 	 1 765 	 2 015 							 1 727 	 1 600 
+Euoticus_elegantulus	 300 	 315 	 295 			 280 	 290 			 303 	 -   
+Galago_alleni						 270 	 230 			 250 	 -   
+Galago_moholi		 175 	 192 							 183 	 147 
+Galago_senegalensis	 224 	 192 	 215 			 210 	 240 			 210 	 188 
+Galagoides_demidoff	 61 	 60 	 66 			 62 	 63 			 62 	 69 
+Galagoides_zanzibaricus			 147 							 147 	 -   
+Gorilla_beringei		 123 100 	 149 325 							 136 213 	 -   
+Gorilla_gorilla_gorilla	 111 550 	 139 842 	 112 589 	 97 700 	 159 200 	 93 000 	 160 000 			 121 327 	 74 844 
+Hapalemur_griseus	 800 	 1 348 	 916 			 2 000 	 2 000 			 1 021 	 -   
+Hylobates_agilis	 4 000 	 5 925 	 5 829 			 5 700 	 6 000 			 5 251 	 -   
+Hylobates_klossii		 5 900 	 5 822 	 5 900 	 5 700 	 5 900 	 5 700 			 5 861 	 -   
+Hylobates_lar	 4 000 	 6 810 	 5 579 	 5 300 	 5 710 	 5 300 	 5 700 			 5 463 	 5 381 
+Hylobates_moloch		 6 208 	 5 861 			 5 700 	 6 000 			 6 034 	 -   
+Hylobates_muelleri		 5 765 	 5 910 							 5 837 	 5 670 
+Hylobates_pileatus		 5 735 	 5 542 							 5 639 	 -   
+Indri_indri						 10 500 	 10 500 			 10 500 	 -   
+Lagothrix_lagotricha	 9 030 	 7 650 	 6 264 	 5 540 	 6 670 	 5 800 	 6 800 			 7 648 	 -   
+Lemur_catta	 1 960 	 2 555 	 2 626 			 2 500 	 2 900 			 2 380 	 2 460 
+Leontopithecus_chrysomelas		 655 	 573 							 614 	 700 
+Leontopithecus_rosalia		 655 	 593 	 480 	 510 	 550 	 560 			 624 	 518 
+Lepilemur_mustelinus						 640 	 610 			 625 	 -   
+Lepilemur_ruficaudatus						 750 	 750 			 750 	 -   
+Lophocebus_albigena	 7 060 	 9 318 	 7 419 	 6 400 	 8 980 	 6 400 	 9 000 			 7 932 	 5 976 
+Lophocebus_aterrimus		 6 800 	 6 510 							 6 655 	 -   
+Loris_tardigradus	 322 	 238 	 249 			 260 	 290 			 270 	 -   
+Macaca_arctoides	 5 000 	 9 275 	 9 358 	 8 400 	 12 200 	 8 000 	 9 200 			 7 878 	 8 505 
+Macaca_fascicularis	 3 000 	 6 363 	 4 569 	 3 120 	 4 540 	 4 100 	 5 900 			 4 644 	 3 518 
+Macaca_fuscata		 8 883 	 10 115 	 9 100 	 11 700 	 9 100 	 11 700 			 9 499 	 -   
+Macaca_mulatta	 4 725 	 8 235 	 6 455 	 5 180 	 6 800 	 3 000 	 6 200 			 6 472 	 5 670 
+Macaca_nemestrina	 6 000 	 7 913 	 7 821 	 6 350 	 10 210 	 7 800 	 10 400 			 7 245 	 6 539 
+Macaca_nigra		 7 965 	 7 359 	 4 690 	 7 990 	 6 600 	 10 400 			 7 662 	 -   
+Macaca_radiata		 6 755 	 5 000 			 3 700 	 6 600 			 5 877 	 3 856 
+Macaca_silenus		 7 875 	 5 995 	 5 000 	 6 800 	 5 000 	 6 800 			 6 935 	 -   
+Macaca_sinica		 4 370 	 4 656 	 3 400 	 6 500 	 3 400 	 6 500 			 4 513 	 -   
+Macaca_sylvanus		 10 875 	 11 472 			 10 000 	 11 200 			 11 173 	 9 000 
+Mandrillus_leucophaeus		 18 250 	 14 253 	 10 000 	 17 000 	 10 000 	 17 000 			 16 252 	 -   
+Mandrillus_sphinx		 23 000 	 16 685 			 11 500 	 25 000 			 19 843 	 -   
+Microcebus_murinus	 58 	 65 	 69 			 80 	 80 			 64 	 -   
+Microcebus_rufus			 48 							 48 	 85 
+Miopithecus_talapoin	 1 077 	 1 385 	 1 249 	 1 120 	 1 380 	 1 100 	 1 400 			 1 237 	 -   
+Mirza_coquereli	 308 	 311 	 327 			 300 	 300 			 315 	 -   
+Nasalis_larvatus		 14 618 	 12 266 	 10 000 	 21 200 	 9 900 	 20 300 			 13 442 	 9 730 
+Nomascus_concolor		 6 853 	 6 410 	 5 800 	 5 600 	 5 800 	 5 600 			 6 632 	 -   
+Nycticebus_coucang	 700 	 891 	 925 			 1 200 	 1 300 			 838 	 551 
+Nycticebus_pygmaeus	 480 	 419 	 342 							 414 	 -   
+Otolemur_crassicaudatus	 1 800 	 1 095 	 1 207 			 1 260 	 1 420 			 1 367 	 926 
+Otolemur_garnettii		 1 300 	 811 							 1 056 	 1 142 
+Pan_paniscus		 39 925 	 35 120 	 33 200 	 45 000 					 37 522 	 -   
+Pan_troglodytes_troglodytes	 55 000 	 44 984 	 45 000 	 33 200 	 43 000 	 31 100 	 41 600 			 48 328 	 -   
+Papio_anubis	 14 700 	 19 200 	 17 729 	 14 100 	 25 100 	 12 000 	 21 000 			 17 210 	 14 969 
+Papio_cynocephalus	 10 000 	 17 050 	 15 822 	 9 750 	 17 240 	 15 000 	 20 000 			 14 291 	 13 125 
+Papio_hamadryas	 4 000 	 18 000 	 14 007 	 9 980 	 19 580 	 9 400 	 21 500 			 12 002 	 10 000 
+Papio_papio		 17 596 	 18 026 			 13 000 	 26 000 			 17 811 	 -   
+Papio_ursinus		 22 300 	 17 729 	 14 520 	 27 450 	 16 800 	 20 400 			 20 015 	 -   
+Perodicticus_potto	 1 067 	 1 225 	 1 082 			 1 080 	 1 020 			 1 124 	 868 
+Pithecia_pithecia		 1 480 	 1 667 	 1 510 	 1 800 	 1 400 	 1 600 			 1 574 	 1 816 
+Pongo_abelii		 56 750 	 39 696 							 48 223 	 41 148 
+Pongo_pygmaeus		 57 150 	 53 408 	 38 700 	 86 300 	 37 000 	 69 000 			 55 279 	 36 948 
+Presbytis_comata				 6 660 	 6 680 	 6 200 	 6 300 			 6 460 	 -   
+Presbytis_melalophos	 3 000 	 6 540 	 6 439 	 6 320 	 6 480 	 6 600 	 6 700 			 5 326 	 6 567 
+Propithecus_diadema						 7 500 	 7 500 			 7 500 	 6 600 
+Propithecus_verreauxi	 3 480 	 3 100 	 3 588 			 3 500 	 3 700 			 3 389 	 -   
+Pygathrix_nemaeus	 8 620 	 9 720 	 9 411 							 9 250 	 -   
+Saguinus_fuscicollis	 370 	 457 	 394 	 410 	 410 	 370 	 420 			 407 	 412 
+Saguinus_geoffroyi		 499 	 493 			 510 	 500 			 496 	 534 
+Saguinus_midas	 560 	 554 	 541 	 520 	 490 	 530 	 600 			 551 	 430 
+Saguinus_mystax	 524 	 544 	 556 	 580 	 570 					 541 	 538 
+Saguinus_oedipus	 259 	 446 	 462 	 500 	 480 	 510 	 450 			 389 	 445 
+Saimiri_boliviensis		 615 	 799 	 700 	 1 100 					 707 	 -   
+Saimiri_oerstedii				 600 	 750 	 580 	 750 			 670 	 -   
+Saimiri_sciureus	 760 	 925 	 749 	 790 	 960 	 580 	 750 			 811 	 765 
+Semnopithecus_entellus	 8 000 	 13 517 	 12 679 	 6 700 	 10 640 	 11 400 	 18 400 			 11 399 	 11 340 
+Symphalangus_syndactylus	 6 000 	 10 900 	 10 839 	 10 600 	 10 850 	 10 600 	 10 900 			 9 246 	 10 745 
+Tarsius_bancanus	 78 	 123 	 114 							 105 	 99 
+Tarsius_syrichta	 88 	 119 	 116 			 120 	 130 			 108 	 -   
+Theropithecus_gelada	 12 200 	 16 200 	 15 964 	 11 700 	 19 000 	 13 600 	 20 500 			 14 788 	 14 171 
+Trachypithecus_cristatus	 3 000 	 6 185 	 7 177 	 5 700 	 6 600 	 8 100 	 8 600 			 5 454 	 6 060 
+Trachypithecus_johnii	 10 700 	 12 000 	 10 595 	 10 900 	 12 700 	 12 000 	 14 800 			 11 098 	 -   
+Trachypithecus_obscurus	 3 000 	 7 080 	 7 248 	 6 470 	 7 390 	 6 500 	 8 300 			 5 776 	 6 765 
+Trachypithecus_phayrei		 8 400 	 7 682 							 8 041 	 7 182 
+Trachypithecus_pileatus	 7 790 	 11 450 	 11 220 	 10 000 	 12 800 					 10 153 	 11 340 
+Trachypithecus_vetulus	 8 830 	 7 082 	 7 205 	 5 110 	 5 670 	 7 800 	 8 500 			 7 706 	 5 103 
+Varecia_variegata_variegata	 3 000 		 3 670 			 3 100 	 3 600 			 3 335 	 3 000 

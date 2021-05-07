@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+
+</head>
+<body style="background-color:white;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#cjgljcqwjs .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000;
+  font-size: 16px;
+  background-color: #FFFFFF;
+  /* table.background.color */
+  width: auto;
+  /* table.width */
+  border-top-style: solid;
+  /* table.border.top.style */
+  border-top-width: 2px;
+  /* table.border.top.width */
+  border-top-color: #A8A8A8;
+  /* table.border.top.color */
+}
+
+#cjgljcqwjs .gt_heading {
+  background-color: #FFFFFF;
+  /* heading.background.color */
+  border-bottom-color: #FFFFFF;
+}
+
+#cjgljcqwjs .gt_title {
+  color: #000000;
+  font-size: 125%;
+  /* heading.title.font.size */
+  padding-top: 4px;
+  /* heading.top.padding */
+  padding-bottom: 1px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#cjgljcqwjs .gt_subtitle {
+  color: #000000;
+  font-size: 85%;
+  /* heading.subtitle.font.size */
+  padding-top: 1px;
+  padding-bottom: 4px;
+  /* heading.bottom.padding */
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#cjgljcqwjs .gt_bottom_border {
+  border-bottom-style: solid;
+  /* heading.border.bottom.style */
+  border-bottom-width: 2px;
+  /* heading.border.bottom.width */
+  border-bottom-color: #A8A8A8;
+  /* heading.border.bottom.color */
+}
+
+#cjgljcqwjs .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#cjgljcqwjs .gt_col_heading {
+  color: #000000;
+  background-color: #FFFFFF;
+  /* column_labels.background.color */
+  font-size: 16px;
+  /* column_labels.font.size */
+  font-weight: initial;
+  /* column_labels.font.weight */
+  vertical-align: middle;
+  padding: 10px;
+  margin: 10px;
+}
+
+#cjgljcqwjs .gt_sep_right {
+  border-right: 5px solid #FFFFFF;
+}
+
+#cjgljcqwjs .gt_group_heading {
+  padding: 8px;
+  color: #000000;
+  background-color: #FFFFFF;
+  /* row_group.background.color */
+  font-size: 16px;
+  /* row_group.font.size */
+  font-weight: initial;
+  /* row_group.font.weight */
+  border-top-style: solid;
+  /* row_group.border.top.style */
+  border-top-width: 2px;
+  /* row_group.border.top.width */
+  border-top-color: #A8A8A8;
+  /* row_group.border.top.color */
+  border-bottom-style: solid;
+  /* row_group.border.bottom.style */
+  border-bottom-width: 2px;
+  /* row_group.border.bottom.width */
+  border-bottom-color: #A8A8A8;
+  /* row_group.border.bottom.color */
+  vertical-align: middle;
+}
+
+#cjgljcqwjs .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #000000;
+  background-color: #FFFFFF;
+  /* row_group.background.color */
+  font-size: 16px;
+  /* row_group.font.size */
+  font-weight: initial;
+  /* row_group.font.weight */
+  border-top-style: solid;
+  /* row_group.border.top.style */
+  border-top-width: 2px;
+  /* row_group.border.top.width */
+  border-top-color: #A8A8A8;
+  /* row_group.border.top.color */
+  border-bottom-style: solid;
+  /* row_group.border.bottom.style */
+  border-bottom-width: 2px;
+  /* row_group.border.bottom.width */
+  border-bottom-color: #A8A8A8;
+  /* row_group.border.bottom.color */
+  vertical-align: middle;
+}
+
+#cjgljcqwjs .gt_striped {
+  background-color: #f2f2f2;
+}
+
+#cjgljcqwjs .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#cjgljcqwjs .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#cjgljcqwjs .gt_row {
+  padding: 10px;
+  /* row.padding */
+  margin: 10px;
+  vertical-align: middle;
+}
+
+#cjgljcqwjs .gt_stub {
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #A8A8A8;
+  padding-left: 12px;
+}
+
+#cjgljcqwjs .gt_stub.gt_row {
+  background-color: #FFFFFF;
+}
+
+#cjgljcqwjs .gt_summary_row {
+  background-color: #FFFFFF;
+  /* summary_row.background.color */
+  padding: 6px;
+  /* summary_row.padding */
+  text-transform: inherit;
+  /* summary_row.text_transform */
+}
+
+#cjgljcqwjs .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+}
+
+#cjgljcqwjs .gt_table_body {
+  border-top-style: solid;
+  /* table_body.border.top.style */
+  border-top-width: 2px;
+  /* table_body.border.top.width */
+  border-top-color: #A8A8A8;
+  /* table_body.border.top.color */
+  border-bottom-style: solid;
+  /* table_body.border.bottom.style */
+  border-bottom-width: 2px;
+  /* table_body.border.bottom.width */
+  border-bottom-color: #A8A8A8;
+  /* table_body.border.bottom.color */
+}
+
+#cjgljcqwjs .gt_footnote {
+  font-size: 90%;
+  /* footnote.font.size */
+  padding: 4px;
+  /* footnote.padding */
+}
+
+#cjgljcqwjs .gt_sourcenote {
+  font-size: 90%;
+  /* sourcenote.font.size */
+  padding: 4px;
+  /* sourcenote.padding */
+}
+
+#cjgljcqwjs .gt_center {
+  text-align: center;
+}
+
+#cjgljcqwjs .gt_left {
+  text-align: left;
+}
+
+#cjgljcqwjs .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#cjgljcqwjs .gt_font_normal {
+  font-weight: normal;
+}
+
+#cjgljcqwjs .gt_font_bold {
+  font-weight: bold;
+}
+
+#cjgljcqwjs .gt_font_italic {
+  font-style: italic;
+}
+
+#cjgljcqwjs .gt_super {
+  font-size: 65%;
+}
+
+#cjgljcqwjs .gt_footnote_glyph {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="cjgljcqwjs" style="overflow-x:auto;"><!--gt table start-->
+<table class="gt_table">
+<tr>
+<th class="gt_col_heading gt_center" rowspan="1" colspan="1">Species</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Brainvol</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Body.weight</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Neo</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Hippocampus.total</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">HP.HS.fibers</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Hippocampus.retrocomm.</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Subiculum</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">CA1</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">CA2</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">CA3</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Hilus</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Fascia.dentata</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Terrestriality</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Diurnality</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">X.Fruit</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Group.size</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">HR.size.avg</th>
+<th class="gt_col_heading gt_center" rowspan="1" colspan="1">Diet_cat_dec</th>
+<th class="gt_col_heading gt_center" rowspan="1" colspan="1">Soc_sys_dec</th>
+<th class="gt_col_heading gt_center" rowspan="1" colspan="1">Mat_sys_dec</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Soc_gr_sz_dec</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">Group_dunbar</th>
+<th class="gt_col_heading gt_right" rowspan="1" colspan="1">GroupF_dunbar</th>
+</tr>
+<tbody class="gt_table_body">
+<tr>
+<td class="gt_row gt_center">Alouatta_seniculus</td>
+<td class="gt_row gt_right">49009</td>
+<td class="gt_row gt_right">6400</td>
+<td class="gt_row gt_right">31660</td>
+<td class="gt_row gt_right">1319.79</td>
+<td class="gt_row gt_right">315.03</td>
+<td class="gt_row gt_right">1004.76</td>
+<td class="gt_row gt_right">117.67</td>
+<td class="gt_row gt_right">362.93</td>
+<td class="gt_row gt_right">56.59</td>
+<td class="gt_row gt_right">236.05</td>
+<td class="gt_row gt_right">67.88</td>
+<td class="gt_row gt_right">163.64</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">40.03333</td>
+<td class="gt_row gt_right">7.872727</td>
+<td class="gt_row gt_right">22.000</td>
+<td class="gt_row gt_center">Fol</td>
+<td class="gt_row gt_center">Polygynandry</td>
+<td class="gt_row gt_center">Harem Polygyny</td>
+<td class="gt_row gt_right">6.97</td>
+<td class="gt_row gt_right">7.80</td>
+<td class="gt_row gt_right">2.4</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Aotus_trivirgatus</td>
+<td class="gt_row gt_right gt_striped">16195</td>
+<td class="gt_row gt_right gt_striped">830</td>
+<td class="gt_row gt_right gt_striped">9950</td>
+<td class="gt_row gt_right gt_striped">538.80</td>
+<td class="gt_row gt_right gt_striped">133.49</td>
+<td class="gt_row gt_right gt_striped">405.31</td>
+<td class="gt_row gt_right gt_striped">27.43</td>
+<td class="gt_row gt_right gt_striped">150.16</td>
+<td class="gt_row gt_right gt_striped">20.83</td>
+<td class="gt_row gt_right gt_striped">97.14</td>
+<td class="gt_row gt_right gt_striped">33.52</td>
+<td class="gt_row gt_right gt_striped">76.23</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">65.00000</td>
+<td class="gt_row gt_right gt_striped">3.800000</td>
+<td class="gt_row gt_right gt_striped">10.000</td>
+<td class="gt_row gt_center gt_striped">Frug</td>
+<td class="gt_row gt_center gt_striped">Pair</td>
+<td class="gt_row gt_center gt_striped">Monogamy</td>
+<td class="gt_row gt_right gt_striped">3.51</td>
+<td class="gt_row gt_right gt_striped">2.90</td>
+<td class="gt_row gt_right gt_striped">1.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Ateles_geoffroyi</td>
+<td class="gt_row gt_right">101034</td>
+<td class="gt_row gt_right">8000</td>
+<td class="gt_row gt_right">70856</td>
+<td class="gt_row gt_right">1366.01</td>
+<td class="gt_row gt_right">370.37</td>
+<td class="gt_row gt_right">995.64</td>
+<td class="gt_row gt_right">72.63</td>
+<td class="gt_row gt_right">388.30</td>
+<td class="gt_row gt_right">51.79</td>
+<td class="gt_row gt_right">263.35</td>
+<td class="gt_row gt_right">69.29</td>
+<td class="gt_row gt_right">150.28</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">69.50000</td>
+<td class="gt_row gt_right">31.000000</td>
+<td class="gt_row gt_right">168.000</td>
+<td class="gt_row gt_center">Frug</td>
+<td class="gt_row gt_center">Polygynandry</td>
+<td class="gt_row gt_center">Polygynandry</td>
+<td class="gt_row gt_right">28.02</td>
+<td class="gt_row gt_right">31.00</td>
+<td class="gt_row gt_right">12.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Avahi_laniger</td>
+<td class="gt_row gt_right gt_striped">9798</td>
+<td class="gt_row gt_right gt_striped">1285</td>
+<td class="gt_row gt_right gt_striped">4813</td>
+<td class="gt_row gt_right gt_striped">526.25</td>
+<td class="gt_row gt_right gt_striped">67.70</td>
+<td class="gt_row gt_right gt_striped">458.55</td>
+<td class="gt_row gt_right gt_striped">48.13</td>
+<td class="gt_row gt_right gt_striped">178.89</td>
+<td class="gt_row gt_right gt_striped">15.29</td>
+<td class="gt_row gt_right gt_striped">112.49</td>
+<td class="gt_row gt_right gt_striped">24.93</td>
+<td class="gt_row gt_right gt_striped">78.82</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">0.00000</td>
+<td class="gt_row gt_right gt_striped">2.500000</td>
+<td class="gt_row gt_right gt_striped">1.500</td>
+<td class="gt_row gt_center gt_striped">Fol</td>
+<td class="gt_row gt_center gt_striped">Pair</td>
+<td class="gt_row gt_center gt_striped">Monogamy</td>
+<td class="gt_row gt_right gt_striped">2.67</td>
+<td class="gt_row gt_right gt_striped">2.50</td>
+<td class="gt_row gt_right gt_striped">1.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Avahi_occidentalis</td>
+<td class="gt_row gt_right">9124</td>
+<td class="gt_row gt_right">860</td>
+<td class="gt_row gt_right">4443</td>
+<td class="gt_row gt_right">475.58</td>
+<td class="gt_row gt_right">56.15</td>
+<td class="gt_row gt_right">419.43</td>
+<td class="gt_row gt_right">41.61</td>
+<td class="gt_row gt_right">175.41</td>
+<td class="gt_row gt_right">9.13</td>
+<td class="gt_row gt_right">90.39</td>
+<td class="gt_row gt_right">30.86</td>
+<td class="gt_row gt_right">72.03</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0.00000</td>
+<td class="gt_row gt_right">2.000000</td>
+<td class="gt_row gt_right">0.700</td>
+<td class="gt_row gt_center">Fol</td>
+<td class="gt_row gt_center">Pair</td>
+<td class="gt_row gt_center">Monogamy</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">2.50</td>
+<td class="gt_row gt_right">1.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Callicebus_moloch</td>
+<td class="gt_row gt_right gt_striped">17944</td>
+<td class="gt_row gt_right gt_striped">900</td>
+<td class="gt_row gt_right gt_striped">11163</td>
+<td class="gt_row gt_right gt_striped">588.29</td>
+<td class="gt_row gt_right gt_striped">101.92</td>
+<td class="gt_row gt_right gt_striped">486.37</td>
+<td class="gt_row gt_right gt_striped">42.71</td>
+<td class="gt_row gt_right gt_striped">174.88</td>
+<td class="gt_row gt_right gt_striped">22.90</td>
+<td class="gt_row gt_right gt_striped">129.11</td>
+<td class="gt_row gt_right gt_striped">37.33</td>
+<td class="gt_row gt_right gt_striped">79.44</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">54.00000</td>
+<td class="gt_row gt_right gt_striped">3.500000</td>
+<td class="gt_row gt_right gt_striped">9.250</td>
+<td class="gt_row gt_center gt_striped">Frug</td>
+<td class="gt_row gt_center gt_striped">Pair</td>
+<td class="gt_row gt_center gt_striped">Monogamy</td>
+<td class="gt_row gt_right gt_striped">3.37</td>
+<td class="gt_row gt_right gt_striped">3.50</td>
+<td class="gt_row gt_right gt_striped">1.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Callimico_goeldii</td>
+<td class="gt_row gt_right">10510</td>
+<td class="gt_row gt_right">480</td>
+<td class="gt_row gt_right">6476</td>
+<td class="gt_row gt_right">280.90</td>
+<td class="gt_row gt_right">49.34</td>
+<td class="gt_row gt_right">231.56</td>
+<td class="gt_row gt_right">17.57</td>
+<td class="gt_row gt_right">83.53</td>
+<td class="gt_row gt_right">7.84</td>
+<td class="gt_row gt_right">60.81</td>
+<td class="gt_row gt_right">12.08</td>
+<td class="gt_row gt_right">49.73</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">26.00000</td>
+<td class="gt_row gt_right">4.500000</td>
+<td class="gt_row gt_right">100.000</td>
+<td class="gt_row gt_center">Om</td>
+<td class="gt_row gt_center">Pair</td>
+<td class="gt_row gt_center">Monogamy</td>
+<td class="gt_row gt_right">6.50</td>
+<td class="gt_row gt_right">8.00</td>
+<td class="gt_row gt_right">2.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Callithrix_jacchus</td>
+<td class="gt_row gt_right gt_striped">7241</td>
+<td class="gt_row gt_right gt_striped">280</td>
+<td class="gt_row gt_right gt_striped">4371</td>
+<td class="gt_row gt_right gt_striped">221.12</td>
+<td class="gt_row gt_right gt_striped">40.63</td>
+<td class="gt_row gt_right gt_striped">180.49</td>
+<td class="gt_row gt_right gt_striped">11.48</td>
+<td class="gt_row gt_right gt_striped">73.07</td>
+<td class="gt_row gt_right gt_striped">7.49</td>
+<td class="gt_row gt_right gt_striped">42.82</td>
+<td class="gt_row gt_right gt_striped">12.29</td>
+<td class="gt_row gt_right gt_striped">33.34</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">20.60000</td>
+<td class="gt_row gt_right gt_striped">8.400000</td>
+<td class="gt_row gt_right gt_striped">4.600</td>
+<td class="gt_row gt_center gt_striped">Frug</td>
+<td class="gt_row gt_center gt_striped">Pair</td>
+<td class="gt_row gt_center gt_striped">Polyandry</td>
+<td class="gt_row gt_right gt_striped">7.88</td>
+<td class="gt_row gt_right gt_striped">9.50</td>
+<td class="gt_row gt_right gt_striped">4.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Callithrix_pygmaea</td>
+<td class="gt_row gt_right">4302</td>
+<td class="gt_row gt_right">120</td>
+<td class="gt_row gt_right">2535</td>
+<td class="gt_row gt_right">122.34</td>
+<td class="gt_row gt_right">22.84</td>
+<td class="gt_row gt_right">99.50</td>
+<td class="gt_row gt_right">7.45</td>
+<td class="gt_row gt_right">38.83</td>
+<td class="gt_row gt_right">4.11</td>
+<td class="gt_row gt_right">26.95</td>
+<td class="gt_row gt_right">4.49</td>
+<td class="gt_row gt_right">17.67</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1.00000</td>
+<td class="gt_row gt_right">5.400000</td>
+<td class="gt_row gt_right">0.500</td>
+<td class="gt_row gt_center">Om</td>
+<td class="gt_row gt_center">Pair</td>
+<td class="gt_row gt_center">Polyandry</td>
+<td class="gt_row gt_right">5.63</td>
+<td class="gt_row gt_right">5.63</td>
+<td class="gt_row gt_right">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Cebus_albifrons</td>
+<td class="gt_row gt_right gt_striped">66939</td>
+<td class="gt_row gt_right gt_striped">3100</td>
+<td class="gt_row gt_right gt_striped">46429</td>
+<td class="gt_row gt_right gt_striped">890.40</td>
+<td class="gt_row gt_right gt_striped">313.85</td>
+<td class="gt_row gt_right gt_striped">576.55</td>
+<td class="gt_row gt_right gt_striped">43.85</td>
+<td class="gt_row gt_right gt_striped">210.19</td>
+<td class="gt_row gt_right gt_striped">30.29</td>
+<td class="gt_row gt_right gt_striped">146.01</td>
+<td class="gt_row gt_right gt_striped">35.87</td>
+<td class="gt_row gt_right gt_striped">110.34</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">NA</td>
+<td class="gt_row gt_right gt_striped">25.000000</td>
+<td class="gt_row gt_right gt_striped">207.500</td>
+<td class="gt_row gt_center gt_striped">Om</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_right gt_striped">21.13</td>
+<td class="gt_row gt_right gt_striped">19.80</td>
+<td class="gt_row gt_right gt_striped">7.3</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Cercopithecus_ascanius</td>
+<td class="gt_row gt_right">63505</td>
+<td class="gt_row gt_right">3400</td>
+<td class="gt_row gt_right">45166</td>
+<td class="gt_row gt_right">1189.00</td>
+<td class="gt_row gt_right">249.60</td>
+<td class="gt_row gt_right">939.40</td>
+<td class="gt_row gt_right">77.57</td>
+<td class="gt_row gt_right">362.05</td>
+<td class="gt_row gt_right">23.02</td>
+<td class="gt_row gt_right">240.60</td>
+<td class="gt_row gt_right">85.70</td>
+<td class="gt_row gt_right">150.46</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">40.20000</td>
+<td class="gt_row gt_right">29.000000</td>
+<td class="gt_row gt_right">34.000</td>
+<td class="gt_row gt_center">Frug</td>
+<td class="gt_row gt_center">Polygyny</td>
+<td class="gt_row gt_center">Harem Polygyny</td>
+<td class="gt_row gt_right">26.29</td>
+<td class="gt_row gt_right">31.30</td>
+<td class="gt_row gt_right">9.5</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Cercopithecus_mitis</td>
+<td class="gt_row gt_right gt_striped">70564</td>
+<td class="gt_row gt_right gt_striped">6300</td>
+<td class="gt_row gt_right gt_striped">49933</td>
+<td class="gt_row gt_right gt_striped">1366.39</td>
+<td class="gt_row gt_right gt_striped">379.53</td>
+<td class="gt_row gt_right gt_striped">986.86</td>
+<td class="gt_row gt_right gt_striped">77.48</td>
+<td class="gt_row gt_right gt_striped">378.84</td>
+<td class="gt_row gt_right gt_striped">30.44</td>
+<td class="gt_row gt_right gt_striped">288.47</td>
+<td class="gt_row gt_right gt_striped">86.05</td>
+<td class="gt_row gt_right gt_striped">125.58</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">50.00000</td>
+<td class="gt_row gt_right gt_striped">27.000000</td>
+<td class="gt_row gt_right gt_striped">48.500</td>
+<td class="gt_row gt_center gt_striped">Frug</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_center gt_striped">Harem Polygyny</td>
+<td class="gt_row gt_right gt_striped">21.28</td>
+<td class="gt_row gt_right gt_striped">20.70</td>
+<td class="gt_row gt_right gt_striped">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Cheirogaleus_major</td>
+<td class="gt_row gt_right">6373</td>
+<td class="gt_row gt_right">450</td>
+<td class="gt_row gt_right">2938</td>
+<td class="gt_row gt_right">347.35</td>
+<td class="gt_row gt_right">45.57</td>
+<td class="gt_row gt_right">301.78</td>
+<td class="gt_row gt_right">18.90</td>
+<td class="gt_row gt_right">107.42</td>
+<td class="gt_row gt_right">8.32</td>
+<td class="gt_row gt_right">92.66</td>
+<td class="gt_row gt_right">13.22</td>
+<td class="gt_row gt_right">61.26</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">4.000000</td>
+<td class="gt_row gt_right">4.400</td>
+<td class="gt_row gt_center">Om</td>
+<td class="gt_row gt_center">Solitary</td>
+<td class="gt_row gt_center">Spatial Polygyny</td>
+<td class="gt_row gt_right">5.50</td>
+<td class="gt_row gt_right">1.40</td>
+<td class="gt_row gt_right">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Cheirogaleus_medius</td>
+<td class="gt_row gt_right gt_striped">2961</td>
+<td class="gt_row gt_right gt_striped">117</td>
+<td class="gt_row gt_right gt_striped">1221</td>
+<td class="gt_row gt_right gt_striped">174.36</td>
+<td class="gt_row gt_right gt_striped">23.75</td>
+<td class="gt_row gt_right gt_striped">150.61</td>
+<td class="gt_row gt_right gt_striped">9.97</td>
+<td class="gt_row gt_right gt_striped">54.40</td>
+<td class="gt_row gt_right gt_striped">4.72</td>
+<td class="gt_row gt_right gt_striped">44.89</td>
+<td class="gt_row gt_right gt_striped">6.19</td>
+<td class="gt_row gt_right gt_striped">30.44</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">67.50000</td>
+<td class="gt_row gt_right gt_striped">4.000000</td>
+<td class="gt_row gt_right gt_striped">4.000</td>
+<td class="gt_row gt_center gt_striped">Om</td>
+<td class="gt_row gt_center gt_striped">Solitary</td>
+<td class="gt_row gt_center gt_striped">Monogamy</td>
+<td class="gt_row gt_right gt_striped">2.00</td>
+<td class="gt_row gt_right gt_striped">2.10</td>
+<td class="gt_row gt_right gt_striped">1.3</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Daubentonia_madagascariensis</td>
+<td class="gt_row gt_right">42611</td>
+<td class="gt_row gt_right">2800</td>
+<td class="gt_row gt_right">22127</td>
+<td class="gt_row gt_right">1776.10</td>
+<td class="gt_row gt_right">328.20</td>
+<td class="gt_row gt_right">1447.90</td>
+<td class="gt_row gt_right">100.01</td>
+<td class="gt_row gt_right">577.11</td>
+<td class="gt_row gt_right">35.54</td>
+<td class="gt_row gt_right">316.55</td>
+<td class="gt_row gt_right">94.14</td>
+<td class="gt_row gt_right">324.55</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0.00000</td>
+<td class="gt_row gt_right">1.000000</td>
+<td class="gt_row gt_right">103.000</td>
+<td class="gt_row gt_center">Om</td>
+<td class="gt_row gt_center">Solitary</td>
+<td class="gt_row gt_center">Spatial Polygyny</td>
+<td class="gt_row gt_right">1.75</td>
+<td class="gt_row gt_right">1.00</td>
+<td class="gt_row gt_right">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Erythrocebus_patas</td>
+<td class="gt_row gt_right gt_striped">103167</td>
+<td class="gt_row gt_right gt_striped">7800</td>
+<td class="gt_row gt_right gt_striped">77141</td>
+<td class="gt_row gt_right gt_striped">1590.53</td>
+<td class="gt_row gt_right gt_striped">504.92</td>
+<td class="gt_row gt_right gt_striped">1085.61</td>
+<td class="gt_row gt_right gt_striped">76.65</td>
+<td class="gt_row gt_right gt_striped">345.54</td>
+<td class="gt_row gt_right gt_striped">39.46</td>
+<td class="gt_row gt_right gt_striped">327.74</td>
+<td class="gt_row gt_right gt_striped">101.09</td>
+<td class="gt_row gt_right gt_striped">195.13</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">17.50000</td>
+<td class="gt_row gt_right gt_striped">25.000000</td>
+<td class="gt_row gt_right gt_striped">3200.000</td>
+<td class="gt_row gt_center gt_striped">Om</td>
+<td class="gt_row gt_center gt_striped">Polygyny</td>
+<td class="gt_row gt_center gt_striped">Harem Polygyny</td>
+<td class="gt_row gt_right gt_striped">26.52</td>
+<td class="gt_row gt_right gt_striped">34.80</td>
+<td class="gt_row gt_right gt_striped">14.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Eulemur_fulvus_fulvus</td>
+<td class="gt_row gt_right">22106</td>
+<td class="gt_row gt_right">1400</td>
+<td class="gt_row gt_right">12207</td>
+<td class="gt_row gt_right">752.10</td>
+<td class="gt_row gt_right">96.46</td>
+<td class="gt_row gt_right">655.64</td>
+<td class="gt_row gt_right">62.23</td>
+<td class="gt_row gt_right">258.65</td>
+<td class="gt_row gt_right">19.52</td>
+<td class="gt_row gt_right">171.72</td>
+<td class="gt_row gt_right">37.46</td>
+<td class="gt_row gt_right">106.06</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">64.40000</td>
+<td class="gt_row gt_right">11.500000</td>
+<td class="gt_row gt_right">13.500</td>
+<td class="gt_row gt_center">Frug/Fol</td>
+<td class="gt_row gt_center">Polygynandry</td>
+<td class="gt_row gt_center">Polygynandry</td>
+<td class="gt_row gt_right">10.08</td>
+<td class="gt_row gt_right">10.08</td>
+<td class="gt_row gt_right">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Galago_senegalensis</td>
+<td class="gt_row gt_right gt_striped">4512</td>
+<td class="gt_row gt_right gt_striped">186</td>
+<td class="gt_row gt_right gt_striped">2139</td>
+<td class="gt_row gt_right gt_striped">260.78</td>
+<td class="gt_row gt_right gt_striped">15.47</td>
+<td class="gt_row gt_right gt_striped">245.31</td>
+<td class="gt_row gt_right gt_striped">23.14</td>
+<td class="gt_row gt_right gt_striped">99.58</td>
+<td class="gt_row gt_right gt_striped">5.96</td>
+<td class="gt_row gt_right gt_striped">52.43</td>
+<td class="gt_row gt_right gt_striped">13.48</td>
+<td class="gt_row gt_right gt_striped">50.72</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">NA</td>
+<td class="gt_row gt_right gt_striped">3.500000</td>
+<td class="gt_row gt_right gt_striped">NA</td>
+<td class="gt_row gt_center gt_striped">Om</td>
+<td class="gt_row gt_center gt_striped">Solitary</td>
+<td class="gt_row gt_center gt_striped">Spatial Polygyny</td>
+<td class="gt_row gt_right gt_striped">1.00</td>
+<td class="gt_row gt_right gt_striped">2.50</td>
+<td class="gt_row gt_right gt_striped">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Galagoides_demidoff</td>
+<td class="gt_row gt_right">3203</td>
+<td class="gt_row gt_right">81</td>
+<td class="gt_row gt_right">1568</td>
+<td class="gt_row gt_right">152.24</td>
+<td class="gt_row gt_right">21.76</td>
+<td class="gt_row gt_right">130.48</td>
+<td class="gt_row gt_right">13.40</td>
+<td class="gt_row gt_right">53.70</td>
+<td class="gt_row gt_right">3.08</td>
+<td class="gt_row gt_right">28.64</td>
+<td class="gt_row gt_right">7.00</td>
+<td class="gt_row gt_right">24.66</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">19.00000</td>
+<td class="gt_row gt_right">4.000000</td>
+<td class="gt_row gt_right">1.300</td>
+<td class="gt_row gt_center">Om</td>
+<td class="gt_row gt_center">Solitary</td>
+<td class="gt_row gt_center">Spatial Polygyny</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">2.80</td>
+<td class="gt_row gt_right">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Gorilla_gorilla_gorilla</td>
+<td class="gt_row gt_right gt_striped">470359</td>
+<td class="gt_row gt_right gt_striped">105000</td>
+<td class="gt_row gt_right gt_striped">341444</td>
+<td class="gt_row gt_right gt_striped">4780.48</td>
+<td class="gt_row gt_right gt_striped">1475.05</td>
+<td class="gt_row gt_right gt_striped">3305.43</td>
+<td class="gt_row gt_right gt_striped">191.70</td>
+<td class="gt_row gt_right gt_striped">1405.57</td>
+<td class="gt_row gt_right gt_striped">130.65</td>
+<td class="gt_row gt_right gt_striped">951.51</td>
+<td class="gt_row gt_right gt_striped">210.02</td>
+<td class="gt_row gt_right gt_striped">415.98</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">47.00000</td>
+<td class="gt_row gt_right gt_striped">10.500000</td>
+<td class="gt_row gt_right gt_striped">1770.000</td>
+<td class="gt_row gt_center gt_striped">Fol</td>
+<td class="gt_row gt_center gt_striped">Polygyny</td>
+<td class="gt_row gt_center gt_striped">Harem Polygyny</td>
+<td class="gt_row gt_right gt_striped">10.05</td>
+<td class="gt_row gt_right gt_striped">13.50</td>
+<td class="gt_row gt_right gt_striped">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Homo_sapiens</td>
+<td class="gt_row gt_right">1251847</td>
+<td class="gt_row gt_right">65000</td>
+<td class="gt_row gt_right">1006525</td>
+<td class="gt_row gt_right">10287.38</td>
+<td class="gt_row gt_right">2853.78</td>
+<td class="gt_row gt_right">7433.60</td>
+<td class="gt_row gt_right">821.76</td>
+<td class="gt_row gt_right">2793.05</td>
+<td class="gt_row gt_right">229.52</td>
+<td class="gt_row gt_right">2357.63</td>
+<td class="gt_row gt_right">397.17</td>
+<td class="gt_row gt_right">834.47</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_center">NA</td>
+<td class="gt_row gt_center">NA</td>
+<td class="gt_row gt_center">NA</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Hylobates_lar</td>
+<td class="gt_row gt_right gt_striped">97505</td>
+<td class="gt_row gt_right gt_striped">5700</td>
+<td class="gt_row gt_right gt_striped">65800</td>
+<td class="gt_row gt_right gt_striped">2672.56</td>
+<td class="gt_row gt_right gt_striped">444.65</td>
+<td class="gt_row gt_right gt_striped">2227.91</td>
+<td class="gt_row gt_right gt_striped">139.39</td>
+<td class="gt_row gt_right gt_striped">866.51</td>
+<td class="gt_row gt_right gt_striped">76.73</td>
+<td class="gt_row gt_right gt_striped">547.00</td>
+<td class="gt_row gt_right gt_striped">226.25</td>
+<td class="gt_row gt_right gt_striped">372.03</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">63.70000</td>
+<td class="gt_row gt_right gt_striped">4.400000</td>
+<td class="gt_row gt_right gt_striped">48.000</td>
+<td class="gt_row gt_center gt_striped">Frug</td>
+<td class="gt_row gt_center gt_striped">Pair</td>
+<td class="gt_row gt_center gt_striped">Monogamy</td>
+<td class="gt_row gt_right gt_striped">3.51</td>
+<td class="gt_row gt_right gt_striped">4.50</td>
+<td class="gt_row gt_right gt_striped">1.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Indri_indri</td>
+<td class="gt_row gt_right">36285</td>
+<td class="gt_row gt_right">6250</td>
+<td class="gt_row gt_right">20114</td>
+<td class="gt_row gt_right">1529.38</td>
+<td class="gt_row gt_right">358.58</td>
+<td class="gt_row gt_right">1170.80</td>
+<td class="gt_row gt_right">98.11</td>
+<td class="gt_row gt_right">477.66</td>
+<td class="gt_row gt_right">35.77</td>
+<td class="gt_row gt_right">336.04</td>
+<td class="gt_row gt_right">57.87</td>
+<td class="gt_row gt_right">165.35</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">18.08500</td>
+<td class="gt_row gt_right">4.000000</td>
+<td class="gt_row gt_right">27.250</td>
+<td class="gt_row gt_center">Fol</td>
+<td class="gt_row gt_center">Pair</td>
+<td class="gt_row gt_center">Monogamy</td>
+<td class="gt_row gt_right">3.28</td>
+<td class="gt_row gt_right">3.10</td>
+<td class="gt_row gt_right">1.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Lagothrix_lagotricha</td>
+<td class="gt_row gt_right gt_striped">95503</td>
+<td class="gt_row gt_right gt_striped">5200</td>
+<td class="gt_row gt_right gt_striped">65873</td>
+<td class="gt_row gt_right gt_striped">1585.69</td>
+<td class="gt_row gt_right gt_striped">458.90</td>
+<td class="gt_row gt_right gt_striped">1126.79</td>
+<td class="gt_row gt_right gt_striped">78.34</td>
+<td class="gt_row gt_right gt_striped">400.11</td>
+<td class="gt_row gt_right gt_striped">49.57</td>
+<td class="gt_row gt_right gt_striped">332.56</td>
+<td class="gt_row gt_right gt_striped">73.93</td>
+<td class="gt_row gt_right gt_striped">192.28</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">66.70000</td>
+<td class="gt_row gt_right gt_striped">31.900000</td>
+<td class="gt_row gt_right gt_striped">700.000</td>
+<td class="gt_row gt_center gt_striped">Om</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_right gt_striped">20.31</td>
+<td class="gt_row gt_right gt_striped">31.80</td>
+<td class="gt_row gt_right gt_striped">11.2</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Lepilemur_ruficaudatus</td>
+<td class="gt_row gt_right">7175</td>
+<td class="gt_row gt_right">915</td>
+<td class="gt_row gt_right">3282</td>
+<td class="gt_row gt_right">392.28</td>
+<td class="gt_row gt_right">72.73</td>
+<td class="gt_row gt_right">319.55</td>
+<td class="gt_row gt_right">31.58</td>
+<td class="gt_row gt_right">128.48</td>
+<td class="gt_row gt_right">7.28</td>
+<td class="gt_row gt_right">78.29</td>
+<td class="gt_row gt_right">12.62</td>
+<td class="gt_row gt_right">61.30</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">1.500000</td>
+<td class="gt_row gt_right">0.800</td>
+<td class="gt_row gt_center">Fol</td>
+<td class="gt_row gt_center">Solitary</td>
+<td class="gt_row gt_center">Spatial Polygyny</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">2.00</td>
+<td class="gt_row gt_right">1.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Lophocebus_albigena</td>
+<td class="gt_row gt_right gt_striped">97603</td>
+<td class="gt_row gt_right gt_striped">7900</td>
+<td class="gt_row gt_right gt_striped">68733</td>
+<td class="gt_row gt_right gt_striped">1464.21</td>
+<td class="gt_row gt_right gt_striped">426.37</td>
+<td class="gt_row gt_right gt_striped">1037.84</td>
+<td class="gt_row gt_right gt_striped">73.47</td>
+<td class="gt_row gt_right gt_striped">395.87</td>
+<td class="gt_row gt_right gt_striped">38.15</td>
+<td class="gt_row gt_right gt_striped">304.20</td>
+<td class="gt_row gt_right gt_striped">69.90</td>
+<td class="gt_row gt_right gt_striped">156.25</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">41.00000</td>
+<td class="gt_row gt_right gt_striped">15.500000</td>
+<td class="gt_row gt_right gt_striped">225.000</td>
+<td class="gt_row gt_center gt_striped">Frug</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_right gt_striped">15.68</td>
+<td class="gt_row gt_right gt_striped">16.20</td>
+<td class="gt_row gt_right gt_striped">7.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Loris_tardigradus</td>
+<td class="gt_row gt_right">6269</td>
+<td class="gt_row gt_right">322</td>
+<td class="gt_row gt_right">3524</td>
+<td class="gt_row gt_right">191.14</td>
+<td class="gt_row gt_right">24.56</td>
+<td class="gt_row gt_right">166.58</td>
+<td class="gt_row gt_right">12.96</td>
+<td class="gt_row gt_right">57.60</td>
+<td class="gt_row gt_right">4.87</td>
+<td class="gt_row gt_right">49.81</td>
+<td class="gt_row gt_right">8.00</td>
+<td class="gt_row gt_right">33.34</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0.00000</td>
+<td class="gt_row gt_right">2.500000</td>
+<td class="gt_row gt_right">5.900</td>
+<td class="gt_row gt_center">Om</td>
+<td class="gt_row gt_center">Solitary</td>
+<td class="gt_row gt_center">Spatial Polygyny</td>
+<td class="gt_row gt_right">2.00</td>
+<td class="gt_row gt_right">2.50</td>
+<td class="gt_row gt_right">1.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Microcebus_murinus</td>
+<td class="gt_row gt_right gt_striped">1680</td>
+<td class="gt_row gt_right gt_striped">54</td>
+<td class="gt_row gt_right gt_striped">740</td>
+<td class="gt_row gt_right gt_striped">100.35</td>
+<td class="gt_row gt_right gt_striped">12.38</td>
+<td class="gt_row gt_right gt_striped">87.97</td>
+<td class="gt_row gt_right gt_striped">5.99</td>
+<td class="gt_row gt_right gt_striped">30.45</td>
+<td class="gt_row gt_right gt_striped">2.33</td>
+<td class="gt_row gt_right gt_striped">23.82</td>
+<td class="gt_row gt_right gt_striped">4.48</td>
+<td class="gt_row gt_right gt_striped">20.90</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">5.70000</td>
+<td class="gt_row gt_right gt_striped">NA</td>
+<td class="gt_row gt_right gt_striped">2.500</td>
+<td class="gt_row gt_center gt_striped">Om</td>
+<td class="gt_row gt_center gt_striped">Solitary</td>
+<td class="gt_row gt_center gt_striped">Spatial Polygyny</td>
+<td class="gt_row gt_right gt_striped">5.10</td>
+<td class="gt_row gt_right gt_striped">5.10</td>
+<td class="gt_row gt_right gt_striped">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Miopithecus_talapoin</td>
+<td class="gt_row gt_right">37776</td>
+<td class="gt_row gt_right">1200</td>
+<td class="gt_row gt_right">26427</td>
+<td class="gt_row gt_right">704.87</td>
+<td class="gt_row gt_right">190.75</td>
+<td class="gt_row gt_right">514.12</td>
+<td class="gt_row gt_right">41.31</td>
+<td class="gt_row gt_right">183.40</td>
+<td class="gt_row gt_right">15.31</td>
+<td class="gt_row gt_right">134.60</td>
+<td class="gt_row gt_right">51.91</td>
+<td class="gt_row gt_right">87.59</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_center">Om</td>
+<td class="gt_row gt_center">Polygynandry</td>
+<td class="gt_row gt_center">Polygynandry</td>
+<td class="gt_row gt_right">68.38</td>
+<td class="gt_row gt_right">64.00</td>
+<td class="gt_row gt_right">27.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Nasalis_larvatus</td>
+<td class="gt_row gt_right gt_striped">92797</td>
+<td class="gt_row gt_right gt_striped">14000</td>
+<td class="gt_row gt_right gt_striped">62685</td>
+<td class="gt_row gt_right gt_striped">1965.93</td>
+<td class="gt_row gt_right gt_striped">518.83</td>
+<td class="gt_row gt_right gt_striped">1447.10</td>
+<td class="gt_row gt_right gt_striped">113.27</td>
+<td class="gt_row gt_right gt_striped">546.36</td>
+<td class="gt_row gt_right gt_striped">69.39</td>
+<td class="gt_row gt_right gt_striped">370.10</td>
+<td class="gt_row gt_right gt_striped">142.29</td>
+<td class="gt_row gt_right gt_striped">205.69</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">18.30000</td>
+<td class="gt_row gt_right gt_striped">12.700000</td>
+<td class="gt_row gt_right gt_striped">220.000</td>
+<td class="gt_row gt_center gt_striped">Fol</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_center gt_striped">Harem Polygyny</td>
+<td class="gt_row gt_right gt_striped">9.94</td>
+<td class="gt_row gt_right gt_striped">12.70</td>
+<td class="gt_row gt_right gt_striped">5.4</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Nycticebus_coucang</td>
+<td class="gt_row gt_right">11755</td>
+<td class="gt_row gt_right">800</td>
+<td class="gt_row gt_right">6192</td>
+<td class="gt_row gt_right">565.77</td>
+<td class="gt_row gt_right">67.06</td>
+<td class="gt_row gt_right">498.71</td>
+<td class="gt_row gt_right">52.63</td>
+<td class="gt_row gt_right">178.14</td>
+<td class="gt_row gt_right">17.34</td>
+<td class="gt_row gt_right">135.76</td>
+<td class="gt_row gt_right">23.62</td>
+<td class="gt_row gt_right">91.22</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">22.50000</td>
+<td class="gt_row gt_right">2.000000</td>
+<td class="gt_row gt_right">8.800</td>
+<td class="gt_row gt_center">Om</td>
+<td class="gt_row gt_center">Solitary</td>
+<td class="gt_row gt_center">Spatial Polygyny</td>
+<td class="gt_row gt_right">1.00</td>
+<td class="gt_row gt_right">2.00</td>
+<td class="gt_row gt_right">1.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Otolemur_crassicaudatus</td>
+<td class="gt_row gt_right gt_striped">9668</td>
+<td class="gt_row gt_right gt_striped">850</td>
+<td class="gt_row gt_right gt_striped">4723</td>
+<td class="gt_row gt_right gt_striped">460.88</td>
+<td class="gt_row gt_right gt_striped">73.43</td>
+<td class="gt_row gt_right gt_striped">387.45</td>
+<td class="gt_row gt_right gt_striped">42.22</td>
+<td class="gt_row gt_right gt_striped">164.58</td>
+<td class="gt_row gt_right gt_striped">9.60</td>
+<td class="gt_row gt_right gt_striped">78.22</td>
+<td class="gt_row gt_right gt_striped">28.14</td>
+<td class="gt_row gt_right gt_striped">64.69</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">21.00000</td>
+<td class="gt_row gt_right gt_striped">2.500000</td>
+<td class="gt_row gt_right gt_striped">8.500</td>
+<td class="gt_row gt_center gt_striped">Om</td>
+<td class="gt_row gt_center gt_striped">Solitary</td>
+<td class="gt_row gt_center gt_striped">Spatial Polygyny</td>
+<td class="gt_row gt_right gt_striped">2.25</td>
+<td class="gt_row gt_right gt_striped">2.40</td>
+<td class="gt_row gt_right gt_striped">1.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Pan_troglodytes_troglodytes</td>
+<td class="gt_row gt_right">382103</td>
+<td class="gt_row gt_right">46000</td>
+<td class="gt_row gt_right">291592</td>
+<td class="gt_row gt_right">3778.69</td>
+<td class="gt_row gt_right">1015.23</td>
+<td class="gt_row gt_right">2763.46</td>
+<td class="gt_row gt_right">266.58</td>
+<td class="gt_row gt_right">1166.33</td>
+<td class="gt_row gt_right">85.70</td>
+<td class="gt_row gt_right">622.88</td>
+<td class="gt_row gt_right">235.43</td>
+<td class="gt_row gt_right">386.54</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">66.10000</td>
+<td class="gt_row gt_right">40.700000</td>
+<td class="gt_row gt_right">1983.333</td>
+<td class="gt_row gt_center">Frug</td>
+<td class="gt_row gt_center">Polygynandry</td>
+<td class="gt_row gt_center">Polygynandry</td>
+<td class="gt_row gt_right">42.71</td>
+<td class="gt_row gt_right">42.71</td>
+<td class="gt_row gt_right">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Papio_anubis</td>
+<td class="gt_row gt_right gt_striped">190957</td>
+<td class="gt_row gt_right gt_striped">25000</td>
+<td class="gt_row gt_right gt_striped">140142</td>
+<td class="gt_row gt_right gt_striped">3397.90</td>
+<td class="gt_row gt_right gt_striped">1318.88</td>
+<td class="gt_row gt_right gt_striped">2079.02</td>
+<td class="gt_row gt_right gt_striped">156.72</td>
+<td class="gt_row gt_right gt_striped">800.97</td>
+<td class="gt_row gt_right gt_striped">66.37</td>
+<td class="gt_row gt_right gt_striped">564.35</td>
+<td class="gt_row gt_right gt_striped">178.36</td>
+<td class="gt_row gt_right gt_striped">312.25</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">38.00000</td>
+<td class="gt_row gt_right gt_striped">83.300000</td>
+<td class="gt_row gt_right gt_striped">2581.300</td>
+<td class="gt_row gt_center gt_striped">Frug</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_right gt_striped">47.05</td>
+<td class="gt_row gt_right gt_striped">39.90</td>
+<td class="gt_row gt_right gt_striped">11.4</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Perodicticus_potto</td>
+<td class="gt_row gt_right">13212</td>
+<td class="gt_row gt_right">1150</td>
+<td class="gt_row gt_right">6683</td>
+<td class="gt_row gt_right">607.01</td>
+<td class="gt_row gt_right">78.69</td>
+<td class="gt_row gt_right">528.32</td>
+<td class="gt_row gt_right">48.35</td>
+<td class="gt_row gt_right">197.36</td>
+<td class="gt_row gt_right">16.30</td>
+<td class="gt_row gt_right">139.69</td>
+<td class="gt_row gt_right">26.62</td>
+<td class="gt_row gt_right">100.00</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">67.00000</td>
+<td class="gt_row gt_right">2.000000</td>
+<td class="gt_row gt_right">28.000</td>
+<td class="gt_row gt_center">Om</td>
+<td class="gt_row gt_center">Solitary</td>
+<td class="gt_row gt_center">Spatial Polygyny</td>
+<td class="gt_row gt_right">1.25</td>
+<td class="gt_row gt_right">2.00</td>
+<td class="gt_row gt_right">1.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Piliocolobus_badius</td>
+<td class="gt_row gt_right gt_striped">73818</td>
+<td class="gt_row gt_right gt_striped">7000</td>
+<td class="gt_row gt_right gt_striped">50906</td>
+<td class="gt_row gt_right gt_striped">1670.84</td>
+<td class="gt_row gt_right gt_striped">221.64</td>
+<td class="gt_row gt_right gt_striped">1449.20</td>
+<td class="gt_row gt_right gt_striped">129.20</td>
+<td class="gt_row gt_right gt_striped">615.79</td>
+<td class="gt_row gt_right gt_striped">38.44</td>
+<td class="gt_row gt_right gt_striped">323.72</td>
+<td class="gt_row gt_right gt_striped">156.77</td>
+<td class="gt_row gt_right gt_striped">185.28</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">24.10000</td>
+<td class="gt_row gt_right gt_striped">34.100000</td>
+<td class="gt_row gt_right gt_striped">55.500</td>
+<td class="gt_row gt_center gt_striped">Fol</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_right gt_striped">29.18</td>
+<td class="gt_row gt_right gt_striped">34.10</td>
+<td class="gt_row gt_right gt_striped">13.2</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Pithecia_irrorata</td>
+<td class="gt_row gt_right">32867</td>
+<td class="gt_row gt_right">1500</td>
+<td class="gt_row gt_right">21028</td>
+<td class="gt_row gt_right">834.26</td>
+<td class="gt_row gt_right">188.08</td>
+<td class="gt_row gt_right">646.18</td>
+<td class="gt_row gt_right">41.63</td>
+<td class="gt_row gt_right">259.52</td>
+<td class="gt_row gt_right">31.78</td>
+<td class="gt_row gt_right">154.43</td>
+<td class="gt_row gt_right">56.38</td>
+<td class="gt_row gt_right">102.44</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">55.00000</td>
+<td class="gt_row gt_right">3.750000</td>
+<td class="gt_row gt_right">24.900</td>
+<td class="gt_row gt_center">NA</td>
+<td class="gt_row gt_center">NA</td>
+<td class="gt_row gt_center">NA</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">3.75</td>
+<td class="gt_row gt_right">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Propithecus_verreauxi</td>
+<td class="gt_row gt_right gt_striped">25194</td>
+<td class="gt_row gt_right gt_striped">3480</td>
+<td class="gt_row gt_right gt_striped">13170</td>
+<td class="gt_row gt_right gt_striped">1042.96</td>
+<td class="gt_row gt_right gt_striped">160.88</td>
+<td class="gt_row gt_right gt_striped">882.08</td>
+<td class="gt_row gt_right gt_striped">72.19</td>
+<td class="gt_row gt_right gt_striped">361.75</td>
+<td class="gt_row gt_right gt_striped">18.70</td>
+<td class="gt_row gt_right gt_striped">217.12</td>
+<td class="gt_row gt_right gt_striped">70.93</td>
+<td class="gt_row gt_right gt_striped">141.39</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">37.02400</td>
+<td class="gt_row gt_right gt_striped">5.500000</td>
+<td class="gt_row gt_right gt_striped">6.500</td>
+<td class="gt_row gt_center gt_striped">Fol</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_right gt_striped">5.92</td>
+<td class="gt_row gt_right gt_striped">6.50</td>
+<td class="gt_row gt_right gt_striped">2.4</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Pygathrix_nemaeus</td>
+<td class="gt_row gt_right">72530</td>
+<td class="gt_row gt_right">7500</td>
+<td class="gt_row gt_right">48763</td>
+<td class="gt_row gt_right">2295.41</td>
+<td class="gt_row gt_right">445.75</td>
+<td class="gt_row gt_right">1849.66</td>
+<td class="gt_row gt_right">117.14</td>
+<td class="gt_row gt_right">786.60</td>
+<td class="gt_row gt_right">44.48</td>
+<td class="gt_row gt_right">420.73</td>
+<td class="gt_row gt_right">227.64</td>
+<td class="gt_row gt_right">253.07</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">25.50000</td>
+<td class="gt_row gt_right">15.500000</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_center">Fol</td>
+<td class="gt_row gt_center">Polygynandry</td>
+<td class="gt_row gt_center">Harem Polygyny</td>
+<td class="gt_row gt_right">21.45</td>
+<td class="gt_row gt_right">9.00</td>
+<td class="gt_row gt_right">2.3</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Saguinus_midas</td>
+<td class="gt_row gt_right gt_striped">9569</td>
+<td class="gt_row gt_right gt_striped">340</td>
+<td class="gt_row gt_right gt_striped">5883</td>
+<td class="gt_row gt_right gt_striped">280.26</td>
+<td class="gt_row gt_right gt_striped">53.55</td>
+<td class="gt_row gt_right gt_striped">226.71</td>
+<td class="gt_row gt_right gt_striped">15.85</td>
+<td class="gt_row gt_right gt_striped">78.04</td>
+<td class="gt_row gt_right gt_striped">10.95</td>
+<td class="gt_row gt_right gt_striped">68.92</td>
+<td class="gt_row gt_right gt_striped">13.97</td>
+<td class="gt_row gt_right gt_striped">38.98</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">56.10000</td>
+<td class="gt_row gt_right gt_striped">5.900000</td>
+<td class="gt_row gt_right gt_striped">36.800</td>
+<td class="gt_row gt_center gt_striped">Om</td>
+<td class="gt_row gt_center gt_striped">Pair</td>
+<td class="gt_row gt_center gt_striped">Polyandry</td>
+<td class="gt_row gt_right gt_striped">5.00</td>
+<td class="gt_row gt_right gt_striped">4.00</td>
+<td class="gt_row gt_right gt_striped">1.0</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Saguinus_oedipus</td>
+<td class="gt_row gt_right">9537</td>
+<td class="gt_row gt_right">380</td>
+<td class="gt_row gt_right">5894</td>
+<td class="gt_row gt_right">262.09</td>
+<td class="gt_row gt_right">53.10</td>
+<td class="gt_row gt_right">208.99</td>
+<td class="gt_row gt_right">23.45</td>
+<td class="gt_row gt_right">85.42</td>
+<td class="gt_row gt_right">9.66</td>
+<td class="gt_row gt_right">49.77</td>
+<td class="gt_row gt_right">9.14</td>
+<td class="gt_row gt_right">31.55</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">5.800000</td>
+<td class="gt_row gt_right">13.900</td>
+<td class="gt_row gt_center">Om</td>
+<td class="gt_row gt_center">Pair</td>
+<td class="gt_row gt_center">Polyandry</td>
+<td class="gt_row gt_right">6.30</td>
+<td class="gt_row gt_right">6.00</td>
+<td class="gt_row gt_right">NA</td>
+</tr>
+<tr>
+<td class="gt_row gt_center gt_striped">Saimiri_sciureus</td>
+<td class="gt_row gt_right gt_striped">22572</td>
+<td class="gt_row gt_right gt_striped">660</td>
+<td class="gt_row gt_right gt_striped">15541</td>
+<td class="gt_row gt_right gt_striped">351.44</td>
+<td class="gt_row gt_right gt_striped">103.06</td>
+<td class="gt_row gt_right gt_striped">248.38</td>
+<td class="gt_row gt_right gt_striped">17.58</td>
+<td class="gt_row gt_right gt_striped">79.82</td>
+<td class="gt_row gt_right gt_striped">13.70</td>
+<td class="gt_row gt_right gt_striped">66.43</td>
+<td class="gt_row gt_right gt_striped">21.07</td>
+<td class="gt_row gt_right gt_striped">49.78</td>
+<td class="gt_row gt_right gt_striped">0</td>
+<td class="gt_row gt_right gt_striped">1</td>
+<td class="gt_row gt_right gt_striped">31.00000</td>
+<td class="gt_row gt_right gt_striped">23.000000</td>
+<td class="gt_row gt_right gt_striped">97.500</td>
+<td class="gt_row gt_center gt_striped">Om</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_center gt_striped">Polygynandry</td>
+<td class="gt_row gt_right gt_striped">37.81</td>
+<td class="gt_row gt_right gt_striped">23.00</td>
+<td class="gt_row gt_right gt_striped">7.9</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Varecia_variegata_variegata</td>
+<td class="gt_row gt_right">29713</td>
+<td class="gt_row gt_right">3000</td>
+<td class="gt_row gt_right">15293</td>
+<td class="gt_row gt_right">1403.65</td>
+<td class="gt_row gt_right">226.70</td>
+<td class="gt_row gt_right">1176.95</td>
+<td class="gt_row gt_right">80.15</td>
+<td class="gt_row gt_right">410.99</td>
+<td class="gt_row gt_right">26.84</td>
+<td class="gt_row gt_right">304.87</td>
+<td class="gt_row gt_right">118.25</td>
+<td class="gt_row gt_right">235.85</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">78.80000</td>
+<td class="gt_row gt_right">5.800000</td>
+<td class="gt_row gt_right">72.734</td>
+<td class="gt_row gt_center">Frug</td>
+<td class="gt_row gt_center">Pair</td>
+<td class="gt_row gt_center">Monogamy</td>
+<td class="gt_row gt_right">5.93</td>
+<td class="gt_row gt_right">6.00</td>
+<td class="gt_row gt_right">NA</td>
+</tr>
+</tbody>
+</table>
+<!--gt table end-->
+</div>
+</body>
+</html>

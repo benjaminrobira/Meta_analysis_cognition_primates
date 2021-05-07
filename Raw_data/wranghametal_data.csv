@@ -1,0 +1,71 @@
+;;PGS;FGS;PD (/km z);DR,, (km);BW (kg);SS;Ref
+Lemuridae;Lemur catta;18;18;233;0.95;2.5;M F;1
+Lemuridae;Lemurfulvus;9.5;9.5;1125;0.14;1.9;MF;1
+Lemuridae;Lemur mongoz;2.6;2.6;350;0.61;1.8;SF;1
+Indriidae;Indri indri;3;3;12.5;0.25;10.5;SF;1
+Indriidae;Propithecus verreauxi;6.5;6.5;103;0.85;3.5;M F;1
+Callitrichidae;Saguinus oedipus;7.4;7.4;31.5;2.06;0.5;SF;2
+Callitrichidae;Saguinus fuscicollis;4.7;4.7;15;1.37;0.4;SF;2
+Callitrichidae;Saguinusfuscicollis;6.5;6.5;16;1.22;0.4;SF;2
+Callitrichidae;Saguinus imperator;4;4;4.5;1.42;0.5;SF;2, 3
+Cebidae (Pitheciinae);Callicebus moloch;3.2;3.2;400;0.57;1.1;SF;4
+Cebidae (Pitheciinae);Callicebus moloch;4.2;4.2;20;0.67;1.1;SF;4
+Cebidae (Pitheciinae);Callicebus torquatus;3.9;3.9;20;0.82;1.1;SF;4
+Cebidae (Pitheciinae);Chiropotes albinasus;25;25;7.5;3.75;2.5;M F;4
+Cebidae (Pitheeiinae);Chiropotes satanas;19;19;7.5;2.5;2.7;M F;4
+Cebidae (Alouattinae);Alouatta palliata;9.1;9.1;23;0.12;5.7;M F;5
+Cebidae (Alouattinae);Alouatta palliata;12.2;12.2;90;0.6;5.7;M F;5
+Cebidae (Alouattinae);Alouatta palliata;15.5;15.5;53;0.44;5.7;M F;5
+Cebidae (Alouattinae);Alouatta seniculus;9.5;9.5;101;0.39;6.4;MF;5
+Cebidae (Alouattinae);Alouatta seniculus;7.1;7.1;44.5;0.54;6.4;M F;5
+Cebidae (Alouattinae);Alouatta seniculus;9;9;15;0.71;6.4;M F;5
+Cebidae (Cebinae);Saimiri oerstedii;23;23;130;3.35;0.6;M F;6
+Cebidae (Cebinae);Saimiri sciureus;42;42;175;1.5;0.6;M F;6
+Cebidae (Cebinae);Cebus albifrons;15;15;24;1.85;2.6;M F;3, 6
+Cebidae (Cebinae);Cebus capucinus;17.5;17.5;6;2;2.7;MF;6
+Cebidae (Cebinae);Cebus olivaceus;20;20;25;2.3;2.3;MF;6, 7
+Cebidae (Cebinae);Cebus apella;10;10;40;2;2.1;MF;6
+Cebidae (Atelinae);Ateles paniscus;18;3;8;2.7;5.8;F - F;6
+Cebidae (Atelinae);Ateles belzebuth;18;3;16.5;2.3;5.8;F - F;6
+Cebidae (Atelinae);Brachyteles arachnoides;24.5;24.5;5.5;1.28;9.8;M F;8
+Cebidae (Atelinae);Brachyteles arachnoides;45;5;7.3;0.63;9.8;F-F;9
+Cebidae (Atelinae);Lagothrix lagotricha;33;33;12;1;5.8;M F;6
+Cercopithecidae (Colobinae);Colobus badius;34;34;300;0.56;5.8;M F;10
+Cercopithecidae (Colobinae);Colobus badius;20;20;220;0.6;5.8;M F;10
+Cercopithecidae (Colobinae);Colobus guereza;12;12;15;0.54;9.3;M F;10
+Cercopithecidae (Colobinae);Colobus satanas;15.5;15.5;26;0.46;9.5;M F;10
+Cercopithecidae (Colobinae);Presbytis entellus;19;19;75.5;0.36;11.4;M F;10
+Cercopithecidae (Colobinae);Presbytis obscura;10.3;10.3;31;0.95;6.5;M F;10
+Cercopithecidae (Colobinae);Presbytis melalophos;9.3;9.3;74;1.15;6.6;M F;10
+Cercopithecidae (Colobinae);Presbytis melalophos;14;14;47.6;0.61;6.6;M F;10
+Cercopithecidae (Cercopithecinae);Cercopithecus ascanius;26.3;26.3;72;1.54;2.9;M F;11
+Cercopithecidae (Cercopithecinae);Cercopithecus ascanius;32.5;32.5;140;1.45;2.9;M F;11
+Cercopithecidae (Cercopithecinae);Cercopithecus cephus;10;10;25;0.9;2.9;M F;1
+Cercopithecidae (Cercopithecinae);Cercopithecus mitis;32.6;32.6;169;1.14;4.4;MF;11
+Cercopithecidae (Cercopithecinae);Cercopithecus mitis;18.7;18.7;42;1.3;4.4;M F;11
+Cercopithecidae (Cercopithecinae);Cercopithecus nictitans;20;20;30;1.5;4.2;M F;1
+Cercopithecidae (Cercopithecinae);Cercopithecus pogonias;15;15;23;1.75;3;M F;1
+Cercopithecidae (Cercopithecinae);Cercopithecus neglectus;4;4;0.4;0.53;4;SF;11
+Cercopithecidae (Cercopithecinae);Cercopithecus aethiops;24;24;85.3;0.95;3.6;M F;11
+Cercopithecidae (Cercopithecinae);Miopithecus talapoin;112;112;92;2.32;1.1;M F;11
+Cercopithecidae (Cercopithecinae);Erythrocebus patas;35.5;35.5;1.5;4.33;5.6;M F;11
+Cercopithecidae (Cercopithecinae);Erythrocebus patas;20.6;20.6;0.1;2.25;5.6;M F;11
+Cercopithecidae (Cercopithecinae);Cercocebus albigena;14.4;14.4;10;1.27;6.4;M F;12
+Cercopithecidae (Cercopithecinae);Cercocebus galeritus;19;19;60;1.29;5.5;M F;1
+Cercopithecidae (Cercopithecinae);Papio c. cynocephalus;80;80;9.7;6.4;15;M F;12
+Cercopithecidae (Cercopithecinae);Papio c. ursinus;47.2;47.2;4;10.46;16.8;M F;12
+Cercopithecidae (Cercopithecinae);Papio c. ursinus;45;45;2.4;4.67;16.8;M F;12
+Cercopithecidae (Cercopithecinae);Papio c. hamadryas;68;7.3;3;8.6;9.4;F - F;13, 14
+Cercopithecidae (Cercopithecinae);Macacafascicularis;27;27;54.4;1.9;4.1;M F;12
+Cercopithecidae (Cercopithecinae);Macaca nemestrina;35;35;20;2;7.8;MF;12
+Cercopithecidae (Cercopithecinae);Theropithecus gelada;320;113;46;2.5;13.6;F - F;1
+Hylobatidae;Hylobates agilis;4.4;4.4;18.9;1.22;5.7;SF;15
+Hylobatidae;Hylobates klossii;3.7;3.7;10.4;1.51;5.9;SF;15
+Hylobatidae;Hylobates lar;3.5;3.5;2.5;1.49;5.3;SF;15
+Hylobatidae;Hylobates syndactylus;4;4;6;0.79;10.6;SF;15
+Hylobatidae;Hylobates syndactylus;5;5;5;0.97;10.6;SF;15
+Hylobatidae;Hylobates syndactylus;3;3;2.4;0.74;10.6;SF;15
+Hylobatidae;Hylobates syndactylus;3.8;3.8;6.8;0.93;10.6;SF;15
+Pongidae;Pongo pygmaeus;1.8;1.8;3;0.5;37;F-F;16
+Pongidae;Pan troglodytes;28;4;2.5;3.9;31.1;F-F;1
+Pongidae;Gorilla gorilla;9;9;0.5;0.7;93;MF;17

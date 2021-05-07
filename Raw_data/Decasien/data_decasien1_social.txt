@@ -1,0 +1,143 @@
+Taxon	 Ref (17) 	 Ref (18) 	 Ref (3) 	 Ref (35) 	 Ref (63) 	 Ref (64) 	 Ref (65) 	 Ref (66) 	Social System	Mating System
+Alouatta_caraya	 -   	 -   	 -   	 -   	 -   	 MM and UM 	 MMMF 	 UM, MMMF 	Polygynandry	Harem Polygyny
+Alouatta_palliata	 Harem 	 MMMF 	 -   	 -   	 -   	 MM 	 MMMF 	 UM, MMMF 	Polygynandry	Harem Polygyny
+Alouatta_pigra	 -   	 -   	 -   	 -   	 -   	 -   	 MMMF 	 UM, MMMF 	Polygynandry	Harem Polygyny
+Alouatta_seniculus	 -   	 -   	 MMMF 	 -   	 -   	 MM and UM 	 MMMF 	 UM, MMMF 	Polygynandry	Harem Polygyny
+Aotus_azarai	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 PL 	Pair	Monogamy
+Aotus_lemurinus	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 PL 	Pair	Monogamy
+Aotus_trivirgatus	 Mono 	 Mon 	 Mon 	 -   	 Mono/PA 	 Mon 	 Mon 	 PL 	Pair	Monogamy
+Arctocebus_calabarensis	 -   	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S 	Solitary	Spatial Polygyny
+Ateles_belzebuth	 -   	 -   	 MMMF 	 -   	 -   	 -   	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Ateles_fusciceps	 -   	 -   	 MMMF 	 -   	 Polygynous 	 -   	 -   	 MMMF 	Polygynandry	Polygynandry
+Ateles_geoffroyi	 MM 	 MMMF 	 -   	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Ateles_paniscus	 -   	 -   	 -   	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Avahi_laniger	 Mono 	 -   	 -   	 Pair 	 Solitary 	 Mon 	 Mon 	 PL 	Pair	Monogamy
+Avahi_occidentalis	 Mono 	 -   	 -   	 -   	 Solitary 	 -   	 -   	 PL 	Pair	Monogamy
+Brachyteles_arachnoides	 -   	 -   	 -   	 -   	 -   	 -   	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Hoolock_hoolock	 -   	 -   	 Mon 	 -   	 -   	 Mon 	 Mon 	 PL 	Pair	Monogamy
+Cacajao_calvus	 -   	 -   	 -   	 -   	 -   	 MM 	 Harem 	 -   	Polygynandry	Harem Polygyny
+Callicebus_moloch	 Mono 	 -   	 Mon 	 -   	 Mono/PA 	 Mon 	 Mon 	 PL 	Pair	Monogamy
+Callicebus_torquatus	 -   	 -   	 Mon 	 -   	 -   	 Mon 	 Mon 	 -   	Pair	Monogamy
+Callimico_goeldii	 Harem 	 -   	 Mon 	 -   	 Mono/PA 	 -   	 -   	 PL, UM, MMMF 	Pair	Monogamy
+Callithrix_argentata	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 PL, UM, MMMF 	Pair	Monogamy
+Callithrix_geoffroyi	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 PL, UM, MMMF 	Pair	Monogamy
+Callithrix_jacchus	 Mono 	 PA 	 -   	 -   	 Mono/PA 	 -   	 -   	 PL, UM, MMMF 	Pair	Polyandry
+Callithrix_penicillata	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 PL, UM, MMMF 	Pair	Monogamy
+Callithrix_pygmaea	 Mono 	 -   	 Mon 	 -   	 Mono/PA 	 Mon and PA 	 Mon 	 PL, UM, MMMF 	Pair	Polyandry
+Cebus_albifrons	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 MMMF 	Polygynandry	Polygynandry
+Cebus_apella	 MM 	 -   	 -   	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Cebus_capucinus	 -   	 -   	 Harem 	 -   	 -   	 -   	 -   	 MMMF 	Polygynandry	Harem Polygyny
+Cebus_olivaceus	 -   	 -   	 MMMF 	 -   	 -   	 MM UM 	 -   	 -   	Polygynandry	Polygynandry
+Cercocebus_agilis	 -   	 -   	 -   	 -   	 -   	 -   	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Cercocebus_galeritus	 -   	 -   	 MMMF 	 -   	 -   	 MM 	 -   	 MMMF 	Polygynandry	Polygynandry
+Cercocebus_torquatus	 -   	 -   	 -   	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Cercocebus_torquatus_atys	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 MMMF 	Polygynandry	Polygynandry
+Cercopithecus_ascanius	 Harem 	 -   	 Harem 	 -   	 -   	 MM and UM 	 Harem 	 UM 	Polygyny	Harem Polygyny
+Cercopithecus_campbelli	 -   	 -   	 Harem 	 -   	 -   	 -   	 -   	 UM 	Polygyny	Harem Polygyny
+Cercopithecus_cephus	 -   	 -   	 Harem 	 -   	 -   	 UM 	 Harem 	 UM 	Polygyny	Harem Polygyny
+Cercopithecus_diana	 -   	 -   	 -   	 -   	 -   	 UM 	 Harem 	 UM 	Polygyny	Harem Polygyny
+Cercopithecus_lhoesti	 -   	 -   	 Harem 	 -   	 -   	 UM 	 Harem 	 UM 	Polygyny	Harem Polygyny
+Cercopithecus_mitis	 Harem 	 -   	 Harem 	 -   	 -   	 UM 	 Harem 	 UM, MMMF 	Polygynandry	Harem Polygyny
+Cercopithecus_mona	 -   	 -   	 Harem 	 -   	 -   	 UM 	 Harem 	 UM 	Polygyny	Harem Polygyny
+Cercopithecus_neglectus	 -   	 -   	 Harem 	 -   	 -   	 Mon and UM 	 Harem 	 PL, UM 	Polygyny	Harem Polygyny
+Cercopithecus_nictitans	 -   	 -   	 Harem 	 -   	 -   	 UM 	 Harem 	 UM 	Polygyny	Harem Polygyny
+Cercopithecus_pogonias	 -   	 -   	 Harem 	 -   	 -   	 UM 	 Harem 	 UM 	Polygyny	Harem Polygyny
+Cheirogaleus_major	 -   	 -   	 -   	 NP 	 Solitary 	 -   	 -   	 S 	Solitary	Spatial Polygyny
+Cheirogaleus_medius	 S 	 -   	 -   	 Pair 	 Solitary 	 Mon 	 Solitary 	 S 	Solitary	Monogamy
+Chiropotes_satanas	 -   	 -   	 -   	 -   	 -   	 MM 	 Mon 	 -   	Polygynandry	Polygynandry
+Chlorocebus_aethiops	 -   	 MMMF 	 -   	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Chlorocebus_pygerythrus	 -   	 -   	 MMMF 	 -   	 -   	 -   	 -   	 MMMF 	Polygynandry	Polygynandry
+Colobus_angolensis	 -   	 -   	 Harem 	 -   	 -   	 MM 	 MMMF 	 PL, UM, MMMF 	Polygynandry	Harem Polygyny
+Colobus_guereza	 -   	 -   	 Harem 	 -   	 -   	 MM and UM 	 Harem 	 PL, UM, MMMF 	Polygynandry	Harem Polygyny
+Colobus_polykomos	 -   	 Harem 	 Harem 	 -   	 -   	 MM and UM 	 MMMF 	 UM, MMMF 	Polygynandry	Harem Polygyny
+Colobus_satanas	 -   	 -   	 MMMF 	 -   	 -   	 MM and UM 	 MMMF 	 -   	Polygynandry	Polygynandry
+Daubentonia_madagascariensis	 -   	 -   	 -   	 NP 	 Solitary 	 -   	 -   	 S 	Solitary	Spatial Polygyny
+Erythrocebus_patas	 Harem 	 -   	 Harem 	 -   	 -   	 UM 	 Harem 	 UM 	Polygyny	Harem Polygyny
+Eulemur_coronatus	 -   	 -   	 -   	 NP 	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Eulemur_fulvus_fulvus	 MM 	 -   	 MMMF 	 NP 	 Polygynous 	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Eulemur_macaco_macaco	 -   	 -   	 -   	 NP 	 -   	 MM 	 -   	 MMMF 	Polygynandry	Polygynandry
+Eulemur_mongoz	 -   	 -   	 Harem 	 Pair 	 -   	 Mon 	 MMMF 	 PL, MMMF 	Pair	Monogamy
+Eulemur_rubriventer	 -   	 -   	 -   	 Pair 	 -   	 Mon 	 MMMF 	 PL 	Pair	Monogamy
+Euoticus_elegantulus	 -   	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S, UM 	Solitary	Spatial Polygyny
+Galago_alleni	 -   	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S, UM 	Solitary	Spatial Polygyny
+Galago_moholi	 -   	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S, UM 	Solitary	Spatial Polygyny
+Galago_senegalensis	 Harem 	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S, UM 	Solitary	Spatial Polygyny
+Galagoides_demidoff	 Harem 	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S, PL, UM 	Solitary	Spatial Polygyny
+Galagoides_zanzibaricus	 -   	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S, PL, UM 	Solitary	Spatial Polygyny
+Gorilla_beringei	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 -   	Polygyny	Harem Polygyny
+Gorilla_gorilla_gorilla	 Harem 	 Harem 	 Harem 	 -   	 Polygynous 	 UM 	 Harem 	 UM, MMMF 	Polygyny	Harem Polygyny
+Hapalemur_griseus	 -   	 -   	 -   	 NP 	 -   	 Mon 	 -   	 PL 	Pair	Monogamy
+Hylobates_agilis	 -   	 -   	 Mon 	 -   	 -   	 Mon 	 -   	 PL 	Pair	Monogamy
+Hylobates_klossii	 -   	 -   	 Mon 	 -   	 -   	 Mon 	 Mon 	 PL 	Pair	Monogamy
+Hylobates_lar	 Mono 	 Mon 	 Mon 	 -   	 Mono/PA 	 -   	 Mon 	 PL 	Pair	Monogamy
+Hylobates_moloch	 -   	 Mon 	 Mon 	 -   	 -   	 Mon 	 -   	 PL 	Pair	Monogamy
+Hylobates_muelleri	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 PL 	Pair	Monogamy
+Hylobates_pileatus	 -   	 -   	 Mon 	 -   	 -   	 -   	 -   	 PL 	Pair	Monogamy
+Indri_indri	 Mono 	 -   	 Mon 	 Pair 	 Mono/PA 	 Mon 	 Mon 	 PL 	Pair	Monogamy
+Lagothrix_lagotricha	 MM 	 MMMF 	 MMMF 	 -   	 Polygynous 	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Lemur_catta	 -   	 -   	 MMMF 	 NP 	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Leontopithecus_chrysomelas	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 PL, UM, MMMF 	Pair	Monogamy
+Leontopithecus_rosalia	 -   	 -   	 Mon 	 -   	 -   	 -   	 -   	 PL, UM, MMMF 	Pair	Monogamy
+Lepilemur_mustelinus	 -   	 -   	 -   	 NP 	 -   	 -   	 Solitary 	 S 	Solitary	Spatial Polygyny
+Lepilemur_ruficaudatus	 S 	 -   	 -   	 -   	 Solitary 	 -   	 Solitary 	 S 	Solitary	Spatial Polygyny
+Lophocebus_albigena	 MM 	 -   	 MMMF 	 -   	 -   	 -   	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Lophocebus_aterrimus	 -   	 -   	 -   	 -   	 -   	 MM 	 -   	 MMMF 	Polygynandry	Polygynandry
+Loris_tardigradus	 Harem 	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S 	Solitary	Spatial Polygyny
+Macaca_arctoides	 -   	 MMMF 	 -   	 -   	 -   	 -   	 -   	 MMMF 	Polygynandry	Polygynandry
+Macaca_fascicularis	 -   	 MMMF 	 MMMF 	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Macaca_fuscata	 -   	 -   	 MMMF 	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Macaca_mulatta	 MM 	 MMMF 	 MMMF 	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Macaca_nemestrina	 -   	 MMMF 	 MMMF 	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Macaca_nigra	 -   	 -   	 -   	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Macaca_radiata	 -   	 MMMF 	 MMMF 	 -   	 -   	 -   	 -   	 MMMF 	Polygynandry	Polygynandry
+Macaca_silenus	 -   	 -   	 MMMF 	 -   	 -   	 -   	 -   	 MMMF 	Polygynandry	Polygynandry
+Macaca_sinica	 -   	 -   	 MMMF 	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Macaca_sylvanus	 -   	 -   	 MMMF 	 -   	 -   	 -   	 -   	 MMMF 	Polygynandry	Polygynandry
+Mandrillus_leucophaeus	 -   	 -   	 -   	 -   	 -   	 UM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Mandrillus_sphinx	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 MMMF 	Polygynandry	Polygynandry
+Microcebus_murinus	 S 	 -   	 -   	 NP 	 Solitary 	 UM 	 Solitary 	 S 	Solitary	Spatial Polygyny
+Microcebus_rufus	 -   	 -   	 -   	 NP 	 -   	 UM 	 Solitary 	 S 	Solitary	Spatial Polygyny
+Miopithecus_talapoin	 MM 	 -   	 MMMF 	 -   	 -   	 -   	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Mirza_coquereli	 -   	 -   	 -   	 NP 	 -   	 -   	 -   	 S 	Solitary	Spatial Polygyny
+Nasalis_larvatus	 Harem 	 Harem 	 MMMF 	 -   	 -   	 MM and UM 	 MMMF 	 UM 	Polygynandry	Harem Polygyny
+Nomascus_concolor	 -   	 -   	 Mon 	 -   	 -   	 Mon 	 Mon 	 PL 	Pair	Monogamy
+Nycticebus_coucang	 S 	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S 	Solitary	Spatial Polygyny
+Nycticebus_pygmaeus	 -   	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S 	Solitary	Spatial Polygyny
+Otolemur_crassicaudatus	 S 	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S, PL, UM 	Solitary	Spatial Polygyny
+Otolemur_garnettii	 -   	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S 	Solitary	Spatial Polygyny
+Pan_paniscus	 -   	 -   	 -   	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Pan_troglodytes_troglodytes	 MM 	 MMMF 	 MMMF 	 -   	 Polygynous 	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Papio_anubis	 MM 	 MMMF 	 MMMF 	 -   	 -   	 MM 	 -   	 MMMF 	Polygynandry	Polygynandry
+Papio_cynocephalus	 -   	 MMMF 	 MMMF 	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Papio_hamadryas	 -   	 Harem 	 Harem 	 -   	 -   	 UM 	 MMMF 	 UM, MMMF 	Polygynandry	Harem Polygyny
+Papio_papio	 -   	 MMMF 	 MMMF 	 -   	 -   	 -   	 -   	 MMMF 	Polygynandry	Harem Polygyny
+Papio_ursinus	 -   	 MMMF 	 -   	 -   	 -   	 MM 	 -   	 MMMF 	Polygynandry	Polygynandry
+Perodicticus_potto	 S 	 -   	 -   	 -   	 -   	 UM 	 Solitary 	 S 	Solitary	Spatial Polygyny
+Piliocolobus_badius	 MM 	 -   	 MMMF 	 -   	 -   	 MM 	 MMMF 	 MMMF 	Polygynandry	Polygynandry
+Pithecia_pithecia	 -   	 -   	 -   	 -   	 -   	 Mon 	 MMMF 	 -   	Polygynandry	Polygynandry
+Pongo_abelii	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 S, MMMF 	Solitary	Spatial Polygyny
+Pongo_pygmaeus	 -   	 Harem 	 -   	 -   	 -   	 MM and UM 	 Solitary 	 S, MMMF 	Solitary	Spatial Polygyny
+Presbytis_comata	 -   	 -   	 -   	 -   	 -   	 UM 	 Harem 	 -   	Polygyny	Harem Polygyny
+Presbytis_melalophos	 -   	 -   	 Harem 	 -   	 -   	 MM and UM 	 Harem 	 UM, MMMF 	Polygynandry	Harem Polygyny
+Procolobus_verus	 -   	 -   	 MMMF 	 -   	 -   	 MM 	 MMMF 	 -   	Polygynandry	Polygynandry
+Propithecus_diadema	 -   	 -   	 -   	 NP 	 -   	 Mon 	 -   	 PL , UM , MMMF 	Polygynandry	Polygynandry
+Propithecus_verreauxi	 MM 	 -   	 MMMF 	 NP 	 Polygynous 	 MM 	 MMMF 	 PL , UM , MMMF 	Polygynandry	Polygynandry
+Pygathrix_nemaeus	 -   	 -   	 -   	 -   	 -   	 MM and UM 	 Harem 	 UM, MMMF 	Polygynandry	Harem Polygyny
+Saguinus_fuscicollis	 Mono 	 -   	 Mon 	 -   	 -   	 Mon and PA 	 PA 	 PL, UM, MMMF 	Pair	Polyandry
+Saguinus_geoffroyi	 -   	 -   	 Mon 	 -   	 -   	 -   	 -   	 PL, UM, MMMF 	Pair	Monogamy
+Saguinus_midas	 -   	 -   	 Mon 	 -   	 -   	 Mon and PA 	 PA 	 PL, UM, MMMF 	Pair	Polyandry
+Saguinus_oedipus	 -   	 PA 	 Mon 	 -   	 Mono/PA 	 Mon and PA 	 PA 	 -   	Pair	Polyandry
+Saimiri_oerstedii	 -   	 -   	 MMMF 	 -   	 -   	 MM 	 MMMF 	 -   	Polygynandry	Polygynandry
+Saimiri_sciureus	 MM 	 MMMF 	 MMMF 	 -   	 Polygynous 	 MM 	 MMMF 	 -   	Polygynandry	Polygynandry
+Semnopithecus_entellus	 -   	 Harem 	 Harem 	 -   	 -   	 MM and UM 	 MMMF 	 UM, MMMF 	Polygynandry	Harem Polygyny
+Symphalangus_syndactylus	 -   	 -   	 Mon 	 -   	 -   	 Mon 	 Mon 	 PL 	Pair	Monogamy
+Tarsius_bancanus	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 S 	Solitary	Spatial Polygyny
+Tarsius_syrichta	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 S 	Solitary	Spatial Polygyny
+Theropithecus_gelada	 -   	 Harem 	 Harem 	 -   	 -   	 UM 	 MMMF 	 UM 	Polygynandry	Harem Polygyny
+Trachypithecus_cristatus	 -   	 Harem 	 Harem 	 -   	 -   	 UM 	 Harem 	 MMMF 	Polygynandry	Harem Polygyny
+Trachypithecus_johnii	 -   	 -   	 Harem 	 -   	 -   	 UM 	 -   	 UM, MMMF 	Polygynandry	Harem Polygyny
+Trachypithecus_obscurus	 -   	 Harem 	 Harem 	 -   	 -   	 MM and UM 	 Harem 	 MMMF 	Polygynandry	Harem Polygyny
+Trachypithecus_phayrei	 -   	 -   	 -   	 -   	 -   	 -   	 -   	 UM 	Polygyny	Harem Polygyny
+Trachypithecus_pileatus	 -   	 -   	 -   	 -   	 -   	 UM 	 Harem 	 UM 	Polygyny	Harem Polygyny
+Trachypithecus_vetulus	 -   	 -   	 Harem 	 -   	 -   	 UM 	 Harem 	 -   	Polygyny	Harem Polygyny
+Varecia_variegata_variegata	 MM 	 -   	 -   	 Pair 	 Solitary 	 Mon 	 MMMF 	 MMMF 	Pair	Monogamy
