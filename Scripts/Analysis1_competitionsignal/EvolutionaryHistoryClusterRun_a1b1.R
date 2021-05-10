@@ -366,7 +366,6 @@ for(c in 1:length(geographicThresholdVector)){
     
     summaryData <- summaryData_init 
     
-    number= (a-1)*randomSampling*4 + (b-1)*randomSampling*2 + (c-1)*randomSampling + d-1
     
     #Source functions & packages
     
