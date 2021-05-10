@@ -5,7 +5,7 @@ This repository stores all material linked to "**Primate Cognition and the Red Q
 It is divided into several folders:
 
 ## :chart_with_upwards_trend: Raw_data  
-It includes a) brain and associated date (each within a folder named after their study of origin) b) phylogenetic trees (from the 10kTrees project, "Tree" file).
+It includes a) brain and associated data (each within a folder named after their study of origin) b) phylogenetic trees (from the 10kTrees project, "Tree" file).
 
 ## :file_folder: Scripts
 
@@ -19,10 +19,10 @@ It includes:
 * :arrow_right: Analysis2_competitiondirection: Analysis based on PGLS to see for areas that are best predicted by competitive models the direction of the selection
   - The script for extracting the necessary spatial covariates: number of sympatric species, and average overlap (`SpatialProcessingSympatry`). 
   - The script for extracting conducting the PGLS analysis on selection direction (`PGLSdirectionSelection`).
-* :herb: Analysis3_diverification: Analysis to see whether how the diversification rate covaries with brain size
+* :herb: Analysis3_diversification: Analysis to see whether how the diversification rate covaries with brain size
   - The script for running the diversification algorithm ClaDS on the cluster (`DiversificationCluster`). 
   - The script for conducting the PGLS analysis on diversification (`PGLSdiversification`). (still not done)
-  - The file with all outputs from the diversification analysis.
+  - The file with all inputs/outputs from the diversification analysis.
 
 ## :page_with_curl: Article
 
