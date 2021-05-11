@@ -19,8 +19,8 @@ institute:
 output: 
  #      - '--lua-filter=scholarly-metadata.lua'
  #      - '--lua-filter=author-info-blocks.lua'
- bookdown::pdf_book:
- #bookdown::word_document2:
+ #bookdown::pdf_book:
+ bookdown::word_document2:
    number_sections: false
    toc: false
    #citation_package: natbib
@@ -102,8 +102,8 @@ misc3d
 )
 
 #Load environments
-load("C:/Users/robira/Documents/PhD/Meta_analysis/Cognition_metaanalysis/Data_spatial_primate.RData")
-load("C:/Users/robira/Documents/PhD/Meta_analysis/Cognition_metaanalysis/geography_traits_biogeobears.RData")
+load("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/REnvironmentsData_spatial_primate.RData")
+load("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/REnvironmentsgeography_traits_biogeobears.RData")
 
 ```
 
@@ -199,7 +199,6 @@ maxMOB
 
 **Abstract:** The diversity in animal cognition raises the question of its underlying evolutionary drivers. Cognitive selection can stem from interactions of individuals with their environment (*Ecological Intelligence Hypothesis*), with conspecifics within the social unit (*Social Intelligence Hypothesis*) or between social units (*Napoleonic Intelligence Hypothesis*), or even among generations (*Cultural Intelligence Hypothesis*). Yet, one species rarely occupies an area alone: space is a shared place between many species that can interact directly or indirectly. These interactions could represent additional cues and/or noise to find resource or escape predator(s), henceforth stimulate cognition. To test whether species co-occurrence shaped current patterns of cognition, we used Primates (N$_{min-max}$=`r minAllAreas`-`r maxAllAreas`) as a study example and retraced the evolutionary history of species whole brain - or specific area – relative size, using standard phylogenetic models or competitive phylogenetic models. Then we fitted phylogenetic regressions to test for variation in brain size and current co-occurrence pattern correlations. We found that the evolution of the relative size of areas involved in foraging, information processing and/or retention is better described by models accounting for species co-occurrence within dietary guilds which lead to increased relative sizes of these areas. This suggests that cognition is subject to an arms race among species (*Red Queen Intelligence Hypothesis*) and shall explain why specific abilities particularly boomed for some lineages, as for instance with Primates.
 
-
 **Keywords:** "Brain size - Species co-occurrence - Intelligence evolution - Cooperation - Competition"
 
 ```{r}
@@ -213,7 +212,6 @@ words <- RmdWords("Article.Rmd")
 **Word Count:** `r words$num_words` \newline
 <!-- Character Count: `r words$num_char` -->
 <!-- TC:endignore --> 
-
 
 \newpage
 
