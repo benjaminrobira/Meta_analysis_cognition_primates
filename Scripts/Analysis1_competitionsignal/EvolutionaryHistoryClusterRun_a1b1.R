@@ -366,6 +366,10 @@ for(c in 1:length(geographicThresholdVector)){
     
     summaryData <- summaryData_init 
     
+<<<<<<< HEAD
+=======
+    
+>>>>>>> b7ad3650c1b4a01e06b3753dfd32c2f755841d78
     #Source functions & packages
     
     #Capitalize first letter
