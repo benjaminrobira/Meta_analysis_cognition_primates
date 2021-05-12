@@ -1,287 +1,287 @@
-",""MSW3sp"",""Site"",""Plot"",""PD"",""DR"",""HR"",""ov"",""GS"",""FS"",""miner"",""Status"",""mass"",""rain"",""multi1"",""multi2"""
-"1,""Allocebus trichotis"",""Analamazaotra Special reserve, nr Andasibe village"",NA,18,NA,16,30,4,NA,""fiona"",""A"",78.09,1700,FALSE,TRUE"
-"2,""Allocebus trichotis"",""Analamazaotra Special reserve, nr Andasibe village"",NA,18,NA,35.5,15,11,NA,""fiona"",""A"",78.09,1700,FALSE,TRUE"
-"3,""Alouatta caraya"",""El Pi¤alito Provincial Park"",NA,112.514285714286,0.3995,17.32,37.92,6,30.3333333333333,""fiona"",""A"",5576.96,1952,TRUE,TRUE"
-"4,""Alouatta caraya"",""El Pi¤alito Provincial Park"",NA,112.514285714286,0.3995,111.91,5.87,13,30.3333333333333,""fiona"",""A"",5576.96,1952,TRUE,TRUE"
-"5,""Alouatta guariba"",""El Pi¤alito Provincial Park"",NA,34.3978823529412,0.558,31.22,0,4,18.8785714285714,""fiona"",""A"",5188.33,1952,TRUE,TRUE"
-"6,""Alouatta guariba"",""El Pi¤alito Provincial Park"",NA,34.3978823529412,0.558,70.32,0,8,18.8785714285714,""fiona"",""A"",5188.33,1952,TRUE,TRUE"
-"7,""Alouatta guariba"",""Santa Genebra (SP)"",""(Santa Genebra)"",148,0.467,4.13,33.3,6,10,""nick"",""A"",5188.33,1360,TRUE,TRUE"
-"8,""Alouatta palliata"",""Barqueta"",""Hacienda Barqueta"",1040,0.272,4.85,94,18.9,35.452,""nick"",""A"",6576.99,2469,TRUE,TRUE"
-"9,""Alouatta palliata"",""Barro Colorado"",NA,70.8623953488372,0.287947368421053,31,100,15.0332692307692,35.452,""fiona"",""A"",6576.99,2623,TRUE,TRUE"
-"10,""Alouatta palliata"",""Barro Colorado Island"",""(BCI)"",100.9,0.284,11.3,62.5,14.7,44.32,""nick"",""A"",6576.99,2728,TRUE,TRUE"
-"11,""Alouatta palliata"",""Barro Colorado Island"",""(BCI)"",50.5116666666667,0.2,18.5,0,16.5,44.32,""nick"",""A"",6576.99,2728,TRUE,TRUE"
-"12,""Alouatta palliata"",""Barro Colorado Island"",""year 1971"",1029,0.295888888888889,4.9,94,16.7286666666667,44.9428571428571,""fiona"",""A"",6576.99,2728,TRUE,TRUE"
-"13,""Alouatta pigra"",""Barro Colorado Island"",""year 1932"",49.4,0.472666666666667,86,5,17.3,36.7877777777778,""fiona"",""A"",7172.06,2728,TRUE,TRUE"
-"14,""Alouatta pigra"",""Palenque National Park"",NA,23,0.472666666666667,5.3875,0,6,36.7877777777778,""fiona"",""A"",7172.06,2696,TRUE,TRUE"
-"15,""Alouatta pigra"",""Palenque National Park"",NA,23,0.472666666666667,5.3875,0,6,36.7877777777778,""fiona"",""A"",7172.06,2696,TRUE,TRUE"
-"16,""Alouatta seniculus"",""Hato Masaguaral"",""(Hato Masaguaral)"",128.948275862069,0.379,5.55,52.8,8.17034482758621,47.5333333333333,""nick"",""A"",6398.31,1450,TRUE,TRUE"
-"17,""Alouatta seniculus"",""Ot£n Quimbaya"",NA,72.6,0.63875,10.2,20.9,8,47.5333333333333,""fiona"",""A"",6398.31,2712,TRUE,TRUE"
-"18,""Ateles belzebuth"",""La Macarena"",""Laguna el Tigre"",13.5,4,323,25,23.5,83,""nick"",""A"",6692.42,2674,TRUE,TRUE"
-"19,""Ateles belzebuth"",""Yasuni National Park"",""Proyecto Primates Research Area"",7.575,2.7125,149.4,80,1,83,""fiona"",""A"",6692.42,3200,TRUE,TRUE"
-"20,""Ateles belzebuth"",""Yasuni National Park"",""Proyecto Primates Research Area"",7.575,2.7125,152.3,85,1,83,""fiona"",""A"",6692.42,3200,TRUE,TRUE"
-"21,""Ateles chamek"",""Manu"",""Cocha Cashu"",24.9475,2.1885,153,16,40,77.5,""nick"",""A"",7053.92,2080,TRUE,TRUE"
-"22,""Ateles chamek"",""Manu"",""Cocha Cashu"",24.9475,2.1885,231,10,37,77.5,""nick"",""A"",7053.92,2080,TRUE,TRUE"
-"23,""Ateles paniscus"",""Central Suriname Nature Preserve"",""beneath Volzberg dome"",8.2,2.7,255,0,18,82.9,""nick"",""A"",8697.25,2300,TRUE,TRUE"
-"24,""Brachyteles hypoxanthus"",""Fazenda Montes Claros (MG)"",""Estacao Biologica de Caratinga"",5.2,1.283,168,46,35.4230769230769,28,""nick"",""A"",10537.31,1120,TRUE,TRUE"
-"25,""Brachyteles hypoxanthus"",""Fazenda Montes Claros (MG)"",""Estacao Biologica de Caratinga"",5.2,1.313,309,41,62.5,28,""nick"",""A"",10537.31,1120,TRUE,TRUE"
-"26,""Bunopithecus hoolock"",""Hollongapar (Assam)"",""(Hollongapar)"",20,1.04133333333333,22,23,3.43,67,""nick"",""A"",6699,3890,TRUE,TRUE"
-"27,""Bunopithecus hoolock"",""West Bhanugach"",""Lawachara"",9.34,1.157,35,9,3,82.2,""nick"",""A"",6699,2000,TRUE,TRUE"
-"28,""Bunopithecus hoolock"",""West Bhanugach"",""Lawachara"",9.34,1.367,66.5,21.4,2.85714285714286,82.2,""nick"",""A"",6699,2000,TRUE,TRUE"
-"29,""Callicebus melanochir"",""Lemos Maia (Bahia)"",""ESMAI"",17,1.01,23.3,12.9,3,76.6,""nick"",""A"",1034.31076923077,2037,TRUE,TRUE"
-"30,""Callicebus melanochir"",""Lemos Maia (Bahia)"",""ESMAI"",17,1.01,24.3,12.3,3,76.6,""nick"",""A"",1034.31076923077,2037,TRUE,TRUE"
-"31,""Callicebus ornatus"",""Barbascal"",""Socay forest"",407,0.5675,0.4352,6,3.11,NA,""nick"",""A"",1034.31076923077,2650,TRUE,TRUE"
-"32,""Callicebus ornatus"",""Finca la Macarena"",""(Finca La Macarena)"",57,0.5675,3.66,1.55,3,NA,""nick"",""A"",1034.31076923077,NA,FALSE,FALSE"
-"33,""Callicebus ornatus"",""Finca la Macarena"",""*Troop C"",57,0.5675,4.18,18,3.065,70,""fiona"",""A"",988,2000,TRUE,TRUE"
-"34,""Callicebus ornatus"",""Finca la Macarena"",""*Troop Cr"",57,0.5675,3.5,1.4,3.065,70,""fiona"",""A"",988,2000,TRUE,TRUE"
-"35,""Callicebus ornatus"",""Finca la Macarena"",""*Troop T"",57,0.5675,3.29,16.6,3.065,70,""fiona"",""A"",988,2000,TRUE,TRUE"
-"36,""Callicebus personatus"",""Linhares (ES)"",""(Linhares)"",10.075,1,10.7,20,3.97,56,""nick"",""A"",1390.8,1051,TRUE,TRUE"
-"37,""Callicebus personatus"",""Linhares (ES)"",""(Linhares)"",10.075,1,12.3,20,3.97,56,""nick"",""A"",1390.8,1051,TRUE,TRUE"
-"38,""Callithrix aurita"",""Cunha Nucleus (SP)"",""Serro do Mar"",30,0.9588,35.3,15,8.5,81.5,""nick"",""A"",386.2,2000,TRUE,TRUE"
-"39,""Callithrix flaviceps"",""Fazenda Montes Claros (MG)"",""Estacao Biologica de Caratinga"",40,1.2225,35.5,80,13,80.12,""nick"",""A"",372.97,1120,TRUE,TRUE"
-"40,""Callithrix intermedia"",""Rio Aripuana (MT)"",""right bank, opposite Dardanelos"",54.1,1.459,28.25,22,10,86.4,""nick"",""A"",345.224166666667,2082,TRUE,TRUE"
-"41,""Callithrix jacchus"",""Nisia Floresta (Rio Grande del Norte)"",""EFLEX-IBAMA"",804.833333333333,0.912,5.2,46,7,48.05,""nick"",""A"",290.21,1229,TRUE,TRUE"
-"42,""Callithrix jacchus"",""Nisia Floresta (Rio Grande del Norte)"",""EFLEX-IBAMA"",804.833333333333,1.181,4.6,72,13,48.05,""nick"",""A"",290.21,1229,TRUE,TRUE"
-"43,""Callithrix jacchus"",""Nisia Floresta (Rio Grande del Norte)"",""EFLEX-IBAMA"",804.833333333333,1.243,3.9,86,12,48.05,""nick"",""A"",290.21,1229,TRUE,TRUE"
-"44,""Callithrix jacchus"",""Tapacura (Pernambuco)"",""Tapacura field station"",588,0.5655,2.24,14,8,48.05,""nick"",""A"",290.21,1117,TRUE,TRUE"
-"45,""Callithrix jacchus"",""Tapacura (Pernambuco)"",""Tapacura field station"",663,0.606,2.08,15,8,48.05,""nick"",""A"",290.21,1117,TRUE,TRUE"
-"46,""Callithrix jacchus"",""Tapacura (Pernambuco)"",""Tapacura field station"",679,0.978,3.52,18,11,48.05,""nick"",""A"",290.21,1117,TRUE,TRUE"
-"47,""Callithrix jacchus"",""Tapacura (Pernambuco)"",""Tapacura field station"",700,0.15,0.85,31,10.5,48.05,""nick"",""A"",290.21,1117,TRUE,TRUE"
-"48,""Callithrix jacchus"",""Tapacura (Pernambuco)"",""Tapacura field station"",804.833333333333,0.5655,2.5,0,9.63636363636364,48.05,""nick"",""A"",290.21,1117,TRUE,TRUE"
-"49,""Callithrix jacchus"",""Tapacura (Pernambuco)"",""Tapacura field station"",804.833333333333,0.5655,6.5,0,9.63636363636364,48.05,""nick"",""A"",290.21,1117,TRUE,TRUE"
-"50,""Callithrix kuhlii"",""Lemos Maia (Bahia)"",""CEPEC"",46,0.975,13,50,5,86.1,""nick"",""A"",374.99,2037,TRUE,TRUE"
-"51,""Callithrix pygmaea"",""Rio Maniti"",""R. Maniti & Hatun Quabrada"",51.5,0.29,0.35,0,5.63,77,""nick"",""A"",123.94,2830,TRUE,TRUE"
-"52,""Cebus albifrons"",""Manu"",""Cocha Cashu"",35,1.82,150,3.5,8.5,34.85,""nick"",""A"",2509.68,2080,TRUE,TRUE"
-"53,""Cebus albifrons"",""Manu"",""Cocha Cashu"",29.5,1.82,150,71,8.5,34.85,""nick"",""A"",2509.68,2080,TRUE,TRUE"
-"54,""Cebus apella"",""Manu"",""Cocha Cashu"",40,2.07,82.5,3.2,10.7222222222222,24,""nick"",""A"",2758.38,2080,TRUE,TRUE"
-"55,""Cebus apella"",""Manu"",""Cocha Cashu"",38,2.07,80,69,10.7222222222222,24,""nick"",""A"",2758.38,2080,TRUE,TRUE"
-"56,""Cebus nigritus"",""Iguazu National Park"",""(Iguazu)"",16,NA,161,43.3,14.6,NA,""nick"",""A"",2812.338,1950,FALSE,TRUE"
-"57,""Cebus olivaceus"",""Hato Masaguaral"",""(Hato Masaguaral)"",13.126,2.3,275,100,19.5,50.75,""nick"",""A"",2787.64,1450,TRUE,TRUE"
-"58,""Cercopithecus albogularis"",""Cape Vidal"",""(Cape Vidal)"",196,NA,18,16.7,28,52.4,""nick"",""A"",4049.44055555556,1037,FALSE,TRUE"
-"59,""Cercopithecus cephus"",""Makokou"",""(Makokou)"",25.5,1.295,52,56,15,79,""nick"",""A"",3444.88,1645,TRUE,TRUE"
-"60,""Cercopithecus cephus"",""Makokou"",""(Makokou)"",25.5,1.98,119,24,15,79,""nick"",""A"",3444.88,1645,TRUE,TRUE"
-"61,""Cercopithecus diana"",""Tai"",""(Tai)"",52.5,1.236,83,41,25,76.3,""nick"",""A"",4358.91,1830,TRUE,TRUE"
-"62,""Cercopithecus diana"",""Tai"",""(Tai)"",70.5,1.236,77,38,25,76.3,""nick"",""A"",4358.91,1830,TRUE,TRUE"
-"63,""Cercopithecus mitis"",""Kakamega"",""."",176.7,1.136,15.25,66,14,57,""nick"",""A"",5041.29,2040,TRUE,TRUE"
-"64,""Cercopithecus mitis"",""Kakamega"",""."",176.7,1.136,23,45,34,57,""nick"",""A"",5041.29,2040,TRUE,TRUE"
-"65,""Cercopithecus mitis"",""Kakamega"",""Isecheno"",176.7,1.136,38,53,43,57,""nick"",""A"",5041.29,2040,TRUE,TRUE"
-"66,""Cercopithecus mitis"",""Kibale"",""Kanyawara (K14)"",52.2,1.216,36.44,5,18,21.7,""nick"",""A"",5041.29,1570,TRUE,TRUE"
-"67,""Cercopithecus mitis"",""Kibale"",""Ngogo"",6.67,1.406,325,1,23,30.1,""nick"",""A"",5041.29,1570,TRUE,TRUE"
-"68,""Cercopithecus neglectus"",""Kisere Forest"",""Isiukhu"",220,0.31,5,5,11,47,""nick"",""A"",5324.52,2215,TRUE,TRUE"
-"69,""Cercopithecus neglectus"",""Kisere Forest"",""Isiukhu"",320,0.31,4.1,14,13,47,""nick"",""A"",5324.52,2215,TRUE,TRUE"
-"70,""Cercopithecus neglectus"",""Makokou"",""Ile aux Chimpanzes"",35,0.53,5.33,13.6,3.67,74.38,""nick"",""A"",5324.52,1645,TRUE,TRUE"
-"71,""Cercopithecus neglectus"",""Makokou"",""M'Passa Plateau"",45,0.53,8.5,21.9,4,74.38,""nick"",""A"",5324.52,1659,TRUE,TRUE"
-"72,""Cheirogaleus major"",""Mandena forest"",""QMM Station"",NA,NA,5.5,5.9,2,65,""fiona"",""A"",446.02,1680,FALSE,FALSE"
-"73,""Cheirogaleus major"",""Mandena forest"",""QMM Station"",NA,NA,7,4.6,5,65,""fiona"",""A"",446.02,1680,FALSE,FALSE"
-"74,""Cheirogaleus major"",""Mandena forest"",NA,NA,NA,4.4,3,NA,65,""fiona"",""A"",446.02,1680,FALSE,FALSE"
-"75,""Cheirogaleus medius"",""Mandena forest"",NA,261.6,NA,1.6,3,3,65,""fiona"",""A"",196.76,1680,FALSE,TRUE"
-"76,""Chlorocebus djamdjamensis"",""Odobullu Forest"",""Robe Field Station"",NA,NA,12.3,4.1,48,NA,""fiona"",""ST"",3000,797,FALSE,FALSE"
-"77,""Chlorocebus djamdjamensis"",""Odobullu Forest"",""Robe Field Station"",NA,NA,18.1,2.8,58,NA,""fiona"",""ST"",3000,796,FALSE,FALSE"
-"78,""Chlorocebus pygerythrus"",""Amboseli"",""(Amboseli)"",62.2525,0.456,5.2,31.9,11,NA,""nick"",""ST"",3695.99,300,TRUE,TRUE"
-"79,""Chlorocebus pygerythrus"",""Amboseli"",""(Amboseli)"",62.2525,0.456,12.8,57.4,16,NA,""nick"",""ST"",3695.99,300,TRUE,TRUE"
-"80,""Chlorocebus pygerythrus"",""Amboseli"",""(Amboseli)"",62.2525,0.456,13.4,9.9,8,NA,""nick"",""ST"",3695.99,300,TRUE,TRUE"
-"81,""Chlorocebus pygerythrus"",""Amboseli"",""(Amboseli)"",62.2525,0.456,15.8,34.5,11,NA,""nick"",""ST"",3695.99,300,TRUE,TRUE"
-"82,""Chlorocebus pygerythrus"",""Amboseli"",""(Amboseli)"",62.2525,0.456,16.7,4,10.5,NA,""nick"",""ST"",3695.99,300,TRUE,TRUE"
-"83,""Chlorocebus pygerythrus"",""Amboseli"",""(Amboseli)"",62.2525,0.456,24.9,8,11,NA,""nick"",""ST"",3695.99,300,TRUE,TRUE"
-"84,""Chlorocebus pygerythrus"",""Amboseli"",NA,62.2525,0.456,38,34,17.7307692307692,NA,""fiona"",""ST"",3560,300,TRUE,TRUE"
-"85,""Chlorocebus sabaeus"",""Niokolo-Koba"",""Mt. Assirik"",14.3,NA,178.4,9.6,25.5,63,""nick"",""ST"",3695.99,1045,FALSE,TRUE"
-"86,""Chlorocebus tantalus"",""Bakossiland"",""near Nayassoso"",112.6,1.6035,11.5,0,11,57.2,""nick"",""ST"",3695.99,3952.5,TRUE,TRUE"
-"87,""Chlorocebus tantalus"",""Bakossiland"",""near Nayassoso"",112.6,1.6035,15.25,0,18,57.2,""nick"",""ST"",3695.99,3952.5,TRUE,TRUE"
-"88,""Chlorocebus tantalus"",""Buffle Noir"",""(Buffle Noir)"",18,2.268,102.5,5.6,18,26.8,""nick"",""ST"",3695.99,1450,TRUE,TRUE"
-"89,""Chlorocebus tantalus"",""Kalamaloue"",""(Kalamaloue)"",149,0.939,56.25,18.2,76,67.3333333333333,""nick"",""ST"",3695.99,650,TRUE,TRUE"
-"90,""Colobus guereza"",""Kakamega"",""Isecheno"",147.15,0.45,20.25,61,11,38.55,""nick"",""A"",9925.88,2040,TRUE,TRUE"
-"91,""Colobus guereza"",""Kakamega"",""Isecheno"",147.15,0.564,12.75,49,15,38.55,""nick"",""A"",9925.88,2040,TRUE,TRUE"
-"92,""Colobus guereza"",""Kakamega"",""Isecheno"",147.15,0.565,12,73,10,38.55,""nick"",""A"",9925.88,2040,TRUE,TRUE"
-"93,""Colobus guereza"",""Kakamega"",""Isecheno"",147.15,0.625,16,83,7,38.55,""nick"",""A"",9925.88,2040,TRUE,TRUE"
-"94,""Colobus guereza"",""Kakamega"",""Isecheno"",147.15,0.734,17.25,69,21,38.55,""nick"",""A"",9925.88,2040,TRUE,TRUE"
-"95,""Colobus guereza"",""Kibale"",""Kanyawara"",41.6408333333333,0.535,19.7,83,8.31363636363636,6.32222222222222,""fiona"",""A"",9925.88,1570,TRUE,TRUE"
-"96,""Colobus guereza"",""Kibale"",""Kanyawara (K14)"",36.525,0.535,8.4,42,6,9.6,""nick"",""A"",9925.88,1570,TRUE,TRUE"
-"97,""Colobus guereza"",""Kibale"",""Kanyawara (K14)"",36.525,0.535,12.5,28,9,0,""nick"",""A"",9925.88,1570,TRUE,TRUE"
-"98,""Colobus guereza"",""Kibale"",NA,41.6408333333333,0.535,15,74,9,5.16666666666667,""fiona"",""A"",9925.88,1570,TRUE,TRUE"
-"99,""Colobus guereza"",""Queen Elizabeth"",""Kyambura Gorge"",347,0.54275,3.7,80,7.95833333333333,16.2538461538462,""nick"",""A"",9925.88,900,TRUE,TRUE"
-"100,""Colobus polykomos"",""Tiwai"",""East study area"",52,0.832,24.5,4,12.5,36,""nick"",""A"",8797.29,2708,TRUE,TRUE"
-"101,""Colobus satanas"",""Foret des Abeilles"",""Makande"",5.85,0.73,573,65,18,50.95,""nick"",""A"",9055.32,1755,TRUE,TRUE"
-"102,""Colobus satanas"",""Foret des Abeilles"",""Makande"",6.575,0.608,224,70,11,50.95,""nick"",""A"",9055.32,1755,TRUE,TRUE"
-"103,""Colobus satanas"",""Foret des Abeilles"",""Makande"",6.575,0.852,573,65,17.5,52,""nick"",""A"",9055.32,1755,TRUE,TRUE"
-"104,""Daubentonia madagascariensis"",""Nosy Mangabe"",""(Nosy Mangabe)"",NA,1.551,126,75,1,47.6,""nick"",""A"",2731.37,3806,FALSE,FALSE"
-"105,""Daubentonia madagascariensis"",""Nosy Mangabe"",""(Nosy Mangabe)"",NA,2.256,214,40,1,47.6,""nick"",""A"",2731.37,3806,FALSE,FALSE"
-"106,""Eulemur macaco"",""Ankafara"",""SIRNP"",200,NA,5.12,95,10.6,22,""fiona"",""A"",2470.43,1824,FALSE,TRUE"
-"107,""Eulemur macaco"",""Ankafara"",""SIRNP"",200,NA,6.02,100,10.6,22,""fiona"",""A"",2470.43,1824,FALSE,TRUE"
-"108,""Eulemur macaco"",""Ankafara"",""SIRNP"",200,NA,8.78,100,10.6,22,""fiona"",""A"",2470.43,1824,FALSE,TRUE"
-"109,""Eulemur macaco"",""Ankafara"",""SIRNP"",200,NA,25.21,50,10.6,22,""fiona"",""A"",2470.43,1824,FALSE,TRUE"
-"110,""Eulemur macaco"",""Sahamalaza (UN BR): Ankarafa forest"",NA,200,NA,3.8,90,10.6,22,""fiona"",""A"",2470.43,1824,FALSE,TRUE"
-"111,""Eulemur macaco"",""Sahamalaza (UN BR): Ankarafa forest"",NA,200,NA,6.3,50,10.6,22,""fiona"",""A"",2470.43,1824,FALSE,TRUE"
-"112,""Eulemur macaco"",""Sahamalaza (UN BR): Ankarafa forest"",NA,200,NA,9.7,35,10.6,22,""fiona"",""A"",2470.43,1824,FALSE,TRUE"
-"113,""Eulemur macaco"",""Sahamalaza (UN BR): Ankarafa forest"",NA,200,NA,19.6,15,10.6,22,""fiona"",""A"",2470.43,1824,FALSE,TRUE"
-"114,""Gorilla beringei"",""Vulcans (Virunga volcanoes)"",""Karisoke"",1.374,0.485,2080,55,14.5,1.7,""nick"",""T"",149325.19,1750,TRUE,TRUE"
-"115,""Gorilla beringei"",""Vulcans (Virunga volcanoes)"",""Karisoke"",1.374,0.485,2430,47,26,1.7,""nick"",""T"",149325.19,1750,TRUE,TRUE"
-"116,""Gorilla gorilla"",""Mt Alen (Rio Muni)"",""Abuminzok-Aninzok"",0.58,0.9,550,0,6.4,54.72,""nick"",""T"",112588.99,2800,TRUE,TRUE"
-"117,""Gorilla gorilla"",""Mt Alen (Rio Muni)"",""Monte Alen region"",0.86,1.13,675,0,7.13,54.72,""nick"",""T"",112588.99,2800,TRUE,TRUE"
-"118,""Hapalemur aureus"",""Ranomafana"",""Talatakely"",NA,0.4,26,10,3.75,4,""nick"",""A"",1562.41,2489,FALSE,FALSE"
-"119,""Hapalemur griseus"",""Ranomafana"",""Talatakely"",38.625,NA,15,7,5.5,5,""nick"",""A"",916,2489,FALSE,TRUE"
-"120,""Hylobates agilis"",""Gunung Bubu Forest Reserve"",""Sungai Dal"",190,1.26,29,24,4,57.5,""fiona"",""A"",5829.08,4000,TRUE,TRUE"
-"121,""Hylobates albibarbis"",""Sabanga"",""NLPSF"",10.38,NA,53,15,4.3,NA,""fiona"",""A"",5300,2912,FALSE,TRUE"
-"122,""Hylobates klossii"",""Siberut (Mentawai Islands)"",""Paitan river"",10.5,1.508,34.5,0,3.67,72,""nick"",""A"",5822.29,4217,TRUE,TRUE"
-"123,""Hylobates klossii"",""Siberut (Mentawai Islands)"",""Paitan river"",10.5,1.508,31,0,3,72,""nick"",""A"",5822.29,4217,TRUE,TRUE"
-"124,""Hylobates klossii"",""Siberut (Mentawai Islands)"",""Teitei Peleigei"",30,1.508,11,0,4.1,72,""nick"",""A"",5822.29,4217,TRUE,TRUE"
-"125,""Hylobates lar"",""Khao Yai"",""(Khao Yai)"",30.4,1.54666666666667,21.5,15.6,4.83333333333333,64.1,""nick"",""A"",5578.61,1500,TRUE,TRUE"
-"126,""Hylobates lar"",""Khao Yai"",""(Khao Yai)"",30.4,1.54666666666667,24.5,35.7,4.83333333333333,64.1,""nick"",""A"",5578.61,1500,TRUE,TRUE"
-"127,""Hylobates lar"",""Khao Yai"",""(Khao Yai)"",30.4,1.54666666666667,26.5,16.4,4.83333333333333,64.1,""nick"",""A"",5578.61,1500,TRUE,TRUE"
-"128,""Hylobates lar"",""Krau"",""Kuala Lompat"",6.1,1.85,53,1,3.5,56.85,""nick"",""A"",5578.61,2000,TRUE,TRUE"
-"129,""Hylobates lar"",""Sungai Tekam"",""C13C, after logging"",14.8,1.54666666666667,11,14,3.5,60,""nick"",""A"",5578.61,2572,TRUE,TRUE"
-"130,""Hylobates lar"",""Sungai Tekam"",""C13C, after logging"",14.8,1.54666666666667,15,8,3.5,60,""nick"",""A"",5578.61,2572,TRUE,TRUE"
-"131,""Hylobates lar"",""Sungai Tekam"",""C13C, before logging"",8.6,1.54666666666667,17,28,3.5,77,""nick"",""A"",5578.61,2572,TRUE,TRUE"
-"132,""Hylobates lar"",""Sungai Tekam"",""C13C, before logging"",8.6,1.54666666666667,19,21,3.5,77,""nick"",""A"",5578.61,2572,TRUE,TRUE"
-"133,""Hylobates lar"",""Tanjong Triang"",""(Tanjong Triang)"",9.826875,1.54666666666667,39,14,4,64.1,""nick"",""A"",5578.61,NA,FALSE,FALSE"
-"134,""Hylobates pileatus"",""Khao Ang Rue Nai Wildlife Sanctuary"",NA,29.6,0.8315,55.7,26.4,3,60,""fiona"",""A"",5542.37,1600,TRUE,TRUE"
-"135,""Indri indri"",""Betampona"",""(Betampona)"",13.2,0.5,27,6.6,3.17,8.90833333333333,""nick"",""A"",8565.48,4129,TRUE,TRUE"
-"136,""Lagothrix lagotricha"",""Caparú"",""Estacion Biologica Caparú"",6.6,2.28,748,95,24,NA,""nick"",""A"",6263.69,3836,TRUE,TRUE"
-"137,""Lagothrix lagotricha"",""Tinigua NP"",""(Tinigua)"",6.62,1.64,662,100,31.125,60,""fiona"",""A"",6263.69,2622,TRUE,TRUE"
-"138,""Lagothrix lugens"",""Tinigua NP"",""(Tinigua)"",30,2.1375,169,100,22.9,16.625,""nick"",""A"",6263.69,2622,TRUE,TRUE"
-"139,""Lagothrix poeppigii"",""Yasuni"",""km 47 (De Fiore site)"",14.8428571428571,1.792,124,45,24.5,76.3,""nick"",""A"",6263.69,3250,TRUE,TRUE"
-"140,""Lagothrix poeppigii"",""Yasuni"",""km 47 (De Fiore site)"",14.8428571428571,1.878,124,47,24.5,76.3,""nick"",""A"",6263.69,3250,TRUE,TRUE"
-"141,""Lagothrix poeppigii"",""Yasuni"",""km 47 (De Fiore site)"",14.8428571428571,1.835,105,71,18,76.3,""nick"",""A"",6263.69,3250,TRUE,TRUE"
-"142,""Leontopithecus chrysomelas"",""Lemos Maia (Bahia)"",""CEPEC"",9.75,1.793,38.5,7,5,78.7,""nick"",""A"",572.8,2037,TRUE,TRUE"
-"143,""Leontopithecus rosalia"",""Poco das Antas (RJ)"",""Poco das Antas reserve"",12,1.446,36.2,61.4,5,83.15,""nick"",""A"",592.52,1082,TRUE,TRUE"
-"144,""Leontopithecus rosalia"",""Poco das Antas (RJ)"",""Poco das Antas reserve"",12,1.446,48.7,60.5,5,83.15,""nick"",""A"",592.52,1082,TRUE,TRUE"
-"145,""Lophocebus albigena"",""Kibale"",""Kanyawara and Dura"",6.1,1.06683333333333,4100,72,16,80,""fiona"",""A"",7418.71,1570,TRUE,TRUE"
-"146,""Lophocebus albigena"",""Kibale"",""Ngogo"",13.289,1.299,140,11,20,58,""nick"",""A"",7418.71,1570,TRUE,TRUE"
-"147,""Lophocebus aterrimus"",""Lake Tumba"",""(Lake Tumba)"",69,NA,48,70,19,87.2,""nick"",""A"",6510.37,1398,FALSE,TRUE"
-"148,""Lophocebus aterrimus"",""Lake Tumba"",""(Lake Tumba)"",69,NA,70,70,19,87.2,""nick"",""A"",6510.37,1398,FALSE,TRUE"
-"149,""Macaca fascicularis"",""Mon Vallon"",""(Mon Vallon)"",130,1.2966,87,63,77.5,67.5166666666667,""nick"",""ST"",4569.32,1300,TRUE,TRUE"
-"150,""Macaca fuscata"",""Kinkazan"",""(Kinkazan)"",30,1.878,221,55.1,33,53.8,""nick"",""T"",10114.76,1500,TRUE,TRUE"
-"151,""Macaca fuscata"",""Shiga Heights"",NA,30,2.3328,450,28.1,700,68.086,""fiona"",""T"",10114.76,2314,TRUE,TRUE"
-"152,""Macaca fuscata"",""Shiga Heights"",NA,30,2.3328,680,21.5,135,68.086,""fiona"",""T"",10114.76,2314,TRUE,TRUE"
-"153,""Macaca fuscata"",""Shiga Heights"",NA,30,2.3328,870,24.3,180,68.086,""fiona"",""T"",10114.76,2314,TRUE,TRUE"
-"154,""Macaca fuscata"",""Takagoyama"",NA,30,2.3328,380,46.3,39.8761904761905,68.086,""fiona"",""T"",10114.76,1500,TRUE,TRUE"
-"155,""Macaca fuscata"",""Takagoyama"",NA,30,2.3328,390,18.7,39.8761904761905,68.086,""fiona"",""T"",10114.76,1500,TRUE,TRUE"
-"156,""Macaca fuscata"",""Takagoyama"",NA,30,2.3328,540,18.5,39.8761904761905,68.086,""fiona"",""T"",10114.76,1500,TRUE,TRUE"
-"157,""Macaca fuscata"",""Tsugaru Peninsula"",""*K troop"",30,2.3328,1000,13.1,39.8761904761905,68.086,""fiona"",""T"",10114.76,1380,TRUE,TRUE"
-"158,""Macaca fuscata"",""Tsugaru Peninsula"",""*Y troop"",30,2.3328,1380,9.5,39.8761904761905,68.086,""fiona"",""T"",10114.76,1380,TRUE,TRUE"
-"159,""Macaca fuscata"",""Yakushima"",""W. slope Mt. Kuniwari"",30,1.464,90,58.7,34,80.53,""nick"",""T"",10114.76,2800,TRUE,TRUE"
-"160,""Macaca fuscata"",""Yakushima"",""W. slope Mt. Kuniwari"",30,1.464,40,34.1,22.5,80.53,""nick"",""T"",10114.76,2800,TRUE,TRUE"
-"161,""Macaca fuscata"",""Yakushima"",""W. slope Mt. Kuniwari"",30,1.464,41,35,49,80.53,""nick"",""T"",10114.76,2800,TRUE,TRUE"
-"162,""Macaca mulatta"",""?Nepal"",NA,63.6136111111111,1.61565,12,20,56.9515789473684,NA,""fiona"",""ST"",6455.19,NA,FALSE,FALSE"
-"163,""Macaca mulatta"",""Asarori (Uttar Pradesh)"",""(Asarori)"",63.6136111111111,1.8033,1340,41.3,32.8333333333333,NA,""nick"",""ST"",6455.19,1650,TRUE,TRUE"
-"164,""Macaca mulatta"",""Asarori (Uttar Pradesh)"",""(Asarori)"",63.6136111111111,1.8033,130,100,32.8333333333333,NA,""nick"",""ST"",6455.19,1650,TRUE,TRUE"
-"165,""Macaca mulatta"",""Asarori (Uttar Pradesh)"",""(Asarori)"",63.6136111111111,1.8033,280,51.4,32.8333333333333,NA,""nick"",""ST"",6455.19,1650,TRUE,TRUE"
-"166,""Macaca mulatta"",""Asarori (Uttar Pradesh)"",""(Asarori)"",63.6136111111111,1.8033,480,23.5,32.8333333333333,NA,""nick"",""ST"",6455.19,1650,TRUE,TRUE"
-"167,""Macaca mulatta"",""Asarori (Uttar Pradesh)"",""(Asarori)"",63.6136111111111,1.8033,610,80.3,32.8333333333333,NA,""nick"",""ST"",6455.19,1650,TRUE,TRUE"
-"168,""Macaca mulatta"",""Asarori (Uttar Pradesh)"",""(Asarori)"",63.6136111111111,1.8033,720,82.4,32.8333333333333,NA,""nick"",""ST"",6455.19,1650,TRUE,TRUE"
-"169,""Macaca sylvanus"",""Ghomaran Rif mountains"",""Ghomara"",6.73,NA,307,100,12,NA,""nick"",""ST"",11471.53,992,FALSE,TRUE"
-"170,""Macaca sylvanus"",""Ghomaran Rif mountains"",""Ghomara"",6.73,NA,756,100,12,NA,""nick"",""ST"",11471.53,992,FALSE,TRUE"
-"171,""Macaca sylvanus"",""Ghomaran Rif mountains"",""Ghomara"",6.73,NA,779,39,30,NA,""nick"",""ST"",11471.53,992,FALSE,TRUE"
-"172,""Macaca sylvanus"",""Ghomaran Rif mountains"",""Ghomara"",6.73,NA,884,85,31,NA,""nick"",""ST"",11471.53,992,FALSE,TRUE"
-"173,""Macaca sylvanus"",""Ghomaran Rif mountains"",""Ghomara"",6.73,NA,901,78,59,NA,""nick"",""ST"",11471.53,992,FALSE,TRUE"
-"174,""Macaca sylvanus"",""Moyen Atlas"",""Ain Kahla"",65,NA,117,100,25,NA,""nick"",""ST"",11471.53,561,FALSE,TRUE"
-"175,""Microcebus murinus"",""Ampijoroa Forestry Reserve"",NA,73,NA,3.2,65,1,65,""fiona"",""A"",69,1200,FALSE,TRUE"
-"176,""Microcebus murinus"",""Ampijoroa Forestry Reserve"",NA,95,NA,1.8,44,1,65,""fiona"",""A"",69,1200,FALSE,TRUE"
-"177,""Microcebus murinus"",""Mandena forest"",NA,82.0571428571429,NA,0.6,20,1,65,""fiona"",""A"",69,1680,FALSE,TRUE"
-"178,""Microcebus murinus"",""Mandena forest"",NA,82.0571428571429,NA,4.2,36,1,65,""fiona"",""A"",69,1680,FALSE,TRUE"
-"179,""Nasalis larvatus"",""Lower Kinabatangan (Sabah)"",""Abai"",10,0.91,315,100,10.5,42.4433333333333,""nick"",""A"",12265.65,2395.5,TRUE,TRUE"
-"180,""Nasalis larvatus"",""Lower Kinabatangan (Sabah)"",""Sukau"",34.01,0.91,220.5,100,21,42.4433333333333,""nick"",""A"",12265.65,2395.5,TRUE,TRUE"
-"181,""Nasalis larvatus"",""Mananggul River"",NA,28.135,0.901666666666667,138.3,95,16,42.4433333333333,""fiona"",""A"",12265.65,2509,TRUE,TRUE"
-"182,""Nasalis larvatus"",""Tanjung Puting (Kalimantan)"",""Natai Lengkuas station"",62.6,0.901666666666667,130.3,95.9,12.1,40.33,""nick"",""A"",12265.65,3000,TRUE,TRUE"
-"183,""Nomascus hainanus"",""Bawanglin (Hainan)"",""(Bawanglin)"",1.75,0.42,500,21,7,NA,""nick"",""A"",6865.235,1596,TRUE,TRUE"
-"184,""Otolemur garnettii"",""Diani"",""(Diani)"",34.5,1.8,11.6,40,2,50,""nick"",""A"",811.17,1000,TRUE,TRUE"
-"185,""Otolemur garnettii"",""Diani"",""(Diani)"",34.5,3,17.8,90,2,50,""nick"",""A"",811.17,1000,TRUE,TRUE"
-"186,""Otolemur garnettii"",""Gedi"",""Gedi Ruins"",34.5,1.6,10.8,95,2,50,""nick"",""A"",811.17,1086,TRUE,TRUE"
-"187,""Otolemur garnettii"",""Gedi"",""Gedi Ruins"",34.5,1.6,12.5,90,2,50,""nick"",""A"",811.17,1086,TRUE,TRUE"
-"188,""Otolemur garnettii"",""Gedi"",""Gedi Ruins"",34.5,1.6,13,95,2,50,""nick"",""A"",811.17,1086,TRUE,TRUE"
-"189,""Otolemur garnettii"",""Gedi"",""Gedi Ruins"",34.5,1.6,16.6,40,2,50,""nick"",""A"",811.17,1086,TRUE,TRUE"
-"190,""Otolemur garnettii"",""Gedi"",""Gedi Ruins"",34.5,1.6,16.9,50,2,50,""nick"",""A"",811.17,1086,TRUE,TRUE"
-"191,""Pan paniscus"",""Wamba"",""Yayenge"",3,2.4,1400,64,105,79.4,""nick"",""ST"",35119.95,2005,TRUE,TRUE"
-"192,""Pan paniscus"",""Wamba"",""Yayenge"",3,2.4,1600,63,55,79.4,""nick"",""ST"",35119.95,2005,TRUE,TRUE"
-"193,""Pan paniscus"",""Wamba"",""Yayenge"",3,2.4,2000,40,63,79.4,""nick"",""ST"",35119.95,2005,TRUE,TRUE"
-"194,""Pan paniscus"",""Wamba"",""Yayenge"",3,2.4,2900,48,90,79.4,""nick"",""ST"",35119.95,2005,TRUE,TRUE"
-"195,""Pan troglodytes"",""Mahale, Tanzania"",NA,1.54889763779528,4.588125,1150,41,40.2651851851852,67.4285714285714,""fiona"",""ST"",45000,2000,TRUE,TRUE"
-"196,""Pan troglodytes"",""Masito Hills"",""Kasakati"",0.41,2,12300,21,45,87,""nick"",""ST"",45000,1040,TRUE,TRUE"
-"197,""Pan troglodytes"",""Masito Hills"",""Kasakati"",0.622,2,10500,20,43,87,""nick"",""ST"",45000,1040,TRUE,TRUE"
-"198,""Pan troglodytes"",""Tai"",""(Tai)"",2.58,2.08,1210,13.5,11,67.4285714285714,""nick"",""ST"",45000,1830,TRUE,TRUE"
-"199,""Pan troglodytes"",""Tai"",""(Tai)"",2.58,3.34,1680,9.5,35,67.4285714285714,""nick"",""ST"",45000,1830,TRUE,TRUE"
-"200,""Pan troglodytes"",""Tai"",""(Tai)"",2.58,4.19,2650,7.5,63,67.4285714285714,""nick"",""ST"",45000,1830,TRUE,TRUE"
-"201,""Papio anubis"",""Awash"",""(Awash)"",5.6,5.8,430,95,87,37.975,""nick"",""T"",17728.56,550,TRUE,TRUE"
-"202,""Papio anubis"",""Queen Elizabeth"",""Ishasha River camp"",10.8,4.45528571428571,453.25,9,45,37.975,""nick"",""T"",17728.56,989,TRUE,TRUE"
-"203,""Papio cynocephalus"",""Amboseli"",""(Amboseli)"",5.70333333333333,5.23,1260,22,51.3333333333333,0.05,""nick"",""T"",15822.15,300,TRUE,TRUE"
-"204,""Papio cynocephalus"",""Amboseli"",""(Amboseli)"",5.70333333333333,5.23,1590,22,51.3333333333333,0.05,""nick"",""T"",15822.15,300,TRUE,TRUE"
-"205,""Papio cynocephalus"",""Amboseli"",""(Amboseli)"",5.70333333333333,5.23,1960,22,51.3333333333333,0.05,""nick"",""T"",15822.15,300,TRUE,TRUE"
-"206,""Papio cynocephalus"",""Amboseli"",NA,5.70333333333333,5.23,2400,100,51.3333333333333,0.05,""fiona"",""T"",15822.15,300,TRUE,TRUE"
-"207,""Papio cynocephalus"",""Nairobi NP"",""(Nairobi NP)"",3.86,4.8,2325,40,41,0.05,""nick"",""T"",15822.15,503,TRUE,TRUE"
-"208,""Papio hamadryas"",""Erer-Gota"",""(Erer-Gota)"",10.175,8.6,2800,50,83,NA,""nick"",""T"",14007.08,NA,FALSE,FALSE"
-"209,""Papio ursinus"",""De Hoop"",""(De Hoop)"",9.12368421052632,4.6215625,1236,100,19,35,""nick"",""T"",17729.44,428,TRUE,TRUE"
-"210,""Papio ursinus"",""De Hoop"",""(De Hoop)"",9.12368421052632,4.6215625,1876,100,42,35,""nick"",""T"",17729.44,428,TRUE,TRUE"
-"211,""Papio ursinus"",""Drakensberg"",""Giant's Castle"",0.95,4.3,1890,100,9,0,""nick"",""T"",17729.44,1197,TRUE,TRUE"
-"212,""Papio ursinus"",""Drakensberg"",""Giant's Castle"",1.87,3.8,1000,50,14,6,""nick"",""T"",17729.44,1197,TRUE,TRUE"
-"213,""Papio ursinus"",""Kuiseb"",""(Kuiseb)"",3.5,4.025,941,10.5,32,29.86,""nick"",""T"",17729.44,22.5,TRUE,TRUE"
-"214,""Papio ursinus"",""Kuiseb"",""(Kuiseb)"",7,4.025,402,17.8,31,29.86,""nick"",""T"",17729.44,22.5,TRUE,TRUE"
-"215,""Papio ursinus"",""Suikerbosrand"",""(Suikerbosrand)"",3.76,3.1,2487.5,42,74,43.3,""nick"",""T"",17729.44,700,TRUE,TRUE"
-"216,""Papio ursinus"",""Suikerbosrand"",""(Suikerbosrand)"",3.93,4.5,2825,40,88,43.3,""nick"",""T"",17729.44,700,TRUE,TRUE"
-"217,""Papio ursinus"",""Suikerbosrand"",""(Suikerbosrand)"",4.86,4.8,2475,62,82,43.3,""nick"",""T"",17729.44,700,TRUE,TRUE"
-"218,""Papio ursinus"",""Suikerbosrand"",""(Suikerbosrand)"",4.98,5.4,2050,69,68,43.3,""nick"",""T"",17729.44,700,TRUE,TRUE"
-"219,""Piliocolobus badius"",""Tai"",""(Tai)"",145,0.967,65,23,72.5,10.4,""nick"",""A"",8430.4,1830,TRUE,TRUE"
-"220,""Piliocolobus badius"",""Tai"",""(Tai)"",160.625,0.967,64,19.5,72.5,10.4,""nick"",""A"",8430.4,1830,TRUE,TRUE"
-"221,""Piliocolobus badius"",""Tiwai"",""East study area"",60.7,0.8375,52.5,15,3,31,""nick"",""A"",8430.4,2708,TRUE,TRUE"
-"222,""Piliocolobus rufomitratus"",""Kibale"",""Ngogo"",265.9978,0.531666666666667,12.65,45,12.2671428571429,25,""fiona"",""A"",8030.75,1570,TRUE,TRUE"
-"223,""Piliocolobus tephrosceles"",""Kibale"",""Kanyawara (K14)"",225.05,0.575,21.9,49,24,8.9,""nick"",""A"",8676.23,1570,TRUE,TRUE"
-"224,""Piliocolobus tephrosceles"",""Kibale"",""Kanyawara (K14)"",225.05,0.575,26.4,41,48,6.6,""nick"",""A"",8676.23,1570,TRUE,TRUE"
-"225,""Piliocolobus tephrosceles"",""Kibale"",""Kanyawara (K30)"",309.375,0.309,5.04,10,10,7.645,""nick"",""A"",8676.23,1570,TRUE,TRUE"
-"226,""Piliocolobus tephrosceles"",""Kibale"",""Kanyawara (K30)"",309.375,0.577,36.9,1.5,48,7.645,""nick"",""A"",8676.23,1570,TRUE,TRUE"
-"227,""Piliocolobus tephrosceles"",""Kibale"",""Kanyawara (K30)"",309.375,0.511633333333333,16.5,98.5,40,7.645,""nick"",""A"",8676.23,1570,TRUE,TRUE"
-"228,""Piliocolobus tephrosceles"",""Kibale"",""Kanyawara (K30)"",309.375,0.511633333333333,40,89.4,78,7.645,""nick"",""A"",8676.23,1570,TRUE,TRUE"
-"229,""Pongo pygmaeus"",""Mawas (Kalimantan)"",""Tuanan"",4.38,0.613333333333333,245,95,1.7775,62.225,""nick"",""A"",53408.29,NA,FALSE,FALSE"
-"230,""Pongo pygmaeus"",""Tuanan Mawas reserve "",""Tuanan field station"",4.25,0.613333333333333,275.415,30,1,62.225,""fiona"",""A"",53408.29,2678,TRUE,TRUE"
-"231,""Presbytis comata"",""Kamojang (Java)"",""(Kamojang)"",11,0.5,38,9,8,14.2,""nick"",""A"",6550.07,3000,TRUE,TRUE"
-"232,""Presbytis melalophos"",""Krau"",""Kuala Lompat"",33.1,NA,29.5,79,15,46,""fiona"",""A"",6439.12,2000,FALSE,TRUE"
-"233,""Presbytis potenziani"",""North Pagai (Mentawai Islands)"",""Betumonga"",13.5,0.54,25,40,2,32,""nick"",""A"",6449.53,3373,TRUE,TRUE"
-"234,""Presbytis potenziani"",""North Pagai (Mentawai Islands)"",""Betumonga"",13.5,0.54,30,40,3,32,""nick"",""A"",6449.53,3373,TRUE,TRUE"
-"235,""Presbytis potenziani"",""North Pagai (Mentawai Islands)"",""Betumonga"",13.5,0.54,35,40,3,32,""nick"",""A"",6449.53,3373,TRUE,TRUE"
-"236,""Presbytis potenziani"",""North Pagai (Mentawai Islands)"",""Betumonga"",13.5,0.54,38,40,5.3,32,""nick"",""A"",6449.53,3373,TRUE,TRUE"
-"237,""Presbytis potenziani"",""North Pagai (Mentawai Islands)"",""Betumonga"",13.5,0.54,40,40,4,32,""nick"",""A"",6449.53,3373,TRUE,TRUE"
-"238,""Presbytis rubicunda"",""Sepilok (Sabah)"",""(Sepilok)"",19,0.892,77.7,10,7.5,50.2,""nick"",""A"",6348.53,3000,TRUE,TRUE"
-"239,""Presbytis rubicunda"",""Tanjung Puting (Kalimantan)"",""Orangutan research centre"",12.3333333333333,0.844,63,25,6.11111111111111,52,""nick"",""A"",6348.53,3000,TRUE,TRUE"
-"240,""Presbytis siamensis"",""Krau"",""Kuala Lompat"",87.1,0.68,27.5,79,13.3111111111111,48.2666666666667,""nick"",""A"",5895.06,2000,TRUE,TRUE"
-"241,""Presbytis siamensis"",""Krau"",""Kuala Lompat"",87.1,0.766,31.3,50,13.3111111111111,48.2666666666667,""nick"",""A"",5895.06,2000,TRUE,TRUE"
-"242,""Presbytis siamensis"",""Sungai Tekam"",""13C"",39.0076923076923,0.614,14,15,14,54,""nick"",""A"",5895.06,2572,TRUE,TRUE"
-"243,""Presbytis siamensis"",""Sungai Tekam"",""13C"",39.0076923076923,0.614,15,32,14,54,""nick"",""A"",5895.06,2572,TRUE,TRUE"
-"244,""Presbytis siamensis"",""Sungai Tekam"",""C13C, after logging"",61.4,0.614,17,2,14,42,""nick"",""A"",5895.06,2572,TRUE,TRUE"
-"245,""Presbytis siamensis"",""Sungai Tekam"",""C13C, after logging"",61.4,0.614,20,4,14,42,""nick"",""A"",5895.06,2572,TRUE,TRUE"
-"246,""Presbytis siamensis"",""Sungai Tekam"",""C13C, before logging"",47.4,0.614,14,15,14,60,""nick"",""A"",5895.06,2572,TRUE,TRUE"
-"247,""Presbytis siamensis"",""Sungai Tekam"",""C13C, before logging"",47.4,0.614,15,32,14,60,""nick"",""A"",5895.06,2572,TRUE,TRUE"
-"248,""Propithecus verreauxi"",""Kirindy"",""German Primate Centre"",51.5666666666667,NA,7.9,50.1,6,NA,""fiona"",""A"",3588.26,889,FALSE,TRUE"
-"249,""Rhinopithecus roxellana"",""Zhouzhi NNR"",""Yuhuangmiao (East ridge pop)"",7.2,1.332,1830,25,112,NA,""fiona"",""ST"",13456.8,980,TRUE,TRUE"
-"250,""Rhinopithecus roxellana"",""Zhouzhi NNR "",""Yuhuangmiao (west ridge pop)"",7.2,1.332,1525,30,239.4625,NA,""fiona"",""ST"",13456.8,980,TRUE,TRUE"
-"251,""Saguinus fuscicollis"",""Cachoeira Samuel (Rondonia)"",""Cachoeira Samuel power stn"",20.0028205128205,1.312,44,21,8,79.4,""nick"",""A"",393.99,2250,TRUE,TRUE"
-"252,""Saguinus fuscicollis"",""Manu"",""Cocha Cashu"",16,1.22,30,1,3.83333333333333,31,""nick"",""A"",393.99,2080,TRUE,TRUE"
-"253,""Saguinus fuscicollis"",""Manu"",""Cocha Cashu"",13.4,1.22,30,0,3.83333333333333,31,""nick"",""A"",393.99,2080,TRUE,TRUE"
-"254,""Saguinus fuscicollis"",""Mucden"",""(Mucden)"",18.85,1.54644444444444,33.4,79,4.3,55.2833333333333,""nick"",""A"",393.99,1747,TRUE,TRUE"
-"255,""Saguinus geoffroyi"",""Rodman"",""Rodman Naval Ammunition Depot"",27,2.061,26,13,4.14,49,""nick"",""A"",492.5,1727,TRUE,TRUE"
-"256,""Saguinus imperator"",""Manu"",""Cocha Cashu"",12,1.42,30,1,4,23.35,""nick"",""A"",407.91,2080,TRUE,TRUE"
-"257,""Saguinus imperator"",""Manu"",""Cocha Cashu"",8.7,1.42,30,0,4,23.35,""nick"",""A"",407.91,2080,TRUE,TRUE"
-"258,""Saguinus mystax"",""Iquitos islands"",""Padre Isla"",23.7,1.50933333333333,6.8,38,7,44.5,""nick"",""A"",555.87,2846,TRUE,TRUE"
-"259,""Saguinus niger"",""Fazenda Vit¢ria"",""(Fazenda Vit¢ria)"",16.365,NA,15.6,21.7,6,NA,""fiona"",""A"",500,1900,FALSE,TRUE"
-"260,""Saguinus oedipus"",""Tolu"",""(Tolu)"",50,1.7,10,25,4,NA,""nick"",""A"",462.04,750,TRUE,TRUE"
-"261,""Saguinus oedipus"",""Tolu"",""(Tolu)"",55,1.7,7.8,27,4,NA,""nick"",""A"",462.04,750,TRUE,TRUE"
-"262,""Saguinus oedipus"",""Tolu"",""(Tolu)"",125,1.7,7.8,20,9,NA,""nick"",""A"",462.04,750,TRUE,TRUE"
-"263,""Saimiri boliviensis"",""Manu"",""Cocha Cashu"",60,NA,250,3.6,35,17.2,""nick"",""A"",799.45,2080,FALSE,TRUE"
-"264,""Saimiri boliviensis"",""Manu"",""Cocha Cashu"",72,NA,250,77,35,17.2,""nick"",""A"",799.45,2080,FALSE,TRUE"
-"265,""Saimiri oerstedii"",""Barqueta"",""Hacienda Barqueta"",130,3.35,17.5,90,23,NA,""nick"",""A"",714.18,2469,TRUE,TRUE"
-"266,""Semnopithecus dussumieri"",""Dharwar (Karnataka)"",""20km"",44.565,1.207,18,50.5,17,25,""nick"",""ST"",11352.97,867.5,TRUE,TRUE"
-"267,""Semnopithecus dussumieri"",""Dharwar (Karnataka)"",""20km"",44.565,1.207,26.6,56,23,25,""nick"",""ST"",11352.97,867.5,TRUE,TRUE"
-"268,""Semnopithecus entellus"",""Gir forest (Gujarat)"",""(Gir)"",127,1.28433333333333,17,0,25.5666666666667,30,""nick"",""ST"",12679.29,889,TRUE,TRUE"
-"269,""Semnopithecus entellus"",""Gir forest (Gujarat)"",""(Gir)"",127,1.28433333333333,23,0,25.5666666666667,30,""nick"",""ST"",12679.29,889,TRUE,TRUE"
-"270,""Semnopithecus entellus"",""Kanha"",NA,34.6266666666667,1.28433333333333,75,50,23.9556790123457,24,""fiona"",""ST"",12679.29,1600,TRUE,TRUE"
-"271,""Simias concolor"",""Siberut (Mentawai Islands)"",""Grukna"",220,NA,3.5,8,6,27.5,""nick"",""A"",7393.9,4217,FALSE,TRUE"
-"272,""Symphalangus syndactylus"",""?Malaysia"",NA,11.2635833333333,0.809666666666667,32,30,3.76742857142857,60,""fiona"",""A"",10839,NA,FALSE,FALSE"
-"273,""Tarsius bancanus"",""Semongok (Sarawak)"",""(Semongok)"",77.5,1.8,1.25,10,3,0,""nick"",""A"",114.39,3905,TRUE,TRUE"
-"274,""Trachypithecus johnii"",""Kakachi"",NA,70.8,0.5,24,10,17,26.3,""fiona"",""A"",10595.08,3084,TRUE,TRUE"
-"275,""Trachypithecus obscurus"",""Krau"",""Kuala Lompat"",45.85,0.559,33,3,13.55,41.15,""nick"",""A"",7247.88,2000,TRUE,TRUE"
-"276,""Trachypithecus pileatus"",""Madhupur"",""(Madhupur)"",13.2,0.2245,50,84,7.88181818181818,24.4,""nick"",""A"",11219.93,2280,TRUE,TRUE"
-"277,""Trachypithecus pileatus"",""Madhupur"",""(Madhupur)"",92,0.2245,24,100,13,33,""fiona"",""A"",11219.93,2280,TRUE,TRUE"
-"278,""Trachypithecus poliocephalus"",""Fusui (Guangxi)"",""LGS (Fusui reserve)"",2.965,0.6,26,19.2,7.5,NA,""nick"",""A"",8593.55888888889,1548,TRUE,TRUE"
-"279,""Trachypithecus poliocephalus"",""Fusui (Guangxi)"",""LGS (Fusui reserve)"",2.965,0.6,27,0,12,NA,""nick"",""A"",8593.55888888889,1548,TRUE,TRUE"
-"280,""Trachypithecus poliocephalus"",""Fusui (Guangxi)"",""LGS (Fusui reserve)"",2.965,0.6,28,95,4.5,NA,""nick"",""A"",8593.55888888889,1548,TRUE,TRUE"
-"281,""Trachypithecus poliocephalus"",""Fusui (Guangxi)"",""LGS (Fusui reserve)"",2.965,0.6,32,0,6,NA,""nick"",""A"",8593.55888888889,1548,TRUE,TRUE"
-"282,""Trachypithecus poliocephalus"",""Fusui (Guangxi)"",""LGS (Fusui reserve)"",2.965,0.6,32,48.3,14.5,NA,""nick"",""A"",8593.55888888889,1548,TRUE,TRUE"
-"283,""Trachypithecus poliocephalus"",""Fusui (Guangxi)"",""LGS (Fusui reserve)"",2.965,0.6,36,83.7,9.5,NA,""nick"",""A"",8593.55888888889,1548,TRUE,TRUE"
-"284,""Trachypithecus poliocephalus"",""Fusui (Guangxi)"",""LGS (Fusui reserve)"",2.965,0.6,48,87.1,10,NA,""nick"",""A"",8593.55888888889,1548,TRUE,TRUE"
-"285,""Varecia rubra"",""Masoala"",""Ambatonakolahy forest"",36.85,0.436,23.3,10.8,5,73.9,""nick"",""A"",3872.6,4200,TRUE,TRUE"
-"286,""Varecia rubra"",""Masoala"",""Ambatonakolahy forest"",36.85,0.436,25.8,9.7,6,73.9,""nick"",""A"",3872.6,4200,TRUE,TRUE"
+;MSW3sp;Site;Plot;PD;DR;HR;ov;GS;FS;miner;Status;mass;rain;multi1;multi2
+1;Allocebus trichotis;Analamazaotra Special reserve, nr Andasibe village;NA;18;NA;16;30;4;NA;fiona;A;78.09;1700;FALSE;TRUE
+2;Allocebus trichotis;Analamazaotra Special reserve, nr Andasibe village;NA;18;NA;35.5;15;11;NA;fiona;A;78.09;1700;FALSE;TRUE
+3;Alouatta caraya;El Pi¤alito Provincial Park;NA;112.5142857;0.3995;17.32;37.92;6;30.33333333;fiona;A;5576.96;1952;TRUE;TRUE
+4;Alouatta caraya;El Pi¤alito Provincial Park;NA;112.5142857;0.3995;111.91;5.87;13;30.33333333;fiona;A;5576.96;1952;TRUE;TRUE
+5;Alouatta guariba;El Pi¤alito Provincial Park;NA;34.39788235;0.558;31.22;0;4;18.87857143;fiona;A;5188.33;1952;TRUE;TRUE
+6;Alouatta guariba;El Pi¤alito Provincial Park;NA;34.39788235;0.558;70.32;0;8;18.87857143;fiona;A;5188.33;1952;TRUE;TRUE
+7;Alouatta guariba;Santa Genebra (SP);(Santa Genebra);148;0.467;4.13;33.3;6;10;nick;A;5188.33;1360;TRUE;TRUE
+8;Alouatta palliata;Barqueta;Hacienda Barqueta;1040;0.272;4.85;94;18.9;35.452;nick;A;6576.99;2469;TRUE;TRUE
+9;Alouatta palliata;Barro Colorado;NA;70.86239535;0.287947368;31;100;15.03326923;35.452;fiona;A;6576.99;2623;TRUE;TRUE
+10;Alouatta palliata;Barro Colorado Island;(BCI);100.9;0.284;11.3;62.5;14.7;44.32;nick;A;6576.99;2728;TRUE;TRUE
+11;Alouatta palliata;Barro Colorado Island;(BCI);50.51166667;0.2;18.5;0;16.5;44.32;nick;A;6576.99;2728;TRUE;TRUE
+12;Alouatta palliata;Barro Colorado Island;year 1971;1029;0.295888889;4.9;94;16.72866667;44.94285714;fiona;A;6576.99;2728;TRUE;TRUE
+13;Alouatta pigra;Barro Colorado Island;year 1932;49.4;0.472666667;86;5;17.3;36.78777778;fiona;A;7172.06;2728;TRUE;TRUE
+14;Alouatta pigra;Palenque National Park;NA;23;0.472666667;5.3875;0;6;36.78777778;fiona;A;7172.06;2696;TRUE;TRUE
+15;Alouatta pigra;Palenque National Park;NA;23;0.472666667;5.3875;0;6;36.78777778;fiona;A;7172.06;2696;TRUE;TRUE
+16;Alouatta seniculus;Hato Masaguaral;(Hato Masaguaral);128.9482759;0.379;5.55;52.8;8.170344828;47.53333333;nick;A;6398.31;1450;TRUE;TRUE
+17;Alouatta seniculus;Ot£n Quimbaya;NA;72.6;0.63875;10.2;20.9;8;47.53333333;fiona;A;6398.31;2712;TRUE;TRUE
+18;Ateles belzebuth;La Macarena;Laguna el Tigre;13.5;4;323;25;23.5;83;nick;A;6692.42;2674;TRUE;TRUE
+19;Ateles belzebuth;Yasuni National Park;Proyecto Primates Research Area;7.575;2.7125;149.4;80;1;83;fiona;A;6692.42;3200;TRUE;TRUE
+20;Ateles belzebuth;Yasuni National Park;Proyecto Primates Research Area;7.575;2.7125;152.3;85;1;83;fiona;A;6692.42;3200;TRUE;TRUE
+21;Ateles chamek;Manu;Cocha Cashu;24.9475;2.1885;153;16;40;77.5;nick;A;7053.92;2080;TRUE;TRUE
+22;Ateles chamek;Manu;Cocha Cashu;24.9475;2.1885;231;10;37;77.5;nick;A;7053.92;2080;TRUE;TRUE
+23;Ateles paniscus;Central Suriname Nature Preserve;beneath Volzberg dome;8.2;2.7;255;0;18;82.9;nick;A;8697.25;2300;TRUE;TRUE
+24;Brachyteles hypoxanthus;Fazenda Montes Claros (MG);Estacao Biologica de Caratinga;5.2;1.283;168;46;35.42307692;28;nick;A;10537.31;1120;TRUE;TRUE
+25;Brachyteles hypoxanthus;Fazenda Montes Claros (MG);Estacao Biologica de Caratinga;5.2;1.313;309;41;62.5;28;nick;A;10537.31;1120;TRUE;TRUE
+26;Bunopithecus hoolock;Hollongapar (Assam);(Hollongapar);20;1.041333333;22;23;3.43;67;nick;A;6699;3890;TRUE;TRUE
+27;Bunopithecus hoolock;West Bhanugach;Lawachara;9.34;1.157;35;9;3;82.2;nick;A;6699;2000;TRUE;TRUE
+28;Bunopithecus hoolock;West Bhanugach;Lawachara;9.34;1.367;66.5;21.4;2.857142857;82.2;nick;A;6699;2000;TRUE;TRUE
+29;Callicebus melanochir;Lemos Maia (Bahia);ESMAI;17;1.01;23.3;12.9;3;76.6;nick;A;1034.310769;2037;TRUE;TRUE
+30;Callicebus melanochir;Lemos Maia (Bahia);ESMAI;17;1.01;24.3;12.3;3;76.6;nick;A;1034.310769;2037;TRUE;TRUE
+31;Callicebus ornatus;Barbascal;Socay forest;407;0.5675;0.4352;6;3.11;NA;nick;A;1034.310769;2650;TRUE;TRUE
+32;Callicebus ornatus;Finca la Macarena;(Finca La Macarena);57;0.5675;3.66;1.55;3;NA;nick;A;1034.310769;NA;FALSE;FALSE
+33;Callicebus ornatus;Finca la Macarena;*Troop C;57;0.5675;4.18;18;3.065;70;fiona;A;988;2000;TRUE;TRUE
+34;Callicebus ornatus;Finca la Macarena;*Troop Cr;57;0.5675;3.5;1.4;3.065;70;fiona;A;988;2000;TRUE;TRUE
+35;Callicebus ornatus;Finca la Macarena;*Troop T;57;0.5675;3.29;16.6;3.065;70;fiona;A;988;2000;TRUE;TRUE
+36;Callicebus personatus;Linhares (ES);(Linhares);10.075;1;10.7;20;3.97;56;nick;A;1390.8;1051;TRUE;TRUE
+37;Callicebus personatus;Linhares (ES);(Linhares);10.075;1;12.3;20;3.97;56;nick;A;1390.8;1051;TRUE;TRUE
+38;Callithrix aurita;Cunha Nucleus (SP);Serro do Mar;30;0.9588;35.3;15;8.5;81.5;nick;A;386.2;2000;TRUE;TRUE
+39;Callithrix flaviceps;Fazenda Montes Claros (MG);Estacao Biologica de Caratinga;40;1.2225;35.5;80;13;80.12;nick;A;372.97;1120;TRUE;TRUE
+40;Callithrix intermedia;Rio Aripuana (MT);right bank, opposite Dardanelos;54.1;1.459;28.25;22;10;86.4;nick;A;345.2241667;2082;TRUE;TRUE
+41;Callithrix jacchus;Nisia Floresta (Rio Grande del Norte);EFLEX-IBAMA;804.8333333;0.912;5.2;46;7;48.05;nick;A;290.21;1229;TRUE;TRUE
+42;Callithrix jacchus;Nisia Floresta (Rio Grande del Norte);EFLEX-IBAMA;804.8333333;1.181;4.6;72;13;48.05;nick;A;290.21;1229;TRUE;TRUE
+43;Callithrix jacchus;Nisia Floresta (Rio Grande del Norte);EFLEX-IBAMA;804.8333333;1.243;3.9;86;12;48.05;nick;A;290.21;1229;TRUE;TRUE
+44;Callithrix jacchus;Tapacura (Pernambuco);Tapacura field station;588;0.5655;2.24;14;8;48.05;nick;A;290.21;1117;TRUE;TRUE
+45;Callithrix jacchus;Tapacura (Pernambuco);Tapacura field station;663;0.606;2.08;15;8;48.05;nick;A;290.21;1117;TRUE;TRUE
+46;Callithrix jacchus;Tapacura (Pernambuco);Tapacura field station;679;0.978;3.52;18;11;48.05;nick;A;290.21;1117;TRUE;TRUE
+47;Callithrix jacchus;Tapacura (Pernambuco);Tapacura field station;700;0.15;0.85;31;10.5;48.05;nick;A;290.21;1117;TRUE;TRUE
+48;Callithrix jacchus;Tapacura (Pernambuco);Tapacura field station;804.8333333;0.5655;2.5;0;9.636363636;48.05;nick;A;290.21;1117;TRUE;TRUE
+49;Callithrix jacchus;Tapacura (Pernambuco);Tapacura field station;804.8333333;0.5655;6.5;0;9.636363636;48.05;nick;A;290.21;1117;TRUE;TRUE
+50;Callithrix kuhlii;Lemos Maia (Bahia);CEPEC;46;0.975;13;50;5;86.1;nick;A;374.99;2037;TRUE;TRUE
+51;Callithrix pygmaea;Rio Maniti;R. Maniti & Hatun Quabrada;51.5;0.29;0.35;0;5.63;77;nick;A;123.94;2830;TRUE;TRUE
+52;Cebus albifrons;Manu;Cocha Cashu;35;1.82;150;3.5;8.5;34.85;nick;A;2509.68;2080;TRUE;TRUE
+53;Cebus albifrons;Manu;Cocha Cashu;29.5;1.82;150;71;8.5;34.85;nick;A;2509.68;2080;TRUE;TRUE
+54;Cebus apella;Manu;Cocha Cashu;40;2.07;82.5;3.2;10.72222222;24;nick;A;2758.38;2080;TRUE;TRUE
+55;Cebus apella;Manu;Cocha Cashu;38;2.07;80;69;10.72222222;24;nick;A;2758.38;2080;TRUE;TRUE
+56;Cebus nigritus;Iguazu National Park;(Iguazu);16;NA;161;43.3;14.6;NA;nick;A;2812.338;1950;FALSE;TRUE
+57;Cebus olivaceus;Hato Masaguaral;(Hato Masaguaral);13.126;2.3;275;100;19.5;50.75;nick;A;2787.64;1450;TRUE;TRUE
+58;Cercopithecus albogularis;Cape Vidal;(Cape Vidal);196;NA;18;16.7;28;52.4;nick;A;4049.440556;1037;FALSE;TRUE
+59;Cercopithecus cephus;Makokou;(Makokou);25.5;1.295;52;56;15;79;nick;A;3444.88;1645;TRUE;TRUE
+60;Cercopithecus cephus;Makokou;(Makokou);25.5;1.98;119;24;15;79;nick;A;3444.88;1645;TRUE;TRUE
+61;Cercopithecus diana;Tai;(Tai);52.5;1.236;83;41;25;76.3;nick;A;4358.91;1830;TRUE;TRUE
+62;Cercopithecus diana;Tai;(Tai);70.5;1.236;77;38;25;76.3;nick;A;4358.91;1830;TRUE;TRUE
+63;Cercopithecus mitis;Kakamega;.;176.7;1.136;15.25;66;14;57;nick;A;5041.29;2040;TRUE;TRUE
+64;Cercopithecus mitis;Kakamega;.;176.7;1.136;23;45;34;57;nick;A;5041.29;2040;TRUE;TRUE
+65;Cercopithecus mitis;Kakamega;Isecheno;176.7;1.136;38;53;43;57;nick;A;5041.29;2040;TRUE;TRUE
+66;Cercopithecus mitis;Kibale;Kanyawara (K14);52.2;1.216;36.44;5;18;21.7;nick;A;5041.29;1570;TRUE;TRUE
+67;Cercopithecus mitis;Kibale;Ngogo;6.67;1.406;325;1;23;30.1;nick;A;5041.29;1570;TRUE;TRUE
+68;Cercopithecus neglectus;Kisere Forest;Isiukhu;220;0.31;5;5;11;47;nick;A;5324.52;2215;TRUE;TRUE
+69;Cercopithecus neglectus;Kisere Forest;Isiukhu;320;0.31;4.1;14;13;47;nick;A;5324.52;2215;TRUE;TRUE
+70;Cercopithecus neglectus;Makokou;Ile aux Chimpanzes;35;0.53;5.33;13.6;3.67;74.38;nick;A;5324.52;1645;TRUE;TRUE
+71;Cercopithecus neglectus;Makokou;M'Passa Plateau;45;0.53;8.5;21.9;4;74.38;nick;A;5324.52;1659;TRUE;TRUE
+72;Cheirogaleus major;Mandena forest;QMM Station;NA;NA;5.5;5.9;2;65;fiona;A;446.02;1680;FALSE;FALSE
+73;Cheirogaleus major;Mandena forest;QMM Station;NA;NA;7;4.6;5;65;fiona;A;446.02;1680;FALSE;FALSE
+74;Cheirogaleus major;Mandena forest;NA;NA;NA;4.4;3;NA;65;fiona;A;446.02;1680;FALSE;FALSE
+75;Cheirogaleus medius;Mandena forest;NA;261.6;NA;1.6;3;3;65;fiona;A;196.76;1680;FALSE;TRUE
+76;Chlorocebus djamdjamensis;Odobullu Forest;Robe Field Station;NA;NA;12.3;4.1;48;NA;fiona;ST;3000;797;FALSE;FALSE
+77;Chlorocebus djamdjamensis;Odobullu Forest;Robe Field Station;NA;NA;18.1;2.8;58;NA;fiona;ST;3000;796;FALSE;FALSE
+78;Chlorocebus pygerythrus;Amboseli;(Amboseli);62.2525;0.456;5.2;31.9;11;NA;nick;ST;3695.99;300;TRUE;TRUE
+79;Chlorocebus pygerythrus;Amboseli;(Amboseli);62.2525;0.456;12.8;57.4;16;NA;nick;ST;3695.99;300;TRUE;TRUE
+80;Chlorocebus pygerythrus;Amboseli;(Amboseli);62.2525;0.456;13.4;9.9;8;NA;nick;ST;3695.99;300;TRUE;TRUE
+81;Chlorocebus pygerythrus;Amboseli;(Amboseli);62.2525;0.456;15.8;34.5;11;NA;nick;ST;3695.99;300;TRUE;TRUE
+82;Chlorocebus pygerythrus;Amboseli;(Amboseli);62.2525;0.456;16.7;4;10.5;NA;nick;ST;3695.99;300;TRUE;TRUE
+83;Chlorocebus pygerythrus;Amboseli;(Amboseli);62.2525;0.456;24.9;8;11;NA;nick;ST;3695.99;300;TRUE;TRUE
+84;Chlorocebus pygerythrus;Amboseli;NA;62.2525;0.456;38;34;17.73076923;NA;fiona;ST;3560;300;TRUE;TRUE
+85;Chlorocebus sabaeus;Niokolo-Koba;Mt. Assirik;14.3;NA;178.4;9.6;25.5;63;nick;ST;3695.99;1045;FALSE;TRUE
+86;Chlorocebus tantalus;Bakossiland;near Nayassoso;112.6;1.6035;11.5;0;11;57.2;nick;ST;3695.99;3952.5;TRUE;TRUE
+87;Chlorocebus tantalus;Bakossiland;near Nayassoso;112.6;1.6035;15.25;0;18;57.2;nick;ST;3695.99;3952.5;TRUE;TRUE
+88;Chlorocebus tantalus;Buffle Noir;(Buffle Noir);18;2.268;102.5;5.6;18;26.8;nick;ST;3695.99;1450;TRUE;TRUE
+89;Chlorocebus tantalus;Kalamaloue;(Kalamaloue);149;0.939;56.25;18.2;76;67.33333333;nick;ST;3695.99;650;TRUE;TRUE
+90;Colobus guereza;Kakamega;Isecheno;147.15;0.45;20.25;61;11;38.55;nick;A;9925.88;2040;TRUE;TRUE
+91;Colobus guereza;Kakamega;Isecheno;147.15;0.564;12.75;49;15;38.55;nick;A;9925.88;2040;TRUE;TRUE
+92;Colobus guereza;Kakamega;Isecheno;147.15;0.565;12;73;10;38.55;nick;A;9925.88;2040;TRUE;TRUE
+93;Colobus guereza;Kakamega;Isecheno;147.15;0.625;16;83;7;38.55;nick;A;9925.88;2040;TRUE;TRUE
+94;Colobus guereza;Kakamega;Isecheno;147.15;0.734;17.25;69;21;38.55;nick;A;9925.88;2040;TRUE;TRUE
+95;Colobus guereza;Kibale;Kanyawara;41.64083333;0.535;19.7;83;8.313636364;6.322222222;fiona;A;9925.88;1570;TRUE;TRUE
+96;Colobus guereza;Kibale;Kanyawara (K14);36.525;0.535;8.4;42;6;9.6;nick;A;9925.88;1570;TRUE;TRUE
+97;Colobus guereza;Kibale;Kanyawara (K14);36.525;0.535;12.5;28;9;0;nick;A;9925.88;1570;TRUE;TRUE
+98;Colobus guereza;Kibale;NA;41.64083333;0.535;15;74;9;5.166666667;fiona;A;9925.88;1570;TRUE;TRUE
+99;Colobus guereza;Queen Elizabeth;Kyambura Gorge;347;0.54275;3.7;80;7.958333333;16.25384615;nick;A;9925.88;900;TRUE;TRUE
+100;Colobus polykomos;Tiwai;East study area;52;0.832;24.5;4;12.5;36;nick;A;8797.29;2708;TRUE;TRUE
+101;Colobus satanas;Foret des Abeilles;Makande;5.85;0.73;573;65;18;50.95;nick;A;9055.32;1755;TRUE;TRUE
+102;Colobus satanas;Foret des Abeilles;Makande;6.575;0.608;224;70;11;50.95;nick;A;9055.32;1755;TRUE;TRUE
+103;Colobus satanas;Foret des Abeilles;Makande;6.575;0.852;573;65;17.5;52;nick;A;9055.32;1755;TRUE;TRUE
+104;Daubentonia madagascariensis;Nosy Mangabe;(Nosy Mangabe);NA;1.551;126;75;1;47.6;nick;A;2731.37;3806;FALSE;FALSE
+105;Daubentonia madagascariensis;Nosy Mangabe;(Nosy Mangabe);NA;2.256;214;40;1;47.6;nick;A;2731.37;3806;FALSE;FALSE
+106;Eulemur macaco;Ankafara;SIRNP;200;NA;5.12;95;10.6;22;fiona;A;2470.43;1824;FALSE;TRUE
+107;Eulemur macaco;Ankafara;SIRNP;200;NA;6.02;100;10.6;22;fiona;A;2470.43;1824;FALSE;TRUE
+108;Eulemur macaco;Ankafara;SIRNP;200;NA;8.78;100;10.6;22;fiona;A;2470.43;1824;FALSE;TRUE
+109;Eulemur macaco;Ankafara;SIRNP;200;NA;25.21;50;10.6;22;fiona;A;2470.43;1824;FALSE;TRUE
+110;Eulemur macaco;Sahamalaza (UN BR): Ankarafa forest;NA;200;NA;3.8;90;10.6;22;fiona;A;2470.43;1824;FALSE;TRUE
+111;Eulemur macaco;Sahamalaza (UN BR): Ankarafa forest;NA;200;NA;6.3;50;10.6;22;fiona;A;2470.43;1824;FALSE;TRUE
+112;Eulemur macaco;Sahamalaza (UN BR): Ankarafa forest;NA;200;NA;9.7;35;10.6;22;fiona;A;2470.43;1824;FALSE;TRUE
+113;Eulemur macaco;Sahamalaza (UN BR): Ankarafa forest;NA;200;NA;19.6;15;10.6;22;fiona;A;2470.43;1824;FALSE;TRUE
+114;Gorilla beringei;Vulcans (Virunga volcanoes);Karisoke;1.374;0.485;2080;55;14.5;1.7;nick;T;149325.19;1750;TRUE;TRUE
+115;Gorilla beringei;Vulcans (Virunga volcanoes);Karisoke;1.374;0.485;2430;47;26;1.7;nick;T;149325.19;1750;TRUE;TRUE
+116;Gorilla gorilla;Mt Alen (Rio Muni);Abuminzok-Aninzok;0.58;0.9;550;0;6.4;54.72;nick;T;112588.99;2800;TRUE;TRUE
+117;Gorilla gorilla;Mt Alen (Rio Muni);Monte Alen region;0.86;1.13;675;0;7.13;54.72;nick;T;112588.99;2800;TRUE;TRUE
+118;Hapalemur aureus;Ranomafana;Talatakely;NA;0.4;26;10;3.75;4;nick;A;1562.41;2489;FALSE;FALSE
+119;Hapalemur griseus;Ranomafana;Talatakely;38.625;NA;15;7;5.5;5;nick;A;916;2489;FALSE;TRUE
+120;Hylobates agilis;Gunung Bubu Forest Reserve;Sungai Dal;190;1.26;29;24;4;57.5;fiona;A;5829.08;4000;TRUE;TRUE
+121;Hylobates albibarbis;Sabanga;NLPSF;10.38;NA;53;15;4.3;NA;fiona;A;5300;2912;FALSE;TRUE
+122;Hylobates klossii;Siberut (Mentawai Islands);Paitan river;10.5;1.508;34.5;0;3.67;72;nick;A;5822.29;4217;TRUE;TRUE
+123;Hylobates klossii;Siberut (Mentawai Islands);Paitan river;10.5;1.508;31;0;3;72;nick;A;5822.29;4217;TRUE;TRUE
+124;Hylobates klossii;Siberut (Mentawai Islands);Teitei Peleigei;30;1.508;11;0;4.1;72;nick;A;5822.29;4217;TRUE;TRUE
+125;Hylobates lar;Khao Yai;(Khao Yai);30.4;1.546666667;21.5;15.6;4.833333333;64.1;nick;A;5578.61;1500;TRUE;TRUE
+126;Hylobates lar;Khao Yai;(Khao Yai);30.4;1.546666667;24.5;35.7;4.833333333;64.1;nick;A;5578.61;1500;TRUE;TRUE
+127;Hylobates lar;Khao Yai;(Khao Yai);30.4;1.546666667;26.5;16.4;4.833333333;64.1;nick;A;5578.61;1500;TRUE;TRUE
+128;Hylobates lar;Krau;Kuala Lompat;6.1;1.85;53;1;3.5;56.85;nick;A;5578.61;2000;TRUE;TRUE
+129;Hylobates lar;Sungai Tekam;C13C, after logging;14.8;1.546666667;11;14;3.5;60;nick;A;5578.61;2572;TRUE;TRUE
+130;Hylobates lar;Sungai Tekam;C13C, after logging;14.8;1.546666667;15;8;3.5;60;nick;A;5578.61;2572;TRUE;TRUE
+131;Hylobates lar;Sungai Tekam;C13C, before logging;8.6;1.546666667;17;28;3.5;77;nick;A;5578.61;2572;TRUE;TRUE
+132;Hylobates lar;Sungai Tekam;C13C, before logging;8.6;1.546666667;19;21;3.5;77;nick;A;5578.61;2572;TRUE;TRUE
+133;Hylobates lar;Tanjong Triang;(Tanjong Triang);9.826875;1.546666667;39;14;4;64.1;nick;A;5578.61;NA;FALSE;FALSE
+134;Hylobates pileatus;Khao Ang Rue Nai Wildlife Sanctuary;NA;29.6;0.8315;55.7;26.4;3;60;fiona;A;5542.37;1600;TRUE;TRUE
+135;Indri indri;Betampona;(Betampona);13.2;0.5;27;6.6;3.17;8.908333333;nick;A;8565.48;4129;TRUE;TRUE
+136;Lagothrix lagotricha;Caparú;Estacion Biologica Caparú;6.6;2.28;748;95;24;NA;nick;A;6263.69;3836;TRUE;TRUE
+137;Lagothrix lagotricha;Tinigua NP;(Tinigua);6.62;1.64;662;100;31.125;60;fiona;A;6263.69;2622;TRUE;TRUE
+138;Lagothrix lugens;Tinigua NP;(Tinigua);30;2.1375;169;100;22.9;16.625;nick;A;6263.69;2622;TRUE;TRUE
+139;Lagothrix poeppigii;Yasuni;km 47 (De Fiore site);14.84285714;1.792;124;45;24.5;76.3;nick;A;6263.69;3250;TRUE;TRUE
+140;Lagothrix poeppigii;Yasuni;km 47 (De Fiore site);14.84285714;1.878;124;47;24.5;76.3;nick;A;6263.69;3250;TRUE;TRUE
+141;Lagothrix poeppigii;Yasuni;km 47 (De Fiore site);14.84285714;1.835;105;71;18;76.3;nick;A;6263.69;3250;TRUE;TRUE
+142;Leontopithecus chrysomelas;Lemos Maia (Bahia);CEPEC;9.75;1.793;38.5;7;5;78.7;nick;A;572.8;2037;TRUE;TRUE
+143;Leontopithecus rosalia;Poco das Antas (RJ);Poco das Antas reserve;12;1.446;36.2;61.4;5;83.15;nick;A;592.52;1082;TRUE;TRUE
+144;Leontopithecus rosalia;Poco das Antas (RJ);Poco das Antas reserve;12;1.446;48.7;60.5;5;83.15;nick;A;592.52;1082;TRUE;TRUE
+145;Lophocebus albigena;Kibale;Kanyawara and Dura;6.1;1.066833333;4100;72;16;80;fiona;A;7418.71;1570;TRUE;TRUE
+146;Lophocebus albigena;Kibale;Ngogo;13.289;1.299;140;11;20;58;nick;A;7418.71;1570;TRUE;TRUE
+147;Lophocebus aterrimus;Lake Tumba;(Lake Tumba);69;NA;48;70;19;87.2;nick;A;6510.37;1398;FALSE;TRUE
+148;Lophocebus aterrimus;Lake Tumba;(Lake Tumba);69;NA;70;70;19;87.2;nick;A;6510.37;1398;FALSE;TRUE
+149;Macaca fascicularis;Mon Vallon;(Mon Vallon);130;1.2966;87;63;77.5;67.51666667;nick;ST;4569.32;1300;TRUE;TRUE
+150;Macaca fuscata;Kinkazan;(Kinkazan);30;1.878;221;55.1;33;53.8;nick;T;10114.76;1500;TRUE;TRUE
+151;Macaca fuscata;Shiga Heights;NA;30;2.3328;450;28.1;700;68.086;fiona;T;10114.76;2314;TRUE;TRUE
+152;Macaca fuscata;Shiga Heights;NA;30;2.3328;680;21.5;135;68.086;fiona;T;10114.76;2314;TRUE;TRUE
+153;Macaca fuscata;Shiga Heights;NA;30;2.3328;870;24.3;180;68.086;fiona;T;10114.76;2314;TRUE;TRUE
+154;Macaca fuscata;Takagoyama;NA;30;2.3328;380;46.3;39.87619048;68.086;fiona;T;10114.76;1500;TRUE;TRUE
+155;Macaca fuscata;Takagoyama;NA;30;2.3328;390;18.7;39.87619048;68.086;fiona;T;10114.76;1500;TRUE;TRUE
+156;Macaca fuscata;Takagoyama;NA;30;2.3328;540;18.5;39.87619048;68.086;fiona;T;10114.76;1500;TRUE;TRUE
+157;Macaca fuscata;Tsugaru Peninsula;*K troop;30;2.3328;1000;13.1;39.87619048;68.086;fiona;T;10114.76;1380;TRUE;TRUE
+158;Macaca fuscata;Tsugaru Peninsula;*Y troop;30;2.3328;1380;9.5;39.87619048;68.086;fiona;T;10114.76;1380;TRUE;TRUE
+159;Macaca fuscata;Yakushima;W. slope Mt. Kuniwari;30;1.464;90;58.7;34;80.53;nick;T;10114.76;2800;TRUE;TRUE
+160;Macaca fuscata;Yakushima;W. slope Mt. Kuniwari;30;1.464;40;34.1;22.5;80.53;nick;T;10114.76;2800;TRUE;TRUE
+161;Macaca fuscata;Yakushima;W. slope Mt. Kuniwari;30;1.464;41;35;49;80.53;nick;T;10114.76;2800;TRUE;TRUE
+162;Macaca mulatta;?Nepal;NA;63.61361111;1.61565;12;20;56.95157895;NA;fiona;ST;6455.19;NA;FALSE;FALSE
+163;Macaca mulatta;Asarori (Uttar Pradesh);(Asarori);63.61361111;1.8033;1340;41.3;32.83333333;NA;nick;ST;6455.19;1650;TRUE;TRUE
+164;Macaca mulatta;Asarori (Uttar Pradesh);(Asarori);63.61361111;1.8033;130;100;32.83333333;NA;nick;ST;6455.19;1650;TRUE;TRUE
+165;Macaca mulatta;Asarori (Uttar Pradesh);(Asarori);63.61361111;1.8033;280;51.4;32.83333333;NA;nick;ST;6455.19;1650;TRUE;TRUE
+166;Macaca mulatta;Asarori (Uttar Pradesh);(Asarori);63.61361111;1.8033;480;23.5;32.83333333;NA;nick;ST;6455.19;1650;TRUE;TRUE
+167;Macaca mulatta;Asarori (Uttar Pradesh);(Asarori);63.61361111;1.8033;610;80.3;32.83333333;NA;nick;ST;6455.19;1650;TRUE;TRUE
+168;Macaca mulatta;Asarori (Uttar Pradesh);(Asarori);63.61361111;1.8033;720;82.4;32.83333333;NA;nick;ST;6455.19;1650;TRUE;TRUE
+169;Macaca sylvanus;Ghomaran Rif mountains;Ghomara;6.73;NA;307;100;12;NA;nick;ST;11471.53;992;FALSE;TRUE
+170;Macaca sylvanus;Ghomaran Rif mountains;Ghomara;6.73;NA;756;100;12;NA;nick;ST;11471.53;992;FALSE;TRUE
+171;Macaca sylvanus;Ghomaran Rif mountains;Ghomara;6.73;NA;779;39;30;NA;nick;ST;11471.53;992;FALSE;TRUE
+172;Macaca sylvanus;Ghomaran Rif mountains;Ghomara;6.73;NA;884;85;31;NA;nick;ST;11471.53;992;FALSE;TRUE
+173;Macaca sylvanus;Ghomaran Rif mountains;Ghomara;6.73;NA;901;78;59;NA;nick;ST;11471.53;992;FALSE;TRUE
+174;Macaca sylvanus;Moyen Atlas;Ain Kahla;65;NA;117;100;25;NA;nick;ST;11471.53;561;FALSE;TRUE
+175;Microcebus murinus;Ampijoroa Forestry Reserve;NA;73;NA;3.2;65;1;65;fiona;A;69;1200;FALSE;TRUE
+176;Microcebus murinus;Ampijoroa Forestry Reserve;NA;95;NA;1.8;44;1;65;fiona;A;69;1200;FALSE;TRUE
+177;Microcebus murinus;Mandena forest;NA;82.05714286;NA;0.6;20;1;65;fiona;A;69;1680;FALSE;TRUE
+178;Microcebus murinus;Mandena forest;NA;82.05714286;NA;4.2;36;1;65;fiona;A;69;1680;FALSE;TRUE
+179;Nasalis larvatus;Lower Kinabatangan (Sabah);Abai;10;0.91;315;100;10.5;42.44333333;nick;A;12265.65;2395.5;TRUE;TRUE
+180;Nasalis larvatus;Lower Kinabatangan (Sabah);Sukau;34.01;0.91;220.5;100;21;42.44333333;nick;A;12265.65;2395.5;TRUE;TRUE
+181;Nasalis larvatus;Mananggul River;NA;28.135;0.901666667;138.3;95;16;42.44333333;fiona;A;12265.65;2509;TRUE;TRUE
+182;Nasalis larvatus;Tanjung Puting (Kalimantan);Natai Lengkuas station;62.6;0.901666667;130.3;95.9;12.1;40.33;nick;A;12265.65;3000;TRUE;TRUE
+183;Nomascus hainanus;Bawanglin (Hainan);(Bawanglin);1.75;0.42;500;21;7;NA;nick;A;6865.235;1596;TRUE;TRUE
+184;Otolemur garnettii;Diani;(Diani);34.5;1.8;11.6;40;2;50;nick;A;811.17;1000;TRUE;TRUE
+185;Otolemur garnettii;Diani;(Diani);34.5;3;17.8;90;2;50;nick;A;811.17;1000;TRUE;TRUE
+186;Otolemur garnettii;Gedi;Gedi Ruins;34.5;1.6;10.8;95;2;50;nick;A;811.17;1086;TRUE;TRUE
+187;Otolemur garnettii;Gedi;Gedi Ruins;34.5;1.6;12.5;90;2;50;nick;A;811.17;1086;TRUE;TRUE
+188;Otolemur garnettii;Gedi;Gedi Ruins;34.5;1.6;13;95;2;50;nick;A;811.17;1086;TRUE;TRUE
+189;Otolemur garnettii;Gedi;Gedi Ruins;34.5;1.6;16.6;40;2;50;nick;A;811.17;1086;TRUE;TRUE
+190;Otolemur garnettii;Gedi;Gedi Ruins;34.5;1.6;16.9;50;2;50;nick;A;811.17;1086;TRUE;TRUE
+191;Pan paniscus;Wamba;Yayenge;3;2.4;1400;64;105;79.4;nick;ST;35119.95;2005;TRUE;TRUE
+192;Pan paniscus;Wamba;Yayenge;3;2.4;1600;63;55;79.4;nick;ST;35119.95;2005;TRUE;TRUE
+193;Pan paniscus;Wamba;Yayenge;3;2.4;2000;40;63;79.4;nick;ST;35119.95;2005;TRUE;TRUE
+194;Pan paniscus;Wamba;Yayenge;3;2.4;2900;48;90;79.4;nick;ST;35119.95;2005;TRUE;TRUE
+195;Pan troglodytes;Mahale, Tanzania;NA;1.548897638;4.588125;1150;41;40.26518519;67.42857143;fiona;ST;45000;2000;TRUE;TRUE
+196;Pan troglodytes;Masito Hills;Kasakati;0.41;2;12300;21;45;87;nick;ST;45000;1040;TRUE;TRUE
+197;Pan troglodytes;Masito Hills;Kasakati;0.622;2;10500;20;43;87;nick;ST;45000;1040;TRUE;TRUE
+198;Pan troglodytes;Tai;(Tai);2.58;2.08;1210;13.5;11;67.42857143;nick;ST;45000;1830;TRUE;TRUE
+199;Pan troglodytes;Tai;(Tai);2.58;3.34;1680;9.5;35;67.42857143;nick;ST;45000;1830;TRUE;TRUE
+200;Pan troglodytes;Tai;(Tai);2.58;4.19;2650;7.5;63;67.42857143;nick;ST;45000;1830;TRUE;TRUE
+201;Papio anubis;Awash;(Awash);5.6;5.8;430;95;87;37.975;nick;T;17728.56;550;TRUE;TRUE
+202;Papio anubis;Queen Elizabeth;Ishasha River camp;10.8;4.455285714;453.25;9;45;37.975;nick;T;17728.56;989;TRUE;TRUE
+203;Papio cynocephalus;Amboseli;(Amboseli);5.703333333;5.23;1260;22;51.33333333;0.05;nick;T;15822.15;300;TRUE;TRUE
+204;Papio cynocephalus;Amboseli;(Amboseli);5.703333333;5.23;1590;22;51.33333333;0.05;nick;T;15822.15;300;TRUE;TRUE
+205;Papio cynocephalus;Amboseli;(Amboseli);5.703333333;5.23;1960;22;51.33333333;0.05;nick;T;15822.15;300;TRUE;TRUE
+206;Papio cynocephalus;Amboseli;NA;5.703333333;5.23;2400;100;51.33333333;0.05;fiona;T;15822.15;300;TRUE;TRUE
+207;Papio cynocephalus;Nairobi NP;(Nairobi NP);3.86;4.8;2325;40;41;0.05;nick;T;15822.15;503;TRUE;TRUE
+208;Papio hamadryas;Erer-Gota;(Erer-Gota);10.175;8.6;2800;50;83;NA;nick;T;14007.08;NA;FALSE;FALSE
+209;Papio ursinus;De Hoop;(De Hoop);9.123684211;4.6215625;1236;100;19;35;nick;T;17729.44;428;TRUE;TRUE
+210;Papio ursinus;De Hoop;(De Hoop);9.123684211;4.6215625;1876;100;42;35;nick;T;17729.44;428;TRUE;TRUE
+211;Papio ursinus;Drakensberg;Giant's Castle;0.95;4.3;1890;100;9;0;nick;T;17729.44;1197;TRUE;TRUE
+212;Papio ursinus;Drakensberg;Giant's Castle;1.87;3.8;1000;50;14;6;nick;T;17729.44;1197;TRUE;TRUE
+213;Papio ursinus;Kuiseb;(Kuiseb);3.5;4.025;941;10.5;32;29.86;nick;T;17729.44;22.5;TRUE;TRUE
+214;Papio ursinus;Kuiseb;(Kuiseb);7;4.025;402;17.8;31;29.86;nick;T;17729.44;22.5;TRUE;TRUE
+215;Papio ursinus;Suikerbosrand;(Suikerbosrand);3.76;3.1;2487.5;42;74;43.3;nick;T;17729.44;700;TRUE;TRUE
+216;Papio ursinus;Suikerbosrand;(Suikerbosrand);3.93;4.5;2825;40;88;43.3;nick;T;17729.44;700;TRUE;TRUE
+217;Papio ursinus;Suikerbosrand;(Suikerbosrand);4.86;4.8;2475;62;82;43.3;nick;T;17729.44;700;TRUE;TRUE
+218;Papio ursinus;Suikerbosrand;(Suikerbosrand);4.98;5.4;2050;69;68;43.3;nick;T;17729.44;700;TRUE;TRUE
+219;Piliocolobus badius;Tai;(Tai);145;0.967;65;23;72.5;10.4;nick;A;8430.4;1830;TRUE;TRUE
+220;Piliocolobus badius;Tai;(Tai);160.625;0.967;64;19.5;72.5;10.4;nick;A;8430.4;1830;TRUE;TRUE
+221;Piliocolobus badius;Tiwai;East study area;60.7;0.8375;52.5;15;3;31;nick;A;8430.4;2708;TRUE;TRUE
+222;Piliocolobus rufomitratus;Kibale;Ngogo;265.9978;0.531666667;12.65;45;12.26714286;25;fiona;A;8030.75;1570;TRUE;TRUE
+223;Piliocolobus tephrosceles;Kibale;Kanyawara (K14);225.05;0.575;21.9;49;24;8.9;nick;A;8676.23;1570;TRUE;TRUE
+224;Piliocolobus tephrosceles;Kibale;Kanyawara (K14);225.05;0.575;26.4;41;48;6.6;nick;A;8676.23;1570;TRUE;TRUE
+225;Piliocolobus tephrosceles;Kibale;Kanyawara (K30);309.375;0.309;5.04;10;10;7.645;nick;A;8676.23;1570;TRUE;TRUE
+226;Piliocolobus tephrosceles;Kibale;Kanyawara (K30);309.375;0.577;36.9;1.5;48;7.645;nick;A;8676.23;1570;TRUE;TRUE
+227;Piliocolobus tephrosceles;Kibale;Kanyawara (K30);309.375;0.511633333;16.5;98.5;40;7.645;nick;A;8676.23;1570;TRUE;TRUE
+228;Piliocolobus tephrosceles;Kibale;Kanyawara (K30);309.375;0.511633333;40;89.4;78;7.645;nick;A;8676.23;1570;TRUE;TRUE
+229;Pongo pygmaeus;Mawas (Kalimantan);Tuanan;4.38;0.613333333;245;95;1.7775;62.225;nick;A;53408.29;NA;FALSE;FALSE
+230;Pongo pygmaeus;Tuanan Mawas reserve ;Tuanan field station;4.25;0.613333333;275.415;30;1;62.225;fiona;A;53408.29;2678;TRUE;TRUE
+231;Presbytis comata;Kamojang (Java);(Kamojang);11;0.5;38;9;8;14.2;nick;A;6550.07;3000;TRUE;TRUE
+232;Presbytis melalophos;Krau;Kuala Lompat;33.1;NA;29.5;79;15;46;fiona;A;6439.12;2000;FALSE;TRUE
+233;Presbytis potenziani;North Pagai (Mentawai Islands);Betumonga;13.5;0.54;25;40;2;32;nick;A;6449.53;3373;TRUE;TRUE
+234;Presbytis potenziani;North Pagai (Mentawai Islands);Betumonga;13.5;0.54;30;40;3;32;nick;A;6449.53;3373;TRUE;TRUE
+235;Presbytis potenziani;North Pagai (Mentawai Islands);Betumonga;13.5;0.54;35;40;3;32;nick;A;6449.53;3373;TRUE;TRUE
+236;Presbytis potenziani;North Pagai (Mentawai Islands);Betumonga;13.5;0.54;38;40;5.3;32;nick;A;6449.53;3373;TRUE;TRUE
+237;Presbytis potenziani;North Pagai (Mentawai Islands);Betumonga;13.5;0.54;40;40;4;32;nick;A;6449.53;3373;TRUE;TRUE
+238;Presbytis rubicunda;Sepilok (Sabah);(Sepilok);19;0.892;77.7;10;7.5;50.2;nick;A;6348.53;3000;TRUE;TRUE
+239;Presbytis rubicunda;Tanjung Puting (Kalimantan);Orangutan research centre;12.33333333;0.844;63;25;6.111111111;52;nick;A;6348.53;3000;TRUE;TRUE
+240;Presbytis siamensis;Krau;Kuala Lompat;87.1;0.68;27.5;79;13.31111111;48.26666667;nick;A;5895.06;2000;TRUE;TRUE
+241;Presbytis siamensis;Krau;Kuala Lompat;87.1;0.766;31.3;50;13.31111111;48.26666667;nick;A;5895.06;2000;TRUE;TRUE
+242;Presbytis siamensis;Sungai Tekam;13C;39.00769231;0.614;14;15;14;54;nick;A;5895.06;2572;TRUE;TRUE
+243;Presbytis siamensis;Sungai Tekam;13C;39.00769231;0.614;15;32;14;54;nick;A;5895.06;2572;TRUE;TRUE
+244;Presbytis siamensis;Sungai Tekam;C13C, after logging;61.4;0.614;17;2;14;42;nick;A;5895.06;2572;TRUE;TRUE
+245;Presbytis siamensis;Sungai Tekam;C13C, after logging;61.4;0.614;20;4;14;42;nick;A;5895.06;2572;TRUE;TRUE
+246;Presbytis siamensis;Sungai Tekam;C13C, before logging;47.4;0.614;14;15;14;60;nick;A;5895.06;2572;TRUE;TRUE
+247;Presbytis siamensis;Sungai Tekam;C13C, before logging;47.4;0.614;15;32;14;60;nick;A;5895.06;2572;TRUE;TRUE
+248;Propithecus verreauxi;Kirindy;German Primate Centre;51.56666667;NA;7.9;50.1;6;NA;fiona;A;3588.26;889;FALSE;TRUE
+249;Rhinopithecus roxellana;Zhouzhi NNR;Yuhuangmiao (East ridge pop);7.2;1.332;1830;25;112;NA;fiona;ST;13456.8;980;TRUE;TRUE
+250;Rhinopithecus roxellana;Zhouzhi NNR ;Yuhuangmiao (west ridge pop);7.2;1.332;1525;30;239.4625;NA;fiona;ST;13456.8;980;TRUE;TRUE
+251;Saguinus fuscicollis;Cachoeira Samuel (Rondonia);Cachoeira Samuel power stn;20.00282051;1.312;44;21;8;79.4;nick;A;393.99;2250;TRUE;TRUE
+252;Saguinus fuscicollis;Manu;Cocha Cashu;16;1.22;30;1;3.833333333;31;nick;A;393.99;2080;TRUE;TRUE
+253;Saguinus fuscicollis;Manu;Cocha Cashu;13.4;1.22;30;0;3.833333333;31;nick;A;393.99;2080;TRUE;TRUE
+254;Saguinus fuscicollis;Mucden;(Mucden);18.85;1.546444444;33.4;79;4.3;55.28333333;nick;A;393.99;1747;TRUE;TRUE
+255;Saguinus geoffroyi;Rodman;Rodman Naval Ammunition Depot;27;2.061;26;13;4.14;49;nick;A;492.5;1727;TRUE;TRUE
+256;Saguinus imperator;Manu;Cocha Cashu;12;1.42;30;1;4;23.35;nick;A;407.91;2080;TRUE;TRUE
+257;Saguinus imperator;Manu;Cocha Cashu;8.7;1.42;30;0;4;23.35;nick;A;407.91;2080;TRUE;TRUE
+258;Saguinus mystax;Iquitos islands;Padre Isla;23.7;1.509333333;6.8;38;7;44.5;nick;A;555.87;2846;TRUE;TRUE
+259;Saguinus niger;Fazenda Vit¢ria;(Fazenda Vit¢ria);16.365;NA;15.6;21.7;6;NA;fiona;A;500;1900;FALSE;TRUE
+260;Saguinus oedipus;Tolu;(Tolu);50;1.7;10;25;4;NA;nick;A;462.04;750;TRUE;TRUE
+261;Saguinus oedipus;Tolu;(Tolu);55;1.7;7.8;27;4;NA;nick;A;462.04;750;TRUE;TRUE
+262;Saguinus oedipus;Tolu;(Tolu);125;1.7;7.8;20;9;NA;nick;A;462.04;750;TRUE;TRUE
+263;Saimiri boliviensis;Manu;Cocha Cashu;60;NA;250;3.6;35;17.2;nick;A;799.45;2080;FALSE;TRUE
+264;Saimiri boliviensis;Manu;Cocha Cashu;72;NA;250;77;35;17.2;nick;A;799.45;2080;FALSE;TRUE
+265;Saimiri oerstedii;Barqueta;Hacienda Barqueta;130;3.35;17.5;90;23;NA;nick;A;714.18;2469;TRUE;TRUE
+266;Semnopithecus dussumieri;Dharwar (Karnataka);20km;44.565;1.207;18;50.5;17;25;nick;ST;11352.97;867.5;TRUE;TRUE
+267;Semnopithecus dussumieri;Dharwar (Karnataka);20km;44.565;1.207;26.6;56;23;25;nick;ST;11352.97;867.5;TRUE;TRUE
+268;Semnopithecus entellus;Gir forest (Gujarat);(Gir);127;1.284333333;17;0;25.56666667;30;nick;ST;12679.29;889;TRUE;TRUE
+269;Semnopithecus entellus;Gir forest (Gujarat);(Gir);127;1.284333333;23;0;25.56666667;30;nick;ST;12679.29;889;TRUE;TRUE
+270;Semnopithecus entellus;Kanha;NA;34.62666667;1.284333333;75;50;23.95567901;24;fiona;ST;12679.29;1600;TRUE;TRUE
+271;Simias concolor;Siberut (Mentawai Islands);Grukna;220;NA;3.5;8;6;27.5;nick;A;7393.9;4217;FALSE;TRUE
+272;Symphalangus syndactylus;?Malaysia;NA;11.26358333;0.809666667;32;30;3.767428571;60;fiona;A;10839;NA;FALSE;FALSE
+273;Tarsius bancanus;Semongok (Sarawak);(Semongok);77.5;1.8;1.25;10;3;0;nick;A;114.39;3905;TRUE;TRUE
+274;Trachypithecus johnii;Kakachi;NA;70.8;0.5;24;10;17;26.3;fiona;A;10595.08;3084;TRUE;TRUE
+275;Trachypithecus obscurus;Krau;Kuala Lompat;45.85;0.559;33;3;13.55;41.15;nick;A;7247.88;2000;TRUE;TRUE
+276;Trachypithecus pileatus;Madhupur;(Madhupur);13.2;0.2245;50;84;7.881818182;24.4;nick;A;11219.93;2280;TRUE;TRUE
+277;Trachypithecus pileatus;Madhupur;(Madhupur);92;0.2245;24;100;13;33;fiona;A;11219.93;2280;TRUE;TRUE
+278;Trachypithecus poliocephalus;Fusui (Guangxi);LGS (Fusui reserve);2.965;0.6;26;19.2;7.5;NA;nick;A;8593.558889;1548;TRUE;TRUE
+279;Trachypithecus poliocephalus;Fusui (Guangxi);LGS (Fusui reserve);2.965;0.6;27;0;12;NA;nick;A;8593.558889;1548;TRUE;TRUE
+280;Trachypithecus poliocephalus;Fusui (Guangxi);LGS (Fusui reserve);2.965;0.6;28;95;4.5;NA;nick;A;8593.558889;1548;TRUE;TRUE
+281;Trachypithecus poliocephalus;Fusui (Guangxi);LGS (Fusui reserve);2.965;0.6;32;0;6;NA;nick;A;8593.558889;1548;TRUE;TRUE
+282;Trachypithecus poliocephalus;Fusui (Guangxi);LGS (Fusui reserve);2.965;0.6;32;48.3;14.5;NA;nick;A;8593.558889;1548;TRUE;TRUE
+283;Trachypithecus poliocephalus;Fusui (Guangxi);LGS (Fusui reserve);2.965;0.6;36;83.7;9.5;NA;nick;A;8593.558889;1548;TRUE;TRUE
+284;Trachypithecus poliocephalus;Fusui (Guangxi);LGS (Fusui reserve);2.965;0.6;48;87.1;10;NA;nick;A;8593.558889;1548;TRUE;TRUE
+285;Varecia rubra;Masoala;Ambatonakolahy forest;36.85;0.436;23.3;10.8;5;73.9;nick;A;3872.6;4200;TRUE;TRUE
+286;Varecia rubra;Masoala;Ambatonakolahy forest;36.85;0.436;25.8;9.7;6;73.9;nick;A;3872.6;4200;TRUE;TRUE

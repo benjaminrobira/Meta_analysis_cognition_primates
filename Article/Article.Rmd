@@ -89,8 +89,8 @@ source("T:/Saved_PhD/Empirical_analysis/Scripts&Functions/Functions/toolbox.R", 
 
 #Create citation fusion between articles and package (based on toolbox function)
 citeR(
-bibliographyArticle="C:/Users/robira/Documents/PhD/Meta_analysis/Cognition_metaanalysis/Text/bibliographyarticle.bib",
-bibliographyOutput="C:/Users/robira/Documents/PhD/Meta_analysis/Cognition_metaanalysis/Text/bibliographyarticlepackage.bib",
+bibliographyArticle="C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Article/bibliographyarticle.bib",
+bibliographyOutput="C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Article/bibliographyarticlepackage.bib",
 rgeos,
 geosphere,
 phytools,
@@ -102,8 +102,8 @@ misc3d
 )
 
 #Load environments
-load("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/REnvironmentsData_spatial_primate.RData")
-load("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/REnvironmentsgeography_traits_biogeobears.RData")
+load("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/REnvironments/Data_spatial_primate.RData")
+load("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/REnvironments/geography_traits_biogeobears.RData")
 
 ```
 
@@ -136,7 +136,7 @@ checkSampleMOB <- rep(NA, times=repetition)
 
 for(i in 0:repetition){
   
-  summaryDataOfInterest <- read_delim(paste("C:/Users/robira/Documents/PhD/Meta_analysis/Cognition_metaanalysis/OutputEvolModel/Data",i,".txt", sep=""), "\t", escape_double = FALSE, trim_ws = TRUE)
+  summaryDataOfInterest <- read_delim(paste("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/OutputEvolModel/Data",i,".txt", sep=""), "\t", escape_double = FALSE, trim_ws = TRUE)
     
   checkSampleFruit[i] <- length(summaryDataOfInterest$DietaryGuild[summaryDataOfInterest$DietaryGuild=="Fruit"])
   checkSampleLeaf[i]  <- length(summaryDataOfInterest$DietaryGuild[summaryDataOfInterest$DietaryGuild=="Leaf"])
@@ -246,7 +246,7 @@ Note that in all these analyses, we discarded *Homo sapiens*. A summary of avail
 
 ### Phylogeny
 
-We used a block of chronogram trees of the Primates taxon of the 10kTrees project (downloaded on the 28/01/2020, version 3), as well as a consensus tree of 1 000 trees for the subsequent phylogenetic analyses. The trees contain `r length(phylo_init$tip.label)` primate species. 
+We used a block of chronogram trees of the Primates taxon of the 10kTrees project (downloaded on the 11/05/2021, version 3), as well as a consensus tree of 1 000 trees for the subsequent phylogenetic analyses. The trees contain `r length(phylo_init$tip.label)` primate species. 
 
 ### Brain data
 
@@ -408,10 +408,10 @@ par(mar=c(0, 0, 0, 0), mgp=c(2, 0.5, 0), xpd=TRUE)
 ####
 
 #Import data
-summaryDataForPlot <- read_delim("C:/Users/robira/Documents/PhD/Meta_analysis/Cognition_metaanalysis/OutputEvolModel/Dataplot.txt","\t", escape_double = FALSE, trim_ws = TRUE)
+summaryDataForPlot <- read_delim("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/OutputEvolModel/Dataplot.txt","\t", escape_double = FALSE, trim_ws = TRUE)
 
 #Tree
-tree <- read.tree("C:/Users/robira/Documents/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Tree/Tree_diet.nex")
+tree <- read.tree("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Raw_data/Tree/Tree_diet.nex")
 
 #Create geography df
 geoBinary <- as.data.frame(summaryDataForPlot[,c(3,which(colnames(summaryDataForPlot)=="geographicCode"))])

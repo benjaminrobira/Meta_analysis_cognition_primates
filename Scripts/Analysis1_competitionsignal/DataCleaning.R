@@ -19,7 +19,7 @@ rm(list=ls())
 ##--------
 #Home made functions
 #To source all phylogenetics functions (biogeobears + models of evolution)
-source("~/PhD/Meta_analysis/Cognition_metaanalysis/Functions.R")
+source("Scripts/Functions.R")
 
 #My toolkit
 source("T:/Saved_PhD/Empirical_analysis/Scripts&Functions/Functions/toolbox.R")
@@ -129,7 +129,7 @@ speciesGeo <- gsub(" ", "_",  speciesGeo)
 
 #Extract name of phylogeny
 
-treeForName <-read.nexus("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Tree/consensusTree_10kTrees_Primates_Version3.nex")
+treeForName <-read.nexus("/Raw_data/Tree/consensusTree_10kTrees_Primates_Version3.nex")
 speciesLabels <-  as.data.frame(treeForName$tip.label)
 
 #Determine the belonging geographic area based on overlap
@@ -362,48 +362,48 @@ lines(x=thresholdPresenceRange, y=howManyDifferent)
 
 options(warn=1)
 #Powell
-Data_powell <- read.delim("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Powell/Data_powell.txt")
-Data_powell_mosaic <- read.delim("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Powell/Data_powell_mosaic.txt")
-Data_powell2 <- read.delim("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Powell/Data_powell2.txt")
+Data_powell <- read.delim("Raw_data/Powell/Data_powell.txt")
+Data_powell_mosaic <- read.delim("Raw_data/Powell/Data_powell_mosaic.txt")
+Data_powell2 <- read.delim("Raw_data/Powell/Data_powell2.txt")
 Data_powell2<- Data_powell2[Data_powell2$MSW05_Order=="Primates",]
 
 #Todorov
-Data_todorov <-  read.delim("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Todorov/data.txt")
+Data_todorov <-  read.delim("Raw_data/Todorov/data.txt")
 
 #Willems
-Data_willems <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Willems/willems_data.csv", sep=";")
+Data_willems <- read.csv("Raw_data/Willems/willems_data.csv", sep=";")
 
 #Decasien
-Data_decasien_body <- read.delim("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Decasien/data_decasien1_body.txt")
-Data_decasien_brain <- read.delim("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Decasien/data_decasien1_brain.txt")
-Data_decasien_diet <- read.delim("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Decasien/data_decasien1_diet.txt")
-Data_decasien_groupsize <- read.delim("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Decasien/data_decasien1_groupsize.txt")
-Data_decasien_social <- read.delim2("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Decasien/data_decasien1_social.txt")
-Data_decasien_mosaic <- read.delim2("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Decasien/Decasien_mosaic.txt")
+Data_decasien_body <- read.delim("Raw_data/Decasien/data_decasien1_body.txt")
+Data_decasien_brain <- read.delim("Raw_data/Decasien/data_decasien1_brain.txt")
+Data_decasien_diet <- read.delim("Raw_data/Decasien/data_decasien1_diet.txt")
+Data_decasien_groupsize <- read.delim("Raw_data/Decasien/data_decasien1_groupsize.txt")
+Data_decasien_social <- read.delim2("Raw_data/Decasien/data_decasien1_social.txt")
+Data_decasien_mosaic <- read.delim2("Raw_data/Decasien/Decasien_mosaic.txt")
 
 #Kamilar
-Data_kamilar1 <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Kamilar/kamilar_data1.csv", sep=";")
-Data_kamilar2 <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Kamilar/kamilar_data2.csv", sep=";")
-Data_kamilar3 <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Kamilar/kamilar_data3.csv", sep=";")
-Data_kamilar4 <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Kamilar/kamilar_data4.csv", sep=";")
-Data_kamilar5 <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Kamilar/kamilar_data5.csv", sep=";")
-Data_kamilar6 <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Kamilar/kamilar_data6.csv", sep=";")
-Data_kamilar7 <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Kamilar/kamilar_data7.csv", sep=";")
-Data_kamilar8 <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Kamilar/kamilar_data8.csv", sep=";")
-Data_kamilar9 <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Kamilar/kamilar_data9.csv", sep=";")
-Data_kamilar10 <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Kamilar/kamilar_data10.csv", sep=";")
+Data_kamilar1 <- read.csv("Raw_data/Kamilar/kamilar_data1.csv", sep=";")
+Data_kamilar2 <- read.csv("Raw_data/Kamilar/kamilar_data2.csv", sep=";")
+Data_kamilar3 <- read.csv("Raw_data/Kamilar/kamilar_data3.csv", sep=";")
+Data_kamilar4 <- read.csv("Raw_data/Kamilar/kamilar_data4.csv", sep=";")
+Data_kamilar5 <- read.csv("Raw_data/Kamilar/kamilar_data5.csv", sep=";")
+Data_kamilar6 <- read.csv("Raw_data/Kamilar/kamilar_data6.csv", sep=";")
+Data_kamilar7 <- read.csv("Raw_data/Kamilar/kamilar_data7.csv", sep=";")
+Data_kamilar8 <- read.csv("Raw_data/Kamilar/kamilar_data8.csv", sep=";")
+Data_kamilar9 <- read.csv("Raw_data/Kamilar/kamilar_data9.csv", sep=";")
+Data_kamilar10 <- read.csv("Raw_data/Kamilar/kamilar_data10.csv", sep=";")
 
 #Pearce
-Data_pearce <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Pearce_data.csv", sep=";")
+Data_pearce <- read.csv("Raw_data/Pearce_data.csv", sep=";")
 
 #Wrangham
-Data_wrangham <- read.csv("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/wranghametal_data.csv", sep=";")
+Data_wrangham <- read.csv("Raw_data/wranghametal_data.csv", sep=";")
 
 #Grueter
-Data_grueter <- read.delim("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Grueter/grueter.txt")
+Data_grueter <- read.delim("Raw_data/Grueter/grueter.txt")
 
 #Navarrete
-Data_navarrete <- read.delim("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Navarrete/Data_navarrete_copied_fromTable1_main.txt")
+Data_navarrete <- read.delim("Raw_data/Navarrete/Data_navarrete_copied_fromTable1_main.txt")
 Data_navarrete <- aggregate(Data_navarrete[, c(4:ncol(Data_navarrete))], by=list(Data_navarrete$Species), FUN=mean)
 
 #Error seen 
@@ -509,8 +509,7 @@ summaryData[is.na(summaryData[,2]),]
 #Matching correct name for phylogeny
 #summaryData$SpeciesForPhylogeny <- Data_powell$Species.name.adjusted.to.10kTrees[match(summaryData$Species_abbrv, Data_powell$Species_abbrv)]
 
-
-treeForName <-read.nexus("~/PhD/Meta_analysis/Cognition_metaanalysis/Raw_data/Tree/consensusTree_10kTrees_Primates_Version3.nex")
+treeForName <-read.nexus("Raw_data/Tree/consensusTree_10kTrees_Primates_Version3.nex")
 
 speciesLabels <-  as.data.frame(treeForName$tip.label)
 colnames(speciesLabels) <- "SpeciesTree"
@@ -702,7 +701,7 @@ colNumTest <- c(4, 4, 4, 4, 14, 14, 14, 17, 17, 22,
                 24, 24, 24, 25, 25, 26,
                 29,
                 30
-                ) 
+                )
 
 colNumToCompare <- c(14, 17, 22, 23, 17, 22, 23, 22, 23, 23,
                      15, 18, 18,
@@ -1055,4 +1054,4 @@ addGrid(xmin=1, xmax=ncol(dataForSample), xintsmall=1, xintbig=1, ymin=0, ymax=n
 
 ##--
 ## Saving environment
-save.image("REnvironments/geography_traits.RData")
+save.image("REnvironments/geography_traits.RData", version=2)
