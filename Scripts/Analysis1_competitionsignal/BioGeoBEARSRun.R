@@ -14,7 +14,7 @@ load("REnvironments/geography_traits.RData")
 ##--------
 #Home made functions
 #To source all phylogenetics functions (biogeobears + models of evolution)
-source("~/PhD/Meta_analysis/Cognition_metaanalysis/Functions.R")
+source("Scripts/Functions.R")
 
 #My toolkit
 source("T:/Saved_PhD/Empirical_analysis/Scripts&Functions/Functions/toolbox.R")
@@ -80,6 +80,12 @@ phylo <- read.tree("Raw_data/Tree/Tree_biogeobears.nex")
 
 #numstates_from_numareas(numareas=12, maxareas=3, include_null_range=TRUE)#check how big is the transition matrix to deal with
 
+frugivoryThresholdVector <- seq(from=20, to=40, by=20)
+folivoryThresholdVector <- seq(from=40, to=60, by=20)
+geographicThresholdVector <- c(10,30)/100
+randomSampling=10
+numberSimulations=10
+numberTrees=1
 for(c in 1:length(geographicThresholdVector)){
   
   ###------------------
@@ -116,7 +122,7 @@ for(c in 1:length(geographicThresholdVector)){
     pathToGeo="test_geo.data",
     maxCooccurrenceGeo=3,
     mapNumber=numberSimulations,
-    coreNumber=9,
+    coreNumber=6,
     pathToSaveRdata=paste("BioGeoBEARS/BioGeoBEARS_", c, ".Rdata", sep=""),
     pathToSaveFigureGeo=paste("Brain_DEC_v1", c, ".pdf", sep=""),
     pathToBSMMapList=paste("BioGeoBEARS/BSM_output_file", c, ".Rdata", sep=""),
@@ -126,4 +132,4 @@ for(c in 1:length(geographicThresholdVector)){
   dev.off()
 } 
 
-save.image("BioGeoBEARS/geography_traits_biogeobears.RData")
+save.image("BioGeoBEARS/geography_traits_biogeobears.RData", version=2)
