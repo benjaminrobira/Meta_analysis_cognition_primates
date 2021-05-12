@@ -17,7 +17,7 @@
 ###Set working directory
 # scp -r /Users/bperez/ownCloud/Recherche/These/ENS/Autres/Benjamin/Evolutionary_history/* bperez@jord.biologie.ens.fr:/users/biodiv/bperez/data/others/Benji/Evolutionary_history/
 # setwd("/Users/bperez/ownCloud/Recherche/These/ENS/Autres/Benjamin/Evolutionary_history/")
-setwd("/users/biodiv/bperez/data/others/Benji/Evolutionary_history/")
+setwd("/users/biodiv/bperez/data/others/Benji/Evolutionary_history_2/")
 
 dir.create(file.path("Sample_size"), showWarnings = FALSE)
 dir.create(file.path("extdata"), showWarnings = FALSE)
@@ -30,7 +30,7 @@ load("geography_traits_biogeobears.RData")
 ##--------
 #Home made functions
 #To source all phylogenetics functions (biogeobears + models of evolution)
-source("/users/biodiv/bperez/data/others/Benji/Evolutionary_history//Functions.R")
+source("Functions.R")
 
 ##--------
 
