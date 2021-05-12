@@ -14,6 +14,7 @@ setwd("/users/biodiv/bperez/data/others/Benji/Evolutionary_history_2/")
 dir.create(file.path("Sample_size"), showWarnings = FALSE)
 dir.create(file.path("extdata"), showWarnings = FALSE)
 dir.create(file.path("OutputEvolModel"), showWarnings = FALSE)
+dir.create(file.path("Dataplot"), showWarnings = FALSE)
 
 #Import environment
 rm(list=ls())
@@ -580,7 +581,7 @@ for(c in 1:length(geographicThresholdVector)){
     }
     
     #SaveDataGeneral
-    write.table(summaryData, paste("Dataplot", a, "_", b, "_", c, "_", d,".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+    write.table(summaryData, paste("Dataplot/Dataplot", a, "_", b, "_", c, "_", d,".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
     
     write.table(length(summaryData$DietaryGuild[summaryData$DietaryGuild=="Fruit"]), 
                 paste("Sample_size/checkSampleFruit", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
