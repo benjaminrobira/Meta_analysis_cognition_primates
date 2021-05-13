@@ -655,7 +655,7 @@ for(c in 1:length(geographicThresholdVector)){
     #summaryData$ratioBrain.log <- log(summaryData$ratioBrain)
     
     hist(summaryData$EQ)
-    #summaryData$EQ.log <- log(summaryData$EQ)
+    summaryData$EQ.log <- log(summaryData$EQ)
     #hist(summaryData$EQ.log)
     
     hist(summaryData$Brain)
@@ -690,25 +690,25 @@ for(c in 1:length(geographicThresholdVector)){
       data=summaryData[!is.na(summaryData$EQ)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
       subgroup="Fruit",
       numberMaps=numberSimulations,
-      trait="EQ",
+      trait="EQ.log",
       tree=phylo,
       ana_events_tables=BSM_output$RES_ana_events_tables,
       clado_events_tables=BSM_output$RES_clado_events_tables
     )
     write.table(resultEQFrugivory, paste("OutputEvolModel/Output_evolutionary_history_EQ", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
     
-    
     #Neocortex
     print("Neocortex")
     summaryData$ratioNeocortex <- summaryData$Neocortex/ summaryData$Brain
     hist(summaryData$ratioNeocortex )
+    summaryData$ratioNeocortex.log <- log(summaryData$ratioNeocortex)
     
     resultNeocortexFrugivory <- runComparisonModelsCompetition(
       simmap=simmapdiet1,
       data=summaryData[!is.na(summaryData$ratioNeocortex)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
       subgroup="Fruit",
       numberMaps=numberSimulations,
-      trait="ratioNeocortex",
+      trait="ratioNeocortex.log",
       tree=phylo,
       ana_events_tables=BSM_output$RES_ana_events_tables,
       clado_events_tables=BSM_output$RES_clado_events_tables
@@ -719,13 +719,14 @@ for(c in 1:length(geographicThresholdVector)){
     print("ratioHippocampus")
     summaryData$ratioHippocampus <- summaryData$Hippocampus/ summaryData$Brain
     hist(summaryData$ratioHippocampus )
+    summaryData$ratioHippocampus.log <- log(summaryData$ratioHippocampus)
     
     resultHippocampusFrugivory <- runComparisonModelsCompetition(
       simmap=simmapdiet1,
       data=summaryData[!is.na(summaryData$ratioHippocampus)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
       subgroup="Fruit",
       numberMaps=numberSimulations,
-      trait="ratioHippocampus",
+      trait="ratioHippocampus.log",
       tree=phylo,
       ana_events_tables=BSM_output$RES_ana_events_tables,
       clado_events_tables=BSM_output$RES_clado_events_tables
