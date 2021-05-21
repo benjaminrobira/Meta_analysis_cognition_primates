@@ -131,6 +131,7 @@ for(c in 1:length(geographicThresholdVector)){
 
   parrallel_run <- function(d){
     
+    set.seed(d)
     
     runComparisonModelsCompetition <- function(
       
@@ -672,6 +673,7 @@ for(c in 1:length(geographicThresholdVector)){
     
     colnames(summaryData)[colnames(summaryData)=="DietaryGuild"] <- "Guild"
 
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_Brain", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
     print("Brain")
     resultBrainFrugivory <- runComparisonModelsCompetition(
       simmap=simmapdiet1,
@@ -684,7 +686,9 @@ for(c in 1:length(geographicThresholdVector)){
       clado_events_tables=BSM_output$RES_clado_events_tables
     )
     write.table(resultBrainFrugivory, paste("OutputEvolModel/Output_evolutionary_history_Brain", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+    }
     
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_EQ", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
     print("EQ")
     resultEQFrugivory <- runComparisonModelsCompetition(
       simmap=simmapdiet1,
@@ -697,8 +701,10 @@ for(c in 1:length(geographicThresholdVector)){
       clado_events_tables=BSM_output$RES_clado_events_tables
     )
     write.table(resultEQFrugivory, paste("OutputEvolModel/Output_evolutionary_history_EQ", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+    }
     
     #Neocortex
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_Neocortex", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
     print("Neocortex")
     summaryData$ratioNeocortex <- summaryData$Neocortex/ summaryData$Brain
     hist(summaryData$ratioNeocortex )
@@ -715,8 +721,10 @@ for(c in 1:length(geographicThresholdVector)){
       clado_events_tables=BSM_output$RES_clado_events_tables
     )
     write.table(resultNeocortexFrugivory, paste("OutputEvolModel/Output_evolutionary_history_Neocortex", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+    }
     
     #Hippocampus
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_Hippocampus", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
     print("ratioHippocampus")
     summaryData$ratioHippocampus <- summaryData$Hippocampus/ summaryData$Brain
     hist(summaryData$ratioHippocampus )
@@ -733,8 +741,10 @@ for(c in 1:length(geographicThresholdVector)){
       clado_events_tables=BSM_output$RES_clado_events_tables
     )
     write.table(resultHippocampusFrugivory, paste("OutputEvolModel/Output_evolutionary_history_Hippocampus", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+    }
     
     #Cerebellum
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_Cerebellum", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
     print("ratioCerebellum")
     summaryData$ratioCerebellum <- summaryData$Cerebellum/ summaryData$Brain
     hist(summaryData$ratioCerebellum )
@@ -749,9 +759,10 @@ for(c in 1:length(geographicThresholdVector)){
       clado_events_tables=BSM_output$RES_clado_events_tables
     )
     write.table(resultCerebellumFrugivory, paste("OutputEvolModel/Output_evolutionary_history_Cerebellum", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
-    
+    }
     
     #Striatum
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_Striatum", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
     print("ratioStriatum")
     summaryData$ratioStriatum <- summaryData$Striatum/ summaryData$Brain
     hist(summaryData$ratioStriatum)
@@ -767,10 +778,11 @@ for(c in 1:length(geographicThresholdVector)){
       clado_events_tables=BSM_output$RES_clado_events_tables
     )
      write.table(resultStriatumFrugivory, paste("OutputEvolModel/Output_evolutionary_history_Striatum", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
-    
+    }
     
     
     #MOB
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_MOB", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
      print("MOB")
     summaryData$ratioMOB <- summaryData$MOB/ summaryData$Brain
     hist(summaryData$ratioMOB)
@@ -788,6 +800,7 @@ for(c in 1:length(geographicThresholdVector)){
       clado_events_tables=BSM_output$RES_clado_events_tables
     )
     write.table(resultMOBFrugivory, paste("OutputEvolModel/Output_evolutionary_history_MOB", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+    }
     
   }
   
