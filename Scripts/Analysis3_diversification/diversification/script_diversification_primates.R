@@ -409,49 +409,49 @@ for (f in c(60, 67, 70, 80, 90, 95)){
   x <- summaryData_omit$Brain.log
   names(x) <- summaryData_omit$SpeciesForPhylogeny
   dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
-  text(0,0, "Brain.log")
+  text(10,0, "Brain.log")
   
   summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$EQ.log)),]
   tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
   x <- summaryData_omit$EQ.log
   names(x) <- summaryData_omit$SpeciesForPhylogeny
   dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
-  text(0,0, "EQ.log")
+  text(10,0, "EQ.log")
   
   summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioNeocortex)),]
   tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
   x <- summaryData_omit$ratioNeocortex
   names(x) <- summaryData_omit$SpeciesForPhylogeny
   dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
-  text(0,0, "ratioNeocortex")
+  text(10,0, "ratioNeocortex")
   
   summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioHippocampus)),]
   tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
   x <- summaryData_omit$ratioHippocampus
   names(x) <- summaryData_omit$SpeciesForPhylogeny
   dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
-  text(0,0, "ratioHippocampus")
+  text(10,0, "ratioHippocampus")
   
   summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioCerebellum)),]
   tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
   x <- summaryData_omit$ratioCerebellum
   names(x) <- summaryData_omit$SpeciesForPhylogeny
   dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
-  text(0,0, "ratioCerebellum")
+  text(10,0, "ratioCerebellum")
   
   summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioStriatum)),]
   tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
   x <- summaryData_omit$ratioStriatum
   names(x) <- summaryData_omit$SpeciesForPhylogeny
   dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
-  text(0,0, "ratioStriatum")
+  text(10,0, "ratioStriatum")
   
   summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioMOB.log)),]
   tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
   x <- summaryData_omit$ratioMOB.log
   names(x) <- summaryData_omit$SpeciesForPhylogeny
   dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
-  text(0,0, "ratioMOB.log")
+  text(10,0, "ratioMOB.log")
   dev.off()
   
 
