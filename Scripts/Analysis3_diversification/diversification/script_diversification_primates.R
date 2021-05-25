@@ -328,6 +328,7 @@ for (f in c( "95", "90", "80", "70", "60", "67")){
 
 rm(list=ls())
 
+library(phytools)
 
 # setwd("/users/biodiv/bperez/data/others/Benji/Evolutionary_history/")
 # load("geography_traits_biogeobears_2.RData")
@@ -337,9 +338,9 @@ setwd("/Users/bperez/Documents/GitHub/Meta_analysis_cognition_primates/Scripts/A
 
 tree <- read.tree("tree_primate_complete.tre")
 
-summaryData <- read.table("../results/Evolutionary_history/Dataplot.txt", header=TRUE, sep="\t")
+summaryData <- read.table("../../../Processed_data/Dataplot.txt", header=TRUE, sep="\t")
 
-nrow(summaryData) # 428 species
+nrow(summaryData) # 425 species
 Ntip(tree) # 367 species 
 table(summaryData$SpeciesForPhylogeny %in% tree$tip.label)
 
@@ -373,6 +374,7 @@ table(summaryData$SpeciesForPhylogeny %in% tree$tip.label)
 summaryData$Brain.log <- log(summaryData$Brain)
 summaryData$ratioBrain <- summaryData$Brain*1.036*(10**-3)/summaryData$Bodymass #Following decasien for multiplication by 1.036
 summaryData$EQ <- summaryData$Brain*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775) #Following decasien, according to #Jerison, H. J. Evolution of the Brain and Intelligence (Academic, 1973).
+summaryData$EQ.log <- log(summaryData$EQ)
 summaryData$ratioNeocortex <- summaryData$Neocortex/ summaryData$Brain
 summaryData$ratioHippocampus <- summaryData$Hippocampus/ summaryData$Brain
 summaryData$ratioCerebellum <- summaryData$Cerebellum/ summaryData$Brain
@@ -392,20 +394,89 @@ for (f in c(60, 67, 70, 80, 90, 95)){
   table_MAPS_rates <- read.table(paste0("MAPS_speciation_rates_tips_ClaDS2_tree_primate_complete_f",f,".csv"), sep=";",header=T)
   
   summaryData_div$speciation_rate <- NA
+  summaryData_div$diversification_rate <- NA
   for (i in 1:nrow(summaryData_div)){
     summaryData_div$speciation_rate[i] <- table_MAPS_rates$Speciation_rate[which(table_MAPS_rates$Species==summaryData_div$SpeciesForPhylogeny[i])]
+    summaryData_div$diversification_rate[i] <- table_MAPS_rates$Diversification_rate[which(table_MAPS_rates$Species==summaryData_div$SpeciesForPhylogeny[i])]
   }
+  
+  
+  # Plot traits at the tips of the tree
+  
+  pdf("Traits_at_tips.pdf")
+  summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$Brain.log)),]
+  tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
+  x <- summaryData_omit$Brain.log
+  names(x) <- summaryData_omit$SpeciesForPhylogeny
+  dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
+  text(0,0, "Brain.log")
+  
+  summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$EQ.log)),]
+  tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
+  x <- summaryData_omit$EQ.log
+  names(x) <- summaryData_omit$SpeciesForPhylogeny
+  dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
+  text(0,0, "EQ.log")
+  
+  summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioNeocortex)),]
+  tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
+  x <- summaryData_omit$ratioNeocortex
+  names(x) <- summaryData_omit$SpeciesForPhylogeny
+  dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
+  text(0,0, "ratioNeocortex")
+  
+  summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioHippocampus)),]
+  tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
+  x <- summaryData_omit$ratioHippocampus
+  names(x) <- summaryData_omit$SpeciesForPhylogeny
+  dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
+  text(0,0, "ratioHippocampus")
+  
+  summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioCerebellum)),]
+  tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
+  x <- summaryData_omit$ratioCerebellum
+  names(x) <- summaryData_omit$SpeciesForPhylogeny
+  dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
+  text(0,0, "ratioCerebellum")
+  
+  summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioStriatum)),]
+  tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
+  x <- summaryData_omit$ratioStriatum
+  names(x) <- summaryData_omit$SpeciesForPhylogeny
+  dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
+  text(0,0, "ratioStriatum")
+  
+  summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioMOB.log)),]
+  tree_plot <- drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny])
+  x <- summaryData_omit$ratioMOB.log
+  names(x) <- summaryData_omit$SpeciesForPhylogeny
+  dotTree(tree_plot,x,ftype="i",legend=F, standardize=T)
+  text(0,0, "ratioMOB.log")
+  dev.off()
+  
+
   
   hist(summaryData_div$speciation_rate)
   
   pdf(paste0("Correlation_speciation_rates_traits_f",f,".pdf"), width=4, height=3.5)
   plot(summaryData_div$Brain.log, summaryData_div$speciation_rate, xlab="Brain.log", ylab="Speciation rate (/Myr)", col="#e59866", pch=19)
-  plot(summaryData_div$EQ, summaryData_div$speciation_rate, xlab="EQ", ylab="Speciation rate (/Myr)", col="#e59866", pch=19)
+  plot(summaryData_div$EQ.log, summaryData_div$speciation_rate, xlab="EQ.log", ylab="Speciation rate (/Myr)", col="#e59866", pch=19)
   plot(summaryData_div$ratioNeocortex, summaryData_div$speciation_rate, xlab="ratioNeocortex", ylab="Speciation rate (/Myr)", col="#e59866", pch=19)
   plot(summaryData_div$ratioHippocampus, summaryData_div$speciation_rate, xlab="ratioHippocampus", ylab="Speciation rate (/Myr)", col="#e59866", pch=19)
   plot(summaryData_div$ratioCerebellum, summaryData_div$speciation_rate, xlab="ratioCerebellum", ylab="Speciation rate (/Myr)", col="#e59866", pch=19)
   plot(summaryData_div$ratioStriatum, summaryData_div$speciation_rate, xlab="ratioStriatum", ylab="Speciation rate (/Myr)", col="#e59866", pch=19)
   plot(summaryData_div$ratioMOB.log, summaryData_div$speciation_rate, xlab="ratioMOB.log", ylab="Speciation rate (/Myr)", col="#e59866", pch=19)
+  dev.off()
+  
+  
+  pdf(paste0("Correlation_diversification_rates_traits_f",f,".pdf"), width=4, height=3.5)
+  plot(summaryData_div$Brain.log, summaryData_div$diversification_rate, xlab="Brain.log", ylab="Diversification rate (/Myr)", col="#e59866", pch=19)
+  plot(summaryData_div$EQ.log, summaryData_div$diversification_rate, xlab="EQ.log", ylab="Diversification rate (/Myr)", col="#e59866", pch=19)
+  plot(summaryData_div$ratioNeocortex, summaryData_div$diversification_rate, xlab="ratioNeocortex", ylab="Diversification rate (/Myr)", col="#e59866", pch=19)
+  plot(summaryData_div$ratioHippocampus, summaryData_div$diversification_rate, xlab="ratioHippocampus", ylab="Diversification rate (/Myr)", col="#e59866", pch=19)
+  plot(summaryData_div$ratioCerebellum, summaryData_div$diversification_rate, xlab="ratioCerebellum", ylab="Diversification rate (/Myr)", col="#e59866", pch=19)
+  plot(summaryData_div$ratioStriatum, summaryData_div$diversification_rate, xlab="ratioStriatum", ylab="Diversification rate (/Myr)", col="#e59866", pch=19)
+  plot(summaryData_div$ratioMOB.log, summaryData_div$diversification_rate, xlab="ratioMOB.log", ylab="Diversification rate (/Myr)", col="#e59866", pch=19)
   dev.off()
   
   
@@ -415,51 +486,58 @@ for (f in c(60, 67, 70, 80, 90, 95)){
   summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$Brain.log)),]
   rownames(summaryData_omit) <- summaryData_omit$SpeciesForPhylogeny
   BM_tree <- corBrownian(1, drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny]), form = ~SpeciesForPhylogeny)
-  bm.gls<-nlme::gls(speciation_rate ~ Brain.log, correlation=BM_tree, data=summaryData_omit)
+  bm.gls<-nlme::gls(diversification_rate ~ Brain.log, correlation=BM_tree, data=summaryData_omit)
   print(summary(bm.gls))
+  print(summary(lm(diversification_rate ~ Brain.log, data=summaryData_omit)))
   
   # EQ
-  summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$EQ)),]
+  summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$EQ.log)),]
   rownames(summaryData_omit) <- summaryData_omit$SpeciesForPhylogeny
   BM_tree <- corBrownian(1, drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny]), form = ~SpeciesForPhylogeny)
-  bm.gls<-nlme::gls(speciation_rate ~ EQ, correlation=BM_tree, data=summaryData_omit)
+  bm.gls<-nlme::gls((diversification_rate) ~ EQ.log, correlation=BM_tree, data=summaryData_omit)
   print(summary(bm.gls))
+  print(summary(lm(diversification_rate ~ EQ.log, data=summaryData_omit)))
   
   # ratioNeocortex
   summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioNeocortex)),]
   rownames(summaryData_omit) <- summaryData_omit$SpeciesForPhylogeny
   BM_tree <- corBrownian(1, drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny]), form = ~SpeciesForPhylogeny)
-  bm.gls<-nlme::gls(speciation_rate ~ ratioNeocortex, correlation=BM_tree, data=summaryData_omit)
+  bm.gls<-nlme::gls(diversification_rate ~ ratioNeocortex, correlation=BM_tree, data=summaryData_omit)
   print(summary(bm.gls))
+  print(summary(lm(diversification_rate ~ ratioNeocortex, data=summaryData_omit)))
   
   # ratioHippocampus
   summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioHippocampus)),]
   rownames(summaryData_omit) <- summaryData_omit$SpeciesForPhylogeny
   BM_tree <- corBrownian(1, drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny]), form = ~SpeciesForPhylogeny)
-  bm.gls<-nlme::gls(speciation_rate ~ ratioHippocampus, correlation=BM_tree, data=summaryData_omit)
+  bm.gls<-nlme::gls(diversification_rate ~ ratioHippocampus, correlation=BM_tree, data=summaryData_omit)
   print(summary(bm.gls))
+  print(summary(lm(diversification_rate ~ ratioHippocampus, data=summaryData_omit)))
   
   # ratioCerebellum
   summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioCerebellum)),]
   rownames(summaryData_omit) <- summaryData_omit$SpeciesForPhylogeny
   BM_tree <- corBrownian(1, drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny]), form = ~SpeciesForPhylogeny)
-  bm.gls<-nlme::gls(speciation_rate ~ ratioCerebellum, correlation=BM_tree, data=summaryData_omit)
+  bm.gls<-nlme::gls(diversification_rate ~ ratioCerebellum, correlation=BM_tree, data=summaryData_omit)
   print(summary(bm.gls))
+  print(summary(lm(diversification_rate ~ ratioCerebellum, data=summaryData_omit)))
   
   # ratioStriatum
   summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioStriatum)),]
   rownames(summaryData_omit) <- summaryData_omit$SpeciesForPhylogeny
   BM_tree <- corBrownian(1, drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny]), form = ~SpeciesForPhylogeny)
-  bm.gls<-nlme::gls(speciation_rate ~ ratioStriatum, correlation=BM_tree, data=summaryData_omit)
+  bm.gls<-nlme::gls(diversification_rate ~ ratioStriatum, correlation=BM_tree, data=summaryData_omit)
   print(summary(bm.gls)) 
+  print(summary(lm(diversification_rate ~ ratioStriatum, data=summaryData_omit)))
   
   # ratioMOB.log
   summaryData_omit<- summaryData_div[-which(is.na(summaryData_div$ratioMOB.log)),]
   rownames(summaryData_omit) <- summaryData_omit$SpeciesForPhylogeny
   BM_tree <- corBrownian(1, drop.tip(tree,tip=tree$tip.label[!tree$tip.label %in% summaryData_omit$SpeciesForPhylogeny]), form = ~SpeciesForPhylogeny)
-  bm.gls<-nlme::gls(speciation_rate ~ ratioMOB.log, correlation=BM_tree, data=summaryData_omit)
+  bm.gls<-nlme::gls((diversification_rate) ~ ratioMOB.log, correlation=BM_tree, data=summaryData_omit)
   print(summary(bm.gls))
-
+  print(summary(lm(diversification_rate ~ ratioMOB.log, data=summaryData_omit)))
+  
 }
 
 
