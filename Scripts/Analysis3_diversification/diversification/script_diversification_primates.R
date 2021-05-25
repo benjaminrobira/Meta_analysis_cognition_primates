@@ -4,9 +4,11 @@
 # from Dos Reis 2018
 # set the MRCA at 74 Myr 
 
+rm(list=ls())
+
 library(ape)
 
-setwd("/Users/bperez/ownCloud/Recherche/These/ENS/Autres/Benjamin/diversification/")
+setwd("/Users/bperez/Documents/GitHub/Meta_analysis_cognition_primates/Scripts/Analysis3_diversification/diversification/")
 
 tree <- read.tree("host_tree_primate_complete.tre")
 
@@ -267,6 +269,8 @@ for (f in c( "95", "90", "80", "70", "60", "67")){
   colnames(speciation_rates) <- c("Species","Speciation_rate")
   speciation_rates$Speciation_rate <- as.numeric(as.character(speciation_rates$Speciation_rate))
   
+  speciation_rates$Diversification_rate <- speciation_rates$Speciation_rate*(1-MAPS[3])
+  
   write.table(speciation_rates, paste0("MAPS_speciation_rates_tips_",name,".csv"), sep=";",row.names=F,quote=F)
   
   # density
@@ -296,24 +300,6 @@ for (f in c( "95", "90", "80", "70", "60", "67")){
   colnames(table_mean_rates) <- c("time","speciation_rates")
   write.table(table_mean_rates,paste0("mean_speciation_rates_trought_time_",name,".csv"),sep=";",quote=F,row.names = F)
   
-  # index <- 1:12
-  # 
-  # for (rep in index){
-  #   load(paste0("ClaDS2_tree_GMYC_units_LSU_replicate_",rep,"_f",f,".Rdata"))
-  #   
-  #   # density
-  #   MAPS <- c()
-  #   for (i in 1:length(mr[[1]][[1]])){
-  #     D=density(sapply(1:length(mr), function(k) sapply(floor(length(mr[[1]])*0.3):length(mr[[1]]), function(j) mr[[k]][[j]][i])))
-  #     MAPS <- c(MAPS, D[[1]][which.max(D[[2]])])
-  #   }
-  #   plot(MAPS)
-  #   table_MAPS_rates <- cbind(seq(-505,0,length.out = length(mr[[1]][[1]])), MAPS)
-  #   colnames(table_MAPS_rates) <- c("time","speciation_rates")
-  #   write.table(table_MAPS_rates,paste0("MAPS_speciation_rates_trought_time_ClaDS2_tree_GMYC_units_LSU_replicate_",rep,"_f",f,".csv"),sep=";",quote=F,row.names = F)
-  #   
-  # }
-  
   
   # Plot 
   
@@ -325,23 +311,14 @@ for (f in c( "95", "90", "80", "70", "60", "67")){
   table_mean_rates <- read.table(paste0("MAPS_speciation_rates_trought_time_",name,".csv"), sep=";",header=T)
   
   print(plot(table_mean_rates$time,table_mean_rates$speciation_rates, type='l', lwd=4, pch=19, col="#212f3c", xlab="Time (in Myr)", ylab="MAPS speciation rates (/Myr)"))
-  #ylim=c(0.007,max_y), axes = F))
+
+  print(plot(table_mean_rates$time,table_mean_rates$speciation_rates*(1-MAPS[3]), type='l', lwd=4, pch=19, col="#212f3c", xlab="Time (in Myr)", ylab="MAPS diversification rates (/Myr)"))
   
-  # for (i in index){
-  #   table_mean_rates_rep <- read.table(paste0("MAPS_speciation_rates_trought_time_ClaDS2_tree_GMYC_units_LSU_replicate_",i,"_f",f,".csv"), sep=";",header=T)
-  #   par(new=T)
-  #   print(max(table_mean_rates_rep$speciation_rates))
-  #   print(plot(table_mean_rates_rep$time,table_mean_rates_rep$speciation_rates, type='l', lwd=2.5, pch=19, col="#e67e22", xlab=" ", ylab=" ", ylim=c(0.007,max_y), axes = F))
-  # }
-  # 
-  # par(new=T)
-  # print(plot(table_mean_rates$time,table_mean_rates$speciation_rates, type='l', lwd=4, pch=19, col="#212f3c", xlab=" ", ylab=" ", ylim=c(0.007,max_y)))
-  # 
   dev.off()
   
 }
 
-# scp bperez@jord.biologie.ens.fr:/users/biodiv/bperez/data/others/Benji/diversification/MAPS*  /Users/bperez/ownCloud/Recherche/These/ENS/Autres/Benjamin/diversification/
+# scp bperez@jord.biologie.ens.fr:/users/biodiv/bperez/data/others/Benji/diversification/MAPS*  /Users/bperez/Documents/GitHub/Meta_analysis_cognition_primates/Scripts/Analysis3_diversification/diversification/
 
 
 
@@ -355,7 +332,7 @@ rm(list=ls())
 # setwd("/users/biodiv/bperez/data/others/Benji/Evolutionary_history/")
 # load("geography_traits_biogeobears_2.RData")
 
-setwd("/Users/bperez/ownCloud/Recherche/These/ENS/Autres/Benjamin/diversification/")
+setwd("/Users/bperez/Documents/GitHub/Meta_analysis_cognition_primates/Scripts/Analysis3_diversification/diversification/")
 
 
 tree <- read.tree("tree_primate_complete.tre")
