@@ -385,7 +385,7 @@ summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
 
 f=67
 
-for (f in c(60, 67, 70, 80, 90, 95)){
+for (f in c(60, 73, 70, 80, 90, 95)){
   
   print(f)
   
