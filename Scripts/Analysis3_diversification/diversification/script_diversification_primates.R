@@ -248,9 +248,9 @@ plot_ClaDS_phylo <- function (phylo, rates, rates2 = NULL, same.scale = T, main 
 
 setwd("/users/biodiv/bperez/data/others/Benji/diversification/")
 
-f="60"
+f="73"
 
-for (f in c( "95", "90", "80", "70", "60", "67")){
+for (f in c( "95", "90", "80", "70", "60", "73")){
   
   print(f)
   name=paste0("ClaDS2_tree_primate_complete_f",f)

@@ -45,12 +45,12 @@ tree = ape2Tree(tree)    # and make it a Julia Tree
 Random.seed!(813)
 n_iter = 400
 
-sample_fraction = 0.67
+sample_fraction = 0.73
 sampler = run_ClaDS2(tree, n_iter,plot_tree = 0,
     print_state = Int64(n_iter/4), plot_chain = false,
     f=sample_fraction, ltt_steps = 250)
 
-sampler_to_Rdata(tree, sampler, join(["ClaDS2_tree_", name, "_f67.Rdata"]) ; sample_fraction = sample_fraction, max_it_number = 2_500)
+sampler_to_Rdata(tree, sampler, join(["ClaDS2_tree_", name, "_f73.Rdata"]) ; sample_fraction = sample_fraction, max_it_number = 2_500)
 result = (tree, sampler, sample_fraction)
-@save join(["ClaDS2_tree_", name, "_f67.jld2"]) result
+@save join(["ClaDS2_tree_", name, "_f73.jld2"]) result
 
