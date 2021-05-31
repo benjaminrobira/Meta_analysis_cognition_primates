@@ -66,7 +66,7 @@ progression=0
 ##--------
 
 # Set the frugivory and folivory threshold to consider:
-a=1
+a=2
 frugivoryThreshold=frugivoryThresholdVector[a]
 
 b=1

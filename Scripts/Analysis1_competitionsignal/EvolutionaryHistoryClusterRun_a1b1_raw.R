@@ -585,9 +585,9 @@ for(c in 1:length(geographicThresholdVector)){
     
     colnames(summaryData)[colnames(summaryData)=="DietaryGuild"] <- "Guild"
     
-    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_BrainBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_BrainRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("Brain")
-      summaryData$ratioBrain <-  summaryData$Brain/summaryData$Bodymass
+      summaryData$ratioBrain <-  summaryData$Brain
       hist(summaryData$ratioBrain )
       summaryData$ratioBrain.log <- log(summaryData$ratioBrain)
       resultBrainFrugivory <- runComparisonModelsCompetition(
@@ -600,28 +600,13 @@ for(c in 1:length(geographicThresholdVector)){
         ana_events_tables=BSM_output$RES_ana_events_tables,
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
-      write.table(resultBrainFrugivory, paste("OutputEvolModel/Output_evolutionary_history_BrainBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      write.table(resultBrainFrugivory, paste("OutputEvolModel/Output_evolutionary_history_BrainRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
     }
+
     
-    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_EQ", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
-      print("EQ")
-      resultEQFrugivory <- runComparisonModelsCompetition(
-        simmap=simmapdiet1,
-        data=summaryData[!is.na(summaryData$EQ)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
-        subgroup="Fruit",
-        numberMaps=numberSimulations,
-        trait="EQ.log",
-        tree=phylo,
-        ana_events_tables=BSM_output$RES_ana_events_tables,
-        clado_events_tables=BSM_output$RES_clado_events_tables
-      )
-      write.table(resultEQFrugivory, paste("OutputEvolModel/Output_evolutionary_history_EQ", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
-    }
-    
-    
-    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_NeocortexBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_NeocortexRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("Neocortex")
-      summaryData$ratioNeocortex <-  summaryData$Neocortex/summaryData$Bodymass
+      summaryData$ratioNeocortex <-  summaryData$Neocortex
       hist(summaryData$ratioNeocortex )
       summaryData$ratioNeocortex.log <- log(summaryData$ratioNeocortex)
       
@@ -635,14 +620,14 @@ for(c in 1:length(geographicThresholdVector)){
         ana_events_tables=BSM_output$RES_ana_events_tables,
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
-      write.table(resultNeocortexFrugivory, paste("OutputEvolModel/Output_evolutionary_history_NeocortexBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      write.table(resultNeocortexFrugivory, paste("OutputEvolModel/Output_evolutionary_history_NeocortexRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
     }
     
     
     #Hippocampus
-    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_HippocampusBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_HippocampusRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("ratioHippocampus")
-      summaryData$ratioHippocampus <- summaryData$Hippocampus/ summaryData$Bodymass
+      summaryData$ratioHippocampus <- summaryData$Hippocampus
       hist(summaryData$ratioHippocampus )
       summaryData$ratioHippocampus.log <- log(summaryData$ratioHippocampus)
       
@@ -656,13 +641,13 @@ for(c in 1:length(geographicThresholdVector)){
         ana_events_tables=BSM_output$RES_ana_events_tables,
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
-      write.table(resultHippocampusFrugivory, paste("OutputEvolModel/Output_evolutionary_history_HippocampusBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      write.table(resultHippocampusFrugivory, paste("OutputEvolModel/Output_evolutionary_history_HippocampusRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
     }
     
     #Cerebellum
-    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_CerebellumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_CerebellumRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("ratioCerebellum")
-      summaryData$ratioCerebellum <- summaryData$Cerebellum/ summaryData$Bodymass
+      summaryData$ratioCerebellum <- summaryData$Cerebellum
       hist(summaryData$ratioCerebellum )
       summaryData$ratioCerebellum.log <- log(summaryData$ratioCerebellum)
       resultCerebellumFrugivory <- runComparisonModelsCompetition(
@@ -675,13 +660,13 @@ for(c in 1:length(geographicThresholdVector)){
         ana_events_tables=BSM_output$RES_ana_events_tables,
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
-      write.table(resultCerebellumFrugivory, paste("OutputEvolModel/Output_evolutionary_history_CerebellumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      write.table(resultCerebellumFrugivory, paste("OutputEvolModel/Output_evolutionary_history_CerebellumRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
     }
     
     #Striatum
-    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_StriatumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_StriatumRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("ratioStriatum")
-      summaryData$ratioStriatum <- summaryData$Striatum/ summaryData$Bodymass
+      summaryData$ratioStriatum <- summaryData$Striatum
       hist(summaryData$ratioStriatum)
       summaryData$ratioStriatum.log <- log(summaryData$ratioStriatum)
       
@@ -695,14 +680,14 @@ for(c in 1:length(geographicThresholdVector)){
         ana_events_tables=BSM_output$RES_ana_events_tables,
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
-      write.table(resultStriatumFrugivory, paste("OutputEvolModel/Output_evolutionary_history_StriatumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      write.table(resultStriatumFrugivory, paste("OutputEvolModel/Output_evolutionary_history_StriatumRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
     }
     
     
     #MOB
-    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_MOBBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
+    if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_MOBRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("MOB")
-      summaryData$ratioMOB <- summaryData$MOB/ summaryData$Bodymass
+      summaryData$ratioMOB <- summaryData$MOB
       hist(summaryData$ratioMOB)
       summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
       hist(summaryData$ratioMOB.log)
@@ -717,7 +702,7 @@ for(c in 1:length(geographicThresholdVector)){
         ana_events_tables=BSM_output$RES_ana_events_tables,
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
-      write.table(resultMOBFrugivory, paste("OutputEvolModel/Output_evolutionary_history_MOBBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      write.table(resultMOBFrugivory, paste("OutputEvolModel/Output_evolutionary_history_MOBRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
     }
     
     

@@ -5,10 +5,10 @@
 # This script allows running one the cluster the different scenario (non-competitive vs. competitive) of brain size evolution in frugivorous primates. 
 # This is the example script for low frugivory and low folivory threshold i.e.:
 
-# a=1
+# a=2
 # frugivoryThreshold=frugivoryThresholdVector[a]
 
-# b=1
+# b=2
 # folivoryThreshold=folivoryThresholdVector[b] 
 
 

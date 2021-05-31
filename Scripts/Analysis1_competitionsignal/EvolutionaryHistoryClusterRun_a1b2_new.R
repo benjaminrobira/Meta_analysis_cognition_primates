@@ -69,7 +69,7 @@ progression=0
 a=1
 frugivoryThreshold=frugivoryThresholdVector[a]
 
-b=1
+b=2
 folivoryThreshold=folivoryThresholdVector[b] 
 
 ##------------
