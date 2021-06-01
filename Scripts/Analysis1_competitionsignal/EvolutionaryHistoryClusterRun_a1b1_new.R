@@ -26,6 +26,7 @@ dir.create(file.path("Dataplot"), showWarnings = FALSE)
 rm(list=ls())
 
 load("geography_traits_biogeobears.RData")
+#load("../BioGeoBEARS/geography_traits_biogeobears.RData")
 
 
 #Libraries
@@ -104,17 +105,16 @@ checkSampleRange <- rep(NA, times=repetition)
 
 for(c in 1:length(geographicThresholdVector)){
   
-
+  ## Adding the co-occurence
+  
+  summaryData$geographicCode <- matrixRangingSensitivity[match(summaryData$SpeciesForPhylogeny,matrixRangingSensitivity$SpeciesForPhylogeny),which(thresholdPresenceRange==geographicThresholdVector[c])]   
+  
+  load(paste("BioGeoBEARS/BSM_output_file", c, ".Rdata", sep=""))
+  
+  summaryData_init <- summaryData
+  
+  
   parrallel_run <- function(d){
-    
-    
-    ## Adding the co-occurence
-    
-    summaryData$geographicCode <- matrixRangingSensitivity[match(summaryData$SpeciesForPhylogeny,matrixRangingSensitivity$SpeciesForPhylogeny),which(thresholdPresenceRange==geographicThresholdVector[c])]   
-    
-    load(paste("BioGeoBEARS/BSM_output_file", c, ".Rdata", sep=""))
-    
-    summaryData_init <- summaryData
 
     base::set.seed(d)
     base::set.seed(d)
@@ -145,7 +145,7 @@ for(c in 1:length(geographicThresholdVector)){
       data.grouped<-subset(data, Guild==subgroup)
       mass<-data.grouped[,which(colnames(data.grouped)=="SpeciesForPhylogeny")]
       names(mass)<-data.grouped[,which(colnames(data.grouped)=="SpeciesForPhylogeny")]
-      nc<-name.check(tree,mass)
+      nc<-geiger::name.check(tree,mass)
       data.grouped.tree<-drop.tip(tree,nc$tree_not_data)
       subdata<-data.grouped[which(data.grouped$SpeciesForPhylogeny%in%data.grouped.tree$tip.label),]
       
@@ -177,7 +177,7 @@ for(c in 1:length(geographicThresholdVector)){
         names(M)<-subdata$SpeciesForPhylogeny
         M<-subset(M,M!='NA')
         
-        nc<-name.check(subtree,M)
+        nc<-geiger::name.check(subtree,M)
         if(is.list(nc)){
           subtree<-drop.tip(subtree,nc$tree_not_data)
         }
@@ -725,8 +725,12 @@ for(c in 1:length(geographicThresholdVector)){
   }
   
   # Run parallel
-  parallel::mclapply(1:randomSampling, parrallel_run, mc.cores=10, mc.preschedule = T)
+  #parallel::mclapply(1:randomSampling, parrallel_run, mc.cores=10, mc.preschedule = T)
 
+  for (d in 1:randomSampling){
+    parrallel_run(d)
+  }
+  
 }
 
 ## END ANALYSIS

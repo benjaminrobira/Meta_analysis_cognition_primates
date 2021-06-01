@@ -145,7 +145,7 @@ for(c in 1:length(geographicThresholdVector)){
       data.grouped<-subset(data, Guild==subgroup)
       mass<-data.grouped[,which(colnames(data.grouped)=="SpeciesForPhylogeny")]
       names(mass)<-data.grouped[,which(colnames(data.grouped)=="SpeciesForPhylogeny")]
-      nc<-name.check(tree,mass)
+      nc<-geiger::name.check(tree,mass)
       data.grouped.tree<-drop.tip(tree,nc$tree_not_data)
       subdata<-data.grouped[which(data.grouped$SpeciesForPhylogeny%in%data.grouped.tree$tip.label),]
       
@@ -177,7 +177,7 @@ for(c in 1:length(geographicThresholdVector)){
         names(M)<-subdata$SpeciesForPhylogeny
         M<-subset(M,M!='NA')
         
-        nc<-name.check(subtree,M)
+        nc<-geiger::name.check(subtree,M)
         if(is.list(nc)){
           subtree<-drop.tip(subtree,nc$tree_not_data)
         }
