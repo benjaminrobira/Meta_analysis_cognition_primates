@@ -36,15 +36,15 @@ load("geography_traits_biogeobears.RData")
 
 # Phylogenetics
 # library(caper)
-# library(ape)
-library(phytools, lib.loc = "/users/biodiv/bperez/packages/")
+library(ape)
+library(phytools) #, lib.loc = "/users/biodiv/bperez/packages/")
 # library(geiger)
 # library(MCMCglmm, lib.loc = "/users/biodiv/bperez/packages/")
-# library(ellipsis, lib.loc = "/users/biodiv/bperez/packages/")
+library(ellipsis, lib.loc = "/users/biodiv/bperez/packages/")
 library(RPANDA, lib.loc = "/users/biodiv/bperez/packages/")
-# library(BioGeoBEARS)
-# library(optimx)
-# library(svMisc, lib.loc = "/users/biodiv/bperez/packages/")
+library(BioGeoBEARS)
+library(optimx)
+library(svMisc, lib.loc = "/users/biodiv/bperez/packages/")
 
 #Parallelizing
 # library(parallel)
@@ -205,7 +205,9 @@ for(c in 1:length(geographicThresholdVector)){
         EB.z0<-o32$opt$z0
         EB.aicc<-o32$opt$aicc
         EB.conv<-as.numeric(tail(o32$res[,length(o32$res[1,])],n=1))
+
         
+        print(group.map2)
         
         o4<-fit_t_comp_subgroup(full.phylo=tree,
                                 ana.events=ana_events_tables[[i]],
@@ -555,6 +557,9 @@ for(c in 1:length(geographicThresholdVector)){
     #simmapdiet1 <- make.simmap(tree=phylo, vectorDiet, model="ARD", pi="estimated", nsim=numberSimulations)#inequal and not symmetrical rate of transition from folivory to frugivory etc...
     
     load(file=paste("Simmap/Output_simmap_transition", a, "_", b, "_", c, "_", d, ".Rdata", sep=""))
+    
+    
+    print(simmapdiet1)
     
     write.table(as.vector(simmapdiet1[[1]]$Q[,1]), paste("OutputEvolModel/Output_simmap_transition", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
     
