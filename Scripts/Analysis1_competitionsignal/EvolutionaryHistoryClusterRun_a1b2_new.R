@@ -26,6 +26,7 @@ dir.create(file.path("Dataplot"), showWarnings = FALSE)
 rm(list=ls())
 
 load("geography_traits_biogeobears.RData")
+#load("../BioGeoBEARS/geography_traits_biogeobears.RData")
 
 
 #Libraries
@@ -34,19 +35,19 @@ load("geography_traits_biogeobears.RData")
 # install_version("phytools", version = "0.6.99", repos = "http://cran.us.r-project.org", lib="/users/biodiv/bperez/packages/")
 
 # Phylogenetics
-# library(caper)
-# library(ape)
-library(phytools, lib.loc = "/users/biodiv/bperez/packages/")
-# library(geiger)
+library(caper)
+library(ape)
+library(phytools) #, lib.loc = "/users/biodiv/bperez/packages/")
+library(geiger)
 # library(MCMCglmm, lib.loc = "/users/biodiv/bperez/packages/")
-# library(ellipsis, lib.loc = "/users/biodiv/bperez/packages/")
+library(ellipsis, lib.loc = "/users/biodiv/bperez/packages/")
 library(RPANDA, lib.loc = "/users/biodiv/bperez/packages/")
-# library(BioGeoBEARS)
-# library(optimx)
-# library(svMisc, lib.loc = "/users/biodiv/bperez/packages/")
+library(BioGeoBEARS)
+library(optimx)
+library(svMisc, lib.loc = "/users/biodiv/bperez/packages/")
 
 #Parallelizing
-# library(parallel)
+library(parallel)
 
 ##--------
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,23 +105,25 @@ checkSampleRange <- rep(NA, times=repetition)
 
 for(c in 1:length(geographicThresholdVector)){
   
-
+  ## Adding the co-occurence
+  
+  summaryData$geographicCode <- matrixRangingSensitivity[match(summaryData$SpeciesForPhylogeny,matrixRangingSensitivity$SpeciesForPhylogeny),which(thresholdPresenceRange==geographicThresholdVector[c])]   
+  
+  load(paste("BioGeoBEARS/BSM_output_file", c, ".Rdata", sep=""))
+  # load(paste("../BioGeoBEARS/BSM_output_file", c, ".Rdata", sep=""))
+  
+  summaryData_init <- summaryData
+  
+  
   parrallel_run <- function(d){
-    
-    
-    ## Adding the co-occurence
-    
-    summaryData$geographicCode <- matrixRangingSensitivity[match(summaryData$SpeciesForPhylogeny,matrixRangingSensitivity$SpeciesForPhylogeny),which(thresholdPresenceRange==geographicThresholdVector[c])]   
-    
-    load(paste("BioGeoBEARS/BSM_output_file", c, ".Rdata", sep=""))
-    
-    summaryData_init <- summaryData
 
     base::set.seed(d)
     base::set.seed(d)
+    rm(.Random.seed)
+    base::set.seed(d)
+    base::set.seed(d)
     
-    print(runif(1))
-
+   
     runComparisonModelsCompetition <- function(
       
       #######################
@@ -142,10 +145,12 @@ for(c in 1:length(geographicThresholdVector)){
       
       #isolate data from subgroup of interest 
       group.map<-simmap
-      data.grouped<-subset(data, Guild==subgroup)
+      data.grouped<-data[which(data$Guild==subgroup),]
+      
       mass<-data.grouped[,which(colnames(data.grouped)=="SpeciesForPhylogeny")]
       names(mass)<-data.grouped[,which(colnames(data.grouped)=="SpeciesForPhylogeny")]
       nc<-geiger::name.check(tree,mass)
+      
       data.grouped.tree<-drop.tip(tree,nc$tree_not_data)
       subdata<-data.grouped[which(data.grouped$SpeciesForPhylogeny%in%data.grouped.tree$tip.label),]
       
@@ -205,8 +210,7 @@ for(c in 1:length(geographicThresholdVector)){
         EB.z0<-o32$opt$z0
         EB.aicc<-o32$opt$aicc
         EB.conv<-as.numeric(tail(o32$res[,length(o32$res[1,])],n=1))
-        
-        
+
         o4<-fit_t_comp_subgroup(full.phylo=tree,
                                 ana.events=ana_events_tables[[i]],
                                 clado.events=clado_events_tables[[i]],
@@ -297,223 +301,12 @@ for(c in 1:length(geographicThresholdVector)){
       substr(x, 1, 1) <- toupper(substr(x, 1, 1))
       x
     }
-    
-    #####   Random sampling for covariate in case of multiple sources  ####
-    
-    summaryData$Family<- NA
-    summaryData$DietaryGuild <- NA
-    summaryData$FrugivoryPercent <- NA
-    summaryData$FolivoryPercent <- NA
-    summaryData$Brain <- NA
-    summaryData$Neocortex <- NA 
-    summaryData$Cerebellum <- NA
-    summaryData$Hippocampus <- NA
-    summaryData$Striatum <- NA
-    summaryData$MOB <- NA 
-    summaryData$Optic.Tract <- NA 
-    summaryData$Bodymass <- NA
-    
-    for (i in 1:nrow(summaryData)){
-      #Frugivory 
-      value <- c(summaryData$Diet_frug_powell[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-                 summaryData$Diet_frug_decasien[summaryData$Species_abbrv==summaryData$Species_abbrv[i]])
-      
-      value <- value[!is.na(value)]
-      #Because there are issues if of length 1
-      if(length(value)==1){
-        value <- c(value, value)
-      }
-      
-      if(length(value)>0){
-        summaryData$FrugivoryPercent[i] <- sample(value, 1)
-      }
-      else{
-        summaryData$FrugivoryPercent[i] <- NA
-      }
-      
-      #Folivory 
-      value <- c(summaryData$Diet_leaves_powell[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-                 summaryData$Diet_leaves_willems[summaryData$Species_abbrv==summaryData$Species_abbrv[i]])
-      
-      value <- value[!is.na(value)]
-      #Because there are issues if of length 1
-      if(length(value)==1){
-        value <- c(value, value)
-      }
-      
-      if(length(value)>0){
-        summaryData$FolivoryPercent[i] <- sample(value, 1)
-      }
-      else{
-        summaryData$FolivoryPercent[i] <- NA
-      }
-      
-      ##### Associate the dietary guild
-      if(!is.na(as.numeric(as.character(summaryData$FrugivoryPercent[i])))&as.numeric(as.character(summaryData$FrugivoryPercent[i]))>=frugivoryThreshold){
-        summaryData$DietaryGuild[i] <- "Fruit"
-      } else if(!is.na(as.numeric(as.character(summaryData$FolivoryPercent[i])))&as.numeric(as.character(summaryData$FolivoryPercent[i]))>=folivoryThreshold){
-        summaryData$DietaryGuild[i] <- "Leaf"
-      }
-      else if(!is.na(summaryData$Guild_init_decasien[i])){
-        summaryData$DietaryGuild[i] <- summaryData$Guild_init_decasien[i]
-        if(summaryData$DietaryGuild[i] =="Om"|summaryData$DietaryGuild[i]=="Frug/Fol"){
-          summaryData$DietaryGuild[i] <- "Fruit"
-        }
-      }
-      else {
-        summaryData$DietaryGuild[i] <- "Other"
-      }
-      
-      #Brain volume
-      
-      value <- c(
-        summaryData$Brain_volume_mm3_decasien[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-        summaryData$Brain_volume_mm3_powell[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-        summaryData$Brain_volume_mm3_todorov[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-        summaryData$Brain_volume_mm3_grueter[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-        summaryData$Brain_volume_mm3_navarrete[summaryData$Species_abbrv==summaryData$Species_abbrv[i]])
-      
-      value <- value[!is.na(value)]
-      #Because there are issues if of length 1
-      if(length(value)==1){
-        value <- c(value, value)
-      }
-      
-      if(length(value)>0){
-        summaryData$Brain[i] <- sample(value, 1)
-      }
-      else{
-        summaryData$Brain[i] <- NA
-      }
-      
-      #Striatum
-      
-      value <- c(
-        summaryData$Striatum_volume_mm3_decasien[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-        summaryData$Striatum_volume_mm3_navarrete[summaryData$Species_abbrv==summaryData$Species_abbrv[i]])
-      
-      value <- value[!is.na(value)]
-      #Because there are issues if of length 1
-      if(length(value)==1){
-        value <- c(value, value)
-      }
-      
-      if(length(value)>0){
-        summaryData$Striatum[i] <- sample(value, 1)
-      }
-      else{
-        summaryData$Striatum[i] <- NA
-      }
-      
-      #Neocortex
-      
-      value <- c(summaryData$Neocortex_volume_mm3_decasien[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-                 summaryData$Neocortex_volume_mm3_powell_mosaic[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-                 summaryData$Neocortex_volume_mm3_todorov[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-                 summaryData$Neocortex_volume_mm3_navarrete[summaryData$Species_abbrv==summaryData$Species_abbrv[i]])
-      
-      value <- value[!is.na(value)]
-      #Because there are issues if of length 1
-      if(length(value)==1){
-        value <- c(value, value)
-      }
-      
-      if(length(value)>0){
-        summaryData$Neocortex[i] <- sample(value, 1)
-      }
-      else{
-        summaryData$Neocortex[i] <- NA
-      }
-      
-      #Cerebellum
-      
-      value <- c(summaryData$Cerebellum_volume_mm3_decasien[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-                 summaryData$Cerebellum_volume_mm3_powell_mosaic[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-                 summaryData$Cerebellum_volume_mm3_navarrete[summaryData$Species_abbrv==summaryData$Species_abbrv[i]])
-      
-      value <- value[!is.na(value)]
-      #Because there are issues if of length 1
-      if(length(value)==1){
-        value <- c(value, value)
-      }
-      
-      if(length(value)>0){
-        summaryData$Cerebellum[i] <- sample(value, 1)
-      }
-      else{
-        summaryData$Cerebellum[i] <- NA
-      }
-      
-      #Hippocampus
-      
-      value <- c(summaryData$Hippocampus_volume_mm3_decasien[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-                 summaryData$Hippocampus_volume_mm3_todorov[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-                 summaryData$Hippocampus_volume_mm3_navarrete[summaryData$Species_abbrv==summaryData$Species_abbrv[i]])
-      
-      value <- value[!is.na(value)]
-      #Because there are issues if of length 1
-      if(length(value)==1){
-        value <- c(value, value)
-      }
-      
-      if(length(value)>0){
-        summaryData$Hippocampus[i] <- sample(value, 1)
-      }
-      else{
-        summaryData$Hippocampus[i] <- NA
-      }
-      
-      #MOB
-      
-      value <- c(summaryData$MOB_volume_mm3_decasien[summaryData$Species_abbrv==summaryData$Species_abbrv[i]])
-      
-      value <- value[!is.na(value)]
-      #Because there are issues if of length 1
-      if(length(value)==1){
-        value <- c(value, value)
-      }
-      
-      if(length(value)>0){
-        summaryData$MOB[i] <- sample(value, 1)
-      }
-      else{
-        summaryData$MOB[i] <- NA
-      }
-      
-      #Bodymass
-      
-      value <- c(summaryData$Body_mass_g_decasien[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-                 summaryData$Body_mass_g_powell[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-                 summaryData$Body_mass_g_pearce[summaryData$Species_abbrv==summaryData$Species_abbrv[i]],
-                 summaryData$Body_mass_g_grueter[summaryData$Species_abbrv==summaryData$Species_abbrv[i]])
-      
-      value <- value[!is.na(value)]
-      #Because there are issues if of length 1
-      if(length(value)==1){
-        value <- c(value, value)
-      }
-      
-      if(length(value)>0){
-        summaryData$Bodymass[i] <- sample(value, 1)
-      }
-      else{
-        summaryData$Bodymass[i] <- NA
-      }
-      
-    }
-    
-    summaryData$Family<- summaryData$Family[match(summaryData$Species_abbrv,summaryData$Species_abbrv)]
-    
-    
-    #save data for plotting
-    if(a==1&b==1&c==1&d==1){
-      summaryDataForPlot <- summaryData
-      write.table(summaryData, "Dataplot.txt", row.names=FALSE, col.names=TRUE, sep="\t")
-    }
-    
+   
     #SaveDataGeneral
-    write.table(summaryData, paste("Dataplot/Dataplot", a, "_", b, "_", c, "_", d,".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+    summaryData <- read.table(paste("Dataplot/Dataplot", a, "_", b, "_", c, "_", d,".txt", sep=""),  header=TRUE, sep="\t", colClasses = "character")
     
+    for (col in c(4:34, 38:47)){summaryData[,col] <- as.numeric(summaryData[,col])}
+
     write.table(length(summaryData$DietaryGuild[summaryData$DietaryGuild=="Fruit"]), 
                 paste("Sample_size/checkSampleFruit", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
     write.table(length(summaryData$DietaryGuild[summaryData$DietaryGuild=="Leaf"]), 
@@ -547,6 +340,7 @@ for(c in 1:length(geographicThresholdVector)){
   
     #Load and save tree corresponding to species with diet
     phylo <- read.tree("Tree/Tree_biogeobears.nex")
+    # phylo <- read.tree("../Raw_data/Tree/Tree_biogeobears.nex")
     
     phylo <- drop.tip(phylo,
                       phylo$tip.label[
@@ -555,7 +349,7 @@ for(c in 1:length(geographicThresholdVector)){
     #simmapdiet1 <- make.simmap(tree=phylo, vectorDiet, model="ARD", pi="estimated", nsim=numberSimulations)#inequal and not symmetrical rate of transition from folivory to frugivory etc...
     
     load(file=paste("Simmap/Output_simmap_transition", a, "_", b, "_", c, "_", d, ".Rdata", sep=""))
-    
+
     write.table(as.vector(simmapdiet1[[1]]$Q[,1]), paste("OutputEvolModel/Output_simmap_transition", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
     
     # Evolutionary history of traits (~brain size) with and without competition
@@ -583,8 +377,12 @@ for(c in 1:length(geographicThresholdVector)){
     #Reload tree to have same than used for biogeobears
     phylo <- read.tree("Tree/Tree_biogeobears.nex")
     
-    colnames(summaryData)[colnames(summaryData)=="DietaryGuild"] <- "Guild"
     
+    
+    colnames(summaryData)[colnames(summaryData)=="DietaryGuild"] <- "Guild"
+
+    
+    # Brain
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_BrainBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("Brain")
       summaryData$ratioBrain <-  summaryData$Brain/summaryData$Bodymass
@@ -727,6 +525,10 @@ for(c in 1:length(geographicThresholdVector)){
   # Run parallel
   parallel::mclapply(1:randomSampling, parrallel_run, mc.cores=10, mc.preschedule = T)
 
+  # for (d in 1:randomSampling){
+  #   parrallel_run(d)
+  # }
+  
 }
 
 ## END ANALYSIS

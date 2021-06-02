@@ -123,6 +123,10 @@ for(c in 1:length(geographicThresholdVector)){
     
     base::set.seed(d)
     base::set.seed(d)
+    rm(.Random.seed)
+    base::set.seed(d)
+    base::set.seed(d)
+    
     
     #####  To run with different d values 
     
@@ -346,8 +350,11 @@ for(c in 1:length(geographicThresholdVector)){
     #save data for plotting
     if(a==1&b==1&c==1&d==1){
       summaryDataForPlot <- summaryData
-      #write.table(summaryData, "Dataplot.txt", row.names=FALSE, col.names=TRUE, sep="\t")
+      write.table(summaryData, "Dataplot.txt", row.names=FALSE, col.names=TRUE, sep="\t")
     }
+    
+    #SaveDataGeneral
+    write.table(summaryData, paste("Dataplot/Dataplot", a, "_", b, "_", c, "_", d,".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
     
 
     ##--------
