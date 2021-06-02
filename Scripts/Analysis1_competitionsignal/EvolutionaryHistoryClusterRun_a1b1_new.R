@@ -35,10 +35,10 @@ load("geography_traits_biogeobears.RData")
 # install_version("phytools", version = "0.6.99", repos = "http://cran.us.r-project.org", lib="/users/biodiv/bperez/packages/")
 
 # Phylogenetics
-# library(caper)
+library(caper)
 library(ape)
 library(phytools) #, lib.loc = "/users/biodiv/bperez/packages/")
-# library(geiger)
+library(geiger)
 # library(MCMCglmm, lib.loc = "/users/biodiv/bperez/packages/")
 library(ellipsis, lib.loc = "/users/biodiv/bperez/packages/")
 library(RPANDA, lib.loc = "/users/biodiv/bperez/packages/")
@@ -47,7 +47,7 @@ library(optimx)
 library(svMisc, lib.loc = "/users/biodiv/bperez/packages/")
 
 #Parallelizing
-# library(parallel)
+library(parallel)
 
 ##--------
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -110,6 +110,7 @@ for(c in 1:length(geographicThresholdVector)){
   summaryData$geographicCode <- matrixRangingSensitivity[match(summaryData$SpeciesForPhylogeny,matrixRangingSensitivity$SpeciesForPhylogeny),which(thresholdPresenceRange==geographicThresholdVector[c])]   
   
   load(paste("BioGeoBEARS/BSM_output_file", c, ".Rdata", sep=""))
+  # load(paste("../BioGeoBEARS/BSM_output_file", c, ".Rdata", sep=""))
   
   summaryData_init <- summaryData
   
@@ -118,8 +119,18 @@ for(c in 1:length(geographicThresholdVector)){
 
     base::set.seed(d)
     base::set.seed(d)
+    rm(.Random.seed)
+    base::set.seed(d)
+    base::set.seed(d)
     
     print(runif(1))
+    
+    
+    for (rep in 1:1000){
+      print(runif(1))
+    }
+    
+    print("end")
 
     runComparisonModelsCompetition <- function(
       
@@ -142,11 +153,30 @@ for(c in 1:length(geographicThresholdVector)){
       
       #isolate data from subgroup of interest 
       group.map<-simmap
-      data.grouped<-subset(data, Guild==subgroup)
+      
+      
+      print(nrow(data))
+      print(table(data$Guild))
+      
+      data.grouped<-data[which(data$Guild==subgroup),]
+      
+      print(table(data.grouped$Guild))
+      
+      print(nrow(data.grouped))
+      
       mass<-data.grouped[,which(colnames(data.grouped)=="SpeciesForPhylogeny")]
       names(mass)<-data.grouped[,which(colnames(data.grouped)=="SpeciesForPhylogeny")]
       nc<-geiger::name.check(tree,mass)
       data.grouped.tree<-drop.tip(tree,nc$tree_not_data)
+      
+      # test
+      if (Ntip(data.grouped.tree)!=nrow(data.grouped)){
+        data.grouped.tree<-drop.tip(data.grouped.tree,tip = data.grouped.tree$tip.label[which(!data.grouped.tree$tip.label %in% data.grouped$SpeciesForPhylogeny)])
+      }
+      
+      print(nrow(data.grouped))
+      print(Ntip(data.grouped.tree))
+      
       subdata<-data.grouped[which(data.grouped$SpeciesForPhylogeny%in%data.grouped.tree$tip.label),]
       
       #set up analyses
@@ -207,7 +237,12 @@ for(c in 1:length(geographicThresholdVector)){
         EB.conv<-as.numeric(tail(o32$res[,length(o32$res[1,])],n=1))
 
         
+        print(Ntip(tree))
+        print(nrow(ana_events_tables[[i]]))
         print(group.map2)
+        print(nrow(group.map2))
+        print(M)
+        print(length(M))
         
         o4<-fit_t_comp_subgroup(full.phylo=tree,
                                 ana.events=ana_events_tables[[i]],
@@ -327,6 +362,7 @@ for(c in 1:length(geographicThresholdVector)){
       }
       
       if(length(value)>0){
+        #print(runif(1))
         summaryData$FrugivoryPercent[i] <- sample(value, 1)
       }
       else{
@@ -504,6 +540,18 @@ for(c in 1:length(geographicThresholdVector)){
       
     }
     
+    #delete
+    print(a)
+    print(b)
+    print(c)
+    print(d)
+    print(frugivoryThreshold)
+    print(folivoryThreshold)
+    print(summary(summaryData$FrugivoryPercent))
+    print(summary(summaryData$FolivoryPercent))
+    print(table(summaryData$DietaryGuild))
+    
+    
     summaryData$Family<- summaryData$Family[match(summaryData$Species_abbrv,summaryData$Species_abbrv)]
     
     
@@ -549,6 +597,7 @@ for(c in 1:length(geographicThresholdVector)){
   
     #Load and save tree corresponding to species with diet
     phylo <- read.tree("Tree/Tree_biogeobears.nex")
+    # phylo <- read.tree("../Raw_data/Tree/Tree_biogeobears.nex")
     
     phylo <- drop.tip(phylo,
                       phylo$tip.label[
@@ -588,6 +637,8 @@ for(c in 1:length(geographicThresholdVector)){
     #Reload tree to have same than used for biogeobears
     phylo <- read.tree("Tree/Tree_biogeobears.nex")
     
+    
+    
     colnames(summaryData)[colnames(summaryData)=="DietaryGuild"] <- "Guild"
     
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_BrainBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
@@ -595,6 +646,13 @@ for(c in 1:length(geographicThresholdVector)){
       summaryData$ratioBrain <-  summaryData$Brain/summaryData$Bodymass
       hist(summaryData$ratioBrain )
       summaryData$ratioBrain.log <- log(summaryData$ratioBrain)
+      
+      
+#delete 
+      print(table(summaryData$Guild))
+      print(table(summaryData[!is.na(summaryData$Brain.log)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,]$Guild))
+      
+      
       resultBrainFrugivory <- runComparisonModelsCompetition(
         simmap=simmapdiet1,
         data=summaryData[!is.na(summaryData$Brain.log)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
