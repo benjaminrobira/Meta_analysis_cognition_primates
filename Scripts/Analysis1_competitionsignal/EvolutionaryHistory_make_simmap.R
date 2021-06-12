@@ -71,7 +71,7 @@ for (a in c(1,2)){
   print(c("a: ", a))
 frugivoryThreshold=frugivoryThresholdVector[a]
 
-b=1
+b=2
 for (b in c(1,2)){
   print(c("b: ", b))
 folivoryThreshold=folivoryThresholdVector[b] 
@@ -377,6 +377,20 @@ for(c in 1:length(geographicThresholdVector)){
     simmapdiet1 <- make.simmap(tree=phylo, vectorDiet, model="ARD", pi="estimated", nsim=numberSimulations) #inequal and not symmetrical rate of transition from folivory to frugivory etc...
     
     save(list = "simmapdiet1", file=paste("Simmap/Output_simmap_transition", a, "_", b, "_", c, "_", d, ".Rdata", sep=""), version=2)
+    
+    
+    # # check 
+    # table(summaryData$DietaryGuild)
+    # group.map<- simmapdiet1
+    # i=1
+    # tree=read.tree("../Raw_data/Tree/Tree_biogeobears.nex")
+    # group.map2 <-drop.tip.simmap(group.map[[i]],group.map[[i]]$tip.label[which(!group.map[[i]]$tip.label%in%tree$tip.label)])
+    # 
+    # group.map2$tip.label
+    # 
+    # summaryData$SpeciesForPhylogeny[summaryData$DietaryGuild=="Fruit"] %in% group.map2$tip.label
+    # 
+    # BSM_output$RES_ana_events_tables[[1]]$label
     
   }
   

@@ -15,7 +15,7 @@
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ###Set working directory
-setwd("/users/biodiv/bperez/data/others/Benji/Evolutionary_history_2/")
+setwd("/users/biodiv/bperez/data/others/Benji/Evolutionary_history_3/")
 
 dir.create(file.path("Sample_size"), showWarnings = FALSE)
 dir.create(file.path("extdata"), showWarnings = FALSE)
