@@ -1,6 +1,6 @@
 # Meta analysis of cognition in primates :monkey:
 
-This repository stores all material linked to "**Primate Cognition and the Red Queen Intelligence Hypothesis**" by Benjamin Robira and Benoît Perez-Lamarque.
+This repository stores all material linked to "**Species sympatry constrains brain size evolution in Primates**" by *Benjamin Robira* and *Benoît Perez-Lamarque*.
 
 It is divided into several folders:
 
@@ -21,12 +21,12 @@ It includes:
   - The script for conducting the PGLS analysis on selection direction (`PGLSdirectionSelection`).
 * :herb: Analysis3_diversification: Analysis to see whether how the diversification rate covaries with brain size
   - The script for running the diversification algorithm ClaDS on the cluster (`DiversificationCluster`). 
-  - The script for conducting the PGLS analysis on diversification (`PGLSdiversification`). (still not done)
+  - The script for conducting the PGLS analysis on diversification (`PGLSdiversification`).
   - The file with all inputs/outputs from the diversification analysis.
 
 ## :page_with_curl: Article
 
-It includes the R markdown document that is actually the written version of the article ("Article.Rmd") and the associated bibtex file for article reference only (intern compilation for adding *R* packages; "biliograpphyarticle.bib"). Supplementary files (the .lua and the .csl) are added so as to allow correct compilation. They must be stored together with the .Rmd file.
+It includes the R markdown document that corresponds to the written version of the article ("Article.Rmd") and the associated bibtex file for article reference only (intern compilation for adding *R* packages; "biliograpphyarticle.bib"). Supplementary files (the .lua and the .csl) are added so as to allow correct compilation. They must be stored together with the .Rmd file.
 
 
 

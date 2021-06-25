@@ -42,7 +42,7 @@ library(geiger)
 ################
 # Fitting linear models
 
-repetitionBootstrap=200
+repetitionBootstrap=1000
 
 #####---------------
 #Fixing data
@@ -270,27 +270,60 @@ summaryData$Family<- summaryData$Family[match(summaryData$Species_abbrv,summaryD
 
 #All the potential output predictors:
 
-summaryData$ratioBrain <- summaryData$Brain*1.036*(10**-3)/summaryData$Bodymass #Following decasien for multiplication by 1.036
+##--
+# Ratio body mass
+summaryData$ratioBrain <- summaryData$Brain/summaryData$Bodymass
+summaryData$ratioBrain.log <- log(summaryData$ratioBrain)
+
 summaryData$EQ <- summaryData$Brain*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775) #Following decasien, according to #Jerison, H. J. Evolution of the Brain and Intelligence (Academic, 1973).
 
 summaryData$Brain.log <- log(summaryData$Brain)
 summaryData$EQ.log <- log(summaryData$EQ)
 
-summaryData$ratioNeocortex <- summaryData$Neocortex*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775)#summaryData$Neocortex/summaryData$Brain
+summaryData$ratioNeocortex <- summaryData$Neocortex/summaryData$Bodymass
 summaryData$ratioNeocortex.log  <- log(summaryData$ratioNeocortex)
 
-summaryData$ratioHippocampus <- summaryData$Hippocampus*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775)#summaryData$Hippocampus/summaryData$Brain
+summaryData$ratioHippocampus <- summaryData$Hippocampus/summaryData$Bodymass
 summaryData$ratioHippocampus.log <- log(summaryData$ratioHippocampus)
 
-summaryData$ratioCerebellum <- summaryData$Cerebellum*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775)#summaryData$Cerebellum/summaryData$Brain
+summaryData$ratioCerebellum <- summaryData$Cerebellum/summaryData$Bodymass
+summaryData$ratioCerebellum.log <- log(summaryData$ratioCerebellum )
 
-summaryData$ratioStriatum <- summaryData$Striatum*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775)#summaryData$Striatum/summaryData$Brain
+summaryData$ratioStriatum <- summaryData$Striatum/summaryData$Bodymass
+summaryData$ratioStriatum.log <- log(summaryData$Striatum/summaryData$Bodymass)
 
-summaryData$ratioMOB <- summaryData$MOB*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775)#summaryData$MOB/summaryData$Brain
+summaryData$ratioMOB <- summaryData$MOB/summaryData$Bodymass
 summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
 
+##--
+# Ratio EQ
 
-# summaryData$ratioBrain <- summaryData$Brain*1.036*(10**-3)/summaryData$Bodymass #Following decasien for multiplication by 1.036
+# summaryData$ratioBrain <- summaryData$Brain/summaryData$Bodymass
+# summaryData$ratioBrain.log <- log(summaryData$ratioBrain)
+# summaryData$EQ <- summaryData$Brain*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775) #Following decasien, according to #Jerison, H. J. Evolution of the Brain and Intelligence (Academic, 1973).
+# 
+# summaryData$Brain.log <- log(summaryData$Brain)
+# summaryData$EQ.log <- log(summaryData$EQ)
+# 
+# summaryData$ratioNeocortex <- summaryData$Neocortex*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775)#summaryData$Neocortex/summaryData$Brain
+# summaryData$ratioNeocortex.log  <- log(summaryData$ratioNeocortex)
+# 
+# summaryData$ratioHippocampus <- summaryData$Hippocampus*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775)#summaryData$Hippocampus/summaryData$Brain
+# summaryData$ratioHippocampus.log <- log(summaryData$ratioHippocampus)
+# 
+# summaryData$ratioCerebellum <- summaryData$Cerebellum*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775)#summaryData$Cerebellum/summaryData$Brain
+# 
+# summaryData$ratioStriatum <- summaryData$Striatum*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775)#summaryData$Striatum/summaryData$Brain
+# 
+# summaryData$ratioMOB <- summaryData$MOB*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775)#summaryData$MOB/summaryData$Brain
+# summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
+
+
+##--
+# Ratio brain
+
+# summaryData$ratioBrain <- summaryData$Brain/summaryData$Bodymass
+# summaryData$ratioBrain.log <- log(summaryData$ratioBrain)
 # summaryData$EQ <- summaryData$Brain*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775) #Following decasien, according to #Jerison, H. J. Evolution of the Brain and Intelligence (Academic, 1973).
 # 
 # summaryData$Brain.log <- log(summaryData$Brain)
@@ -309,6 +342,9 @@ summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
 # summaryData$ratioMOB <- summaryData$MOB/summaryData$Brain
 # summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
 
+##--
+# RAW
+
 # summaryData$ratioBrain <- summaryData$Brain*1.036*(10**-3)/summaryData$Bodymass #Following decasien for multiplication by 1.036
 # summaryData$EQ <- summaryData$Brain*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775) #Following decasien, according to #Jerison, H. J. Evolution of the Brain and Intelligence (Academic, 1973).
 # 
@@ -325,8 +361,8 @@ summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
 # 
 # summaryData$ratioStriatum <- summaryData$Striatum
 
-summaryData$ratioMOB <- summaryData$MOB
-summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
+# summaryData$ratioMOB <- summaryData$MOB
+# summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
 
 ##---
 #Load consensus tree
@@ -344,8 +380,8 @@ abline(a=0, b=1, col="gray", lwd=0.5)
 phylo <- multi2di(phylo)
 is.binary(phylo)
 
-traitToStudy=c("EQ.log", "ratioBrain", "ratioHippocampus.log", "ratioNeocortex.log", "ratioCerebellum", "ratioStriatum", "ratioMOB.log")
-traitName=c("EQ (log)", "Brain", "Hippocampus (log)", "Neocortex (log)", "Cerebellum", "Striatum", "MOB (log)")
+traitToStudy=c("EQ.log", "ratioBrain.log", "ratioHippocampus.log", "ratioNeocortex.log", "ratioCerebellum.log", "ratioStriatum.log", "ratioMOB.log")
+traitName=c("EQ (log)", "Brain (/bodymass, log)", "Hippocampus (/bodymass, log)", "Neocortex (/bodymass, log)", "Cerebellum (/bodymass, log)", "Striatum (/bodymass, log)", "MOB (/bodymass, log)")
 vifVector <- rep(NA, times=length(traitName))  
   
 results.df <- as.data.frame(matrix(NA, nrow=5*length(traitToStudy), ncol=7))
@@ -376,7 +412,6 @@ results.df[(firstRowWrite+1):(firstRowWrite+4), 1] <- c("Intercept", "% of overl
 ##--------
 ## Main model: based on consensus tree
 ##--------
-
 
 #Create data for phylogenetic regression
 # comp_data <- comparative.data(phy = phyloConsensus, data= dataRangePrimate_rdc,
@@ -416,7 +451,7 @@ modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt + Number_species_co
 results.df[(firstRowWrite+1):(firstRowWrite+3), 2] <- roundIntelligent(summary(modelBrain)$coefficients[,1], digit=2) #roundIntelligent(summary(modelBrain)$tTable[,1], digit=2)
 results.df[(firstRowWrite+1):(firstRowWrite+3), 3] <- roundIntelligent(summary(modelBrain)$coefficients[,4], digit=2) #roundIntelligent(CI$coef[,1], digit=2)
 results.df[(firstRowWrite+1):(firstRowWrite+3), 4] <- roundIntelligent(summary(modelBrain)$coefficients[,5], digit=2) #roundIntelligent(CI$coef[,3], digit=2)
-results.df[(firstRowWrite+1):(firstRowWrite+3), 5] <- roundIntelligent(summary(modelBrain)$coefficients[,3], digit=2) #roundIntelligent(summary(modelBrain)$tTable[,2], digit=2)
+results.df[(firstRowWrite+1):(firstRowWrite+3), 5] <- roundIntelligent(summary(modelBrain)$coefficients[,2], digit=2) #roundIntelligent(summary(modelBrain)$tTable[,2], digit=2)
 results.df[(firstRowWrite+1):(firstRowWrite+3), 6] <- c("-", roundIntelligent(summary(modelBrain)$coefficients[2:3,3], digit=2))
 results.df[(firstRowWrite+1):(firstRowWrite+3), 7] <- c("-", roundIntelligent(summary(modelBrain)$coefficients[2:3,6], digit=2))
 
@@ -425,7 +460,7 @@ results.df[(firstRowWrite+1):(firstRowWrite+3), 7] <- c("-", roundIntelligent(su
 # 
 # lambda <- paste(round(summary(modelBrainPgls)$param.CI$lambda$opt, digit=2), " [",val1,",",val2,"]", sep="")
 #         
-results.df[firstRowWrite+4,2] <- roundIntelligent(summary(modelBrain)$bootmean[5])
+results.df[firstRowWrite+4,2] <- roundIntelligent(summary(modelBrain)$optpar)#bootmean[5])
 results.df[firstRowWrite+4,3] <- roundIntelligent(summary(modelBrain)$bootconfint95[1,5])#CI$corStruct[1,1])
 results.df[firstRowWrite+4,4] <- roundIntelligent(summary(modelBrain)$bootconfint95[2,5])#CI$corStruct[1,3])
 
@@ -472,7 +507,7 @@ for(a in 1:length(traitToStudy)){
     dataRangePrimate_rdc$Overlap_average.sqrt <- sqrt(dataRangePrimate_rdc$Overlap_average)
     rownames(dataRangePrimate_rdc) <- dataRangePrimate_rdc$Species
 
-    dataRangePrimate_rdc2 <- dataRangePrimate_rdc [-r,] 
+    dataRangePrimate_rdc2 <- dataRangePrimate_rdc[-r,] 
     #Readjust phylo tree
     phyloConsensus <- drop.tip(phylo,
                                phylo$tip.label[
@@ -492,7 +527,7 @@ for(a in 1:length(traitToStudy)){
    dfBetasEstimate[rowToAdd,] <- summary(modelBrain)$coefficients[,1]
    dfBetasPvalue[rowToAdd,] <- summary(modelBrain)$coefficients[,4]
    dfBetasLambda[rowToAdd] <- summary(modelBrain)$optpar
-   traitVectordfBetas[rowToAdd] <- traitToStudy[a]
+   traitVectordfBetas[rowToAdd] <- traitName[a]
 
   progress(r/nrow(dataRangePrimate_rdc)*100)
   }
@@ -507,11 +542,11 @@ for(a in 1:length(traitToStudy)){
 #1) create layout + matrix for all plots
 
 #finish the plot part:write for overlap + adjust axis and color + add regression
+pdf("Plots/selectionGradientPGLS.pdf", height=25, width=18)
 
-layout(mat=rbind(1:length(traitToStudy), 
-                 (length(traitToStudy)+1):(length(traitToStudy)+length(traitToStudy))),
+layout(mat=cbind(seq(from=1, to=length(traitToStudy), by=2), seq(from=2, to=length(traitToStudy)+1, by=2)),
        widths=c(5,5), heights=rep(5, times=length(traitToStudy)))
-par(mar=c(3, 3, 1, 1), mgp=c(2, 0.5, 0), xpd=TRUE)
+par(mar=c(3.5, 3.5, 1, 1), mgp=c(2.5, 0.5, 0), xpd=TRUE, cex=1.2)
 
 for(i in 1:length(traitToStudy)){ 
   
@@ -542,7 +577,7 @@ for(i in 1:length(traitToStudy)){
   dataRangePrimate_rdc$Number_species_cooccurrence.sqrt.z <- scale(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt)
   dataRangePrimate_rdc$Overlap_average.sqrt.z <- scale(dataRangePrimate_rdc$Overlap_average.sqrt)
   
-  modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt + Number_species_cooccurrence.sqrt, 
+  modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt.z + Number_species_cooccurrence.sqrt, 
                         data=dataRangePrimate_rdc, phy=phyloConsensus, model="lambda", measurement_error=FALSE, boot=repetitionBootstrap)
   
   CI <- cbind(modelBrain$bootmean, t(summary(modelBrain)$bootconfint95))
@@ -550,11 +585,12 @@ for(i in 1:length(traitToStudy)){
   ##----
   #Plot against N co-occ
   
-  xmin=min(round(dataRangePrimate_rdc[,c(2)]), digit=2)
-  xmax=max(round(dataRangePrimate_rdc[,c(2)]), digit=2)
-  ymin=min(round(dataRangePrimate_rdc[,c(4)]), digit=2)
-  ymax=max(round(dataRangePrimate_rdc[,c(4)]), digit=2)
+  xmin=min(round(dataRangePrimate_rdc[,c(2)], digit=2))
+  xmax=max(round(dataRangePrimate_rdc[,c(2)], digit=2))
+  ymin=min(round(dataRangePrimate_rdc[,c(4)], digit=2))
+  ymax=max(round(dataRangePrimate_rdc[,c(4)], digit=2))
   
+  par(mar=c(3.5, 3.5, 1, 1), mgp=c(2.5, 0.5, 0), xpd=TRUE, cex=1.2)
   ##With number of co-occurring species
   plot(dataRangePrimate_rdc[,c(2)], dataRangePrimate_rdc[,c(4)], xlab="Number of sympatric\nfrugivorous species", ylab=traitName[i],
        las=1, type="n", tcl=-0.25, bty="n",
@@ -565,7 +601,8 @@ for(i in 1:length(traitToStudy)){
     xmin=xmin, xmax=xmax, xintsmall=(xmax-xmin)/20, xintbig=(xmax-xmin)/5,
     ymin=ymin, ymax=ymax, yintsmall=(ymax-ymin)/20, yintbig=(ymax-ymin)/5,
     axisPlot=TRUE, round=TRUE, digit=c(2,2))
-  addLabel(xfrac=0.05, yfrac=0.05, label=paste(i, "a", sep=""), circle=TRUE, radiuscircle=(xmax-xmin)/25, circle.bg="black", font.col="white")
+  axis(side=1, at=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), labels=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), las=1, tcl=-0.25)
+  addLabel(xfrac=0.05, yfrac=0.05, label=paste(i, "a", sep=""), circle=TRUE, radiuscircle=(xmax-xmin)/35, circle.bg="black", font.col="white")
   
   #Add result model
   ymean <- c(CI[1,1], CI[1,1] + CI[3,1]*max(dataRangePrimate_rdc[,c(4)]))
@@ -593,18 +630,20 @@ for(i in 1:length(traitToStudy)){
   ##----
   #Plot against overlap
   
-  modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt + Number_species_cooccurrence.sqrt, 
+  modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt + Number_species_cooccurrence.sqrt.z, 
                         data=dataRangePrimate_rdc ,phy=phyloConsensus,model="lambda",measurement_error=FALSE,boot=repetitionBootstrap)
   
   CI <- cbind(modelBrain$bootmean, t(summary(modelBrain)$bootconfint95))
   
-  xmin=min(round(dataRangePrimate_rdc[,c(3)]), digit=2)
-  xmax=max(round(dataRangePrimate_rdc[,c(3)]), digit=2)
-  ymin=min(round(dataRangePrimate_rdc[,c(4)]), digit=2)
-  ymax=max(round(dataRangePrimate_rdc[,c(4)]), digit=2)
+  xmin=min(round(dataRangePrimate_rdc[,c(3)], digit=2))
+  xmax=max(round(dataRangePrimate_rdc[,c(3)], digit=2))
+  ymin=min(round(dataRangePrimate_rdc[,c(4)], digit=2))
+  ymax=max(round(dataRangePrimate_rdc[,c(4)], digit=2))
+  
+  par(mar=c(3.5, 1, 1, 3), mgp=c(2.5, 0.5, 0), xpd=TRUE)
   
   ##With overlap
-  plot(dataRangePrimate_rdc[,c(3)], dataRangePrimate_rdc[,c(4)], xlab="Average surfacic overlap\nwith sympatric frugivorous species", ylab=traitName[i],
+  plot(dataRangePrimate_rdc[,c(3)], dataRangePrimate_rdc[,c(4)], xlab="Average surfacic overlap\nwith sympatric frugivorous species", ylab="",
        las=1, type="n", tcl=-0.25, bty="n",
        xaxt="n",xaxs="i",yaxs="i", yaxt="n", xpd=TRUE)
   
@@ -612,14 +651,16 @@ for(i in 1:length(traitToStudy)){
   addGrid(
     xmin=xmin, xmax=xmax, xintsmall=(xmax-xmin)/20, xintbig=(xmax-xmin)/5,
     ymin=ymin, ymax=ymax, yintsmall=(ymax-ymin)/20, yintbig=(ymax-ymin)/5,
-    axisPlot=TRUE, round=TRUE, digit=c(2,2))
-  addLabel(xfrac=0.05, yfrac=0.05, label=paste(i, "b", sep=""), circle=TRUE, radiuscircle=(xmax-xmin)/25, circle.bg="black", font.col="white")
+    axisPlot=FALSE, round=TRUE, digit=c(2,2))
+  axis(side=1, at=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), labels=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), las=1, tcl=-0.25)
+
+  addLabel(xfrac=0.05, yfrac=0.05, label=paste(i, "b", sep=""), circle=TRUE, radiuscircle=(xmax-xmin)/35, circle.bg="black", font.col="white")
   
   #Add background tree
   col=list(col.edge=setNames(rep("darkgrey",nrow(phyloConsensus$edge)),as.character(phyloConsensus$edge[,2])),
            col.node=setNames(rep("black",max(phyloConsensus$edge)),as.character(1:max(phyloConsensus$edge))))
   
-  phylomorphospace(phyloConsensus,dataRangePrimate_rdc[,c(2,4)], add=TRUE, label="true", lty=3,
+  phylomorphospace(phyloConsensus,dataRangePrimate_rdc[,c(3,4)], add=TRUE, label="true", lty=3,
                    control=col)
   
   #Add result model
@@ -637,10 +678,6 @@ for(i in 1:length(traitToStudy)){
     border=NA#,
     #lty=2
   )
-  
-  #Overlay points
-  points(dataRangePrimate_rdc[,c(3)], dataRangePrimate_rdc[,c(4)], pch=19, col="red",xpd=TRUE)
-  
 }
 
 dev.off()
@@ -654,7 +691,7 @@ dev.off()
 ##Remains to do: -> summarizing the output + check if it works
 
 repetitionTrees=50
-repetitionModels=30
+repetitionModels=50
   
 sensitivityEstimate <- as.data.frame(matrix(NA, ncol=3, nrow=repetitionTrees*repetitionModels*length(traitToStudy)))
 sensitivityPvalue <- as.data.frame(matrix(NA, ncol=3, nrow=repetitionTrees*repetitionModels*length(traitToStudy)))
@@ -878,26 +915,28 @@ for(d in 1:repetitionModels){#data
   
   
   #All the potential output predictors:
+  summaryData$ratioBrain <- summaryData$Brain/summaryData$Bodymass
+  summaryData$ratioBrain.log <- log(summaryData$ratioBrain)
   
-  summaryData$ratioBrain <- summaryData$Brain*1.036*(10**-3)/summaryData$Bodymass #Following decasien for multiplication by 1.036
   summaryData$EQ <- summaryData$Brain*1.036*(10**-3)/(0.085*summaryData$Bodymass**0.775) #Following decasien, according to #Jerison, H. J. Evolution of the Brain and Intelligence (Academic, 1973).
   
   summaryData$Brain.log <- log(summaryData$Brain)
   summaryData$EQ.log <- log(summaryData$EQ)
   
-  summaryData$ratioNeocortex <- summaryData$Neocortex/summaryData$Brain
+  summaryData$ratioNeocortex <- summaryData$Neocortex/summaryData$Bodymass
   summaryData$ratioNeocortex.log  <- log(summaryData$ratioNeocortex)
   
-  summaryData$ratioHippocampus <- summaryData$Hippocampus/summaryData$Brain
+  summaryData$ratioHippocampus <- summaryData$Hippocampus/summaryData$Bodymass
   summaryData$ratioHippocampus.log <- log(summaryData$ratioHippocampus)
   
-  summaryData$ratioCerebellum <- summaryData$Cerebellum/summaryData$Brain
+  summaryData$ratioCerebellum <- summaryData$Cerebellum/summaryData$Bodymass
+  summaryData$ratioCerebellum.log <- log(summaryData$ratioCerebellum )
   
-  summaryData$ratioStriatum <- summaryData$Striatum/summaryData$Brain
+  summaryData$ratioStriatum <- summaryData$Striatum/summaryData$Bodymass
+  summaryData$ratioStriatum.log <- log(summaryData$Striatum/summaryData$Bodymass)
   
-  summaryData$ratioMOB <- summaryData$MOB/summaryData$Brain
+  summaryData$ratioMOB <- summaryData$MOB/summaryData$Bodymass
   summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
-  
   
   for(t in 1:repetitionTrees){
     
@@ -920,7 +959,7 @@ for(d in 1:repetitionModels){#data
   for(a in 1:length(traitToStudy)){
     
     rowToAdd=which(is.na(sensitivityLambda))[1]
-    traitVectorSensitivity[rowToAdd] <- traitToStudy[a]
+    traitVectorSensitivity[rowToAdd] <- traitName[a]
     #Matching the brain trait to the dataset with predictors
     
     dataRangePrimate$Trait <- summaryData[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny), which(colnames(summaryData)==traitToStudy[a])]
@@ -960,7 +999,7 @@ for(d in 1:repetitionModels){#data
     dataRangePrimate_rdc$Number_species_cooccurrence.sqrt <- sqrt(dataRangePrimate_rdc$Number_species_cooccurrence)
       
     modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt + Number_species_cooccurrence.sqrt, 
-                          data=dataRangePrimate_rdc ,phy=phyloConsensus,model="lambda",measurement_error=FALSE)
+                          data=dataRangePrimate_rdc, phy=phyloConsensus,model="lambda",measurement_error=FALSE)
     
     # modelBrain <- gls(Trait ~ Overlap_average.sqrt  correlation = corPagel(1, phyloConsensus, form = ~Species),
     #                   data = dataRangePrimate_rdc, method = "ML")
@@ -971,10 +1010,12 @@ for(d in 1:repetitionModels){#data
     sensitivityEstimate[rowToAdd,] <- summary(modelBrain)$coefficients[,1]#round(summary(modelBrain)$coefficients[,1], digit=4)
     sensitivityPvalue[rowToAdd,] <- summary(modelBrain)$coefficients[,4]#c("-", round(results[1:2,5], digit=3))
     sensitivityLambda[rowToAdd] <- summary(modelBrain)$optpar#CI$corStruct[1,2])#round(summary(modelBrain)$param.CI$lambda$opt, digit=2)
-    traitVectorSensitivity[rowToAdd] <- traitToStudy[a]
+    traitVectorSensitivity[rowToAdd] <- traitName[a]
     
     }
   }
+  
+  progress(d/repetitionModels*100)
 }
 
 ###----
@@ -993,8 +1034,8 @@ colnames(maxEst) <- c("Trait", "Intercept", "Overlap", "N co-occurrence", "Lambd
 maxEst <- pivot_longer(maxEst, col=2:5, names_to="Variable", values_to="Estimate")
 
 estimate <- results.df[results.df[,2]!="",2]
-whatIs <- rep(traitToStudy, each=4)
-numberForFinishingMatch <- rep(1:4, times=length(traitToStudy))
+whatIs <- rep(traitName, each=4)
+numberForFinishingMatch <- rep(1:4, times=length(traitName))
 
 #medianEst <- aggregate(dfBetasEstimate, by=list(traitVectordfBetas), median)
 minEst$EstimateTrue <- estimate[match(paste(minEst$Trait,numberForFinishingMatch),paste(whatIs,numberForFinishingMatch))]
@@ -1030,8 +1071,8 @@ colnames(maxEst) <- c("Trait", "Intercept", "Overlap", "N co-occurrence", "Lambd
 maxEst <- pivot_longer(maxEst, col=2:5, names_to="Variable", values_to="Estimate")
 
 estimate <- results.df[results.df[,2]!="",2]
-whatIs <- rep(traitToStudy, each=4)
-numberForFinishingMatch <- rep(1:4, times=length(traitToStudy))
+whatIs <- rep(traitName, each=4)
+numberForFinishingMatch <- rep(1:4, times=length(traitName))
 
 #medianEst <- aggregate(sensitivityEstimate, by=list(traitVectorSensitivity), median)
 minEst$EstimateTrue <- estimate[match(paste(minEst$Trait,numberForFinishingMatch),paste(whatIs,numberForFinishingMatch))]
@@ -1064,12 +1105,15 @@ knitr::kable(summarySensitivityGradient, escape=TRUE, booktabs = TRUE,
 ###---
 ## Create main table
 
+results.df_gradient_init <- results.df_gradient
+results.df_gradient <- results.df_gradient_init
+
 whichToBold <- which(as.numeric(results.df_gradient$"p-value")<=0.05)
 toPlotBold <- rep(FALSE, times=nrow(results.df_gradient))
 toPlotBold[whichToBold] <- TRUE
 
-replace <- sapply(as.numeric(results.df_gradient$"p-value"), function(x) if(!is.na(x)){pvalueRound(x, text=FALSE)}else{x})
-results.df_gradient$"p-value"[!is.na(replace)] <- replace
+replace <- sapply(as.numeric(results.df_gradient$"p-value"), function(x) if(!is.na(x)&x!=""&x!="-"){pvalueRound(x, text=FALSE)}else{x})
+results.df_gradient$"p-value"[!is.na(replace)] <- replace[!is.na(replace)]
   
 knitr::kable(results.df_gradient, escape=TRUE, booktabs = TRUE,
              caption = "Model estimates and significance of phylogenetic regressions to assess the selection gradient direction | Est.=Estimate, CI2.5%=Lower border of the CI95%, CI97.5%=Upper border of the CI95%, Sd= Standard deviation, t= Statitsitics t-vale. The brain area (as well as the associated sample size)
