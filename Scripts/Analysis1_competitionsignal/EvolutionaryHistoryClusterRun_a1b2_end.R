@@ -385,6 +385,7 @@ for(c in length(geographicThresholdVector):1){
     # Brain
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_BrainBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("Brain")
+      tryCatch({
       summaryData$ratioBrain <-  summaryData$Brain/summaryData$Bodymass
       hist(summaryData$ratioBrain )
       summaryData$ratioBrain.log <- log(summaryData$ratioBrain)
@@ -399,12 +400,14 @@ for(c in length(geographicThresholdVector):1){
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
       write.table(resultBrainFrugivory, paste("OutputEvolModel/Output_evolutionary_history_BrainBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
     #MOB
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_MOBBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("MOB")
+      tryCatch({
       summaryData$ratioMOB <- summaryData$MOB/ summaryData$Bodymass
       hist(summaryData$ratioMOB)
       summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
@@ -421,6 +424,7 @@ for(c in length(geographicThresholdVector):1){
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
       write.table(resultMOBFrugivory, paste("OutputEvolModel/Output_evolutionary_history_MOBBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
@@ -428,6 +432,7 @@ for(c in length(geographicThresholdVector):1){
     #Striatum
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_StriatumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("ratioStriatum")
+      tryCatch({
       summaryData$ratioStriatum <- summaryData$Striatum/ summaryData$Bodymass
       hist(summaryData$ratioStriatum)
       summaryData$ratioStriatum.log <- log(summaryData$ratioStriatum)
@@ -443,6 +448,7 @@ for(c in length(geographicThresholdVector):1){
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
       write.table(resultStriatumFrugivory, paste("OutputEvolModel/Output_evolutionary_history_StriatumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
@@ -450,6 +456,7 @@ for(c in length(geographicThresholdVector):1){
     #Cerebellum
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_CerebellumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("ratioCerebellum")
+      tryCatch({
       summaryData$ratioCerebellum <- summaryData$Cerebellum/ summaryData$Bodymass
       hist(summaryData$ratioCerebellum )
       summaryData$ratioCerebellum.log <- log(summaryData$ratioCerebellum)
@@ -464,12 +471,14 @@ for(c in length(geographicThresholdVector):1){
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
       write.table(resultCerebellumFrugivory, paste("OutputEvolModel/Output_evolutionary_history_CerebellumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
     #Hippocampus
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_HippocampusBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("ratioHippocampus")
+      tryCatch({
       summaryData$ratioHippocampus <- summaryData$Hippocampus/ summaryData$Bodymass
       hist(summaryData$ratioHippocampus )
       summaryData$ratioHippocampus.log <- log(summaryData$ratioHippocampus)
@@ -485,11 +494,13 @@ for(c in length(geographicThresholdVector):1){
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
       write.table(resultHippocampusFrugivory, paste("OutputEvolModel/Output_evolutionary_history_HippocampusBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_NeocortexBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("Neocortex")
+      tryCatch({
       summaryData$ratioNeocortex <-  summaryData$Neocortex/summaryData$Bodymass
       hist(summaryData$ratioNeocortex )
       summaryData$ratioNeocortex.log <- log(summaryData$ratioNeocortex)
@@ -505,11 +516,13 @@ for(c in length(geographicThresholdVector):1){
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
       write.table(resultNeocortexFrugivory, paste("OutputEvolModel/Output_evolutionary_history_NeocortexBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_EQ", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("EQ")
+      tryCatch({
       resultEQFrugivory <- runComparisonModelsCompetition(
         simmap=simmapdiet1,
         data=summaryData[!is.na(summaryData$EQ)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
@@ -521,9 +534,8 @@ for(c in length(geographicThresholdVector):1){
         clado_events_tables=BSM_output$RES_clado_events_tables
       )
       write.table(resultEQFrugivory, paste("OutputEvolModel/Output_evolutionary_history_EQ", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
-    
-    
     
   }
   

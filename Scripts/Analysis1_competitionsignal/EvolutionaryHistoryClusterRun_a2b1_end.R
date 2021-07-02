@@ -385,42 +385,46 @@ for(c in length(geographicThresholdVector):1){
     # Brain
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_BrainBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("Brain")
-      summaryData$ratioBrain <-  summaryData$Brain/summaryData$Bodymass
-      hist(summaryData$ratioBrain )
-      summaryData$ratioBrain.log <- log(summaryData$ratioBrain)
-      resultBrainFrugivory <- runComparisonModelsCompetition(
-        simmap=simmapdiet1,
-        data=summaryData[!is.na(summaryData$Brain.log)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
-        subgroup="Fruit",
-        numberMaps=numberSimulations,
-        trait="ratioBrain.log",
-        tree=phylo,
-        ana_events_tables=BSM_output$RES_ana_events_tables,
-        clado_events_tables=BSM_output$RES_clado_events_tables
-      )
-      write.table(resultBrainFrugivory, paste("OutputEvolModel/Output_evolutionary_history_BrainBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      tryCatch({
+        summaryData$ratioBrain <-  summaryData$Brain/summaryData$Bodymass
+        hist(summaryData$ratioBrain )
+        summaryData$ratioBrain.log <- log(summaryData$ratioBrain)
+        resultBrainFrugivory <- runComparisonModelsCompetition(
+          simmap=simmapdiet1,
+          data=summaryData[!is.na(summaryData$Brain.log)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
+          subgroup="Fruit",
+          numberMaps=numberSimulations,
+          trait="ratioBrain.log",
+          tree=phylo,
+          ana_events_tables=BSM_output$RES_ana_events_tables,
+          clado_events_tables=BSM_output$RES_clado_events_tables
+        )
+        write.table(resultBrainFrugivory, paste("OutputEvolModel/Output_evolutionary_history_BrainBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
     #MOB
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_MOBBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("MOB")
-      summaryData$ratioMOB <- summaryData$MOB/ summaryData$Bodymass
-      hist(summaryData$ratioMOB)
-      summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
-      hist(summaryData$ratioMOB.log)
-      
-      resultMOBFrugivory <- runComparisonModelsCompetition(
-        simmap=simmapdiet1,
-        data=summaryData[!is.na(summaryData$ratioMOB)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
-        subgroup="Fruit",
-        numberMaps=numberSimulations,
-        trait="ratioMOB.log",
-        tree=phylo,
-        ana_events_tables=BSM_output$RES_ana_events_tables,
-        clado_events_tables=BSM_output$RES_clado_events_tables
-      )
-      write.table(resultMOBFrugivory, paste("OutputEvolModel/Output_evolutionary_history_MOBBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      tryCatch({
+        summaryData$ratioMOB <- summaryData$MOB/ summaryData$Bodymass
+        hist(summaryData$ratioMOB)
+        summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
+        hist(summaryData$ratioMOB.log)
+        
+        resultMOBFrugivory <- runComparisonModelsCompetition(
+          simmap=simmapdiet1,
+          data=summaryData[!is.na(summaryData$ratioMOB)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
+          subgroup="Fruit",
+          numberMaps=numberSimulations,
+          trait="ratioMOB.log",
+          tree=phylo,
+          ana_events_tables=BSM_output$RES_ana_events_tables,
+          clado_events_tables=BSM_output$RES_clado_events_tables
+        )
+        write.table(resultMOBFrugivory, paste("OutputEvolModel/Output_evolutionary_history_MOBBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
@@ -428,21 +432,23 @@ for(c in length(geographicThresholdVector):1){
     #Striatum
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_StriatumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("ratioStriatum")
-      summaryData$ratioStriatum <- summaryData$Striatum/ summaryData$Bodymass
-      hist(summaryData$ratioStriatum)
-      summaryData$ratioStriatum.log <- log(summaryData$ratioStriatum)
-      
-      resultStriatumFrugivory <- runComparisonModelsCompetition(
-        simmap=simmapdiet1,
-        data=summaryData[!is.na(summaryData$ratioStriatum)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
-        subgroup="Fruit",
-        numberMaps=numberSimulations,
-        trait="ratioStriatum.log",
-        tree=phylo,
-        ana_events_tables=BSM_output$RES_ana_events_tables,
-        clado_events_tables=BSM_output$RES_clado_events_tables
-      )
-      write.table(resultStriatumFrugivory, paste("OutputEvolModel/Output_evolutionary_history_StriatumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      tryCatch({
+        summaryData$ratioStriatum <- summaryData$Striatum/ summaryData$Bodymass
+        hist(summaryData$ratioStriatum)
+        summaryData$ratioStriatum.log <- log(summaryData$ratioStriatum)
+        
+        resultStriatumFrugivory <- runComparisonModelsCompetition(
+          simmap=simmapdiet1,
+          data=summaryData[!is.na(summaryData$ratioStriatum)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
+          subgroup="Fruit",
+          numberMaps=numberSimulations,
+          trait="ratioStriatum.log",
+          tree=phylo,
+          ana_events_tables=BSM_output$RES_ana_events_tables,
+          clado_events_tables=BSM_output$RES_clado_events_tables
+        )
+        write.table(resultStriatumFrugivory, paste("OutputEvolModel/Output_evolutionary_history_StriatumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
@@ -450,77 +456,85 @@ for(c in length(geographicThresholdVector):1){
     #Cerebellum
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_CerebellumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("ratioCerebellum")
-      summaryData$ratioCerebellum <- summaryData$Cerebellum/ summaryData$Bodymass
-      hist(summaryData$ratioCerebellum )
-      summaryData$ratioCerebellum.log <- log(summaryData$ratioCerebellum)
-      resultCerebellumFrugivory <- runComparisonModelsCompetition(
-        simmap=simmapdiet1,
-        data=summaryData[!is.na(summaryData$ratioCerebellum)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
-        subgroup="Fruit",
-        numberMaps=numberSimulations,
-        trait="ratioCerebellum.log",
-        tree=phylo,
-        ana_events_tables=BSM_output$RES_ana_events_tables,
-        clado_events_tables=BSM_output$RES_clado_events_tables
-      )
-      write.table(resultCerebellumFrugivory, paste("OutputEvolModel/Output_evolutionary_history_CerebellumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      tryCatch({
+        summaryData$ratioCerebellum <- summaryData$Cerebellum/ summaryData$Bodymass
+        hist(summaryData$ratioCerebellum )
+        summaryData$ratioCerebellum.log <- log(summaryData$ratioCerebellum)
+        resultCerebellumFrugivory <- runComparisonModelsCompetition(
+          simmap=simmapdiet1,
+          data=summaryData[!is.na(summaryData$ratioCerebellum)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
+          subgroup="Fruit",
+          numberMaps=numberSimulations,
+          trait="ratioCerebellum.log",
+          tree=phylo,
+          ana_events_tables=BSM_output$RES_ana_events_tables,
+          clado_events_tables=BSM_output$RES_clado_events_tables
+        )
+        write.table(resultCerebellumFrugivory, paste("OutputEvolModel/Output_evolutionary_history_CerebellumBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
     #Hippocampus
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_HippocampusBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("ratioHippocampus")
-      summaryData$ratioHippocampus <- summaryData$Hippocampus/ summaryData$Bodymass
-      hist(summaryData$ratioHippocampus )
-      summaryData$ratioHippocampus.log <- log(summaryData$ratioHippocampus)
-      
-      resultHippocampusFrugivory <- runComparisonModelsCompetition(
-        simmap=simmapdiet1,
-        data=summaryData[!is.na(summaryData$ratioHippocampus)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
-        subgroup="Fruit",
-        numberMaps=numberSimulations,
-        trait="ratioHippocampus.log",
-        tree=phylo,
-        ana_events_tables=BSM_output$RES_ana_events_tables,
-        clado_events_tables=BSM_output$RES_clado_events_tables
-      )
-      write.table(resultHippocampusFrugivory, paste("OutputEvolModel/Output_evolutionary_history_HippocampusBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      tryCatch({
+        summaryData$ratioHippocampus <- summaryData$Hippocampus/ summaryData$Bodymass
+        hist(summaryData$ratioHippocampus )
+        summaryData$ratioHippocampus.log <- log(summaryData$ratioHippocampus)
+        
+        resultHippocampusFrugivory <- runComparisonModelsCompetition(
+          simmap=simmapdiet1,
+          data=summaryData[!is.na(summaryData$ratioHippocampus)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
+          subgroup="Fruit",
+          numberMaps=numberSimulations,
+          trait="ratioHippocampus.log",
+          tree=phylo,
+          ana_events_tables=BSM_output$RES_ana_events_tables,
+          clado_events_tables=BSM_output$RES_clado_events_tables
+        )
+        write.table(resultHippocampusFrugivory, paste("OutputEvolModel/Output_evolutionary_history_HippocampusBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_NeocortexBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("Neocortex")
-      summaryData$ratioNeocortex <-  summaryData$Neocortex/summaryData$Bodymass
-      hist(summaryData$ratioNeocortex )
-      summaryData$ratioNeocortex.log <- log(summaryData$ratioNeocortex)
-      
-      resultNeocortexFrugivory <- runComparisonModelsCompetition(
-        simmap=simmapdiet1,
-        data=summaryData[!is.na(summaryData$ratioNeocortex)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
-        subgroup="Fruit",
-        numberMaps=numberSimulations,
-        trait="ratioNeocortex.log",
-        tree=phylo,
-        ana_events_tables=BSM_output$RES_ana_events_tables,
-        clado_events_tables=BSM_output$RES_clado_events_tables
-      )
-      write.table(resultNeocortexFrugivory, paste("OutputEvolModel/Output_evolutionary_history_NeocortexBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      tryCatch({
+        summaryData$ratioNeocortex <-  summaryData$Neocortex/summaryData$Bodymass
+        hist(summaryData$ratioNeocortex )
+        summaryData$ratioNeocortex.log <- log(summaryData$ratioNeocortex)
+        
+        resultNeocortexFrugivory <- runComparisonModelsCompetition(
+          simmap=simmapdiet1,
+          data=summaryData[!is.na(summaryData$ratioNeocortex)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
+          subgroup="Fruit",
+          numberMaps=numberSimulations,
+          trait="ratioNeocortex.log",
+          tree=phylo,
+          ana_events_tables=BSM_output$RES_ana_events_tables,
+          clado_events_tables=BSM_output$RES_clado_events_tables
+        )
+        write.table(resultNeocortexFrugivory, paste("OutputEvolModel/Output_evolutionary_history_NeocortexBodymassRaw", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
     if (!file.exists(paste("OutputEvolModel/Output_evolutionary_history_EQ", a, "_", b, "_", c, "_", d, ".txt", sep=""))){
       print("EQ")
-      resultEQFrugivory <- runComparisonModelsCompetition(
-        simmap=simmapdiet1,
-        data=summaryData[!is.na(summaryData$EQ)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
-        subgroup="Fruit",
-        numberMaps=numberSimulations,
-        trait="EQ.log",
-        tree=phylo,
-        ana_events_tables=BSM_output$RES_ana_events_tables,
-        clado_events_tables=BSM_output$RES_clado_events_tables
-      )
-      write.table(resultEQFrugivory, paste("OutputEvolModel/Output_evolutionary_history_EQ", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      tryCatch({
+        resultEQFrugivory <- runComparisonModelsCompetition(
+          simmap=simmapdiet1,
+          data=summaryData[!is.na(summaryData$EQ)&!is.na(summaryData$geographicCode)&summaryData$SpeciesForPhylogeny%in%phylo$tip.label,],
+          subgroup="Fruit",
+          numberMaps=numberSimulations,
+          trait="EQ.log",
+          tree=phylo,
+          ana_events_tables=BSM_output$RES_ana_events_tables,
+          clado_events_tables=BSM_output$RES_clado_events_tables
+        )
+        write.table(resultEQFrugivory, paste("OutputEvolModel/Output_evolutionary_history_EQ", a, "_", b, "_", c, "_", d, ".txt", sep=""), row.names=FALSE, col.names=TRUE, sep="\t")
+      }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
     }
     
     
