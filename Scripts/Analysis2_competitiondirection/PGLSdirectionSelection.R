@@ -542,142 +542,150 @@ for(a in 1:length(traitToStudy)){
 #1) create layout + matrix for all plots
 
 #finish the plot part:write for overlap + adjust axis and color + add regression
-pdf("Plots/selectionGradientPGLS.pdf", height=25, width=18)
-
-layout(mat=cbind(seq(from=1, to=length(traitToStudy), by=2), seq(from=2, to=length(traitToStudy)+1, by=2)),
-       widths=c(5,5), heights=rep(5, times=length(traitToStudy)))
+pdf("Plots/selectionGradientPGLS.pdf", height=40, width=18)
+source("T:/Saved_PhD/Empirical_analysis/Scripts&Functions/Functions/toolbox.R")
+layout(mat=cbind(seq(from=1, to=(length(traitToStudy)-1)*2, by=2), seq(from=2, to=(length(traitToStudy)-1)*2+1, by=2)),
+       widths=c(5,5), heights=rep(5, times=(length(traitToStudy)-1)))
 par(mar=c(3.5, 3.5, 1, 1), mgp=c(2.5, 0.5, 0), xpd=TRUE, cex=1.2)
 
+countLabel=0
 for(i in 1:length(traitToStudy)){ 
-  
-  #Matching the brain trait to the dataset with predictors
-  dataRangePrimate$Trait <- summaryData[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny), which(colnames(summaryData)==traitToStudy[i])]
-  dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,2])&!is.na(dataRangePrimate[,3])&!is.na(dataRangePrimate[,4]),]
-  rownames(dataRangePrimate_rdc) <- dataRangePrimate_rdc$Species
-  
-  #Readjust phylo tree
-  phyloConsensus <- drop.tip(phylo,
-                             phylo$tip.label[
-                               which(phylo$tip.label
-                                     %nin%dataRangePrimate_rdc$Species)])
-  
-  # #Create data for phylogenetic regression
-  # comp_data <- comparative.data(phy = phyloConsensus, data= dataRangePrimate_rdc,
-  #                               names.col = Species, vcv = TRUE)
-  # 
-  # #Make predictor more symmetrical
-  # comp_data$data$Number_species_cooccurrence.sqrt <- sqrt(comp_data$data$Number_species_cooccurrence)
-  # comp_data$data$Overlap_average.sqrt <- sqrt(comp_data$data$Overlap_average)
-  # 
-  # modelBrain <- pgls(formula = Trait ~ Overlap_average.sqrt + Number_species_cooccurrence.sqrt , data = comp_data, lambda = "ML")
-  # 
-  dataRangePrimate_rdc$Number_species_cooccurrence.sqrt <- sqrt(dataRangePrimate_rdc$Number_species_cooccurrence)
-  dataRangePrimate_rdc$Overlap_average.sqrt <- sqrt(dataRangePrimate_rdc$Overlap_average)
-  
-  dataRangePrimate_rdc$Number_species_cooccurrence.sqrt.z <- scale(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt)
-  dataRangePrimate_rdc$Overlap_average.sqrt.z <- scale(dataRangePrimate_rdc$Overlap_average.sqrt)
-  
-  modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt.z + Number_species_cooccurrence.sqrt, 
-                        data=dataRangePrimate_rdc, phy=phyloConsensus, model="lambda", measurement_error=FALSE, boot=repetitionBootstrap)
-  
-  CI <- cbind(modelBrain$bootmean, t(summary(modelBrain)$bootconfint95))
+  print(i)
+  if(i != 2){#Brain do nothing
+    countLabel=countLabel+1
+    #Matching the brain trait to the dataset with predictors
+    dataRangePrimate$Trait <- summaryData[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny), which(colnames(summaryData)==traitToStudy[i])]
+    dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,2])&!is.na(dataRangePrimate[,3])&!is.na(dataRangePrimate[,4]),]
+    rownames(dataRangePrimate_rdc) <- dataRangePrimate_rdc$Species
     
-  ##----
-  #Plot against N co-occ
+    #Readjust phylo tree
+    phyloConsensus <- drop.tip(phylo,
+                               phylo$tip.label[
+                                 which(phylo$tip.label
+                                       %nin%dataRangePrimate_rdc$Species)])
+    
+    # #Create data for phylogenetic regression
+    # comp_data <- comparative.data(phy = phyloConsensus, data= dataRangePrimate_rdc,
+    #                               names.col = Species, vcv = TRUE)
+    # 
+    # #Make predictor more symmetrical
+    # comp_data$data$Number_species_cooccurrence.sqrt <- sqrt(comp_data$data$Number_species_cooccurrence)
+    # comp_data$data$Overlap_average.sqrt <- sqrt(comp_data$data$Overlap_average)
+    # 
+    # modelBrain <- pgls(formula = Trait ~ Overlap_average.sqrt + Number_species_cooccurrence.sqrt , data = comp_data, lambda = "ML")
+    # 
+    dataRangePrimate_rdc$Number_species_cooccurrence.sqrt <- sqrt(dataRangePrimate_rdc$Number_species_cooccurrence)
+    dataRangePrimate_rdc$Overlap_average.sqrt <- sqrt(dataRangePrimate_rdc$Overlap_average)
+    
+    dataRangePrimate_rdc$Number_species_cooccurrence.sqrt.z <- scale(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt)
+    dataRangePrimate_rdc$Overlap_average.sqrt.z <- scale(dataRangePrimate_rdc$Overlap_average.sqrt)
+    
+    modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt.z + Number_species_cooccurrence.sqrt, 
+                          data=dataRangePrimate_rdc, phy=phyloConsensus, model="lambda", measurement_error=FALSE, boot=repetitionBootstrap)
+    
+    CI <- cbind(modelBrain$bootmean, t(summary(modelBrain)$bootconfint95))
+      
+    ##----
+    #Plot against N co-occ
+    
+    xmin=0#min(round(dataRangePrimate_rdc[,c(2)], digit=2))
+    xmax=max(round(dataRangePrimate_rdc[,c(2)], digit=2))
+    ymin=min(round(dataRangePrimate_rdc[,c(4)], digit=2))
+    ymax=max(round(dataRangePrimate_rdc[,c(4)], digit=2))
+    
+    par(mar=c(3.5, 3.5, 1, 1), mgp=c(2.5, 0.5, 0), xpd=TRUE, cex=1.2)
+    ##With number of co-occurring species
+    plot(dataRangePrimate_rdc[,c(2)], dataRangePrimate_rdc[,c(4)], xlab="Number of sympatric frugivorous species", ylab=traitName[i],
+         font.lab=2, cex.lab=1.25,
+         las=1, type="n", tcl=-0.25, bty="n",
+         xaxt="n",xaxs="i",yaxs="i", yaxt="n", xpd=TRUE)
+    
+    #Add grid
+    addGrid(
+      cexAxisX=1.15, cexAxisY=1.15,
+      xmin=xmin, xmax=xmax, xintsmall=(xmax-xmin)/20, xintbig=(xmax-xmin)/5,
+      ymin=ymin, ymax=ymax, yintsmall=(ymax-ymin)/20, yintbig=(ymax-ymin)/5,
+      axisPlot=TRUE, round=TRUE, digit=c(2,2))
+    axis(side=1, at=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), labels=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), las=1, tcl=-0.25)
+    addLabel(xfrac=0.05, yfrac=0.05, label=paste(countLabel, "a", sep=""), circle=TRUE, radiuscircle=(xmax-xmin)/35, circle.bg="black", font.col="white")
+    
+    #Add result model
+    ymean <- c(CI[1,1], CI[1,1] + CI[3,1]*max(dataRangePrimate_rdc[,c(4)]))
+    ylower <- c(CI[1,2], CI[1,2] + (CI[3,2])*max(dataRangePrimate_rdc[,c(4)]))
+    yupper <- c(CI[1,3], CI[1,3] + (CI[3,3])*max(dataRangePrimate_rdc[,c(4)]))
+    lines(
+      x=c(0,max(dataRangePrimate_rdc[,c(2)])),
+      y=ymean
+    )
+    polygon(
+      x=c(0, max(dataRangePrimate_rdc[,c(2)]), max(dataRangePrimate_rdc[,c(2)]), 0, 0),
+      y=c(yupper, rev(ylower), ylower[1]),
+      col=adjustcolor("black", alpha.f=0.1),
+      border=NA#,
+      #lty=2
+    )
+    
+    #Add background tree
+    col=list(col.edge=setNames(rep("darkgrey",nrow(phyloConsensus$edge)),as.character(phyloConsensus$edge[,2])),
+             col.node=setNames(rep("black",max(phyloConsensus$edge)),as.character(1:max(phyloConsensus$edge))))
+    
+    phylomorphospace(phyloConsensus,dataRangePrimate_rdc[,c(2,4)], add=TRUE, label="true", lty=3,
+                     control=col, xpd=TRUE)
   
-  xmin=min(round(dataRangePrimate_rdc[,c(2)], digit=2))
-  xmax=max(round(dataRangePrimate_rdc[,c(2)], digit=2))
-  ymin=min(round(dataRangePrimate_rdc[,c(4)], digit=2))
-  ymax=max(round(dataRangePrimate_rdc[,c(4)], digit=2))
+    ##----
+    #Plot against overlap
+    
+    modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt + Number_species_cooccurrence.sqrt.z, 
+                          data=dataRangePrimate_rdc ,phy=phyloConsensus,model="lambda",measurement_error=FALSE,boot=repetitionBootstrap)
+    
+    CI <- cbind(modelBrain$bootmean, t(summary(modelBrain)$bootconfint95))
+    
+    xmin=0#min(round(dataRangePrimate_rdc[,c(3)], digit=2))
+    xmax=1#max(round(dataRangePrimate_rdc[,c(3)], digit=2))
+    ymin=min(round(dataRangePrimate_rdc[,c(4)], digit=2))
+    ymax=max(round(dataRangePrimate_rdc[,c(4)], digit=2))
+    
+    par(mar=c(3.5, 1, 1, 3), mgp=c(2.5, 0.5, 0), xpd=TRUE)
+    
+    ##With overlap
+    plot(dataRangePrimate_rdc[,c(3)], dataRangePrimate_rdc[,c(4)], xlab="Average surfacic overlap with sympatric frugivorous species", ylab="",
+         font.lab=2, cex.lab=1.25,
+         las=1, type="n", tcl=-0.25, bty="n",
+         xaxt="n",xaxs="i",yaxs="i", yaxt="n", xpd=TRUE)
+    
+    #Add grid
+    addGrid(
+      cexAxisX=1.15, cexAxisY=1.15,
+      xmin=xmin, xmax=xmax, xintsmall=(xmax-xmin)/20, xintbig=(xmax-xmin)/5,
+      ymin=ymin, ymax=ymax, yintsmall=(ymax-ymin)/20, yintbig=(ymax-ymin)/5,
+      axisPlot=FALSE, round=TRUE, digit=c(2,2))
+    axis(side=1, at=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), labels=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), las=1, tcl=-0.25)
   
-  par(mar=c(3.5, 3.5, 1, 1), mgp=c(2.5, 0.5, 0), xpd=TRUE, cex=1.2)
-  ##With number of co-occurring species
-  plot(dataRangePrimate_rdc[,c(2)], dataRangePrimate_rdc[,c(4)], xlab="Number of sympatric\nfrugivorous species", ylab=traitName[i],
-       las=1, type="n", tcl=-0.25, bty="n",
-       xaxt="n",xaxs="i",yaxs="i", yaxt="n", xpd=TRUE)
-  
-  #Add grid
-  addGrid(
-    xmin=xmin, xmax=xmax, xintsmall=(xmax-xmin)/20, xintbig=(xmax-xmin)/5,
-    ymin=ymin, ymax=ymax, yintsmall=(ymax-ymin)/20, yintbig=(ymax-ymin)/5,
-    axisPlot=TRUE, round=TRUE, digit=c(2,2))
-  axis(side=1, at=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), labels=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), las=1, tcl=-0.25)
-  addLabel(xfrac=0.05, yfrac=0.05, label=paste(i, "a", sep=""), circle=TRUE, radiuscircle=(xmax-xmin)/35, circle.bg="black", font.col="white")
-  
-  #Add result model
-  ymean <- c(CI[1,1], CI[1,1] + CI[3,1]*max(dataRangePrimate_rdc[,c(4)]))
-  ylower <- c(CI[1,2], CI[1,2] + (CI[3,2])*max(dataRangePrimate_rdc[,c(4)]))
-  yupper <- c(CI[1,3], CI[1,3] + (CI[3,3])*max(dataRangePrimate_rdc[,c(4)]))
-  lines(
-    x=c(0,max(dataRangePrimate_rdc[,c(2)])),
-    y=ymean
-  )
-  polygon(
-    x=c(0, max(dataRangePrimate_rdc[,c(2)]), max(dataRangePrimate_rdc[,c(2)]), 0, 0),
-    y=c(yupper, rev(ylower), ylower[1]),
-    col=adjustcolor("black", alpha.f=0.1),
-    border=NA#,
-    #lty=2
-  )
-  
-  #Add background tree
-  col=list(col.edge=setNames(rep("darkgrey",nrow(phyloConsensus$edge)),as.character(phyloConsensus$edge[,2])),
-           col.node=setNames(rep("black",max(phyloConsensus$edge)),as.character(1:max(phyloConsensus$edge))))
-  
-  phylomorphospace(phyloConsensus,dataRangePrimate_rdc[,c(2,4)], add=TRUE, label="true", lty=3,
-                   control=col, xpd=TRUE)
-
-  ##----
-  #Plot against overlap
-  
-  modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt + Number_species_cooccurrence.sqrt.z, 
-                        data=dataRangePrimate_rdc ,phy=phyloConsensus,model="lambda",measurement_error=FALSE,boot=repetitionBootstrap)
-  
-  CI <- cbind(modelBrain$bootmean, t(summary(modelBrain)$bootconfint95))
-  
-  xmin=min(round(dataRangePrimate_rdc[,c(3)], digit=2))
-  xmax=max(round(dataRangePrimate_rdc[,c(3)], digit=2))
-  ymin=min(round(dataRangePrimate_rdc[,c(4)], digit=2))
-  ymax=max(round(dataRangePrimate_rdc[,c(4)], digit=2))
-  
-  par(mar=c(3.5, 1, 1, 3), mgp=c(2.5, 0.5, 0), xpd=TRUE)
-  
-  ##With overlap
-  plot(dataRangePrimate_rdc[,c(3)], dataRangePrimate_rdc[,c(4)], xlab="Average surfacic overlap\nwith sympatric frugivorous species", ylab="",
-       las=1, type="n", tcl=-0.25, bty="n",
-       xaxt="n",xaxs="i",yaxs="i", yaxt="n", xpd=TRUE)
-  
-  #Add grid
-  addGrid(
-    xmin=xmin, xmax=xmax, xintsmall=(xmax-xmin)/20, xintbig=(xmax-xmin)/5,
-    ymin=ymin, ymax=ymax, yintsmall=(ymax-ymin)/20, yintbig=(ymax-ymin)/5,
-    axisPlot=FALSE, round=TRUE, digit=c(2,2))
-  axis(side=1, at=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), labels=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), las=1, tcl=-0.25)
-
-  addLabel(xfrac=0.05, yfrac=0.05, label=paste(i, "b", sep=""), circle=TRUE, radiuscircle=(xmax-xmin)/35, circle.bg="black", font.col="white")
-  
-  #Add background tree
-  col=list(col.edge=setNames(rep("darkgrey",nrow(phyloConsensus$edge)),as.character(phyloConsensus$edge[,2])),
-           col.node=setNames(rep("black",max(phyloConsensus$edge)),as.character(1:max(phyloConsensus$edge))))
-  
-  phylomorphospace(phyloConsensus,dataRangePrimate_rdc[,c(3,4)], add=TRUE, label="true", lty=3,
-                   control=col)
-  
-  #Add result model
-  ymean <- c(CI[1,1], CI[1,1] + CI[3,1]*max(dataRangePrimate_rdc[,c(4)]))
-  ylower <- c(CI[1,2], CI[1,2] + (CI[3,2])*max(dataRangePrimate_rdc[,c(4)]))
-  yupper <- c(CI[1,3], CI[1,3] + (CI[3,3])*max(dataRangePrimate_rdc[,c(4)]))
-  lines(
-    x=c(0,max(dataRangePrimate_rdc[,c(3)])),
-    y=ymean
-  )
-  polygon(
-    x=c(0, max(dataRangePrimate_rdc[,c(3)]), max(dataRangePrimate_rdc[,c(3)]), 0, 0),
-    y=c(yupper, rev(ylower), ylower[1]),
-    col=adjustcolor("black", alpha.f=0.1),
-    border=NA#,
-    #lty=2
-  )
+    addLabel(xfrac=0.05, yfrac=0.05, label=paste(countLabel, "b", sep=""), circle=TRUE, radiuscircle=(xmax-xmin)/35, circle.bg="black", font.col="white")
+    
+    #Add background tree
+    col=list(col.edge=setNames(rep("darkgrey",nrow(phyloConsensus$edge)),as.character(phyloConsensus$edge[,2])),
+             col.node=setNames(rep("black",max(phyloConsensus$edge)),as.character(1:max(phyloConsensus$edge))))
+    
+    phylomorphospace(phyloConsensus,dataRangePrimate_rdc[,c(3,4)], add=TRUE, label="true", lty=3,
+                     control=col)
+    
+    #Add result model
+    ymean <- c(CI[1,1], CI[1,1] + CI[3,1]*max(dataRangePrimate_rdc[,c(4)]))
+    ylower <- c(CI[1,2], CI[1,2] + (CI[3,2])*max(dataRangePrimate_rdc[,c(4)]))
+    yupper <- c(CI[1,3], CI[1,3] + (CI[3,3])*max(dataRangePrimate_rdc[,c(4)]))
+    lines(
+      x=c(0,max(dataRangePrimate_rdc[,c(3)])),
+      y=ymean
+    )
+    polygon(
+      x=c(0, max(dataRangePrimate_rdc[,c(3)]), max(dataRangePrimate_rdc[,c(3)]), 0, 0),
+      y=c(yupper, rev(ylower), ylower[1]),
+      col=adjustcolor("black", alpha.f=0.1),
+      border=NA#,
+      #lty=2
+    )
+  }
 }
 
 dev.off()

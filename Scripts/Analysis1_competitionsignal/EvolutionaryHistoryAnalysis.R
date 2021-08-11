@@ -659,15 +659,15 @@ view3d(userMatrix = um)
 contour3d(template, x=1:dtemp[1], y=1:dtemp[2], z=1:dtemp[3], level = cut, alpha = 0.03, draw = TRUE)
 
 mask = remake_img(vec = img %in% hippocampus, img = img)
-contour3d(mask, level = c(0.5), alpha = c(0.4), add = TRUE, color=colourHip)
+contour3d(mask, level = c(0.5), alpha = c(0.7), add = TRUE, color=colourHip)
 mask = remake_img(vec = img %in% cerebellum, img = img)
-contour3d(mask, level = c(0.5), alpha = c(0.4), add = TRUE, color=colourCereb)
+contour3d(mask, level = c(0.5), alpha = c(0.7), add = TRUE, color=colourCereb)
 mask = remake_img(vec = img %in% MOB, img = img)
-contour3d(mask, level = c(0.5), alpha = c(0.4), add = TRUE, color=colourOlf)
+contour3d(mask, level = c(0.5), alpha = c(0.7), add = TRUE, color=colourOlf)
 #mask = remake_img(vec = img %in% neocortex, img = img)
 #contour3d(mask, level = c(0.5), alpha = c(0.4), add = TRUE, color=c("orange"))
 mask = remake_img(vec = img %in% striatum, img = img)
-contour3d(mask, level = c(0.5), alpha = c(0.4), add = TRUE, color=colourStri)
+contour3d(mask, level = c(0.5), alpha = c(0.7), add = TRUE, color=colourStri)
 
 
 ### add text
@@ -684,6 +684,14 @@ arrow3d(p0=c(dtemp[1]/2,dtemp[2],dtemp[3]/2), p1=c(dtemp[1]/2,1.1*dtemp[2],dtemp
 #legend3d(x=0.1, y=0.2, legend = c("Cerebellum", "Hippocampus", "MOB", "Striatum"), fill = c(colourCereb, colourHip, colourOlf, colourStri), cex=1, bty="n", ncol=2)
 #rglwidget()
 
+# save in eps format
+rgl.snapshot('3dplot.png', fmt = 'png')
+rgl.postscript("3dplot_test.eps")
+
+# convert to png
+cmd <- 
+  "gs -dSAFER -dBATCH -dNOPAUSE -dEPSCrop -sDEVICE=png16m -r600 -sOutputFile=randu.png randu.eps"
+system(cmd)
 
 #from: https://r-graphics.org/recipe-miscgraph-3d-save
 #rgl.snapshot('3dplot.png', fmt = 'png', top = TRUE, width = 300)
@@ -692,12 +700,12 @@ arrow3d(p0=c(dtemp[1]/2,dtemp[2],dtemp[3]/2), p1=c(dtemp[1]/2,1.1*dtemp[2],dtemp
 
 #remotes::install_github("rstudio/chromote")
 #remotes::install_github("rstudio/webshot2")
+# 
+# library(webshot2)
+# snapshot3d('Plots/3dplot_higherquality.png', fmt = 'png', width=200, height=200)
 
-library(webshot2)
-snapshot3d('Plots/3dplot.png', fmt = 'png')
-
-writeASY()
-rgl.postscript('3dplot', fmt="svg")
+# writeASY()
+# rgl.postscript('3dplot', fmt="pdf")
 
 plot(x=0, y=0,
      xlab="", ylab="", 

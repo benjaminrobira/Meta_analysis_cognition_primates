@@ -47,8 +47,8 @@ library(cleangeo) #to clean it otherwise issues with intersection
 #diet table
 resultsDiet <- matrix(NA, ncol=90, nrow=nrow(summaryData))
 
-frugivoryThresholdVector <- seq(from=10, to=30, by=10)
-folivoryThresholdVector <- seq(from=50, to=70, by=10)
+frugivoryThresholdVector <- seq(from=20, to=40, by=20)
+folivoryThresholdVector <- seq(from=40, to=60, by=20)
 
 for(a in 1:length(frugivoryThresholdVector)){
   

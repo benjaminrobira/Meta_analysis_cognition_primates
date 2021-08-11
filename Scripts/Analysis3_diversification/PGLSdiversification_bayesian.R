@@ -369,7 +369,7 @@ dataRangePrimate <- dataRangePrimate[-grep("Homo", dataRangePrimate$Species), ]
 
 ##----
 ## Run analysis for each trait
-
+set.seed(26)
 traitToStudy=c("EQ.log", "ratioBrain", "ratioHippocampus.log", "ratioNeocortex.log", "ratioCerebellum.log", "ratioStriatum.log", "ratioMOB.log")
 traitName=c("EQ (log)", "Brain (/bodymass, log)", "Hippocampus (/bodymass, log)", "Neocortex (/bodymass, log)", "Cerebellum (/bodymass, log)", "Striatum (/bodymass, log)", "MOB (/bodymass, log)")
 vifVector <- rep(NA, times=length(traitName))  
@@ -504,104 +504,108 @@ save.image("REnvironments/PGLSdiversification.RData")
 #finish the plot part:write for overlap + adjust axis and color + add regression
 pdf("Plots/diversificationPGLS.pdf", height=25, width=18)
 
-numberPlots = ifelse(length(traitToStudy)/2==floor(length(traitToStudy)/2), length(traitToStudy), length(traitToStudy) + 1)#if odd number, readjust
+numberPlots = ifelse((length(traitToStudy)-1)/2==floor((length(traitToStudy)-1)/2), (length(traitToStudy)-1), (length(traitToStudy)-1) + 1)#if odd number, readjust
 
 layout(mat=matrix(1:numberPlots, ncol=2),
-       widths=c(5,5), heights=rep(5, times=length(traitToStudy)))
+       widths=c(5,5), heights=rep(5, times=numberPlots/2))
 par(mar=c(3.5, 3.5, 1, 1), mgp=c(2.5, 0.5, 0), xpd=TRUE, cex=1.2)
 
+countLabel=0
 for(i in 1:length(traitToStudy)){ 
-  
-  #Matching the brain trait to the dataset with predictors
-  dataRangePrimate$Trait <- summaryData[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny), which(colnames(summaryData)==traitToStudy[i])]
-  dataRangePrimate$Diversification_rate <-  summaryData$Diversification_rate[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny)]
-  dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,4])&!is.na(dataRangePrimate[,5]),]
-  
-  #Readjust phylo tree
-  phyloConsensus <- drop.tip(phylo,
-                             phylo$tip.label[
-                               which(phylo$tip.label
-                                     %nin%dataRangePrimate_rdc$Species)])
-  ##--------
-  ## Main model: based on consensus tree
-  ##--------
-  
-  rownames(dataRangePrimate_rdc) <- dataRangePrimate_rdc$Species
-  #Readjust phylo tree
-  phyloConsensus <- drop.tip(phylo,
-                             phylo$tip.label[
-                               which(phylo$tip.label
-                                     %nin%dataRangePrimate_rdc$Species)])
-  
-  #Clean tree to avoid problem, save and reload
-  source("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Scripts/Functions.R")
-  library(BioGeoBEARS)
-  phyloConsensus <- cleanTree(tr=phyloConsensus, trfn="C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Raw_data/Tree/phyloConsensus.nex")
-  phyloConsensus <- force.ultrametric(tree=phyloConsensus, method="extend")#method="nnls")
-  
-  ##MCMC glmm
-  set.seed(a)
-  
-  library(MCMCglmm)
-  
-  #Create the necessary var/cov for mcmcglmm to be fitted
-  inv.phylo <-inverseA(phyloConsensus,nodes="TIPS",scale=TRUE)
-  
-  #Compute model with 3 chains
-  
-  prior<-list(G=list(G1=list(V=V,nu=nu)),R=list(V=V,nu=nu))#Neutral prior
-  
-  model1<-MCMCglmm(Diversification_rate~Trait, random=~Species, ginverse=list(Species=inv.phylo$Ainv), family="gaussian",
-                   data=dataRangePrimate_rdc, nitt=nitt,burnin=burnin,thin=thin, prior=prior)
-  
-  
-  CI <- as.data.frame(summary(model1)$solutions[,1:3])
-  
-  ##----
-  #Plot against N co-occ
-  
-  xmin=min(round(dataRangePrimate_rdc[,c(4)], digit=2))
-  xmax=max(round(dataRangePrimate_rdc[,c(4)], digit=2))
-  ymin=0#min(round(dataRangePrimate_rdc[,c(5)], digit=2))
-  ymax=max(round(dataRangePrimate_rdc[,c(5)], digit=2))
-  
-  ##With number of co-occurring species
-  plot(dataRangePrimate_rdc[,c(4)], dataRangePrimate_rdc[,c(5)], xlab=traitName[i], ylab="Diversification rate",
-       xlim=c(xmin, xmax), ylim=c(ymin, ymax),
-       las=1, type="n", tcl=-0.25, bty="n",
-       xaxt="n",xaxs="i",yaxs="i", yaxt="n", xpd=TRUE)
-  
-  #Add grid
-  addGrid(
-    xmin=xmin, xmax=xmax, xintsmall=(xmax-xmin)/20, xintbig=(xmax-xmin)/5,
-    ymin=ymin, ymax=ymax, yintsmall=(ymax-ymin)/20, yintbig=(ymax-ymin)/5,
-    axisPlot=TRUE, round=TRUE, digit=c(2,2))
-  axis(side=1, at=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), labels=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), las=1, tcl=-0.25)
-  addLabel(xfrac=0.05, yfrac=0.05, label=i, circle=TRUE, radiuscircle=(xmax-xmin)/35, circle.bg="black", font.col="white")
-  
-  #Add result model
-  ymean <- c(CI[1,1], CI[1,1] + CI[2,1]*max(dataRangePrimate_rdc[,c(4)]))
-  ylower <- c(CI[1,2], CI[1,2] + (CI[2,2])*max(dataRangePrimate_rdc[,c(4)]))
-  yupper <- c(CI[1,3], CI[1,3] + (CI[2,3])*max(dataRangePrimate_rdc[,c(4)]))
-  lines(
-    x=c(min(dataRangePrimate_rdc[,c(4)]),max(dataRangePrimate_rdc[,c(4)])),
-    y=ymean
-  )
-  polygon(
-    x=c(min(dataRangePrimate_rdc[,c(4)]), max(dataRangePrimate_rdc[,c(4)]), max(dataRangePrimate_rdc[,c(4)]), min(dataRangePrimate_rdc[,c(4)]), min(dataRangePrimate_rdc[,c(4)])),
-    y=c(yupper, rev(ylower), ylower[1]),
-    col=adjustcolor("black", alpha.f=0.1),
-    border=NA#,
-    #lty=2
-  )
-  
-  #Add background tree
-  col=list(col.edge=setNames(rep("darkgrey",nrow(phyloConsensus$edge)),as.character(phyloConsensus$edge[,2])),
-           col.node=setNames(rep("black",max(phyloConsensus$edge)),as.character(1:max(phyloConsensus$edge))))
-  
-  phylomorphospace(phyloConsensus,dataRangePrimate_rdc[,c(4,5)], add=TRUE, label="true", lty=3,
-                   control=col, xpd=TRUE)
-  
+  if(i!=2){
+    countLabel=countLabel+1
+    #Matching the brain trait to the dataset with predictors
+    dataRangePrimate$Trait <- summaryData[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny), which(colnames(summaryData)==traitToStudy[i])]
+    dataRangePrimate$Diversification_rate <-  summaryData$Diversification_rate[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny)]
+    dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,4])&!is.na(dataRangePrimate[,5]),]
+    
+    #Readjust phylo tree
+    phyloConsensus <- drop.tip(phylo,
+                               phylo$tip.label[
+                                 which(phylo$tip.label
+                                       %nin%dataRangePrimate_rdc$Species)])
+    ##--------
+    ## Main model: based on consensus tree
+    ##--------
+    
+    rownames(dataRangePrimate_rdc) <- dataRangePrimate_rdc$Species
+    #Readjust phylo tree
+    phyloConsensus <- drop.tip(phylo,
+                               phylo$tip.label[
+                                 which(phylo$tip.label
+                                       %nin%dataRangePrimate_rdc$Species)])
+    
+    #Clean tree to avoid problem, save and reload
+    source("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Scripts/Functions.R")
+    library(BioGeoBEARS)
+    phyloConsensus <- cleanTree(tr=phyloConsensus, trfn="C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Raw_data/Tree/phyloConsensus.nex")
+    phyloConsensus <- force.ultrametric(tree=phyloConsensus, method="extend")#method="nnls")
+    
+    ##MCMC glmm
+    set.seed(a)
+    
+    library(MCMCglmm)
+    
+    #Create the necessary var/cov for mcmcglmm to be fitted
+    inv.phylo <-inverseA(phyloConsensus,nodes="TIPS",scale=TRUE)
+    
+    #Compute model with 3 chains
+    
+    prior<-list(G=list(G1=list(V=V,nu=nu)),R=list(V=V,nu=nu))#Neutral prior
+    
+    model1<-MCMCglmm(Diversification_rate~Trait, random=~Species, ginverse=list(Species=inv.phylo$Ainv), family="gaussian",
+                     data=dataRangePrimate_rdc, nitt=nitt,burnin=burnin,thin=thin, prior=prior)
+    
+    
+    CI <- as.data.frame(summary(model1)$solutions[,1:3])
+    
+    ##----
+    #Plot against N co-occ
+    
+    xmin=min(round(dataRangePrimate_rdc[,c(4)], digit=2))
+    xmax=max(round(dataRangePrimate_rdc[,c(4)], digit=2))
+    ymin=0#min(round(dataRangePrimate_rdc[,c(5)], digit=2))
+    ymax=max(round(dataRangePrimate_rdc[,c(5)], digit=2))
+    
+    ##With number of co-occurring species
+    plot(dataRangePrimate_rdc[,c(4)], dataRangePrimate_rdc[,c(5)], xlab=traitName[i], ylab="Diversification rate",
+         font.lab=2, cex.lab=1.25,
+         xlim=c(xmin, xmax), ylim=c(ymin, ymax),
+         las=1, type="n", tcl=-0.25, bty="n",
+         xaxt="n",xaxs="i",yaxs="i", yaxt="n", xpd=TRUE)
+    
+    #Add grid
+    addGrid(
+      cexAxisX=1.15, cexAxisY=1.15,
+      xmin=xmin, xmax=xmax, xintsmall=(xmax-xmin)/20, xintbig=(xmax-xmin)/5,
+      ymin=ymin, ymax=ymax, yintsmall=(ymax-ymin)/20, yintbig=(ymax-ymin)/5,
+      axisPlot=TRUE, round=TRUE, digit=c(2,2))
+    axis(side=1, at=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), labels=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), las=1, tcl=-0.25)
+    addLabel(xfrac=0.05, yfrac=0.05, label=countLabel, circle=TRUE, radiuscircle=(xmax-xmin)/35, circle.bg="black", font.col="white")
+    
+    #Add result model
+    ymean <- c(CI[1,1], CI[1,1] + CI[2,1]*max(dataRangePrimate_rdc[,c(4)]))
+    ylower <- c(CI[1,2], CI[1,2] + (CI[2,2])*max(dataRangePrimate_rdc[,c(4)]))
+    yupper <- c(CI[1,3], CI[1,3] + (CI[2,3])*max(dataRangePrimate_rdc[,c(4)]))
+    lines(
+      x=c(min(dataRangePrimate_rdc[,c(4)]),max(dataRangePrimate_rdc[,c(4)])),
+      y=ymean
+    )
+    polygon(
+      x=c(min(dataRangePrimate_rdc[,c(4)]), max(dataRangePrimate_rdc[,c(4)]), max(dataRangePrimate_rdc[,c(4)]), min(dataRangePrimate_rdc[,c(4)]), min(dataRangePrimate_rdc[,c(4)])),
+      y=c(yupper, rev(ylower), ylower[1]),
+      col=adjustcolor("black", alpha.f=0.1),
+      border=NA#,
+      #lty=2
+    )
+    
+    #Add background tree
+    col=list(col.edge=setNames(rep("darkgrey",nrow(phyloConsensus$edge)),as.character(phyloConsensus$edge[,2])),
+             col.node=setNames(rep("black",max(phyloConsensus$edge)),as.character(1:max(phyloConsensus$edge))))
+    
+    phylomorphospace(phyloConsensus,dataRangePrimate_rdc[,c(4,5)], add=TRUE, label="true", lty=3,
+                     control=col, xpd=TRUE)
+  }
 }
 
 dev.off()
