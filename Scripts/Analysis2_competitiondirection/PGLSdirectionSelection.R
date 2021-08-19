@@ -397,6 +397,9 @@ dataRangePrimate$Bodymass <- summaryData$Bodymass[match(dataRangePrimate$Species
 dataRangePrimate$Bodymass.log <- log(dataRangePrimate$Bodymass)
 
 dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,2])&!is.na(dataRangePrimate[,3])&!is.na(dataRangePrimate[,4]),]
+#keep only frugivorous
+dataRangePrimate_rdc$Diet <- summaryData$DietaryGuild[match(dataRangePrimate_rdc$Species,summaryData$SpeciesForPhylogeny)]
+dataRangePrimate_rdc <- dataRangePrimate_rdc[dataRangePrimate_rdc$Diet=="Fruit",]
 
 #Readjust phylo tree
 phyloConsensus <- drop.tip(phylo,
@@ -437,8 +440,8 @@ rownames(dataRangePrimate_rdc) <- dataRangePrimate_rdc$Species
 
 # plot(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt, dataRangePrimate_rdc$Overlap_average.sqrt)
      
-modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt + Number_species_cooccurrence.sqrt, 
-                       data=dataRangePrimate_rdc ,phy=phyloConsensus,model="lambda",measurement_error=FALSE,boot=repetitionBootstrap)
+modelBrain <- phylolm(formula = Trait ~ Overlap_average + Number_species_cooccurrence.sqrt, 
+                       data=dataRangePrimate_rdc ,phy=phyloConsensus,model="lambda", measurement_error=FALSE,boot=repetitionBootstrap)
 
 # modelBrain <- gls(Trait ~ Overlap_average.sqrt  correlation = corPagel(1, phyloConsensus, form = ~Species),
 #                   data = dataRangePrimate_rdc, method = "ML")
@@ -470,7 +473,7 @@ assign(paste("modelBrain", traitName[a], sep="_"), modelBrain)
 #assign(paste(modelBrainPgls, traitName[a], sep="_"), modelBrainPgls)
 
 #since only two variables
-cortest <- cor.test(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt, dataRangePrimate_rdc$Overlap_average.sqrt)
+cortest <- cor.test(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt, dataRangePrimate_rdc$Overlap_average)
 
 vifVector[a] <- 1/(1-cortest$estimate**2)#max(vif(modelBrain))
 #diagnostics.plot()
@@ -479,6 +482,15 @@ vifVector[a] <- 1/(1-cortest$estimate**2)#max(vif(modelBrain))
 
 results.df[2:ncol(results.df)] <- replaceNAtable(results.df[2:ncol(results.df)], "")
 results.df_gradient <- results.df
+
+
+get(paste("modelBrain", 1, sep="_"))
+test1 <- get(paste("modelBrain",  "EQ (log)", sep="_"))
+test2 <- get(paste("modelBrain", "Brain (/bodymass, log)", sep="_"))
+
+library(sjPlot)
+plot_models(test1, test2)
+
 
 ######
 ## DFbetas
@@ -495,6 +507,10 @@ for(a in 1:length(traitToStudy)){
   #Matching the brain trait to the dataset with predictors
   dataRangePrimate$Trait <- summaryData[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny), which(colnames(summaryData)==traitToStudy[a])]
   dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,2])&!is.na(dataRangePrimate[,3])&!is.na(dataRangePrimate[,4]),]
+  
+  #keep only frugivorous
+  dataRangePrimate_rdc$Diet <- summaryData$DietaryGuild[match(dataRangePrimate_rdc$Species,summaryData$SpeciesForPhylogeny)]
+  dataRangePrimate_rdc <- dataRangePrimate_rdc[dataRangePrimate_rdc$Diet=="Fruit",]
   
   #Readjust phylo tree
   phyloConsensus <- drop.tip(phylo,
@@ -522,7 +538,7 @@ for(a in 1:length(traitToStudy)){
 
     rownames(dataRangePrimate_rdc2) <- dataRangePrimate_rdc2$Species
 
-    modelBrain <- phylolm(Trait ~ Overlap_average.sqrt + Number_species_cooccurrence.sqrt, phy=phyloConsensus, data = dataRangePrimate_rdc2, model = "lambda", measurement_error=FALSE)
+    modelBrain <- phylolm(Trait ~ Overlap_average + Number_species_cooccurrence.sqrt, phy=phyloConsensus, data = dataRangePrimate_rdc2, model = "lambda", measurement_error=FALSE)
    
    dfBetasEstimate[rowToAdd,] <- summary(modelBrain)$coefficients[,1]
    dfBetasPvalue[rowToAdd,] <- summary(modelBrain)$coefficients[,4]
@@ -558,6 +574,10 @@ for(i in 1:length(traitToStudy)){
     dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,2])&!is.na(dataRangePrimate[,3])&!is.na(dataRangePrimate[,4]),]
     rownames(dataRangePrimate_rdc) <- dataRangePrimate_rdc$Species
     
+    #keep only frugivorous
+    dataRangePrimate_rdc$Diet <- summaryData$DietaryGuild[match(dataRangePrimate_rdc$Species,summaryData$SpeciesForPhylogeny)]
+    dataRangePrimate_rdc <- dataRangePrimate_rdc[dataRangePrimate_rdc$Diet=="Fruit",]
+    
     #Readjust phylo tree
     phyloConsensus <- drop.tip(phylo,
                                phylo$tip.label[
@@ -578,9 +598,9 @@ for(i in 1:length(traitToStudy)){
     dataRangePrimate_rdc$Overlap_average.sqrt <- sqrt(dataRangePrimate_rdc$Overlap_average)
     
     dataRangePrimate_rdc$Number_species_cooccurrence.sqrt.z <- scale(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt)
-    dataRangePrimate_rdc$Overlap_average.sqrt.z <- scale(dataRangePrimate_rdc$Overlap_average.sqrt)
+    dataRangePrimate_rdc$Overlap_average.z <- scale(dataRangePrimate_rdc$Overlap_average)
     
-    modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt.z + Number_species_cooccurrence.sqrt, 
+    modelBrain <- phylolm(formula = Trait ~ Overlap_average.z + Number_species_cooccurrence.sqrt, 
                           data=dataRangePrimate_rdc, phy=phyloConsensus, model="lambda", measurement_error=FALSE, boot=repetitionBootstrap)
     
     CI <- cbind(modelBrain$bootmean, t(summary(modelBrain)$bootconfint95))
@@ -589,14 +609,14 @@ for(i in 1:length(traitToStudy)){
     #Plot against N co-occ
     
     xmin=0#min(round(dataRangePrimate_rdc[,c(2)], digit=2))
-    xmax=max(round(dataRangePrimate_rdc[,c(2)], digit=2))
+    xmax=max(round(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt, digit=2))
     ymin=min(round(dataRangePrimate_rdc[,c(4)], digit=2))
     ymax=max(round(dataRangePrimate_rdc[,c(4)], digit=2))
     
     par(mar=c(3.5, 3.5, 1, 1), mgp=c(2.5, 0.5, 0), xpd=TRUE, cex=1.2)
     ##With number of co-occurring species
-    plot(dataRangePrimate_rdc[,c(2)], dataRangePrimate_rdc[,c(4)], xlab="Number of sympatric frugivorous species", ylab=traitName[i],
-         font.lab=2, cex.lab=1.25,
+    plot(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt, dataRangePrimate_rdc[,c(4)], xlab="Number of sympatric frugivorous species (sqrt)", ylab=traitName[i],
+         font.lab=2, cex.lab=1.25, xlim=c(xmin, xmax), 
          las=1, type="n", tcl=-0.25, bty="n",
          xaxt="n",xaxs="i",yaxs="i", yaxt="n", xpd=TRUE)
     
@@ -614,11 +634,11 @@ for(i in 1:length(traitToStudy)){
     ylower <- c(CI[1,2], CI[1,2] + (CI[3,2])*max(dataRangePrimate_rdc[,c(4)]))
     yupper <- c(CI[1,3], CI[1,3] + (CI[3,3])*max(dataRangePrimate_rdc[,c(4)]))
     lines(
-      x=c(0,max(dataRangePrimate_rdc[,c(2)])),
+      x=c(0,max(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt)),
       y=ymean
     )
     polygon(
-      x=c(0, max(dataRangePrimate_rdc[,c(2)]), max(dataRangePrimate_rdc[,c(2)]), 0, 0),
+      x=c(0, max(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt), max(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt), 0, 0),
       y=c(yupper, rev(ylower), ylower[1]),
       col=adjustcolor("black", alpha.f=0.1),
       border=NA#,
@@ -629,13 +649,16 @@ for(i in 1:length(traitToStudy)){
     col=list(col.edge=setNames(rep("darkgrey",nrow(phyloConsensus$edge)),as.character(phyloConsensus$edge[,2])),
              col.node=setNames(rep("black",max(phyloConsensus$edge)),as.character(1:max(phyloConsensus$edge))))
     
-    phylomorphospace(phyloConsensus,dataRangePrimate_rdc[,c(2,4)], add=TRUE, label="true", lty=3,
+    toPlot <- cbind(dataRangePrimate_rdc$Number_species_cooccurrence.sqrt, dataRangePrimate_rdc[,c(4)])
+    rownames(toPlot) <- rownames(dataRangePrimate_rdc)
+    
+    phylomorphospace(phyloConsensus,toPlot, add=TRUE, label="true", lty=3,
                      control=col, xpd=TRUE)
   
     ##----
     #Plot against overlap
     
-    modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt + Number_species_cooccurrence.sqrt.z, 
+    modelBrain <- phylolm(formula = Trait ~ Overlap_average + Number_species_cooccurrence.sqrt.z, 
                           data=dataRangePrimate_rdc ,phy=phyloConsensus,model="lambda",measurement_error=FALSE,boot=repetitionBootstrap)
     
     CI <- cbind(modelBrain$bootmean, t(summary(modelBrain)$bootconfint95))
@@ -974,6 +997,10 @@ for(d in 1:repetitionModels){#data
     dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,2])&!is.na(dataRangePrimate[,3])&!is.na(dataRangePrimate[,4]),]
     rownames(dataRangePrimate_rdc) <- dataRangePrimate_rdc$Species
     
+    #keep only frugivorous
+    dataRangePrimate_rdc$Diet <- summaryData$DietaryGuild[match(dataRangePrimate_rdc$Species,summaryData$SpeciesForPhylogeny)]
+    dataRangePrimate_rdc <- dataRangePrimate_rdc[dataRangePrimate_rdc$Diet=="Fruit",]
+    
     #Readjust phylo tree
     phyloTree <- drop.tip(phylo,
                                phylo$tip.label[
@@ -1006,7 +1033,7 @@ for(d in 1:repetitionModels){#data
     dataRangePrimate_rdc$Overlap_average.sqrt <- sqrt(dataRangePrimate_rdc$Overlap_average)
     dataRangePrimate_rdc$Number_species_cooccurrence.sqrt <- sqrt(dataRangePrimate_rdc$Number_species_cooccurrence)
       
-    modelBrain <- phylolm(formula = Trait ~ Overlap_average.sqrt + Number_species_cooccurrence.sqrt, 
+    modelBrain <- phylolm(formula = Trait ~ Overlap_average + Number_species_cooccurrence.sqrt, 
                           data=dataRangePrimate_rdc, phy=phyloConsensus,model="lambda",measurement_error=FALSE)
     
     # modelBrain <- gls(Trait ~ Overlap_average.sqrt  correlation = corPagel(1, phyloConsensus, form = ~Species),
@@ -1124,7 +1151,7 @@ replace <- sapply(as.numeric(results.df_gradient$"p-value"), function(x) if(!is.
 results.df_gradient$"p-value"[!is.na(replace)] <- replace[!is.na(replace)]
   
 knitr::kable(results.df_gradient, escape=TRUE, booktabs = TRUE,
-             caption = "Model estimates and significance of phylogenetic regressions to assess the selection gradient direction | Est.=Estimate, CI2.5%=Lower border of the CI95%, CI97.5%=Upper border of the CI95%, Sd= Standard deviation, t= Statitsitics t-vale. The brain area (as well as the associated sample size)
+             caption = "Model estimates and significance of phylogenetic regressions to assess the selection gradient direction | Est.=Estimate, CI2.5%=Lower border of the CI95%, CI97.5%=Upper border of the CI95%, Sd= Standard deviation, t= Statitsitics t-vale. The brain areas (as well as the associated sample size)
              are indicate prior each list of estimates. the transformation (logarithm or square-root) if indicated in parenthese by the abbreviation (log or sqrt).") %>%
   kableExtra::column_spec(2:ncol(results.df_gradient), bold = toPlotBold) %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
@@ -1196,3 +1223,4 @@ save.image("REnvironments/PGLSdirectionSelection.RData")
 # }
 # 
 # legend("bottomright", legend=c("Intercept", "Overlap", "Nspecies", "Lambda"), col=colour.v[1:4], lty=c(1,1,1,1), bty="n")
+

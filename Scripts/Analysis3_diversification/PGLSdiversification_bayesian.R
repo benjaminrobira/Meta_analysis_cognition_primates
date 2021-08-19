@@ -392,6 +392,10 @@ for(a in 1:length(traitToStudy)){
   dataRangePrimate$Bodymass <-  summaryData$Bodymass[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny)]
   dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,4])&!is.na(dataRangePrimate[,5]),]
   
+  #keep only frugivorous
+  dataRangePrimate_rdc$Diet <- summaryData$DietaryGuild[match(dataRangePrimate_rdc$Species,summaryData$SpeciesForPhylogeny)]
+  dataRangePrimate_rdc <- dataRangePrimate_rdc[dataRangePrimate_rdc$Diet=="Fruit",]
+  
   #Readjust phylo tree
   phyloConsensus <- drop.tip(phylo,
                              phylo$tip.label[
@@ -421,7 +425,7 @@ for(a in 1:length(traitToStudy)){
   phyloConsensus <- force.ultrametric(tree=phyloConsensus, method="extend")#method="nnls")
   
   ##MCMC glmm
-  set.seed(a)
+  set.seed(a+100)
   
   library(MCMCglmm)
   
@@ -491,7 +495,7 @@ results.df[2:ncol(results.df)] <- replaceNAtable(results.df[2:ncol(results.df)],
 results.df <- results.df[, -6] #delete column that was created for frequentist and is useless
 results.df_diversification <- results.df
 
-save.image("REnvironments/PGLSdiversification.RData")
+save.image("REnvironments/PGLSdiversification1.RData")
 
 ##############
 ## PLOTTING RESULTS
@@ -519,6 +523,10 @@ for(i in 1:length(traitToStudy)){
     dataRangePrimate$Diversification_rate <-  summaryData$Diversification_rate[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny)]
     dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,4])&!is.na(dataRangePrimate[,5]),]
     
+    #keep only frugivorous
+    dataRangePrimate_rdc$Diet <- summaryData$DietaryGuild[match(dataRangePrimate_rdc$Species,summaryData$SpeciesForPhylogeny)]
+    dataRangePrimate_rdc <- dataRangePrimate_rdc[dataRangePrimate_rdc$Diet=="Fruit",]
+    
     #Readjust phylo tree
     phyloConsensus <- drop.tip(phylo,
                                phylo$tip.label[
@@ -542,7 +550,7 @@ for(i in 1:length(traitToStudy)){
     phyloConsensus <- force.ultrametric(tree=phyloConsensus, method="extend")#method="nnls")
     
     ##MCMC glmm
-    set.seed(a)
+    set.seed(a+100)
     
     library(MCMCglmm)
     
@@ -610,7 +618,7 @@ for(i in 1:length(traitToStudy)){
 
 dev.off()
 
-save.image("REnvironments/PGLSdiversification.RData")
+save.image("REnvironments/PGLSdiversification2.RData")
 
 #Calculate Dfbetas
 
@@ -626,6 +634,10 @@ for(a in 1:length(traitToStudy)){
   dataRangePrimate$Trait <- summaryData[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny), which(colnames(summaryData)==traitToStudy[a])]
   dataRangePrimate$Diversification_rate <-  summaryData$Diversification_rate[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny)]
   dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,4])&!is.na(dataRangePrimate[,5]),]
+  
+  #keep only frugivorous
+  dataRangePrimate_rdc$Diet <- summaryData$DietaryGuild[match(dataRangePrimate_rdc$Species,summaryData$SpeciesForPhylogeny)]
+  dataRangePrimate_rdc <- dataRangePrimate_rdc[dataRangePrimate_rdc$Diet=="Fruit",]
   
   for(r in 1:nrow(dataRangePrimate_rdc)){
     rowToAdd=which(is.na(dfBetasLambda))[1]
@@ -654,7 +666,7 @@ for(a in 1:length(traitToStudy)){
     phyloConsensus <- force.ultrametric(tree=phyloConsensus, method="extend")#method="nnls")
     
     ##MCMC glmm
-    set.seed(a)
+    set.seed(a+100)
     
     library(MCMCglmm)
     
@@ -695,7 +707,7 @@ for(a in 1:length(traitToStudy)){
   }
 }
 
-save.image("REnvironments/PGLSdiversification.RData")
+save.image("REnvironments/PGLSdiversification3.RData")
 
 
 repetitionTrees=50
@@ -971,6 +983,10 @@ for(d in 1:repetitionModels){#data
       dataRangePrimate$Diversification_rate <-  summaryData$Diversification_rate[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny)]
       dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,4])&!is.na(dataRangePrimate[,5]),]
       
+      #keep only frugivorous
+      dataRangePrimate_rdc$Diet <- summaryData$DietaryGuild[match(dataRangePrimate_rdc$Species,summaryData$SpeciesForPhylogeny)]
+      dataRangePrimate_rdc <- dataRangePrimate_rdc[dataRangePrimate_rdc$Diet=="Fruit",]
+      
       #Readjust phylo tree
       phyloConsensus <- drop.tip(phylo,
                                  phylo$tip.label[
@@ -995,7 +1011,7 @@ for(d in 1:repetitionModels){#data
       phyloConsensus <- force.ultrametric(tree=phyloConsensus, method="extend")#method="nnls")
       
       ##MCMC glmm
-      set.seed(a)
+      set.seed(a+100)
       
       library(MCMCglmm)
       
@@ -1039,7 +1055,7 @@ for(d in 1:repetitionModels){#data
   #progress(d/repetitionModels*100)
 }
 
-save.image("REnvironments/PGLSdiversification.RData")
+save.image("REnvironments/PGLSdiversification4.RData")
 
 
 fraction.v <- c(60, 70, 80, 90, 95)
@@ -1104,6 +1120,10 @@ for (f in fraction.v){
     dataRangePrimate$Diversification_rate <-  summaryData$Diversification_rate[match(dataRangePrimate$Species,summaryData$SpeciesForPhylogeny)]
     dataRangePrimate_rdc <- dataRangePrimate[!is.na(dataRangePrimate[,4])&!is.na(dataRangePrimate[,5]),]
     
+    #keep only frugivorous
+    dataRangePrimate_rdc$Diet <- summaryData$DietaryGuild[match(dataRangePrimate_rdc$Species,summaryData$SpeciesForPhylogeny)]
+    dataRangePrimate_rdc <- dataRangePrimate_rdc[dataRangePrimate_rdc$Diet=="Fruit",]
+    
     #Readjust phylo tree
     phyloConsensus <- drop.tip(phylo,
                                phylo$tip.label[
@@ -1128,7 +1148,7 @@ for (f in fraction.v){
     phyloConsensus <- force.ultrametric(tree=phyloConsensus, method="extend")#method="nnls")
     
     ##MCMC glmm
-    set.seed(a)
+    set.seed(a+100)
     
     library(MCMCglmm)
     
@@ -1170,7 +1190,7 @@ for (f in fraction.v){
   }
 }
 
-save.image("REnvironments/PGLSdiversification.RData")
+save.image("REnvironments/PGLSdiversification5.RData")
 
 ###----
 # Create sensitivity tables
