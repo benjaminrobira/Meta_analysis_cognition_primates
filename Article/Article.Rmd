@@ -17,6 +17,26 @@ institute:
   - ENS: Institut de Biologie de l’École Normale Supérieure (IBENS), École Normale Supérieure, CNRS, INSERM, Université PSL, Paris, France.
   - MNHN: Institut de Systématique, Évolution, Biodiversité (ISYEB), Muséum National d’Histoire Naturelle, CNRS, Sorbonne Université, EPHE, Université des Antilles, Paris, France.
 
+# output: 
+#  #      - '--lua-filter=scholarly-metadata.lua'
+#  #      - '--lua-filter=author-info-blocks.lua'
+#  bookdown::pdf_book:
+#  #bookdown::word_document2:
+#    number_sections: false
+#    toc: false
+#    #citation_package: natbib
+#    latex_engine: pdflatex
+#    fig_caption: true
+#    pandoc_args:
+#      - '--lua-filter=scholarly-metadata.lua'
+#      - '--lua-filter=author-info-blocks.lua'
+# 
+# bibliography: bibliographyarticlepackage.bib
+# csl: nature.csl
+# #biblio-style: apa
+# always_allow_html: true
+# link-citations: yes
+
 output: 
  #      - '--lua-filter=scholarly-metadata.lua'
  #      - '--lua-filter=author-info-blocks.lua'
@@ -24,20 +44,21 @@ output:
  #bookdown::word_document2:
    number_sections: false
    toc: false
-   #citation_package: natbib
+   citation_package: biblatex
    latex_engine: pdflatex
    fig_caption: true
    pandoc_args:
      - '--lua-filter=scholarly-metadata.lua'
      - '--lua-filter=author-info-blocks.lua'
+always_allow_html: true
 
 bibliography: bibliographyarticlepackage.bib
-csl: nature.csl
-#biblio-style: apa
-always_allow_html: true
-link-citations: yes
+biblio-style: nature
+biblatexoptions: [natbib=true]
 
 urlcolor: blue
+filecolor: blue
+linkcolor: blue
 fontsize: 12pt
 
 header-includes:
@@ -132,7 +153,7 @@ source("T:/Saved_PhD/Empirical_analysis/Scripts&Functions/Functions/toolbox.R", 
 
 #Create citation fusion between articles and package (based on toolbox function)
 citeR(
-bibliographyArticle="C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Article/bibliographyarticle.bib",
+bibliographyArticle="T:/Saved_PhD/Library_general/libraryMdf.bib",
 bibliographyOutput="C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Article/bibliographyarticlepackage.bib",
 rgeos,
 geosphere,
@@ -167,7 +188,7 @@ words <- RmdWords("Article.Rmd")
 
 :::: {.graybox data-latex=""}
 
-**Abstract |** Hypotheses related to animal intelligence evolution highlight the role of intra-species conspecifics. Yet, one species rarely occupies an area alone: Space is a place often occupied by many species, sometimes belonging to the same ecological guild. These species can act as competitors to outperform or cooperators to decode and maneuver, thereby stimulating cognition. They can also contribute to modifying and depleting the environment such as it overly increases depletion intensity and makes it poorly predictable, thereby alleviating the benefice of cognition. Considering brain size as a proxy for cognition, we used primates as a study example to test for the intertwine between species sympatry and cognition. We retraced the evolutionary history of several brain areas considering competitive or non-competitive evolutionary scenarios. We found that competitive evolutionary scenarios best predicted the evolution of brain areas related to interacting with the social or ecological environment, with a decrease of their relative size the higher the sympatry rate. The whole brain size, as well as the size of areas used in more general contexts were not related to the sympatry rate. In any case, the evolutionary success of primate species was unrelated to the relative sizes of brain areas but was affected by sympatry. Overall, this comparative study suggests that species sympatry, which likely convolutes the environment, contributes to shaping the selective pressure acting upon primate cognition and diversification.
+**Abstract |** Hypotheses related to animal intelligence evolution highlight the role of conspecifics. Yet, one species rarely occupies an area alone: Space is a place often occupied by many species, sometimes belonging to the same ecological guild. These sympatric heterospecifics can act as competitors or (direct or indirect) cooperators, thereby stimulating cognition. They can also contribute to modifying and depleting the environment such as it makes it poorly predictable, thereby alleviating the benefice of cognition. Considering brain size as a proxy for cognition, we used primates as a study example to test for the intertwine between species sympatry and cognition. We retraced the evolutionary history of several brain areas considering competitive or non-competitive evolutionary scenarios. We found that competitive evolutionary scenarios best predicted the evolution of brain areas related to interacting with the social or ecological environment, with a decrease of their relative size the higher the sympatry rate. The whole brain size, as well as the size of areas used in more general contexts were not related to the sympatry level. In any case, the evolutionary success of primate species was unrelated to the relative sizes of brain areas but was negatively affected by sympatry. Overall, this comparative study suggests that species sympatry, which likely convolutes the environment, contributes to shaping the selective pressure acting upon primate cognition and diversification.
 
 \hfill
 
@@ -346,9 +367,9 @@ maxMOB
 
 \initial{\textcolor{black}{C}}ognition evolution results from the balance between socio-ecological drivers promoting cognitive abilities [@gonzalez2018inference] and physiological and energetic constraints [@navarrete2011energetics]. Primates are pivotal species for cognitive studies [@byrne2000evolution] because their cognition is thought to be promoted by interactions of individuals with conspecifics within the social unit [@byrne1994machiavellian; @dunbar2017there], among generations [@wilson1991molecular; @whiten2007evolution; @reader2002social; @herrmann2007humans; @tomasello2009cultural; @van2011social], between social units [@ashton2020interactions], or with the rest of their environment [@clutton1980primates; @milton1981distribution; @rosati2017foraging]. 
 
-|   Retracing the evolutionary history of cognitive abilities proves to be challenging because there is still no consensual measurement applicable across all species. Up to now, a raw approximation consists in considering brain size as a proxy for cognitive abilities (but see discussion in @logan2018beyond). Although generally considered as a singular entity, the brain is a mosaic of areas cognitively specialized [@barton2000mosaic]. For instance, the Striatum is stimulated during social interactions [@baez2013role]. Its size is thus expected to be positively influenced when contacts with other species increase, as in species performing mixed-species groups, a rare  fact in primates nonetheless (e.g. in callitrichine primates, @heymann2015unlike). The Striatum also underpins reward expectation and action, goal-directed behaviour and planning abilities [@johnson2007integrating] which is key when foraging. Foraging-related areas, as are also the Main Olfactory Bulb (MOB) or the Hippocampus, home of a spatio-temporal memory [@burgess2002human], are expected to be influenced by the ecological environment. Fruits being the archetype of a hard-to-find resource yet predictable [@janmaat2016spatio; @robirabotany], this might be particularly relevant for frugivorous primates. The changes induced by other species with similar dietary habits can contribute to increasing its unpredictability, thus changing the selective pressure applying to cognitive abilities [@grove2013evolution: @robirainreview]. Due to the cost of maintaining the brain functional [@raichle2006brain], it expected that the increase in environmental unpredictable only stimulates cognition up to a certain threshold (i;e. positive selection for bigger brain), before it is such high that smaller brain sizes are more adaptive. In between, more generalist areas, such as the Cerebellum [@koziol2014consensus; @sokolov2017cerebellum] and the Neocortex [@wiltgen2004new] underlying movement and/or general information processing and retention, could also be stimulated by the presence of other species movement traces, noises or odors to decode.
+|   Retracing the evolutionary history of cognitive abilities proves to be challenging because there is still no consensual measurement applicable across all species. Up to now, a raw approximation consists in considering brain size as a proxy for cognitive abilities (but see discussion in @logan2018beyond). Although generally considered as a singular entity, the brain is a mosaic of areas cognitively specialized [@barton2000mosaic]. For instance, the Striatum is stimulated during social interactions [@baez2013role]. Its size is thus expected to be positively influenced when contacts with other species increase, as in species performing mixed-species groups, which is rather infrequent in primates nonetheless (but see callitrichine primates in particular, @heymann2015unlike). The Striatum also underpins reward expectation and action, goal-directed behaviour and planning abilities [@johnson2007integrating] which is key when foraging. Foraging-related areas, as are also the Main Olfactory Bulb (MOB) or the Hippocampus, home of a spatio-temporal memory [@burgess2002human], are expected to be influenced by the ecological environment. Such areas are tought to be particularly key for frugivorous primates, as fruits are the archetype of a hard-to-find resource yet predictable [@janmaat2016spatio; @robirabotany]. The changes induced by other species with similar dietary habits can contribute to increasing its unpredictability, thus changing the selective pressure applying to cognitive abilities [@grove2013evolution: @robirainreview]. Due to the cost of maintaining the brain functional [@raichle2006brain], it is expected that the increase in environmental unpredictability only stimulates cognition up to a certain threshold (i.e. positive selection for bigger brain), before smaller brain sizes become more adaptive. Conversely, more generally-used areas, such as the Cerebellum [@koziol2014consensus; @sokolov2017cerebellum] and the Neocortex [@wiltgen2004new] underlying movement and/or general information processing and retention, could also be stimulated by the presence of other species movement traces, noises or odors to decode.
 
-|    Here, we investigated the intertwine between species sympatry and cognition using frugivorous primate as study example. To infer the effect of species interactions on brain size evolution within the frugivorous primates, we evaluated the support for competitive or non-competitive evolutionary scenarios in the context of sympatry and investigated the directionality of the selection upon brain size evolution in the context of sympatry. Finally, we tested for correlative pattern of the evolutionary success in primates with brain size and current sympatry context.
+|    Here, we investigated the intertwine between species sympatry and cognition using frugivorous primate as study example. To infer the effect of species interactions on brain size evolution within the frugivorous primates, we evaluated the support for competitive or non-competitive evolutionary scenarios in the context of sympatry and investigated the directionality of the selection upon brain size evolution in the context of sympatry. Finally, we tested for correlative pattern of the evolutionary success (species diversification) in primates with brain size or current sympatry context.
 
 # Results
 
@@ -452,7 +473,7 @@ We gathered a large database on the whole brain size, the size of the Cerebellum
 
 |   We first reconstructed primate biogeography history (N$_{species}$ = `r minRange`, @matzke2013probabilistic; @matzke2016stochastic) when considering `r length(areaName)` biogeographic areas (Figure \@ref(fig:figmap); @kamilar2009environmental) and their diet evolution (N$_{species}$ = `r minFruit + minLeaf` to `r maxFruit + maxLeaf`; @bollback2006simmap). We then calculated the likelihoods of models considering the role of species interactions (matching competition MC models, @nuismer2015predicting; models of linear or exponential density dependence, DD$_{lin}$and  DD$_{exp}$, of the evolutionary rate on the number of sympatric lineages; @drury2016estimating see [Models of trait evolution: does interspecific interactions shape brain size evolution?]) in the evolution of either the whole brain (using the encephalic quotient, EQ, as a proxy), or the size of the aforementioned specific brain areas relative to the whole-body mass (Figure. \@ref(fig:figbrain)) and compared their likelihood to those of simpler models assuming no effect of species interactions, like the Brownian Motion (BM), the Ornstein-Uhlenbeck process (OU) considering that traits are constrained around on optimal value (e.g. stabilizing selection; see @blomberg2020beyond for a review) or the Early-Burst model (EB, @blomberg2003testing), this latter allowing to check for a time-dependence of the evolutionary rate, hence emphasizing that, if any, the density effect is not an artefact due to time-dependence. Support for each model was evaluated using an information-theoretic framework [@burnham2002model] based on the weights of the Akaike Information Criterions corrected for small samples (AICc) when considering all six models (MC, DD$_{lin}$, DD$_{exp}$, BM, OU, EB, see [Models of trait evolution: does interspecific interactions shape brain size evolution?]). 
 
-|   We found that non-competitive models were the most likely in describing the evolutionary history of the EQ, the Neocortex and the Cerebellum (Figure \@ref(fig:figbrain) and \@ref(fig:figresultsevolution)), two areas specifically involved in movement and/or general information processing [@wiltgen2004new; @koziol2014consensus; @sokolov2017cerebellum] but also in memory consolidation for the Neocortex [@wiltgen2004new]. The fact that these biggest areas are best described by the Ornstein-Uhlenbeck process suggests a stabilization towards an optimal size and illustrates the trade-offs between costs and benefices of brain development [@isler2009expensive]. By contrast, competitive models were most supported in areas involved in foraging-related and social areas, either specialised in spatio-temporal memory (Hippocampus, @burgess2002human) or planning abilities and reward assessment (Striatum, @baez2013role; @johnson2007integrating), while they tended to be so for one involved in sensory abilities (the main olfactory bulb, MOB; Figure \@ref(fig:figbrain) and \@ref(fig:figresultsevolution)). When density-dependent models were the best fit, the rate (*r*, Figure \@ref(fig:figresultsevolution)) suggested an acceleration of the evolutionary tempo together with increased lineage diversity for the Hippocampus and the Striatum, but a slowdown for the MOB. 
+|   We found that non-competitive models were the most likely in describing the evolutionary history of the EQ, the Neocortex, and the Cerebellum (Figure \@ref(fig:figbrain) and \@ref(fig:figresultsevolution)), two areas specifically involved in movement and/or general information processing [@wiltgen2004new; @koziol2014consensus; @sokolov2017cerebellum] but also in memory consolidation for the Neocortex [@wiltgen2004new]. The fact that these biggest areas are best described by the Ornstein-Uhlenbeck process suggests a stabilization towards an optimal size and illustrates the trade-offs between costs and benefices of brain development [@isler2009expensive]. By contrast, competitive models were most supported in areas involved in foraging-related and social areas, either specialised in spatio-temporal memory (Hippocampus, @burgess2002human) or planning abilities and reward assessment (Striatum, @baez2013role; @johnson2007integrating), while they tended to be so for one involved in sensory abilities (the main olfactory bulb, MOB; Figure \@ref(fig:figbrain) and \@ref(fig:figresultsevolution)). When density-dependent models were the best fit, the rate (*r*, Figure \@ref(fig:figresultsevolution)) suggested an acceleration of the evolutionary tempo together with increased lineage diversity for the Hippocampus and the Striatum, but a slowdown for the MOB. 
 
 ```{r samplecooccurrence}
 
@@ -563,11 +584,11 @@ dateSecondRupt <- as.numeric(round((1-dates[2,])*(max(aggregatedSpeciationTime.m
 
 ```
 
-|   In addition, we investigated the evolutionary consequences of brain evolution by evaluating whether brain sizes correlated with species diversification rates (i.e. speciation minus extinction rates), by using lineage-specific birth-death models of species diversification [@maliet2019model; @maliet2020fast]. Overall, species diversification, estimated based on molecular phylogeny increased over time (Figure \@ref(fig:figdiversificationTime)), particularly in the early and late Miocene, around `r dateFirstRupt[2]` (CI95% = `r paste("[",dateFirstRupt[3],",",dateFirstRupt[1],"]", sep="")`) and `r dateSecondRupt[2]` (CI95% = `r paste("[",dateSecondRupt[3],",",dateSecondRupt[1],"]", sep="")`) Myr ago (Figure \@ref(fig:figdiversificationTime)). When accounting for phylogenetic dependence, no significant relationship between diversification rate and the relative size of brain areas was found (Table \@ref(tab:tableRegDiversification), Figure \@ref(fig:forestPlot); see robustness in Table \@ref(tab:tabledfsensitivity2)). Given the context dependence of the direction of selection (towards bigger sizes in the absence of other species, smaller sizes otherwise), there is no surprise that we do not observe a correlation between evolutionary success (approximated by diversification rate) and the three studied areas affected by inter-species sympatry. Surprisingly however, we found no positive association between the EQ and the diversification rate, nor of that latter with the relative size of the Cerebellum or the Neocortex, two areas insensitive to inter-species sympatry too. This is puzzling because this contradicts a recent study [@melchionna2020macroevolutionary]. The visual inspection of the regressions however clearly evidenced a positive trend for the EQ and the Neocortex if discarding phylogenetic signals (Figure \@ref(fig:figRegressionDiversification)). In fact, a sudden encephalisation in primates is clearly associated to a limited number of close-related species [@decasien2017primate; @melchionna2020macroevolutionary]. This clearly limits the statistical power of our phylogenetically corrected analyses as we cannot decipher whether the connivance between brain size and evolutionary success results from a true biological link or appeared by chance. A positive association between brain size and diversification was also found in birds [@sayol2019larger] given that bigger brains act as a buffer to environmental challenge, thus boosting individuals' fitness [@sol2007big]. This means that, despite what we found here, the positive association between brain size and evolutionary success evidenced in @melchionna2020macroevolutionary remains a likely possibility. Finally, despite diversification was uncorrelated with brain size in frugivorous primates, it was influenced by the sympatry context. In particular, phylogenetic regressions highlighted a negative effect of the number of sympatric species on the diversification rate (`r textEstOneVar(as.numcharac(results.df_diversificationAndSympatry[4,2:4]))`, `r textTestOneVar(as.numcharac(results.df_diversificationAndSympatry[4,5:6]), statistics="t")`, Table \@ref(tab:tableRegDiversificationAndSympatry), Figure \@ref(fig:forestPlot)). In other words, the higher the number of sympatric species, the lower the diversification, an inverted pattern compared to what is found in New World passerines [@kennedy2017historical].
+|   In addition, we investigated the evolutionary consequences of brain evolution and sympatry by evaluating whether brain sizes and sympatry level correlated with species diversification rates (i.e. speciation minus extinction rates), by using lineage-specific birth-death models of species diversification [@maliet2019model; @maliet2020fast]. Overall, species diversification, estimated based on molecular phylogeny increased over time (Figure \@ref(fig:figdiversificationTime)), particularly in the early and late Miocene, around `r dateFirstRupt[2]` (CI95% = `r paste("[",dateFirstRupt[3],",",dateFirstRupt[1],"]", sep="")`) and `r dateSecondRupt[2]` (CI95% = `r paste("[",dateSecondRupt[3],",",dateSecondRupt[1],"]", sep="")`) Myr ago (Figure \@ref(fig:figdiversificationTime)). When accounting for phylogenetic dependence, no significant relationship between diversification rate and the relative size of brain areas was found (Table \@ref(tab:tableRegDiversification), Figure \@ref(fig:forestPlot); see robustness in Table \@ref(tab:tabledfsensitivity2)). Given the context dependence of the direction of selection (towards bigger sizes in the absence of other species, smaller sizes otherwise), there is no surprise that we do not observe a correlation between evolutionary success (approximated by diversification rate) and the three studied areas affected by inter-species sympatry. Surprisingly however, we found no positive association between the EQ and the diversification rate, nor of that latter with the relative size of the Cerebellum or the Neocortex, two areas insensitive to inter-species sympatry too. This is puzzling because this contradicts a recent study [@melchionna2020macroevolutionary]. The visual inspection of the regressions however clearly evidenced a positive trend for the EQ and the Neocortex if discarding phylogenetic signals (Figure \@ref(fig:figRegressionDiversification)). In fact, a sudden encephalisation in primates is clearly associated to a limited number of closely-related species [@decasien2017primate; @melchionna2020macroevolutionary]. This clearly limits the statistical power of our phylogenetically corrected analyses as we cannot decipher whether the connivance between brain size and evolutionary success results from a true biological link or appeared by chance. A positive association between brain size and diversification was also found in birds [@sayol2019larger] given that bigger brains act as a buffer to environmental challenge, thus boosting individuals' fitness [@sol2007big]. This means that, despite what we found here, the positive association between brain size and evolutionary success evidenced in @melchionna2020macroevolutionary remains a likely possibility. Finally, although diversification was uncorrelated with brain size in frugivorous primates, it was influenced by the sympatry context. In particular, phylogenetic regressions highlighted a negative effect of the number of sympatric species on the diversification rate (`r textEstOneVar(as.numcharac(results.df_diversificationAndSympatry[4,2:4]))`, `r textTestOneVar(as.numcharac(results.df_diversificationAndSympatry[4,5:6]), statistics="t")`, Table \@ref(tab:tableRegDiversificationAndSympatry), Figure \@ref(fig:forestPlot)). In other words, the higher the number of sympatric species, the lower the diversification, an inverted pattern compared to what is found in New World passerines [@kennedy2017historical].
 
 # Discussion
 
-The bigger is not necessarily the better. The size of the brain is subject to a compromise between the energy it incurs, and the increase of fitness it allows. This is clearly emphasized by the fact that the biggest areas, the Cerebellum and the Neocortex, as well as the whole brain (EQ) were best described by the Orstein-Uhlenbeck process, what might suggest a stabilisation towards an optimal size as a result of an equilibrium between costs and benefices. As the brain area is regionally specialised [@barton2000mosaic], brain regions could be under different selective pressures as suggested by the differences we highlighted in some brain areas (e.g. MOB or Striatum) across different primate genus. Here, we further show that sympatry is one factor that affects the selective regime under which each brain region evolves: Although the brain as a whole was insensitive to species sympatry, this latter nonetheless induced a change in the relative size of the Hippocampus, and the Striatum, and potentially in the MOB. These areas imply individual-based and social-based information processing, pinpointing that the two components might be under selection in primates [@decasien2017primate; @powell2017re; @gonzalez2018inference]. Overall, the relative size of foraging-related brain areas were negatively associated with one index of sympatry intensity (the range overlap with other species) and might thus be a consequence of species direct or indirect interactions. In general, competition is the first-thought mechanism to describe community structures [e.g. @rocha2015role]. In primates, it is rare to observe direct competition between species, which should translate into site exclusion. In fact, inter-species site exclusion in this taxa has only been observed in gibbons [@suwanvecho2012interspecific]. For species with overlapping diet, indirect competition for resource might happen. It has been shown that individuals tend to use social or environmental cues depending on their reliability [@rafacz2003environmental; @dunlap2016foraging]. The utilization of these cues should promote cognition until reaching a certain range of environmental complexity [@grove2013evolution; @robirainreview]. Our results could thus suggest that species sympatry may trigger an important decrease in cues reliability, for instance due to higher and unforeseen depletion rate. That would explain a relaxed positive selection for advance cognitive abilities, and conversely, given the cost of brain maintenance [@raichle2006brain], would induce a negative selection towards areas involved in foraging related activities like the Hippocampus, the MOB and the Striatum. Not only was brain evolution affected by sympatry, but sympatry (the maximum number of co-occurring species only) induced a slowdown in diversification, which contrasts with the picture offered by passerine birds at finer resolution [@kennedy2017historical]. Density-dependence within clade is a known factor to affect negatively diversification rate [@moen2014does]. In particular, species competing for resource are thought to contribute to limiting competitors' range [@price2009evolutionarily], hence to constrain population size and diversification rate [@pigot2013species]. Given the large resolution and low overlap threshold to consider sympatry considered here (i.e. overlap of `r geographicThresholdVector[1]*100`% of the distribution area), this competitive view fits the observed influence of sympatry on frugivorous primate diversification.
+The bigger is not necessarily the better. The size of the brain is subject to a compromise between the energy it incurs, and the increase of fitness it allows. This is clearly emphasized by the fact that the biggest areas, the Cerebellum and the Neocortex, as well as the whole brain (EQ) were best described by the Orstein-Uhlenbeck process, what might suggest a stabilisation towards an optimal size as a result of an equilibrium between costs and benefices. As the brain area is regionally specialised [@barton2000mosaic], brain regions could be under different selective pressures as suggested by the differences we highlighted in some brain areas (e.g. MOB or Striatum) across different primate genus. Here, we further show that sympatry is one factor that affects the selective regime under which each brain region evolves: Although the brain as a whole was insensitive to species sympatry, this latter nonetheless induced a change in the relative size of the Hippocampus, and the Striatum, and potentially in the MOB of frugivorous primates. These areas imply individual-based and social-based information processing, pinpointing that the two components might be under selection in primates [@decasien2017primate; @powell2017re; @gonzalez2018inference]. Overall, the relative sizes of foraging-related brain areas were negatively associated with one index of sympatry intensity (the range overlap with other species) and might thus be a consequence of direct or indirect interspecific interactions. In general, competition is the first-thought mechanism to describe community structures [e.g. @rocha2015role]. In primates, it is rare to observe direct competition between species, which should translate into site exclusion. In fact, inter-species site exclusion in this taxon has only been observed in gibbons [@suwanvecho2012interspecific]. For species with overlapping diet, indirect competition for resources might happen. It has been shown that individuals tend to use social or environmental cues depending on their reliability [@rafacz2003environmental; @dunlap2016foraging]. The utilization of these cues should promote cognition until reaching a certain range of environmental complexity [@grove2013evolution; @robirainreview]. Our results could thus suggest that species sympatry may trigger an important decrease in cues reliability, for instance due to higher and unforeseen depletion rate. That would explain a relaxed positive selection for advance cognitive abilities, and conversely, given the cost of brain maintenance [@raichle2006brain], would induce a negative selection towards the sizes of areas involved in foraging-related activities like the Hippocampus, the MOB and the Striatum. Not only was brain evolution affected by sympatry, but sympatry (the maximum number of co-occurring species only) induced a slowdown in diversification, which contrasts with the picture offered by passerine birds at finer resolution [@kennedy2017historical]. Density-dependence within clade is a known factor to negatively affect diversification rate [@moen2014does]. In particular, species competing for resource are thought to contribute to limiting competitors' range [@price2009evolutionarily], hence to constrain population size and diversification rate [@pigot2013species]. Given the large resolution and low overlap threshold to consider sympatry considered here (i.e. overlap of `r geographicThresholdVector[1]*100`% of the distribution area), this competitive view fits the observed influence of sympatry on frugivorous primate diversification.
 
 |   The use of brain size as a proxy for cognition is a central debate with no optimal solution (see grounded criticism from @deaner2000comparative; @healy2007critique; @logan2018beyond). The current flourishment of consortia, allowing for much more detailed and standardized anatomical measurements (e.g. in primates: @milham2018open), or with standardized behaviourally explicit comparisons (e.g. on captive [@many2019establishing] or wild [@janmaat2021using] primates), might alleviate biases stemming from brain size analysis, but this will take time to generate large-enough datasets. In the meanwhile, brain size is a proxy much appreciated in practice, because of its easy accessibility for a “large” number of species. Here, we showed that species sympatry can influence the evolutionary scenario that applies to animals' brain, but the proximate mechanisms at play remain to be elucidated. Finally, it is very likely that any hypothesis on cognition evolution, generally discussed within species, could be broadened to a between-species context: Polyspecific social associations do exist [@porter2001benefits], as well as inter-species territory defense [@drury2020competition; @losin2016ecological] or imitation and copying [@persson2018spontaneous; @pepperberg2002allospecific]. As Alice said “It's a great huge game of chess that's being played—all over the world” (@Carroll, Chapter II) and all individuals are just pieces to play with or against, no matter the species.
 
@@ -884,12 +905,6 @@ We considerably value the help provided by Jonathan Drury in making some scripts
 
 BR conceived the study, collected, cleaned and analyzed the data, drew the figures and wrote the first version of the manuscript and subsequently revised it. BP-L implemented the ClaDS algorithm for our data, helped with running other analyses, and revised the manuscript multiple times. The authors declare having no conflict of interest. All authors gave final approval for publication and agree to be held accountable for the work performed therein.
 
-# Literature cited
-
-<div id="refs"></div>
-
-\newpage 
-
 ```{r tableRegGradient, include=TRUE}
 results.df_gradient <- results.df_gradient[-(6:10),]
 rownames(results.df_gradient) <- NULL
@@ -933,7 +948,7 @@ knitr::kable(results.df_diversificationAndSympatry, escape=TRUE, booktabs = TRUE
 
 ```
 
-\newpage
+\clearpage
 
 ```{r prepareMap}
 #Reimport areas with cropping
@@ -1117,7 +1132,7 @@ map
 
 ```
 
-\newpage
+\clearpage
 
 ```{r phylogeny, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=7, fig.cap=paste("Current frugivorous primate sympatry pattern and phylogeny | Primate phylogeny from a consensus tree of 1000 possible trees from the 10kTrees project is depicted in the centre, together with abbreviated species name. The corresponding non-abbreviated names can be found using Appendix Figure \\@ref(fig:figdata). Co-occurring frugivorous (based on a frugivory threshold of ", frugivoryThresholdVector[1], "% and folivory of ", folivoryThresholdVector[1], "%) species are linked by lightgray lines. The geographic area occupied by a species is depicted by the coloured rectangles. Presence was assed given an overlap between the species range and the geographic area of ", geographicThresholdVector[1]*100, "%.", sep="")}
 
@@ -1262,7 +1277,7 @@ circos.track(ylim = c(0, dend_height), bg.border = NA,
 circos.clear()
 ```
 
-\newpage
+\clearpage
 
 ```{r figbrain, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=7, fig.cap=paste("(Left) EQ or relative brain size value among frugivorous primates (Right) Studied brain areas | (Left) The circular rows are indicated by the colours which match a specific brain area. The darker background emphasises when values are above average, while the lighter background emphasises when values are below average. The mean value (after scaling and based on one random sampling among possible values, but see \\@ref(fig:figvariabilitydata) for visualization of measure variability) for the Encephalization Quotient (EQ) or relative size of brain parts, when available, is depicted by a plain circle for frugivorous species. The frugivorous threshold was fixed to ", frugivoryThresholdVector[1], "% and folivory to ", folivoryThresholdVector[1], "%. (Right) A 3D brain from *Homo sapiens* is depicted (*neurobase* package [@neurobase], *misc3d* package [@misc3d]). The arrows indicate the sagital and frontal axes. Studied brain area are coloured, although the neocortex was not coloured for readability since it corresponds to the external layer of the cerebral hemisphere. In short, the MOB is involved in immediate olfactory information processing, the Neocortex and the Cerebellum support a working memory and memory consolidation processes [@wiltgen2004new; @koziol2014consensus; @sokolov2017cerebellum], and the Hippocampus supports a working memory and a long-term spatio-temporal memory [@burgess2002human]. The Striatum is involved in social information processing [@baez2013role].", sep="")}
 
@@ -1615,7 +1630,7 @@ legend(x=0.1, y=0.8, legend = c("EQ", "Striatum", "MOB",  "Hippocampus", "Neocor
 
 ```
 
-\newpage
+\clearpage
 
 ```{r figresultsevolution, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=6, fig.cap="Relative support of fitted models of trait evolution for each brain part | Plotted is the AICc weight, a measure of relative support for a given model, for non-competitive (BM, OU, EB) and competitive (MC, DD$_{lin}$, DD$_{exp}$) models. The points represent the average AICc weight obtained (when considering the six models from a same run), while the vertical bars indicate the standard deviation given all tested conditions (see [Models of trait evolution: does interspecific interactions shape brain size evolution?])."}
 
@@ -1888,7 +1903,7 @@ lines(x=thresholdPresenceRange, y=howManyDifferent)
 
 ```
 
-\newpage
+\clearpage
 
 ### Sensitivity to variation in trait value
 
@@ -2279,7 +2294,7 @@ dataForSample <- dataForSample[order(dataForSample$SpeciesForPhylo),]
 nbPlot=4
 
 layout(mat=t(c(1:nbPlot)), widths=rep(5, times=nbPlot), heights=c(5*nbPlot))
-par(mar=c(0, 0, 3, 0), mgp=c(2, 0.5, 0), xpd=TRUE)
+par(mar=c(0, 0, 3, 0.5), mgp=c(2, 0.5, 0), xpd=TRUE)
 
 for(p in 1:nbPlot){
   dataForSample_rdcplot <- dataForSample[(1+(p-1)*nrow(dataForSample)/nbPlot):(1+(p)*nrow(dataForSample)/nbPlot),]
@@ -2323,13 +2338,11 @@ for(p in 1:nbPlot){
 
 ```
 
-\newpage
+\clearpage
 
 ### Primate diversification rate over time
 
-\vspace{-2in}
-
-```{r figdiversificationTime, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=5, fig.height=5, fig.cap="Diversification rate over time in the Primate taxon | The average diversification rate estimated based on an assumed sampling fraction of primate species ranging from 60 to 90% (at a step of 10%) is depicted by the plain line. The grey background depicts the standard deviation. The two breakpoints, depicted by the plain dots and the vertical dotted bars, were thus estimated based on a three-linear regression segmentation using the *strucchange* package [@strucchange1; @strucchange2; @strucchange3; see the vignette package for statistical details]. The three fitted regressions are displayed by the dashed lines. The choice of two breakpoints was priorily assessed by choosing the number of breakpoints minimizing the the Bayesian Information Criterion. The identified breakpoints coin with identified sharp decrease in extinction rate [@arbour2017major; @springer2012macroevolutionary] due to the emergence of more favourable environmental conditions stemming from a progressive warming after harsh temperature cooling that started earlier in the Oligocene until reaching a mid-Miocene Climatic Optimum [@fleagle2006biogeography]."}
+```{r figdiversificationTime, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=4.5, fig.height=4.5, fig.cap="\\footnotesize Diversification rate over time in the Primate taxon | The average diversification rate estimated based on an assumed sampling fraction of primate species ranging from 60 to 90% (at a step of 10%) is depicted by the plain line. The grey background depicts the standard deviation. The two breakpoints, depicted by the plain dots and the vertical dotted bars, were thus estimated based on a three-linear regression segmentation using the *strucchange* package [@strucchange1; @strucchange2; @strucchange3; see the vignette package for statistical details]. The three fitted regressions are displayed by the dashed lines. The choice of two breakpoints was priorily assessed by choosing the number of breakpoints minimizing the the Bayesian Information Criterion. The identified breakpoints coin with identified sharp decrease in extinction rate [@arbour2017major; @springer2012macroevolutionary] due to the emergence of more favourable environmental conditions stemming from a progressive warming after harsh temperature cooling that started earlier in the Oligocene until reaching a mid-Miocene Climatic Optimum [@fleagle2006biogeography]."}
 
 ##Plot diversification in function of time
 xmin=floor(min(aggregatedSpeciationTime.mean[,1]/10))*10
@@ -2401,9 +2414,6 @@ lines(aggregatedSpeciationTime.mean$Time[aggregatedSpeciationTime.mean$Time > -4
 lines(aggregatedSpeciationTime.mean$Time[aggregatedSpeciationTime.mean$Time > -16], reg3[aggregatedSpeciationTime.mean$Time > -16], lty = 2)#truncaturate for readability
 ```
 
-
-\newpage
-
 ## Phylogenetic regressions: results, stability and assumption
 
 ### Model results
@@ -2412,13 +2422,15 @@ lines(aggregatedSpeciationTime.mean$Time[aggregatedSpeciationTime.mean$Time > -1
 
 (a) Phylogenetic regressions: selection gradient
 
+\clearpage
+
 ```{=latex}
 \begin{figure}
 \centering\includegraphics[width=0.65\linewidth]{C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Plots/selectionGradientPGLS.pdf}
 \caption{\scriptsize{Phylogenetic regressions of relative brain size in function of sympatry intensity indices | Left graphics depict the effect of the number of sympatric species on the brain size, when the effect of the percentage of the distribution range overlapped by sympatric species is averaged, while the right graphics do the opposite. Raw data are depicted with points, while the segments that link them correspond to the projected phylogenetic tree. The model fit is shown with the plain black line and the associated 95\% confidence interval is depicted by the transparent gray background.}}\label{fig:figRegressionGradient}
 \end{figure}
 ```
-\newpage
+\clearpage
 
 (b) Phylogenetic regressions: diversification and brain size
 
@@ -2429,6 +2441,8 @@ lines(aggregatedSpeciationTime.mean$Time[aggregatedSpeciationTime.mean$Time > -1
 \end{figure}
 ```
 
+\clearpage
+
 (b) Phylogenetic regressions: diversification and sympatry
 
 ```{=latex}
@@ -2437,11 +2451,12 @@ lines(aggregatedSpeciationTime.mean$Time[aggregatedSpeciationTime.mean$Time > -1
 \caption{\scriptsize{Phylogenetic regressions of diversification rate in function of sympatry intensity indices | Left graphics depict the effect of the number of sympatric species on the brain size, when the effect of the percentage of the distribution range overlapped by sympatric species is averaged, while the right graphics do the opposite. Raw data are depicted with points, while the segments that link them correspond to the projected phylogenetic tree. The model fit is shown with the plain black line and the associated 95\% confidence interval is depicted by the transparent gray background.}}\label{fig:figRegressionDiversificationSympatry}
 \end{figure}
 ```
-\newpage
+
+\clearpage
 
 (d) Forest plot of estimates
 
-```{r forestPlot, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=7, fig.cap="Forest plot of the phylogenetic regressions | CI: Confindence interval, HDP: Highest Posterior Density (when brain size is the predictor, they are barely visible as reduced). Plain dots depict negative effects, open dots depict positive effect. "}
+```{r forestPlot, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=6.25, fig.height=6.25, fig.cap="Forest plot of the phylogenetic regressions | CI: Confindence Interval, HDP: Highest Posterior Density (when brain size is the predictor, they are barely visible because reduced). Plain dots depict negative effects, open dots depict positive effects. "}
 
 source("T:/Saved_PhD/Empirical_analysis/Scripts&Functions/Functions/toolbox.R")
 par(mar=c(8, 8, 0.5, 2), mgp=c(2.5, 0.5, 0), xpd=TRUE)
@@ -2506,7 +2521,7 @@ for(a in 1:length(traitName_rdc)){
   if(a!=length(traitName_rdc)){
     text(x=cbind(model$bootmean, t(model$bootconfint95))[2,3], y=2.5-(a-1)*1/length(traitName_rdc),
        pos=4, col=colourModelsReg[a],
-       labels=pvalueToText(as.numcharac(results.df_gradient[5*(a-1)+3,7])), cex=0.75)
+       labels=pvalueToText(as.numcharac(results.df_gradient[grep(traitName_legend[a], results.df_gradient[,1]) + 2,7])), cex=0.75)
   }else{
     text(x=cbind(model$bootmean, t(model$bootconfint95))[2,3], y=2.5-(a-1)*1/length(traitName_rdc),
          pos=4, col=colourModelsReg[a],
@@ -2526,11 +2541,11 @@ for(a in 1:length(traitName_rdc)){
             lty=1, 
             horiz=TRUE, 
             symmetrical=FALSE)
-  points(x=cbind(model$bootmean, t(model$bootconfint95))[3,1], y=0.5-(a-1)*1/length(traitName_rdc), pch=ifelse(cbind(model$bootmean, t(model$bootconfint95))[3,1]>0,21,19), , bg="white", col=colourModelsReg[a])
+  points(x=cbind(model$bootmean, t(model$bootconfint95))[3,1], y=0.5-(a-1)*1/length(traitName_rdc), pch=ifelse(cbind(model$bootmean, t(model$bootconfint95))[3,1]>0,21,19), bg="white", col=colourModelsReg[a])
   if(a!=length(traitName_rdc)){
     text(x=cbind(model$bootmean, t(model$bootconfint95))[3,3], y=0.5-(a-1)*1/length(traitName_rdc),
        pos=4, col=colourModelsReg[a],
-       labels=pvalueToText(as.numcharac(results.df_gradient[5*(a-1)+4,7])), cex=0.75)
+       labels=pvalueToText(as.numcharac(results.df_gradient[grep(traitName_legend[a], results.df_gradient[,1]) + 3,7])), cex=0.75)
   }else{
     text(x=cbind(model$bootmean, t(model$bootconfint95))[3,3], y=0.5-(a-1)*1/length(traitName_rdc),
          pos=4, col=colourModelsReg[a],
@@ -2553,10 +2568,10 @@ for(a in 1:length(traitName_rdc)){
               lty=1, 
               horiz=TRUE, 
               symmetrical=FALSE)
-    points(x=as.data.frame(summary(model)$solutions[,1:3])[2,1], y=-1.5-(a-1)*1/(length(traitName_rdc)-1), pch=ifelse(as.data.frame(summary(model)$solutions[,1:3])[2,1]>0,21,19), , bg="white", col=colourModelsReg[a])
+    points(x=as.data.frame(summary(model)$solutions[,1:3])[2,1], y=-1.5-(a-1)*1/(length(traitName_rdc)-1), pch=ifelse(as.data.frame(summary(model)$solutions[,1:3])[2,1]>0,21,19), bg="white", col=colourModelsReg[a])
     text(x=as.data.frame(summary(model)$solutions[,1:3])[2,3], y=-1.5-(a-1)*1/(length(traitName_rdc)-1),
          pos=4, col=colourModelsReg[a],
-         labels=pvalueToText(as.numcharac(results.df_diversification[4*(a-1)+3,5])), cex=0.75)
+         labels=pvalueToText(as.numcharac(results.df_diversification[grep(traitName_legend[a], results.df_diversification[,1]) + 2,5])), cex=0.75)
     
   }
 }
@@ -2571,7 +2586,7 @@ legend(x=3, y=0.5,
        xjust=1,
        xpd=TRUE)
 
-legend(x=-3.25, y=-4, 
+legend(x=-2.5, y=-4, 
        pch=rep(19, times=length(traitName_rdc)), 
        col=c(colourModelsReg),
        legend=traitName_legend,
@@ -2582,7 +2597,7 @@ legend(x=-3.25, y=-4,
 
 ```
 
-\newpage
+\clearpage
 
 ### Model stability
 
@@ -2769,7 +2784,6 @@ for(a in 1:length(traitName)){
 ```
 
 \newpage
-
 
 (b) Phylogenetic regressions: diversification and sympatry
 
