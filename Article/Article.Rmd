@@ -205,7 +205,7 @@ words <- RmdWords("Article.Rmd")
 
 :::: {.graybox data-latex=""}
 
-**Abstract |** Main hypotheses related to animal intelligence evolution highlight the role of conspecifics. Yet, space is a place often occupied by many species, sometimes belonging to the same ecological guild. These sympatric heterospecifics can act as competitors or cooperators, thereby stimulating cognition. They can also contribute to modifying and depleting the environment, making it poorly predictable and thereby alleviating the benefit of cognition. Considering brain size as a proxy for cognition, we used primates to test for the intertwine between species sympatry and cognition, and retraced the evolutionary history of several brain areas considering competitive or non-competitive evolutionary scenarios. We found that competitive evolutionary scenarios best predicted the evolution of brain areas related to interacting with the social or ecological environment, with a decrease of their relative size the higher the sympatry rate, but not of the whole brain or brain areas used in immediate information processing. Moreover, sympatry negatively affected primate diversification which was unrelated to the size of brain areas. Overall, this comparative study suggests that species sympatry, which likely convolutes the environment, contributes to shaping the selective pressure acting upon primate cognition and diversification.
+**Abstract |** The main hypotheses related to animal intelligence evolution highlight the role of conspecifics. Yet, space is a place often occupied by many species, sometimes belonging to the same ecological guild. These sympatric heterospecifics can act as competitors or cooperators, thereby shaping cognition. They can provide new cues to infer food presence, or impoverish the environment, stimulating the need of cognition. They can also make the environment poorly predictable, thereby alleviating the benefit of cognition.  Considering brain size as a proxy for cognition, we used primates to test for the intertwine between species sympatry and cognition. We retraced the evolutionary history of several brain areas with evolutionary scenarios considering or discarding sympatry. We found that evolutionary scenarios considering sympatry best predicted the evolution of brain areas related to long-term memory of interactions with the social or ecological environment, with a decrease of their relative size the higher the sympatry rate. By contrast, the whole brain or brain areas used in immediate information processing were best described by evolutionary models not considering sympatry. Moreover, sympatry negatively affected primate diversification which was unrelated to the size of the studied brain areas. Overall, this comparative study suggests that species sympatry contributes to shaping the selective pressure acting upon primate cognition and diversification. We speculate that this is due to an over-complexification of resource spatio-temporal pattern.
 
 \hfill
 
@@ -382,13 +382,26 @@ maxMOB
 <!-- On the road to brain size evolution, generally considered as an equivalent of cognition evolution, mysteries are plenty [@van2006some; @dunbar2017there]. Overall, the evolution of the brain is the consequence of constraints (e.g. energetic limitations, @navarrete2011energetics), but also of socio-ecological drivers promoting cognitive abilities [@gonzalez2018inference].  -->
 <!-- Primates are pivotal species to study the evolution of cognition given the complexity of their socio-ecological environment and the inevitable implication for retracing human evolutionary history [@byrne2000evolution].  -->
 
-\initial{\textcolor{black}{C}}ognition evolution results from the balance between socio-ecological drivers promoting cognitive abilities [@gonzalez2018inference] and physiological and energetic constraints [@navarrete2011energetics]. Primates are pivotal species for cognitive studies [@byrne2000evolution] because their cognition is thought to be promoted by interactions of individuals with conspecifics within the social unit [@byrne1994machiavellian; @dunbar2017there], among generations [@wilson1991molecular; @whiten2007evolution; @reader2002social; @herrmann2007humans; @tomasello2009cultural; @van2011social], between social units [@ashton2020interactions], or with the rest of their environment [@clutton1980primates; @milton1981distribution; @rosati2017foraging]. However, space is a place often occupied by many species belonging to the same ecological guild and we can predict that such interactions with sympatric heterospecifics are likely to strongly shape the evolution of cognition.
+<!-- \initial{\textcolor{black}{C}}ognition evolution results from the balance between socio-ecological drivers promoting cognitive abilities [@gonzalez2018inference] and physiological and energetic constraints [@navarrete2011energetics]. Primates are pivotal species for cognitive studies [@byrne2000evolution] because their cognition is thought to be promoted by interactions of individuals with conspecifics within the social unit [@byrne1994machiavellian; @dunbar2017there], among generations [@wilson1991molecular; @whiten2007evolution; @reader2002social; @herrmann2007humans; @tomasello2009cultural; @van2011social], between social units [@ashton2020interactions], or with the rest of their environment [@clutton1980primates; @milton1981distribution; @rosati2017foraging]. However, space is a place often occupied by many species belonging to the same ecological guild and we can predict that such interactions with sympatric heterospecifics are also likely to strongly shape the evolution of cognition. -->
 
-|   Retracing the evolutionary history of cognitive abilities proves to be challenging because there is still no consensual measurement applicable across all species. Up to now, a raw approximation consists in considering brain size as a proxy for cognitive abilities (but see discussion in @logan2018beyond). Yet, the brain is a mosaic of areas cognitively specialized [@barton2000mosaic] and these areas are likely to be differently affected by species sympatry. For instance, the Striatum is stimulated during social interactions [@baez2013role]. Its size is thus expected to be positively influenced when contacts with other species increase, as in species performing mixed-species groups, which is nonetheless rather infrequent in primates (but see callitrichine primates in particular, @heymann2015unlike). The Striatum also underpins reward expectation and action, goal-directed behaviour and planning abilities [@johnson2007integrating] which is key when foraging. Other foraging-related areas, as the Main Olfactory Bulb (MOB) or the Hippocampus, home of a spatio-temporal memory [@burgess2002human], are also expected to be influenced by the ecological environment. Such areas are thought to be particularly important for frugivorous primates, as fruits are the archetype of a hard-to-find resource yet predictable [@janmaat2016spatio; @robirabotany], and larger areas, taken as equivalent to more advanced cognitive abilities, might be more advantageous. Similarly, more generally-used areas, such as the Cerebellum [@koziol2014consensus; @sokolov2017cerebellum] and the Neocortex [@wiltgen2004new] underlying movement and/or general information processing and retention, could also be stimulated by the presence of other species movement traces, noises or odors to decode. To sum up, a first possibility is that sympatric heterospecifics could altogether stimulate cognition and promote larger sizes of the brain areas related to interacting with the social or ecological environment. 
+<!-- |   Retracing the evolutionary history of cognitive abilities proves to be challenging because there is still no consensual measurement applicable across all species. Up to now, a raw approximation consists in considering brain size as a proxy for cognitive abilities (but see discussion in @logan2018beyond). Yet, the brain is a mosaic of areas cognitively specialized [@barton2000mosaic] and these areas are likely to be differently affected by species sympatry. For instance, the Main Olfactory Bulb (MOB) or the Hippocampus , home of a spatio-temporal memory [@burgess2002human], are largely involved in efficient foraging, especially for frugivorous primates, as fruits are the archetype of a hard-to-find resource yet predictable [@janmaat2016spatio; @robirabotany]: we therefore expect that primate species with larger MOB or Hippocampus areas, taken as equivalent to more advanced perceptive and cognitive abilities for efficient foraging, might be more fit than their sympatric species with smaller areas. Similarly, the Striatum underpins reward expectation and action, goal-directed behaviour and planning abilities [@johnson2007integrating] which is key when foraging. -->
+<!-- are expected to be influenced by the ecological environment. The Striatum is also stimulated during social interactions [@baez2013role]: its size is thus expected to be positively influenced when contacts with other species increase, as in species performing mixed-species groups, which is nonetheless rather infrequent in primates (but see callitrichine primates in particular, @heymann2015unlike). Finally, besides foraging-related areas (Striatum, MOB or Hippocampus), more generally-used areas, such as the Cerebellum [@koziol2014consensus; @sokolov2017cerebellum] and the Neocortex [@wiltgen2004new] underlying movement and/or general information processing and retention, could also be stimulated by the presence of other species movement traces, noises or odors to decode. To sum up, a first possibility is that sympatric heterospecifics could altogether stimulate cognition and promote larger sizes of the brain areas related to interacting with the social or ecological environment.  -->
 
-|   However, if the changes induced by sympatric species increases the environmental unpredictability too much, sympatry could on the contrary change the selective pressure applying to cognitive abilities [@grove2013evolution: @robirainreview]. Indeed, due to the cost of maintaining the brain functional [@raichle2006brain], it is expected that the increase in environmental unpredictability only stimulates cognition up to a certain threshold (i.e. positive selection for bigger brain), before smaller brain sizes of foraging-related areas become more adaptive (because costs are no longer compensated by the benefit of memory). Similarly, it is possible that processing heterospecifics cues, and other environmental cues (e.g. phenology cues) might not necessitate the same cognition level, with the former being potentially simpler to process (since relying on easily accessible social cues) than the latter (relying on trial-and-error processes and personal experience of potentially elusive environmental cues) [@laland2004social]. In this case, the size of brain areas involved in immediate information processing should be less large in sympatric than in non-sympatric conditions. To sum up, a second possibility is that sympatric heterospecifics could hamper the benefits of cognition on foraging, and thus slowdown brain size increase. In an extreme case, it could even induce positive selection for smaller brain size.
+<!-- |   However, if the changes induced by sympatric species increases the environmental unpredictability too much, sympatry could on the contrary change the selective pressure applying to cognitive abilities [@grove2013evolution: @robirainreview]. Indeed, due to the cost of maintaining the brain functional [@raichle2006brain], it is expected that the increase in environmental unpredictability only stimulates cognition up to a certain threshold (i.e. positive selection for bigger brain), before smaller brain sizes of foraging-related areas become more adaptive (because costs are no longer compensated by the benefit of memory). Similarly, it is possible that processing heterospecifics cues, and other environmental cues (e.g. phenology cues) might not necessitate the same cognition level, with the former being potentially simpler to process (since relying on easily accessible social cues) than the latter (relying on trial-and-error processes and personal experience of potentially elusive environmental cues) [@laland2004social]. In this case, the size of brain areas involved in immediate information processing should be less large in sympatric than in non-sympatric conditions. To sum up, a second possibility is that sympatric heterospecifics could hamper the benefits of cognition on foraging, and thus slowdown brain size increase. In an extreme case, it could even induce positive selection for smaller brain size. -->
 
-|    Here, we investigated the intertwine between species sympatry and cognition using frugivorous primates as study example. To infer the effect of species interactions on brain size evolution within frugivorous primates, we evaluated support for competitive or non-competitive evolutionary scenarios, accounting or not for sympatry, and investigated the directionality of the selection induced by sympatry history upon brain size evolution. Finally, we tested for correlative patterns between the evolutionary success (species diversification) in primates with brain size or current sympatry context.
+<!-- |    Here, we investigated the intertwine between species sympatry and cognition using frugivorous primates as study example. To infer the effect of species interactions on brain size evolution within frugivorous primates, we evaluated support for competitive or non-competitive evolutionary scenarios, accounting or not for sympatry, and investigated the directionality of the selection induced by sympatry history upon brain size evolution. Finally, we tested for correlative patterns between brain size or current sympatry with the evolutionary success (species diversification) in primates. -->
+
+\initial{\textcolor{black}{C}}ognition evolution is shaped by the balance between socio-ecological drivers promoting cognitive abilities [@gonzalez2018inference] and physiological and energetic constraints [@navarrete2011energetics]. Primates are pivotal species for cognitive studies [@byrne2000evolution] because their cognition is thought to be promoted by interactions of individuals with conspecifics within the social unit [@byrne1994machiavellian; @dunbar2017there], among generations [@wilson1991molecular; @whiten2007evolution; @reader2002social; @herrmann2007humans; @tomasello2009cultural; @van2011social], between social units [@ashton2020interactions], or with the rest of their environment [@clutton1980primates; @milton1981distribution; @rosati2017foraging]. However, space is a place often occupied by many species belonging to the same ecological guild. We can predict that interactions with sympatric heterospecifics are also likely to strongly shape the evolution of cognition. Heterospecifics can act as indirect competitors for food (Hypothesis 1) and might also be indirect cooperators, providing cues on food location and availability (Hypothesis 2, e.g. [@olupot1998fruit]).
+
+|   Retracing the evolutionary history of cognitive abilities proves to be challenging because there is still no consensual measurement applicable across all species. Up to now, a raw approximation consists in considering brain size as a proxy for cognitive abilities, with larger size considered equivalent to larger cognitive abilities (but see discussion in @logan2018beyond). Yet, the brain is a mosaic of areas cognitively specialized [@barton2000mosaic]. These areas are likely to be under different selective pressures, and thus, to be differently affected by species sympatry. Brain areas involved in processing and storing spatio-temporal information, such as the Hippocampus, home of an associative memory used for spatio-temporal navigation [@burgess2002human], should in particular be affected under the competitive hypothesis (Hypothesis 1). Brain areas involved in processing more general and immediate information, such as the Main Olfactory Bulb (MOB), Cerebellum [@koziol2014consensus; @sokolov2017cerebellum] and the Neocortex [@wiltgen2004new] should be particularly affected under the cooperative hypothesis (Hypothesis 2). 
+
+|   Under both of the two (non-exclusive) hypotheses, sympatry could stimulate or hamper cognition evolution. On the one hand, species co-occurrence could contribute to increasing food depletion and reducing food predictability because of unforeseen depletion by heterospecifics, two facts that might imply the use cognitive abilities for inferring food location and availability [@grove2013evolution; @robirainreview]. Thus, under hypothesis 1, because of reasonable environmental complexification due to heterospecifics, the size of the area such as the Hippocampus should eventually be larger (Prediction 1.1). Heterospecifics might also leave traces of presence or passage that can lead to available food. These cues might add to environmentally used ones. This should thus stimulate areas involved in general and immediate information processing. Thus, under hypothesis 2, due to an additive effect of heterospecifics cues over environmental cues, the size of areas such as the MOB, the Cerebellum or the Neocortex should be larger (Prediction 2.1). 
+
+|   On the other hand, if changes induced by sympatric species increase environmental unpredictability too much, sympatry could on the contrary change the selective pressure applying to cognitive abilities [@grove2013evolution; @robirainreview]. Indeed, due to the cost of maintaining the brain functional [@raichle2006brain], it is expected that the increase in environmental unpredictability only stimulates cognition up to a certain threshold (i.e. positive selection for bigger brain), before smaller brain sizes of foraging-related areas become more adaptive (because costs are no longer compensated by the benefit of memory). Thus, under hypothesis 1, in case of an over-complexification of the environment, the Hippocampus size should be smaller (Prediction 1.2). Similarly, it is possible that processing heterospecifics cues, and other environmental cues (e.g. phenology cues) might not necessitate the same cognition level, with the former being potentially simpler to process (since relying on easily accessible social cues) than the latter (relying on trial-and-error processes and personal experience of potentially elusive environmental cues) [@laland2004social]. It has indeed been shown that individuals tend to use social or environmental cues depending on their reliability [@rafacz2003environmental; @dunlap2016foraging], favouring social cues in particular when environmental cues are too noisy. Thus, under hypothesis 2 and an exclusion effect of heterospecifics cues over environmental cues, the size of the MOB, the Cerebellum or the Neocortex should be smaller (Prediction 2.2). 
+
+|   While cognition can be intensively shaped under the rationale centred around resource harvesting [@milton1981distribution; @rosati2017foraging], cognition can also be triggered by interactions with conspecifics [@byrne1994machiavellian; @dunbar2017there]. The Striatum is stimulated during social interactions [@baez2013role]: its size is thus expected to be positively influenced when contacts with other species increase, as in species performing mixed-species groups, which is nonetheless rather infrequent in primates (but see callitrichine primates in particular [@heymann2015unlike]) and should not be affected under indirect competition or cooperation with heterospecifics. It can thus serve as as a null comparative area. Considering the Striatum as only social-related is however reductive, as the Striatum underpins reward expectation and action, goal-directed behaviour and planning abilities [@johnson2007integrating] which is key when foraging. Thus, very important evolutionary pressure on energetic optimisation might also shape the Striatum size equivalently to the Hippocampus.
+
+|   Here, we investigated the intertwine between species sympatry and cognition using frugivorous primates as study example. Frugivorous primates are an interesting group for such a question because fruits are the archetype of a hard-to-find resource yet predictable [@janmaat2016spatio], for which cognition thus considerably shapes the foraging strategy [@trapanese2019and]. To infer the effect of species interactions on brain size evolution within frugivorous primates, we evaluated support for evolutionary scenarios accounting or not for sympatry, and investigated the directionality of the selection induced by sympatry history upon brain size evolution. Finally, we tested for correlative patterns between brain size or current sympatry with the evolutionary success (species diversification) in all primates.
 
 # Results
 
@@ -488,11 +501,11 @@ meanseStriatumother <- round(c(
 
 ```
 
-We gathered a large database on the whole brain size, the size of the Cerebellum and the Neocortex, involved in daily information processing and retention, and the Main Olfactory Bulb (MOB), the Striatum, and the Hippocampus, those three latter being related to social and foraging-related tasks, containing between `r minAllAreas` to `r maxEQ` frugivorous primate species (depending on the brain area considered). It evidenced ample variations in brain size. For instance, the lemuriformes, that are known to prioritize smell compared to other primate species, have the largest relative MOB size (i.e. pondered by whole-body mass) in our data (Lemuriformes: mean $\pm$ SE = `r meanseMOBlemu[1]` $\pm$ `r meanseMOBlemu[2]`, other: `r meanseMOBother[1]` $\pm$ `r meanseMOBother[2]`, \@ref(fig:figbrain)). Similarly, platyrrhini, and callitrichine primates in particular, are known to form poly-specific associations [@heymann2000behavioural] and indeed show the highest relative size of the Striatum in our data (Platyrrhini: mean $\pm$ SE = `r meanseStriatumplaty[1]` $\pm$ `r meanseStriatumplaty[2]`, other: `r meanseStriatumother[1]` $\pm$ `r meanseStriatumother[2]`, \@ref(fig:figbrain)). 
+We gathered a large database on the whole brain size, the size of the MOB, Cerebellum and the Neocortex, involved in daily information processing, and the Striatum and the Hippocampus, related to either social and foraging-related tasks, containing between `r minAllAreas` to `r maxEQ` frugivorous primate species (depending on the brain area considered). It evidenced ample variations in brain size. For instance, the lemuriformes, that are known to prioritize smell compared to other primate species, have the largest relative MOB size (i.e. pondered by whole-body mass) in our data (Lemuriformes: mean $\pm$ SE = `r meanseMOBlemu[1]` $\pm$ `r meanseMOBlemu[2]`, other: `r meanseMOBother[1]` $\pm$ `r meanseMOBother[2]`, \@ref(fig:figbrain)). Similarly, platyrrhini, and callitrichine primates in particular, are known to form poly-specific associations [@heymann2000behavioural] and indeed show the highest relative size of the Striatum in our data (a brain area related to social interactions, Platyrrhini: mean $\pm$ SE = `r meanseStriatumplaty[1]` $\pm$ `r meanseStriatumplaty[2]`, other: `r meanseStriatumother[1]` $\pm$ `r meanseStriatumother[2]`, \@ref(fig:figbrain)). 
 
-|   We first reconstructed primate biogeography history (N$_{species}$ = `r minRange`, @matzke2013probabilistic; @matzke2016stochastic) when considering `r length(areaName)` biogeographic areas (Figure \@ref(fig:figmap); @kamilar2009environmental) and their diet evolution (N$_{species}$ = `r minFruit + minLeaf` to `r maxFruit + maxLeaf`; @bollback2006simmap). We then calculated the likelihoods of models considering the role of species interactions (matching competition MC models, @nuismer2015predicting; models of linear or exponential density dependence, DD$_{lin}$and  DD$_{exp}$, of the evolutionary rate on the number of sympatric lineages; @drury2016estimating see [Models of trait evolution: does interspecific interactions shape brain size evolution?]) in the evolution of either the whole brain (using the encephalic quotient, EQ, as a proxy), or the size of the aforementioned specific brain areas relative to the whole-body mass (Figure. \@ref(fig:figbrain)) and compared their likelihood to those of simpler models assuming no effect of species interactions, like the Brownian Motion (BM), the Ornstein-Uhlenbeck process (OU) considering that traits are constrained around on optimal value (e.g. stabilizing selection; see @blomberg2020beyond for a review) or the Early-Burst model (EB, @blomberg2003testing), this latter allowing to check for a time-dependence of the evolutionary rate, hence emphasizing that, if any, the density effect is not an artefact due to time-dependence. Support for each model was evaluated using an information-theoretic framework [@burnham2002model] based on the weights of the Akaike Information Criterions corrected for small samples (AICc) when considering all six models (MC, DD$_{lin}$, DD$_{exp}$, BM, OU, EB, see [Models of trait evolution: does interspecific interactions shape brain size evolution?]). 
+|   In order to get the evolutionary history of sympatry between frugivorous lineages, we first reconstructed primate biogeography history (N$_{species}$ = `r minRange`, [@matzke2013probabilistic; @matzke2016stochastic]) when considering `r length(areaName)` biogeographic areas (Figure \@ref(fig:figmap); [@kamilar2009environmental]) and their diet evolution (N$_{species}$ = `r minFruit + minLeaf` to `r maxFruit + maxLeaf`; [@bollback2006simmap]). We then calculated the likelihoods of models considering the role of species interactions (matching competition MC models, [@nuismer2015predicting]; models of linear or exponential density dependence, DD$_{lin}$ and DD$_{exp}$, of the evolutionary rate on the number of sympatric lineages; [@drury2016estimating] see [Models of trait evolution: does interspecific interactions shape brain size evolution?]) in the evolution of either the whole brain (using the encephalic quotient, EQ, as a proxy), or the size of the aforementioned specific brain areas relative to the whole-body mass (Figure. \@ref(fig:figbrain)) and compared their likelihood to those of simpler models assuming no effect of species interactions, like the Brownian Motion (BM), the Ornstein-Uhlenbeck process (OU) considering that traits are constrained around on optimal value (e.g. stabilizing selection; see [@blomberg2020beyond] for a review) or the Early-Burst model (EB, [@blomberg2003testing]), this latter allowing to check for a time-dependence of the evolutionary rate, hence emphasizing that, if any, the density effect is not an artefact due to time-dependence. Support for each model was evaluated using an information-theoretic framework [@burnham2002model] based on the weights of the Akaike Information Criterions corrected for small samples (AICc) when considering all six models (MC, DD$_{lin}$, DD$_{exp}$, BM, OU, EB, see [Models of trait evolution: does interspecific interactions shape brain size evolution?]). 
 
-|   We found that non-competitive models were the most likely in describing the evolutionary history of the EQ, the Neocortex, and the Cerebellum (Figure \@ref(fig:figbrain) and \@ref(fig:figresultsevolution)), two areas specifically involved in movement and/or general information processing [@wiltgen2004new; @koziol2014consensus; @sokolov2017cerebellum] but also in memory consolidation for the Neocortex [@wiltgen2004new]. The fact that these biggest areas are best described by the Ornstein-Uhlenbeck process suggests a stabilization towards an optimal size and illustrates the trade-offs between costs and benefices of brain development [@isler2009expensive]. By contrast, competitive models were most supported in foraging-related and social areas, either specialised in spatio-temporal memory (Hippocampus, @burgess2002human) or planning abilities and reward assessment (Striatum, @baez2013role; @johnson2007integrating), and tended to be so for one brain area involved in sensory abilities (the main olfactory bulb, MOB; Figure \@ref(fig:figbrain) and \@ref(fig:figresultsevolution)). When density-dependent models were the best fit, the rate (*r*, Figure \@ref(fig:figresultsevolution)) suggested an acceleration of the evolutionary tempo together with increased lineage diversity for the Hippocampus and the Striatum, but a slowdown for the MOB. 
+|   We found that models discarding species sympatry were the most likely in describing the evolutionary history of the EQ, the Neocortex, and the Cerebellum (Figure \@ref(fig:figbrain) and \@ref(fig:figresultsevolution)), two areas specifically involved in movement and/or general information processing [@wiltgen2004new; @koziol2014consensus; @sokolov2017cerebellum] but also in memory consolidation for the Neocortex [@wiltgen2004new]. The fact that these biggest areas are best described by the Ornstein-Uhlenbeck process suggests a stabilization towards an optimal size, which may illustrate the trade-offs between costs and benefices of brain development [@isler2009expensive]. By contrast, models considering sympatry were most supported in foraging-related and social areas, either specialised in spatio-temporal memory (Hippocampus, [@burgess2002human]) or planning abilities and reward assessment (Striatum, [@baez2013role; @johnson2007integrating]), and tended to be so for one brain area involved in sensory abilities (the main olfactory bulb, MOB; Figure \@ref(fig:figbrain) and \@ref(fig:figresultsevolution)). When density-dependent models were the best fit, the rate (*r*, Figure \@ref(fig:figresultsevolution)) suggested an acceleration of the evolutionary tempo together with increased diversity of sympatric lineages for the Hippocampus and the Striatum, but a slowdown for the MOB. 
 
 ```{r samplecooccurrence}
 
@@ -539,7 +552,7 @@ estimateGradientMOB <- textEstOneVar(summary(model)$coefficients[2,c(1,4,5)])
 testGradientMOB <- textTestOneVar(summary(model)$coefficients[2,c(3,6)], statistics="")
 ```         
 
-|   Next, to understand the directionality of the selection gradient shaped by sympatry (i.e. selection for “bigger” or “smaller” brain the more species), we fitted phylogenetic regressions (see [Phylogenetic regressions] a)). For these linear regressions, the predicted variable was the relative brain size values of the different areas. We considered the average surface of the frugivorous species range that was overlapped by other sympatric frugivorous species, as well as the number of such sympatric frugivorous species across their entire distribution range as covariates based on IUCN date [@IUCN]. On average ($\pm$ SE), the considered primate species had `r meanOverlap*100`% of their range overlapping with other species ($\pm$ `r seOverlap*100`). That ranged from `r minOverlapSpecies*100`% of overlap (*`r whichSpeciesMinOverlap`*), to `r maxOverlapSpecies*100`% of overlap (*`r whichSpeciesMaxOverlap`*). In terms of distribution range, the considered primate species co-occurred on average with `r meanNspeciesCoocc` other primate species ($\pm$ `r seNspeciesCoocc`), ranging from `r minNspeciesCoocc` other species (*`r whichSpeciesMinNCoocc`*), to `r maxNspeciesCoocc` species (*`r whichSpeciesMaxNCoocc`*). The number of sympatric species never influenced significantly the relative size of the brain or other specific areas (Table \@ref(tab:tableRegGradient)). Conversely, we found that the percentage of range shared with other species correlated with the relative size of areas that were better fit with competitive models: the Hippocampus, and the Striatum (Hippocampus: $t$`r testGradientHippocampus`; Striatum: $t$`r testGradientStriatum`). The correlations were all negative (Hippocampus: `r estimateGradientHippocampus`; Striatum: `r estimateGradientStriatum`), which means that higher species overlap associates with lower relative size, insensitive to data and phylogenetic uncertainty (Table \@ref(tab:tabledfsensitivity), Figure \@ref(fig:forestPlot)). Thus, it suggests that sympatric species are either subject to a positive selection towards smaller brain, or to a less intense selection for advanced cognitive abilities compared with isolated species. 
+|   Next, to understand the directionality of the selection gradient shaped by sympatry (i.e. selection for “bigger” or “smaller” brain the more species), we fitted phylogenetic regressions (see [Phylogenetic regressions] a)). For these linear regressions, the predicted variable was the relative brain size values of the different areas. We considered the average surface of the frugivorous species range that was overlapped by other sympatric frugivorous species, as well as the number of such sympatric frugivorous species across their entire distribution range as covariates based on IUCN data [@IUCN]. On average ($\pm$ SE), the considered primate species had `r meanOverlap*100`% of their range overlapping with other species ($\pm$ `r seOverlap*100`). That ranged from `r minOverlapSpecies*100`% of overlap (*`r whichSpeciesMinOverlap`*), to `r maxOverlapSpecies*100`% of overlap (*`r whichSpeciesMaxOverlap`*). In terms of distribution range, the considered primate species co-occurred on average with `r meanNspeciesCoocc` other primate species ($\pm$ `r seNspeciesCoocc`), ranging from `r minNspeciesCoocc` other species (*`r whichSpeciesMinNCoocc`*), to `r maxNspeciesCoocc` species (*`r whichSpeciesMaxNCoocc`*). The number of sympatric species never influenced significantly the relative size of the brain or other specific areas (Table \@ref(tab:tableRegGradient)). Conversely, we found that the percentage of range shared with other species correlated with the relative size of areas that were better fit with models considering sympatry: the Hippocampus, and the Striatum (Hippocampus: $t$`r testGradientHippocampus`; Striatum: $t$`r testGradientStriatum`). The correlations were all negative (Hippocampus: `r estimateGradientHippocampus`; Striatum: `r estimateGradientStriatum`), which means that higher species overlap associates with lower relative size, insensitive to data and phylogenetic uncertainty (Table \@ref(tab:tabledfsensitivity), Figure \@ref(fig:forestPlot)). Given the acceleration of the evolutionary tempo, it suggests that sympatric species are subject to a positive selection towards smaller brain, and not to a less intense selection for advanced cognitive abilities compared with isolated species. 
 
 ```{r estimateRegDiversification, error=TRUE, include=TRUE}
 
@@ -603,13 +616,17 @@ dateSecondRupt <- as.numeric(round((1-dates[2,])*(max(aggregatedSpeciationTime.m
 
 ```
 
-|   In addition, we investigated the evolutionary consequences of brain evolution and sympatry by evaluating whether brain sizes and sympatry level correlated with species diversification rates (i.e. speciation minus extinction rates), by using lineage-specific birth-death models of species diversification [@maliet2019model; @maliet2020fast]. Overall, species diversification, estimated based on molecular phylogeny increased over time (Figure \@ref(fig:figdiversificationTime)), particularly in the early and late Miocene, around `r dateFirstRupt[2]` (CI95% = `r paste("[",dateFirstRupt[3],",",dateFirstRupt[1],"]", sep="")`) and `r dateSecondRupt[2]` (CI95% = `r paste("[",dateSecondRupt[3],",",dateSecondRupt[1],"]", sep="")`) Myr ago (Figure \@ref(fig:figdiversificationTime)). When accounting for phylogenetic dependence, no significant relationship between diversification rate and the relative size of brain areas was found (Table \@ref(tab:tableRegDiversification), Figure \@ref(fig:forestPlot); see robustness in Table \@ref(tab:tabledfsensitivity2)). Given the context dependence of the direction of selection (towards bigger sizes in the absence of other species, smaller sizes otherwise), there is no surprise that we do not observe a correlation between evolutionary success (approximated by diversification rate) and the three studied areas affected by inter-species sympatry. Surprisingly however, we found no positive association between the EQ and the diversification rate, nor of that latter with the relative size of the Cerebellum or the Neocortex, two areas insensitive to inter-species sympatry too. This is puzzling because this contradicts a recent study [@melchionna2020macroevolutionary]. The visual inspection of the regressions however clearly evidenced a positive trend for the EQ and the Neocortex if discarding phylogenetic non-independence (Figure \@ref(fig:figRegressionDiversification)). In fact, a sudden encephalisation in primates is clearly associated to a limited number of closely-related species [@decasien2017primate; @melchionna2020macroevolutionary]. This clearly limits the statistical power of our phylogenetically corrected analyses as we cannot decipher whether the connivance between brain size and evolutionary success results from a true biological link or appeared by chance. A positive association between brain size and diversification was also found in birds [@sayol2019larger] given that bigger brains act as a buffer to environmental challenge, thus boosting individuals' fitness [@sol2007big]. This means that, despite what we found here, the positive association between brain size and evolutionary success evidenced in @melchionna2020macroevolutionary remains a likely possibility. Finally, although diversification was uncorrelated with brain size in frugivorous primates, it was influenced by the sympatry context. In particular, phylogenetic regressions highlighted a negative effect of the number of sympatric species on the diversification rate (`r textEstOneVar(as.numcharac(results.df_diversificationAndSympatry[4,2:4]))`, `r textTestOneVar(as.numcharac(results.df_diversificationAndSympatry[4,5:6]), statistics="t")`, Table \@ref(tab:tableRegDiversificationAndSympatry), Figure \@ref(fig:forestPlot)). In other words, the higher the number of sympatric species, the lower the diversification, a trend that is frequently suggested in many tetrapod clades [@condamine2019assessing], but which stands as an inverted pattern compared to what is found in New World passerines [@kennedy2017historical].
+|   In addition, we investigated the evolutionary consequences of brain evolution and sympatry by evaluating whether brain sizes and sympatry level correlated with species diversification rates (i.e. speciation minus extinction rates), by using lineage-specific birth-death models of species diversification [@maliet2019model; @maliet2020fast]. Overall, species diversification rates, estimated based on molecular phylogeny increased over time (Figure \@ref(fig:figdiversificationTime)), particularly in the early and late Miocene, around `r dateFirstRupt[2]` (CI95% = `r paste("[",dateFirstRupt[3],",",dateFirstRupt[1],"]", sep="")`) and `r dateSecondRupt[2]` (CI95% = `r paste("[",dateSecondRupt[3],",",dateSecondRupt[1],"]", sep="")`) Myr ago (Figure \@ref(fig:figdiversificationTime)). When accounting for phylogenetic dependence, no significant relationship between diversification rate and the relative size of brain areas was found (Table \@ref(tab:tableRegDiversification), Figure \@ref(fig:forestPlot); see robustness in Table \@ref(tab:tabledfsensitivity2)). Given the context dependence of the direction of selection (towards bigger sizes in the absence of other species, smaller sizes otherwise), there is no surprise that we do not observe a correlation between evolutionary success (approximated by diversification rate) and the three studied areas affected by inter-species sympatry. Surprisingly however, we found no positive association between the EQ and the diversification rate, nor of that latter with the relative size of the Cerebellum or the Neocortex, two areas insensitive to inter-species sympatry too. This is puzzling because this contradicts a recent study [@melchionna2020macroevolutionary]. The visual inspection of the regressions however clearly evidenced a positive trend for the EQ and the Neocortex if discarding phylogenetic non-independence (Figure \@ref(fig:figRegressionDiversification)). In fact, a sudden encephalisation in primates is clearly associated to a limited number of closely-related species [@decasien2017primate; @melchionna2020macroevolutionary]. This clearly limits the statistical power of our phylogenetically-corrected analyses as we cannot decipher whether the connivence between brain size and evolutionary success results from a true biological link or appeared by chance. A positive association between brain size and diversification was also found in birds [@sayol2019larger] given that bigger brains act as a buffer to environmental challenge, thus boosting individuals' fitness [@sol2007big]. This means that, despite what we found here, the positive association between brain size and evolutionary success evidenced in [@melchionna2020macroevolutionary] remains a likely possibility. Finally, although diversification was uncorrelated with brain size in frugivorous primates, it was influenced by the sympatry context. In particular, phylogenetic regressions highlighted a negative effect of the number of sympatric species on the diversification rate (`r textEstOneVar(as.numcharac(results.df_diversificationAndSympatry[4,2:4]))`, `r textTestOneVar(as.numcharac(results.df_diversificationAndSympatry[4,5:6]), statistics="t")`, Table \@ref(tab:tableRegDiversificationAndSympatry), Figure \@ref(fig:forestPlot)). In other words, the higher the number of sympatric species, the lower the diversification, a density-dependendence trend that is frequently suggested in many tetrapod clades [@condamine2019assessing], but which stands as an inverted pattern compared to what is found in New World passerines [@kennedy2017historical].
 
 # Discussion
 
-The bigger is not necessarily the better. The size of the brain is subject to a compromise between the energy it incurs, and the increase of fitness it allows. This is clearly emphasized by the fact that the biggest areas, the Cerebellum and the Neocortex, as well as the whole brain (EQ) were best described by the Orstein-Uhlenbeck process, what might suggest a stabilisation towards an optimal size as a result of an equilibrium between costs and benefices. As the brain area is regionally specialised [@barton2000mosaic], brain regions could be under different selective pressures as suggested by the differences we highlighted in some brain areas (e.g. MOB or Striatum) across different primate genera. Here, we further show that sympatry is one factor that affects the selective regime under which each brain region evolves: although the brain as a whole was insensitive to species sympatry, this latter nonetheless induced a change in the relative size of the Hippocampus, and the Striatum, and potentially in the MOB of frugivorous primates. These areas are involved in individual-based and social-based information processing, pinpointing that the two components might be under selection in primates [@decasien2017primate; @powell2017re; @gonzalez2018inference]. Overall, the relative sizes of foraging-related brain areas were negatively associated with one index of sympatry intensity (the range overlap with other species) and might thus be a consequence of direct or indirect interspecific interactions. In general, competition is the first-thought mechanism to describe community structures [e.g. @rocha2015role]. In primates, it is rare to observe direct competition between species, which should translate into site exclusion. In fact, inter-species site exclusion in this taxon has only been observed in gibbons [@suwanvecho2012interspecific]. For species with overlapping diet, indirect competition for resources might happen. It has been shown that individuals tend to use social or environmental cues depending on their reliability [@rafacz2003environmental; @dunlap2016foraging]. The utilization of these cues should promote cognition until reaching a certain range of environmental complexity [@grove2013evolution; @robirainreview]. Our results could thus suggest that species sympatry may trigger an important decrease in cues reliability, for instance due to higher and unforeseen depletion rate. That would explain a relaxed positive selection for advance cognitive abilities, and conversely, given the cost of brain maintenance [@raichle2006brain], would induce a negative selection towards the sizes of areas involved in foraging-related activities like the Hippocampus, the MOB and the Striatum. Not only was brain evolution affected by sympatry, but sympatry (the maximum number of co-occurring species only) induced a slowdown in diversification, which contrasts with the picture offered by passerine birds at finer resolution [@kennedy2017historical]. Density-dependence within clade is often thought to lower diversification rate [@moen2014does]. In particular, species competing for resource are thought to contribute to limiting competitors' range [@price2009evolutionarily], hence to constrain population size and diversification rate [@pigot2013species]. Given the large resolution and low overlap threshold to consider sympatry considered here (i.e. overlap of `r geographicThresholdVector[1]*100`% of the distribution area), this competitive view fits the observed influence of sympatry on frugivorous primate diversification.
+The bigger is not necessarily the better. The size of the brain is subject to a compromise between the energy it incurs, and the increase of fitness it allows. This is clearly emphasized by the fact that the biggest areas, the Cerebellum and the Neocortex, as well as the whole brain (EQ) were best described by the Orstein-Uhlenbeck process, what might suggest a stabilisation towards an optimal size as a result of an equilibrium between costs and benefices. As the brain area is regionally specialised [@barton2000mosaic], brain regions could be under different selective pressures as suggested by the differences we highlighted in some brain areas (e.g. MOB or Striatum) across different primate genera. Here, we further show that sympatry is one factor that affects the selective regime under which each brain region evolves: although the brain as a whole was insensitive to species sympatry, this latter nonetheless induced a change in the relative size of the Hippocampus and the Striatum. These areas are involved in individual-based and social-based information processing, pinpointing that the two components might be under selection in primates [@decasien2017primate; @powell2017re; @gonzalez2018inference]. The fact that only these two areas, particularly relevant to process and memorise spatio-temporal information, are sensitive to sympatry, is consistent with the idea of an effect of species affecting resource spatio-temporal patterns (Hypothesis 1). By contrast, potential indirect cooperation between species (Hypothesis 2), is ruled out by the absence of an effect of sympatry on brain areas involved in general information processing (e.g. Cerebellum or Neocortex). 
 
-|   The use of brain size as a proxy for cognition is a central debate with no optimal solution (see grounded criticism from @deaner2000comparative; @healy2007critique; @logan2018beyond). The current flourishment of consortia, allowing for much more detailed and standardized anatomical measurements (e.g. in primates: @milham2018open), or with standardized behaviourally explicit comparisons (e.g. on captive [@many2019establishing] or wild [@janmaat2021using] primates), might alleviate biases stemming from brain size analysis, but this will take time to generate large-enough datasets. In the meanwhile, brain size is a proxy much appreciated in practice, because of its easy accessibility for a “large” number of species. Here, we showed that species sympatry is an important factor shaping the evolutionary history of animals' brain, but the proximate mechanisms at play remain to be elucidated. Finally, it is very likely that any hypothesis on cognition evolution, generally discussed within species, could be broadened to a between-species context: polyspecific social associations do exist [@porter2001benefits], as well as inter-species territory defense [@drury2020competition; @losin2016ecological] or imitation and copying [@persson2018spontaneous; @pepperberg2002allospecific]. As Alice said “It's a great huge game of chess that's being played—all over the world” (@Carroll, Chapter II) and all individuals are just pieces to play with or against, no matter the species.
+|   In general, competition is the first-thought mechanism to describe community structures [e.g. @rocha2015role]. In primates, it is rare to observe direct competition between species (but see recently @southern2021lethal), which should translate into site exclusion. In fact, inter-species site exclusion in this taxon has only been observed in gibbons [@suwanvecho2012interspecific]. For species with overlapping diet, indirect competition for resources might happen. We show that higher sympatry rate is actually associated with smaller size of the Hippocampus or Striatum (negative effect of the intensity of overlap with co-occurring species on the specific area size, in accordance with Prediction 1.2). This suggests that indirect competition might contribute to convoluting the environment such as cognitive foraging might no longer be beneficial. In particular, the acceleration of the evolutionary tempo (i.e. the effect size associated to density dependence terms is positive) suggests that it is not limited to a relax of positive selection for bigger brains, but to a positive selection for smaller brains.
+
+|   Not only was brain evolution affected by sympatry, but sympatry (here the maximum number of co-occurring species only) induced a slowdown in diversification. Density-dependence within clade is indeed generally associated to lower diversification rate [@moen2014does]. In particular, species competing for resource are thought to contribute to limiting competitors' range [@price2009evolutionarily], hence to constrain population size and diversification rate [@pigot2013species]. These observations thus strengthen our view on indirect species interaction by scramble competition which might cascade both on population dynamics and species cognition.
+
+|   The use of brain size as a proxy for cognition is a central debate with no optimal solution (see grounded criticism from [@deaner2000comparative; @healy2007critique; @logan2018beyond]). The current flourishment of consortia, allowing for much more detailed and standardized anatomical measurements (e.g. in primates: [@milham2018open]), or with standardized behaviourally explicit comparisons (e.g. on captive [@many2019establishing] or wild [@janmaat2021using] primates), might alleviate biases stemming from brain size analysis, but this will take time to generate large-enough datasets. In the meanwhile, brain size is a proxy much appreciated in practice, because of its easy accessibility for a “large” number of species. Here, we showed that species sympatry is an important factor shaping the evolutionary history of animals' brain, but the proximate mechanisms at play remain to be elucidated. Finally, it is very likely that any hypothesis on cognition evolution, generally discussed within species, could be broadened to a between-species context: polyspecific social associations do exist [@porter2001benefits], as well as inter-species territory defense [@drury2020competition; @losin2016ecological] or imitation and copying [@persson2018spontaneous; @pepperberg2002allospecific]. As Alice said “It's a great huge game of chess that's being played—all over the world” ([@Carroll], Chapter II) and all individuals are just pieces to play with or against, no matter the species.
 
 <!-- TC:ignore -->
 
@@ -627,7 +644,7 @@ We used a block of chronogram trees of the primate taxon of the 10kTrees project
 
 ### Trait data
 
-Brain data were obtained from @decasien2019primate for whole brain and all mentioned other parts (Cerebellum, Hippocampus, Main Olfactory Bulb (MOB), Neocortex, Striatum), @powell2017re and @powell2019maternal for whole brain, Cerebellum and Neocortex size, @todorov2019primate for Hippocampus and Neocortex size, @grueter2015home for the whole brain size and @navarrete2018primate for the whole brain, Cerebellum, Hippocampus and Striatum size. They were freely available in the main manuscript or supplementary materials. When a species was represented multiple times within dataset, we obtained a unique attribute by averaging it. From the global endocranial brain volume, we obtained the Encephalization Quotient (EQ, N$_{EQ,max}$ = `r maxEQ`) as follows [@decasien2017primate]
+Brain data were obtained from [@decasien2019primate] for whole brain and all mentioned other parts (Cerebellum, Hippocampus, Main Olfactory Bulb (MOB), Neocortex, Striatum), [@powell2017re] and [@powell2019maternal] for whole brain, Cerebellum and Neocortex size, [@todorov2019primate] for Hippocampus and Neocortex size, [@grueter2015home] for the whole brain size and [@navarrete2018primate] for the whole brain, Cerebellum, Hippocampus and Striatum size. They were freely available in the main manuscript or supplementary materials. When a species was represented multiple times within dataset, we obtained a unique attribute by averaging it. From the global endocranial brain volume, we obtained the Encephalization Quotient (EQ, N$_{EQ,max}$ = `r maxEQ`) as follows [@decasien2017primate]
 
 \hfill
 
@@ -639,8 +656,8 @@ $\mathrm{EQ}=1.036 \times \mathrm{Brainvolume}/ (0.085 \times \mathrm{Body mass}
 
 \hfill
 
-with the brain volume in cm$^{3}$, 1.036 g/cm$^{3}$ being the assumed homogeneous brain density, and the body mass in g. EQ indicates whether the brain size ranges above (> 1) or below (< 1) expected given the body mass. Body mass was obtained from @decasien2017primate, @powell2017re, @grueter2015home and @pearce2013space.
-The sub-parts of the brain were chosen because they were involved in immediate sensory information processing (MOB, N$_{MOB,max}$ = `r maxMOB`), in movement and/or general information processing and retention (Neocortex, N$_{Neocortex,max}$ = `r maxNeocortex`, @wiltgen2004new; Cerebellum, N$_{Cerebellum,max}$ = `r maxCerebellum`, @koziol2014consensus; @sokolov2017cerebellum), short-term working memory and long-term spatio-temporal memory (Hippocampus, N$_{Hippocampus,max}$ = `r maxHippocampus`, @burgess2002human). The Striatum (N$_{Striatum,max}$ = `r maxStriatum`) supports information processing during social interaction, reward assessment, planning or goal-oriented behaviours [@baez2013role; @johnson2007integrating]. To investigate their evolutionary history, we used the ratio between their volume and body mass, so as to maximize comparability. As such, the use of specific region size relatively to the body mass and not raw size depicts the evolution of cognitive abilities in terms of allocation rather than abilities per se (but see discussion in @deaner2000comparative). Percentage of frugivory and/or folivory was obtained based on freely available dataset from @decasien2017primate and @powell2017re for the frugivory and folivory rate, or @willems2013collective for the folivory rate.
+with the brain volume in cm$^{3}$, 1.036 g/cm$^{3}$ being the assumed homogeneous brain density, and the body mass in g. EQ indicates whether the brain size ranges above (> 1) or below (< 1) expected given the body mass. Body mass was obtained from [@decasien2017primate; @powell2017re; @grueter2015home; @pearce2013space].
+The sub-parts of the brain were chosen because they were involved in immediate sensory information processing (MOB, N$_{MOB,max}$ = `r maxMOB`), in movement and/or general information processing and retention (Neocortex, N$_{Neocortex,max}$ = `r maxNeocortex`, [@wiltgen2004new]; Cerebellum, N$_{Cerebellum,max}$ = `r maxCerebellum`, [@koziol2014consensus; @sokolov2017cerebellum]), short-term working memory and long-term spatio-temporal memory (Hippocampus, N$_{Hippocampus,max}$ = `r maxHippocampus`, [@burgess2002human]). The Striatum (N$_{Striatum,max}$ = `r maxStriatum`) supports information processing during social interaction, reward assessment, planning or goal-oriented behaviours [@baez2013role; @johnson2007integrating]. To investigate their evolutionary history, we used the ratio between their volume and body mass, so as to maximize comparability. As such, the use of specific region size relatively to the body mass and not raw size depicts the evolution of cognitive abilities in terms of allocation rather than abilities per se (but see discussion in [@deaner2000comparative]). Percentage of frugivory and/or folivory was obtained based on freely available dataset from [@decasien2017primate; @powell2017re] for the frugivory and folivory rate, or [@willems2013collective] for the folivory rate.
 
 ### Ranging Data
 
@@ -648,13 +665,13 @@ Current geographic (maximal possible) range of each primate species was assessed
 
 ## Primate species sympatry
 
-One to multiple large-scale geographic areas were assigned to each species as soon as the species current distribution range overlapped in surface at `r geographicThresholdVector[1]*100` (low threshold) or `r geographicThresholdVector[2]*100`% (high threshold; the maximum was chosen to `r geographicThresholdVector[2]*100`% because on present data, a species could occupy as far as three areas, Figure \@ref(fig:figmap)). Overlap was calculated with the “gIntersection” function from the *rgeos* package [@rgeos] applied to Mercator-projected data to get the overlap contour, and the “area” function from the *geosphere* package [@geosphere], applied directly on unprojected longitudinal-latitudinal data for area size calculation. Based on the structure (i.e. number of species and their phylogenetic relationship) of primate communities at different field sites, @kamilar2009environmental determined clusters of sites with highly similar community structures that were shaped by both the environment geography and climatic correlates. We used this classification and manually mapped the geographic areas using Google earth professional (v7.3.3). These geographic areas are represented in Figure \@ref(fig:figmap) and correspond to Central America, the North and the South of South America respectively, West Africa, Central Africa, and East/South Africa, East and West of Madagascar respectively, West Asia, Central/East Asia, South Asia and the Asian Islands. The chosen scale for the areas is large because (i) retracing history of a large number of areas necessitates considerable computational means. In addition, this drastically increases computational time of phylogenetic model of brain trait evolution too. Furthermore (ii), all species and particularly primate species suffer(ed) from recent extinction [@pavoine2019mammal], with reduction of ranging areas at an unprecedented speed rate. Finer geographic characterization would therefore give too much weight to such anthropogenic effect that recently altered species distribution (e.g. evidenced on the North American fauna in @pineda2021mammal).
+One to multiple large-scale geographic areas were assigned to each species as soon as the species current distribution range overlapped in surface at `r geographicThresholdVector[1]*100` (low threshold) or `r geographicThresholdVector[2]*100`% (high threshold; the maximum was chosen to `r geographicThresholdVector[2]*100`% because on present data, a species could occupy as far as three areas, Figure \@ref(fig:figmap)). Overlap was calculated with the “gIntersection” function from the *rgeos* package [@rgeos] applied to Mercator-projected data to get the overlap contour, and the “area” function from the *geosphere* package [@geosphere], applied directly on unprojected longitudinal-latitudinal data for area size calculation. Based on the structure (i.e. number of species and their phylogenetic relationship) of primate communities at different field sites, [@kamilar2009environmental] determined clusters of sites with highly similar community structures that were shaped by both the environment geography and climatic correlates. We used this classification and manually mapped the geographic areas using Google earth professional (v7.3.3). These geographic areas are represented in Figure \@ref(fig:figmap) and correspond to Central America, the North and the South of South America respectively, West Africa, Central Africa, and East/South Africa, East and West of Madagascar respectively, West Asia, Central/East Asia, South Asia and the Asian Islands. The chosen scale for the areas is large because (i) retracing history of a large number of areas necessitates considerable computational means. In addition, this drastically increases computational time of phylogenetic model of brain trait evolution too. Furthermore (ii), all species and particularly primate species suffer(ed) from recent extinction [@pavoine2019mammal], with reduction of ranging areas at an unprecedented speed rate. Finer geographic characterization would therefore give too much weight to such anthropogenic effect that recently altered species distribution (e.g. evidenced on the North American fauna in [@pineda2021mammal]).
 
-|   We retraced the history of the lineage ranges based on current observations of species range using the *BioGeoBEARS* package [@matzke2013probabilistic], using the biogeographic stochastic mapping algorithm [@matzke2016stochastic]. We fitted non-time-stratified dispersal-extinction-cladogenesis (DEC) models specifically suiting analyses of range data since it accounts for spatially explicit processes of cladogenetic and anagenetic events (see @matzke2013probabilistic for further details on these events). To reconstruct the evolution of species range, we fixed the maximum numbers of areas that could be occupied by a lineage at one time to three areas. A too high number of areas that can be occupied simultaneously drastically increases computational time. Here, we therefore chose that a species can at most occupy three areas since it offers the possibility to occupy a complete mainland continent. Finally, because these history reconstructions are likely to vary, for each run of DEC models (considering both possible overlaps to consider species presence), we obtained `r numberSimulations` stochastic maps that were all used in subsequent phylogenetic model fits (see [Phylogenetic models]) to account for uncertainty of these ancestral range estimations (see [Models of trait evolution: does interspecific interactions shape brain size evolution?] (b)).
+|   We retraced the history of the lineage ranges based on current observations of species range using the *BioGeoBEARS* package [@matzke2013probabilistic], using the biogeographic stochastic mapping algorithm [@matzke2016stochastic]. We fitted non-time-stratified dispersal-extinction-cladogenesis (DEC) models specifically suiting analyses of range data since it accounts for spatially explicit processes of cladogenetic and anagenetic events (see [@matzke2013probabilistic] for further details on these events). To reconstruct the evolution of species range, we fixed the maximum numbers of areas that could be occupied by a lineage at one time to three areas. A too high number of areas that can be occupied simultaneously drastically increases computational time. Here, we therefore chose that a species can at most occupy three areas since it offers the possibility to occupy a complete mainland continent. Finally, because these history reconstructions are likely to vary, for each run of DEC models (considering both possible overlaps to consider species presence), we obtained `r numberSimulations` stochastic maps that were all used in subsequent phylogenetic model fits (see [Phylogenetic models]) to account for uncertainty of these ancestral range estimations (see [Models of trait evolution: does interspecific interactions shape brain size evolution?] (b)).
 
 ## Dietary guild
 
-We classified species as either “frugivorous” or “folivorous” based on the availability of frugivorous rate and folivorous rate, prioritizing fruvigory over folivory. First, a species would be classified as frugivorous if the frugivory rate was at least above `r frugivoryThresholdVector[1]` (low threshold) or `r frugivoryThresholdVector[2]`% (high threshold). If this was not the case, or frugivory rate was unavailable, a species could be classified as folivorous if the folivory rate was at least above `r folivoryThresholdVector[1]` (low threshold) or `r folivoryThresholdVector[2]`% (high threshold). Otherwise, @decasien2017primate gave a binary classification of diet, species being categorized as frugivorous or folivorous, partly based on anatomical criteria. Whenever the rate was not available, we referred to this classification. In any other cases, the species was discarded.
+We classified species as either “frugivorous” or “folivorous” based on the availability of frugivorous rate and folivorous rate, prioritizing fruvigory over folivory. First, a species would be classified as frugivorous if the frugivory rate was at least above `r frugivoryThresholdVector[1]` (low threshold) or `r frugivoryThresholdVector[2]`% (high threshold). If this was not the case, or frugivory rate was unavailable, a species could be classified as folivorous if the folivory rate was at least above `r folivoryThresholdVector[1]` (low threshold) or `r folivoryThresholdVector[2]`% (high threshold). Otherwise, [@decasien2017primate] gave a binary classification of diet, species being categorized as frugivorous or folivorous, partly based on anatomical criteria. Whenever the rate was not available, we referred to this classification. In any other cases, the species was discarded.
 
 ```{r transitionMatrix}
 
@@ -683,7 +700,7 @@ maxProba.v <- apply(abs(transitionMatrix), 2, max)
 
 ```
 
-|   Frugivory rate was prioritized over folivory because we considered that since fruits are a highly palatable food source, it would be the key item that drives the foraging strategy (and associate consequence(s) on brain selection), even if less consumed. Additionally, to consider frugivory, we used a lower rate than for folivory for two reasons. First, such static rate does not reflect potential seasonality in fruit eating (e.g. @masi2009western), which is generally shorter, hence a lower overall frugivory rate. Second, frugivory rate is likely to be underestimated in part because primates generally spend more time feeding on leaves than fruits, while rates are often based on relative feeding time, or observation frequency at the individual or group unit of feeding events. Finally, the methodology to obtain this rate could additionally vary (e.g. in addition to the two aforementioned estimations, one could also rely on the proportion of species targeted for their fruits/leaves). For all these reasons, we used two threshold levels (low, `r frugivoryThresholdVector[1]`%, or high, `r frugivoryThresholdVector[2]`%) to classify a species as frugivorous, as well as two threshold levels (low, `r folivoryThresholdVector[1]`%, or high, `r folivoryThresholdVector[2]`%) to classify a species as folivorous.
+|   Frugivory rate was prioritized over folivory because we considered that since fruits are a highly palatable food source, it would be the key item that drives the foraging strategy (and associate consequence(s) on brain selection), even if less consumed. Additionally, to consider frugivory, we used a lower rate than for folivory for two reasons. First, such static rate does not reflect potential seasonality in fruit eating (e.g. [@masi2009western]), which is generally shorter, hence a lower overall frugivory rate. Second, frugivory rate is likely to be underestimated in part because primates generally spend more time feeding on leaves than fruits, while rates are often based on relative feeding time, or observation frequency at the individual or group unit of feeding events. Finally, the methodology to obtain this rate could additionally vary (e.g. in addition to the two aforementioned estimations, one could also rely on the proportion of species targeted for their fruits/leaves). For all these reasons, we used two threshold levels (low, `r frugivoryThresholdVector[1]`%, or high, `r frugivoryThresholdVector[2]`%) to classify a species as frugivorous, as well as two threshold levels (low, `r folivoryThresholdVector[1]`%, or high, `r folivoryThresholdVector[2]`%) to classify a species as folivorous.
 
 |   Considering diet as a binary variable (frugivory versus folivory), we retraced the evolutionary history of such discrete traits based on a continuous Markovian process (extended Mk models) and relying on a Bayesian approach [@bollback2006simmap], using the “simmap” function of the *phytools* package [@phytools] and internally estimating the prior probability of trait (i.e. at the root) but with no prior on the transition matrix. Again, the obtained character history is in no case certain. Therefore, for each run, we obtained `r numberSimulations` stochastic character maps that were used in subsequent phylogenetic model fits [Phylogenetic models] to account for uncertainty of these ancestral diet estimations (see [Phylogenetic models, Models of trait evolution: does interspecific interactions shape brain size evolution?] (b)). 
 
@@ -697,7 +714,7 @@ maxProba.v <- apply(abs(transitionMatrix), 2, max)
 
 \hfill
 
-We focused only on frugivorous primates, because sample size was otherwise insufficient, and fitted phylogenetic models of EQ - or relative size of a specific brain area – evolution with and without species competitions. Models were fitted on different sample sizes due to non-availability of some data for some traits. Specifically, models using EQ included `r minEQ` to `r maxEQ` frugivorous species. Other models included more reduced sample sizes (in species number): Striatum (`r minStriatum` to `r maxStriatum`), MOB (`r minMOB` to `r maxMOB`), Neocortex (`r minNeocortex` to `r maxNeocortex`), Hippocampus (`r minHippocampus` to `r maxHippocampus`), Cerebellum (`r minCerebellum` to `r maxCerebellum`). Nonetheless, for a given set of models (i.e. within brain area), the sample was strictly identical, allowing within set comparison. Prior fitting, trait parameters were log-transformed to reach more symmetrical distributions. Models without competition, Brownian Motion (i.e. BM), Orstein-Uhlenbeck process (i.e. OU, model with stabilizing selection), or Early-Burst model (i.e. EB, for assessing a time-dependence of the evolutionary rate) were fitted using the “fitContinuous” function from the *geiger* package [@geiger3; @geiger5]. Using the evolutionary history of species distribution (see [Primate species sympatry]) and of diet (see [Dietary guild]), we fitted competitive models using the “fit_t_comp” function from the *RPANDA* package [@RPANDA]. These competitive models notably account for interaction matrices that are built on the evolutionary history of species sympatry and diet. These interaction matrices retrace, along the phylogenetic tree, which frugivorous lineages were present within the same geographic areas (see @drury2016estimating). We fitted three different competitive models. The matching competition model (MC) may consider divergence of traits of co-occurring lineages from a same dietary guild due to repulsion of traits (character displacement) [@drury2016estimating]. Here, that would mean that co-occurring species would tend to have either lower or higher EQ or relative brain size. Otherwise, we modelled trait evolution accounting for linear (DD$_{lin}$) or exponential (DD$_{exp}$) density-dependence [@drury2016estimating; @weir2013diversity]. Density-dependence means that the evolutionary rate $\lambda$ varies either positively or negatively as a function $f$ of the number of co-occurring lineages sharing the same diet such as
+We focused only on frugivorous primates, because sample size was otherwise insufficient, and fitted phylogenetic models of EQ - or relative size of a specific brain area – evolution with and without species competitions. Models were fitted on different sample sizes due to non-availability of some data for some traits. Specifically, models using EQ included `r minEQ` to `r maxEQ` frugivorous species. Other models included more reduced sample sizes (in species number): Striatum (`r minStriatum` to `r maxStriatum`), MOB (`r minMOB` to `r maxMOB`), Neocortex (`r minNeocortex` to `r maxNeocortex`), Hippocampus (`r minHippocampus` to `r maxHippocampus`), Cerebellum (`r minCerebellum` to `r maxCerebellum`). Nonetheless, for a given set of models (i.e. within brain area), the sample was strictly identical, allowing within set comparison. Prior to fitting, trait parameters were log-transformed to reach more symmetrical distributions. Models without competition, Brownian Motion (i.e. BM), Orstein-Uhlenbeck process (i.e. OU, model with stabilizing selection), or Early-Burst model (i.e. EB, for assessing a time-dependence of the evolutionary rate) were fitted using the “fitContinuous” function from the *geiger* package [@geiger3; @geiger5]. Using the evolutionary history of species distribution (see [Primate species sympatry]) and of diet (see [Dietary guild]), we fitted models considering sympatry using the “fit_t_comp” function from the *RPANDA* package [@RPANDA]. These models notably account for interaction matrices that are built on the evolutionary history of species sympatry and diet. These interaction matrices retrace, along the phylogenetic tree, which frugivorous lineages were present within the same geographic areas (see [@drury2016estimating]). We fitted three different models including sympatry. The matching competition model (MC) may consider divergence of traits of co-occurring lineages from a same dietary guild due to repulsion of traits (character displacement) [@drury2016estimating]. Here, that would mean that co-occurring species would tend to have either lower or higher EQ or relative brain size. Otherwise, we modelled trait evolution accounting for linear (DD$_{lin}$) or exponential (DD$_{exp}$) density-dependence [@drury2016estimating; @weir2013diversity]. Density-dependence means that the evolutionary rate $\lambda$ varies either positively or negatively as a function $f$ of the number of co-occurring lineages sharing the same diet such as
 
 \begin{center}
 
@@ -834,7 +851,6 @@ colourModels <- brewer.pal(n = 6, name = "Set1")
 
 ```
 
-
 (b) Dealing with data uncertainty and parameter sensitivity
 
 \hfill
@@ -847,22 +863,22 @@ In this analysis, uncertainty can stem from two sources. First, the true phyloge
 
 ### Models of species diversification
 
-We investigated how primates diversified over time. Lineage-specific diversification rates were estimated using an updated version of the *ClaDS* algorithm [@maliet2019model] boosted for computational speed based on data augmentation techniques [@maliet2020fast]. Particularly, we used *ClaDS2*, the model with constant turnover (i.e. constant ratio between extinction and speciation rates). This Bayesian approach considers speciation rate heterogeneity by modeling small shifts in the rate at speciation events. In other words, the daughter lineage is assumed to inherit new speciation rates that is sampled from a log-normal distribution with an expected mean value $log(\alpha \lambda)$ (where $\lambda$ represents the parental speciation rate and $\alpha$ is a trend parameter), and a standard deviation $\sigma$. Three independent chains were run until their respective convergence was validated by a Gelman-Rubin diagnostic criterion [@gelman1992inference]. The analysis relied on the use of a consensus tree of primate phylogeny from @dos2018using. This latter provides a robust phylogenetic tree for 367 primate species (while the 10kTrees primate phylogeny has only `r length(phylo_init$tip.label)` species). 
+We investigated how primates diversified over time. Lineage-specific diversification rates were estimated using an updated version of the *ClaDS* algorithm [@maliet2019model] boosted for computational speed based on data augmentation techniques [@maliet2020fast]. Particularly, we used *ClaDS2*, the model with constant turnover (i.e. constant ratio between extinction and speciation rates). This Bayesian approach considers speciation rate heterogeneity by modeling small shifts in the rate at speciation events. In other words, the daughter lineage is assumed to inherit new speciation rates that is sampled from a log-normal distribution with an expected mean value $log(\alpha \lambda)$ (where $\lambda$ represents the parental speciation rate and $\alpha$ is a trend parameter), and a standard deviation $\sigma$. Three independent chains were run until their respective convergence was validated by a Gelman-Rubin diagnostic criterion [@gelman1992inference]. The analysis relied on the use of a consensus tree of primate phylogeny from [@dos2018using]. This latter provides a robust phylogenetic tree for 367 primate species (while the 10kTrees primate phylogeny has only `r length(phylo_init$tip.label)` species). 
 
-|   Such analysis necessarily depends on a prior estimation of the sample representativeness, that is, the fraction of sampled taxa (present in the phylogenetic tree) among all possible existing ones. @estrada2017impending estimated that, given current knowledge, the primate clade should be composed of 504 species. This means that the current sampling fraction is around 73%. We thus parameterized the *ClaDS* algorithm with this value for the estimate sampling fraction. Yet, given that the extant number of primate species is subject to controversy, and because the estimated sampling fraction may affect diversification rate estimations, we replicated our analyses with a range of sampling fractions from 95% down to 60%. At the end of each run, we extracted the maximum of the *a posteriori* net diversification rate of each extant primate species, as well as the mean diversification rate (given all lineages) through time. 
+|   Such analysis necessarily depends on a prior estimation of the sample representativeness, that is, the fraction of sampled taxa (present in the phylogenetic tree) among all possible existing ones. [@estrada2017impending] estimated that, given current knowledge, the primate clade should be composed of 504 species. This means that the current sampling fraction is around 73%. We thus parameterized the *ClaDS* algorithm with this value for the estimate sampling fraction. Yet, given that the extant number of primate species is subject to controversy, and because the estimated sampling fraction may affect diversification rate estimations, we replicated our analyses with a range of sampling fractions from 95% down to 60%. At the end of each run, we extracted the maximum of the *a posteriori* net diversification rate of each extant primate species, as well as the mean diversification rate (given all lineages) through time. 
 
 
 ### Phylogenetic regressions
 
 \hfill
 
-(a)	Determining the direction of the selection gradient shaped by interspecific competition
+(a)	Determining the direction of the selection gradient shaped by interspecific interactions
 
 \hfill
 
-To determine the nature of the relationship between species sympatry and relative sizes of brain regions, we fitted Gaussian Pagel's lambda phylogenetic regressions (i.e. a derivative of the Brownian Motion model, for which the phylogenetic variance-covariance matrix has all coefficients but its diagonal multiplied by lambda) for each brain region individually and for frugivorous species only. We used the Pagel's lambda model so as to relax the hypothesis of Brownian Motion since we it included brain areas for which the evolutionary history was best described by competitive models. Here specifically, we considered the least stringent frugivory assessment, with frugivory threshold fixed to `r frugivoryThresholdVector[1]`%, folivory threshold fixed to `r folivoryThresholdVector[1]`%. If, due to data variability, a species did not robustly fit into the categorical classification “frugivorous versus folivorous” (i.e. could be either of the two), it was considered as frugivorous nonetheless. 
+To determine the nature of the relationship between species sympatry and relative sizes of brain regions, we fitted Gaussian Pagel's lambda phylogenetic regressions (i.e. a derivative of the Brownian Motion model, for which the phylogenetic variance-covariance matrix has all coefficients but its diagonal multiplied by lambda) for each brain region individually and for frugivorous species only. We used the Pagel's lambda model so as to relax the hypothesis of Brownian Motion since we it included brain areas for which the evolutionary history was best described by models considering sympatry. Here specifically, we considered the least stringent frugivory assessment, with frugivory threshold fixed to `r frugivoryThresholdVector[1]`%, folivory threshold fixed to `r folivoryThresholdVector[1]`%. If, due to data variability, a species did not robustly fit into the categorical classification “frugivorous versus folivorous” (i.e. could be either of the two), it was considered as frugivorous nonetheless. 
 
-|    The response variable was the relative size of brain areas shown as better described by competitive phylogenetic scenario (see above). Due to data variability, we took the mean of the possible values given the different datasets, and assessed the sensitivity using non-averaged values (see [Phylogenetic regressions: results, stability and assumption]). In this model, the covariates (i.e. continuous predictors) were the average percent of the range surface overlapping with other sympatric frugivorous species, and the number of frugivorous sympatric species (the second was square rooted, to reach symmetrical distribution). For a given species A, sympatry with another species B was considered when species B range overlapped on more than 10% of the range of species A. This was done to reduce noise induced by coarse identification of species range. 
+|    The response variable was the relative size of brain areas. Due to data variability, we took the mean of the possible values given the different datasets, and assessed the sensitivity using non-averaged values (see [Phylogenetic regressions: results, stability and assumption]). In this model, the covariates (i.e. continuous predictors) were the average percent of the range surface overlapping with other sympatric frugivorous species, and the number of frugivorous sympatric species (the second was square rooted, to reach symmetrical distribution). For a given species A, sympatry with another species B was considered when species B range overlapped on more than 10% of the range of species A. This was done to reduce noise induced by coarse identification of species range. 
 
 \hfill
 
@@ -887,7 +903,7 @@ To determine whether sympatry was associated to specific diversification pattern
 (i)	Direction of the selection gradient shaped by interspecific competition
 
 \hfill
-                                                                                                                                                                           Models were fitted using the “phylolm” function from the *phylolm* package [@phylolm], with the lambda parameter (i.e. indicating whether the trait is subject to selection, or corresponds to Brownian Motion, if $\lambda$ tends towards 1) estimated by maximum-likelihood (argument “model” set to “lambda”). Bootstrapping over `r repetitionBootstrap` independent replicates was done so as to obtain confidence intervals. Other function parameters were set to default. Prior fitting, covariates were symmetrized if necessary. Necessary assumptions on the normal distribution of residuals and homoscedasticity were visually assessed and pointed out no violation (see Appendix [Model assumptions]). We did not observe correlation issue among predictors either (VIF$_{max}$ < 2, @mundry2014statistical).
+                                                                                                                                                                           Models were fitted using the “phylolm” function from the *phylolm* package [@phylolm], with the lambda parameter (i.e. indicating whether the trait is subject to selection, or corresponds to Brownian Motion, if $\lambda$ tends towards 1) estimated by maximum-likelihood (argument “model” set to “lambda”). Bootstrapping over `r repetitionBootstrap` independent replicates was done so as to obtain confidence intervals. Other function parameters were set to default. Prior to fitting, covariates were symmetrized if necessary. Necessary assumptions on the normal distribution of residuals and homoscedasticity were visually assessed and pointed out no violation (see Appendix [Model assumptions]). We did not observe correlation issue among predictors either (VIF$_{max}$ < 2, [@mundry2014statistical]).
 
 \hfill
 
@@ -926,8 +942,11 @@ BR conceived the study, collected, cleaned and analyzed the data, drew the figur
 
 ```{r tableRegGradient, include=TRUE}
 results.df_gradient <- results.df_gradient[-(6:10),]
+results.df_gradient[1] <- gsub("frugivorous", "frugivores", results.df_gradient[,1])
+results.df_gradient[1] <- gsub("home range", "range", results.df_gradient[,1])
+
 rownames(results.df_gradient) <- NULL
-knitr::kable(results.df_gradient, escape=TRUE, booktabs = TRUE, caption = "Model estimates and significance of phylogenetic regressions to assess the selection gradient direction | Est.=Estimate, CI2.5\\%=Lower border of the CI95\\%, CI97.5\\%=Upper border of the CI95\\%, Sd=Standard deviation, t=Statistics t-value. The brain area (as well as the associated sample size) are indicated prior each list of estimates. The transformation applied to variables are indicated between brackets (logarithm, log, or square-root, sqrt), as well as the ponderation by bodymass (/bodymass).") %>%
+knitr::kable(results.df_gradient, escape=TRUE, booktabs = TRUE, caption = "Model estimates and significance of phylogenetic regressions to assess the relationship between relative brain sizes and sympatry | Est.=Estimate, CI2.5\\%=Lower border of the CI95\\%, CI97.5\\%=Upper border of the CI95\\%, Sd=Standard deviation, t=Statistics t-value. The brain area (as well as the associated sample size) are indicated prior to each list of estimates. The transformation applied to variables are indicated between brackets (logarithm, log, or square-root, sqrt), as well as the ponderation by bodymass (/bodymass).") %>%
   kableExtra::column_spec(2:ncol(results.df_gradient), bold = toPlotBold[-(6:10)]) %>% #Remove brain raw
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::kable_styling(latex_options="scale_down") #%>%
@@ -948,7 +967,7 @@ results.df_diversification[seq(from=1, to=nrow(results.df_diversification), by=4
 ```{r tableRegDiversification, include=TRUE}
 results.df_diversification <- results.df_diversification[-(5:8),]
 rownames(results.df_diversification) <- NULL
-knitr::kable(results.df_diversification, escape=TRUE, booktabs = TRUE, caption = "Model estimates and significance of Bayesian phylogenetic regressions to assess the correlation between diversification and brain size | Est.=Estimate, HDP2.5\\%=Lower border of the 95\\% Highest Posterior Density, HDP97.5\\%=Upper border of the 95\\% Highest Posterior Density, Eff. samp.=Effective sample (adjusted for autocorrelation). The brain area (as well as the associated sample size) are indicated prior each list of estimates. The logarithm transformation was applied to variable and is indicated between brackets (log), as well as the ponderation by bodymass (/bodymass).") %>%
+knitr::kable(results.df_diversification, escape=TRUE, booktabs = TRUE, caption = "Model estimates and significance of Bayesian phylogenetic regressions to assess the correlation between species diversification and relative brain sizes | Est.=Estimate, HDP2.5\\%=Lower border of the 95\\% Highest Posterior Density, HDP97.5\\%=Upper border of the 95\\% Highest Posterior Density, Eff. samp.=Effective sample (adjusted for autocorrelation). The brain area (as well as the associated sample size) are indicated prior to each list of estimates. The logarithm transformation was applied to variable and is indicated between brackets (log), as well as the ponderation by bodymass (/bodymass).") %>%
   kableExtra::column_spec(2:ncol(results.df_diversification), bold = toPlotBoldDiversification[-(5:8)]) %>% #Remove brain raw
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::kable_styling(latex_options="scale_down") #%>%
@@ -958,9 +977,12 @@ knitr::kable(results.df_diversification, escape=TRUE, booktabs = TRUE, caption =
 \newpage
 
 ```{r tableRegDiversificationAndSympatry, include=TRUE}
+results.df_diversificationAndSympatry[1] <- gsub("frugivorous", "frugivores", results.df_diversificationAndSympatry[,1])
+results.df_diversificationAndSympatry[1] <- gsub("home range", "range", results.df_diversificationAndSympatry[,1])
+
 knitr::kable(results.df_diversificationAndSympatry, escape=TRUE, booktabs = TRUE,
              caption = "Model estimates and significance of phylogenetic regressions to assess the correlation between diversification and sympatry | Est.=Estimate, CI2.5%=Lower border of the CI95%, CI97.5%=Upper border of the CI95%, Sd= Standard deviation, t= Statitsitics t-vale. The brain area (as well as the associated sample size)
-             are indicate prior each list of estimates. the transformation (logarithm or square-root) if indicated in parenthese by the abbreviation (log or sqrt).") %>%
+             are indicate prior to each list of estimates. the transformation (logarithm or square-root) if indicated in parenthese by the abbreviation (log or sqrt).") %>%
   kableExtra::column_spec(2:ncol(results.df_diversificationAndSympatry), bold = toPlotBoldSympatry) %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::kable_styling(latex_options="scale_down")
@@ -997,9 +1019,52 @@ for(i in 1:length(areaName)){
   }
 }
 warnings()
+
+# Create legend
+areaNameCorrected <- c(
+  "East Madagascar",
+  "West Madagascar",
+  "West Africa",
+  "Central Africa",
+  "East/South Africa",
+  "Central America",
+  "Northern South America",
+  "Southern South America",
+  "West Asia",
+  "Central/East Asia",
+  "South Asia",
+  "Asian islands")
+colourArea <- c(
+"white",
+"darkseagreen2",
+"darkseagreen",
+"darkseagreen4",
+"black",
+"orange1", 
+"darkorange2",
+"darkorange4",
+"lightgoldenrod1",
+"lightgoldenrod2",
+"lightgoldenrod3",
+"lightgoldenrod4"
+)
+
+
+par(mar=c(0, 0, 0, 0), mgp=c(2, 0.5, 0), xpd=TRUE)
+emptyPlot()
+legend(x=0, y=0.9, col=c("black", colourArea[2:5]), legend=areaNameCorrected[1:5], pch=c(1, rep(19, times=length(2:5))), pt.cex=1.5, xjust=0, yjust=1, bty="n",
+      y.intersp=2.75,
+      title=expression(bold("Africa")))
+legend(x=0.5, y=0.9, col=c(colourArea[6:8]), legend=areaNameCorrected[6:8], pch=19, bty="n", pt.cex=1.5, xjust=0.5, yjust=1,
+       y.intersp=2.75,
+       title=expression(bold("America")))
+legend(x=1, y=0.9, col=c(colourArea[9:12]), legend=areaNameCorrected[9:12], pch=19, bty="n", pt.cex=1.5, xjust=1, yjust=1,
+       y.intersp=2.75,
+       title=expression(bold("Asia")))
+my_legend <- recordPlot()     
 ```
 
-```{r figmap, include=TRUE, position='H', warning = FALSE, message = FALSE, results= 'hide', fig.width=7, fig.height=7, fig.cap=paste("Geographic areas used for ancestral range reconstruction represented on the Natural Earth projection of the world | Areas were defined as a combination of geographic and environmental criteria relatively to the primate taxonomy following results from [@kamilar2009environmental]: (1) East Madagascar (2) West Madagascar (3) West Africa (4) Central Africa (5) East/South Africa (6) Central America (7) North South-America (8) South South-America (9) West Asia (10) Central/East Asia (11) South Asia (12) Asian peninsula and islands. Note that the north part of Africa and the south of Europe were discarded despite the presence of one primate species (*Macaca sylvanus*), because of its geographical complete isolation and repeated intervention of human people in population maintenance [@modolo2005phylogeography]. Hence, *Macaca Sylvanus* is not considered in this study.", sep="")}
+```{r figmap, include=TRUE, position='H', warning = FALSE, message = FALSE, results= 'hide', fig.width=7, fig.height=7, fig.cap=paste("Geographic areas used for ancestral range reconstruction of frugivorous primates represented on the Natural Earth projection of the world | Areas were defined as a combination of geographic and environmental criteria relatively to the primate taxonomy following results from [@kamilar2009environmental]: (1) East Madagascar (2) West Madagascar (3) West Africa (4) Central Africa (5) East/South Africa (6) Central America (7) North South-America (8) South South-America (9) West Asia (10) Central/East Asia (11) South Asia (12) Asian peninsula and islands. Note that the north part of Africa and the south of Europe were discarded despite the presence of one primate species (*Macaca sylvanus*), because of its geographical complete isolation and repeated intervention of human people in population maintenance [@modolo2005phylogeography]. Hence, *Macaca Sylvanus* is not considered in this study.", sep="")}
 
 #abbreviation name are available in https://proj.org/operations/projections/index.html
 #help for graticule: https://rpsychologist.com/working-with-shapefiles-projections-and-world-maps-in-ggplot
@@ -1009,7 +1074,7 @@ proj.map <- "+proj=natearth +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"
 centroid <- as.data.frame(centroid)
 colnames(centroid) <- c("long", "lat")
 centroid$nudge_y <- 0
-centroid$nudge_y[5] <- -5
+centroid$nudge_y[5] <- -10
 
 library(tidyverse)
 library(ggspatial)
@@ -1024,50 +1089,39 @@ grat_df <- fortify(grat)
 bbox <- readOGR(dsn="C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Formap", layer="ne_110m_wgs84_bounding_box")
 bbox_df<- fortify(bbox)
 
-
-bbox.sf <- sfheaders::sf_polygon(  obj = bbox_df 
-                                         , x = "long"
-                                         , y = "lat"
-                                         , polygon_id = "group"
-)
-sf::st_crs(bbox.sf) <- st_crs(world)
-
-grat_df <- grat_df[,c(1,2,6)]
-colnames(grat_df) <- c("x", "y", "linestring_id")
-grat_df.sf <- sfheaders::sf_line(obj = grat_df)
-
-sf::st_crs(grat_df.sf) <- st_crs(world)
+###----
+### OLD WAY: when using sf package
+###----
+# bbox.sf <- sfheaders::sf_polygon(  obj = bbox_df 
+#                                          , x = "long"
+#                                          , y = "lat"
+#                                          , polygon_id = "group"
+# )
+# sf::st_crs(bbox.sf) <- st_crs(world)
+# 
+# grat_df <- grat_df[,c(1,2,6)]
+# colnames(grat_df) <- c("x", "y", "linestring_id")
+# grat_df.sf <- sfheaders::sf_line(obj = grat_df)
+# 
+# sf::st_crs(grat_df.sf) <- st_crs(world)
 
 #Main map
-map <- ggplot() +
-  geom_sf(data = bbox.sf, fill=adjustcolor("white", alpha.f=0.45), col="white") +
-  geom_sf(data = grat_df.sf, col="darkgrey", lty=2) +
-  geom_sf(data = world, fill = "black", col = "white") +
-  theme(panel.background=element_rect(fill="white"),
-        panel.grid = element_blank(),
-        axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.title.y=element_blank(),
-        axis.text.y=element_blank(),
-        axis.ticks.y=element_blank()
-  )
+# map <- ggplot() +
+#   geom_sf(data = bbox.sf, fill=adjustcolor("white", alpha.f=0.45), col="white") +
+#   geom_sf(data = grat_df.sf, col="darkgrey", lty=2) +
+#   geom_sf(data = world, fill = "black", col = "white") +
+#   theme(panel.background=element_rect(fill="white"),
+#         panel.grid = element_blank(),
+#         axis.title.x=element_blank(),
+#         axis.text.x=element_blank(),
+#         axis.ticks.x=element_blank(),
+#         axis.title.y=element_blank(),
+#         axis.text.y=element_blank(),
+#         axis.ticks.y=element_blank()
+#   )
 
 #Plot polygons areas
 mergedArea <- c()
-areaNameCorrected <- c(
-  "East Madagascar",
-  "West Madagascar",
-  "West Africa",
-  "Central Africa",
-  "East/South Africa",
-  "Central America",
-  "Northern South America",
-  "Southern South America",
-  "West Asia",
-  "Central/East Asia",
-  "South Asia",
-  "Asian islands")
 
 for(i in 1:length(areaName)){
   toFortify <- get(paste("area", i, sep="_"))
@@ -1080,40 +1134,129 @@ for(i in 1:length(areaName)){
   #map <- map + geom_polygon(data = toFortify, aes(x = long, y = lat, group = group), col = colourArea[i], fill = colourArea[i])
 }
 
-centroid.sf <- st_as_sf(centroid, coords=c("long", "lat"), crs=st_crs(world))
-library(sfheaders)
-mergedArea.sf <- sfheaders::sf_polygon(  obj = mergedArea
-                                         , x = "long"
-                                         , y = "lat"
-                                         , polygon_id = "group"
-)
-sf::st_crs(mergedArea.sf) <- st_crs(world)
 
-#Readd colour
-mergedArea.sf$colour <- unique(mergedArea[,c(7,8)])[,2]
+###----
+### OLD WAY: when using sf package
+###----
 
+# centroid.sf <- st_as_sf(centroid, coords=c("long", "lat"), crs=st_crs(world))
+# library(sfheaders)
+# mergedArea.sf <- sfheaders::sf_polygon(  obj = mergedArea
+#                                          , x = "long"
+#                                          , y = "lat"
+#                                          , polygon_id = "group"
+# )
+# sf::st_crs(mergedArea.sf) <- st_crs(world)
+# 
+# #Readd colour
+# mergedArea.sf$colour <- unique(mergedArea[,c(7,8)])[,2]
 #   mergedArea, coords=c("long", "lat"), crs=st_crs(world))
 # st_cast(mergedArea.sf, to="POLYGON")
+# 
 
+library(ggmap)
+library(scales)
 
-map <- map +
-  geom_sf(data = mergedArea.sf, aes(fill = colour)) +
-  geom_sf_label(data = centroid.sf, aes(label = 1:nrow(centroid)),
-             fill = c(colourArea[11], colourArea[12], rep("white", times=10)),
-             col = c("black", "white", rep("black", times=10)),#colourArea[3:12]),
-             nudge_y=centroid$nudge_y,
+#Getting the stammen background map and adding the graticule
+mapStammen <- get_stamenmap( bbox = c(left = -180, bottom = -66, right = 180, top = 66), zoom = 4, maptype = "watercolor")#maptype = "terrain-background")
+# plot(mergedArea.sf, add=TRUE)
+mapPlot <- ggmap(mapStammen) #+
+  # theme_void() +
+  # theme(
+  #   panel.border = element_rect(colour = "white", fill=NA, size=2)
+  # )
+for(k in 0:max(as.numcharac(grat_df$id))){
+mapPlot <- mapPlot +
+  geom_path(data = grat_df %>% filter(as.numcharac(id)==k), aes(x=long, y=lat), colour="white", linetype="dashed")
+}
+
+#Adding the coloured cropped polygons of areas
+for(i in 1:length(areaName)){
+  polygonToAdd <- get(paste("area", i, sep="_"))
+
+  for(j in 1:length(polygonToAdd@polygons[[1]]@Polygons)){#Some problem with fortified when multiple polygons. Trying using one sub-polygon at a time.
+    toPlot <- sp::Polygons(list(polygonToAdd@polygons[[1]]@Polygons[[j]]), ID = "A")
+    toPlot <- sp::SpatialPolygons(list(toPlot))
+      fortifiedArea <- fortify(toPlot)
+      mapPlot <- mapPlot + geom_polygon(data = fortifiedArea, aes(x = long, y= lat), fill=colourArea[i], col=colourArea[i], lwd=0.5) +
+          geom_label(data = centroid[i,], aes(x=long, y=lat), label=(1:length(colourArea))[i],
+             fill = ifelse(i != 1 & i != 2, "white", colourArea[i]),
+             col = "black",
+             nudge_y=centroid$nudge_y[i],
              label.r = unit(0.4, "lines"),
-             size = 2) +
-  coord_sf(crs = proj.map, expand = F) +
-  scale_fill_manual(values = colourArea, labels=c("Central Africa", "South/East Africa", "West Africa", "Central America", "North of South America", "South of South America", "Central/East Asia", "Asian islands", "South Asia", "West Asia", "East Madagascar", "West Madagascar")) +
-  labs(fill = "")  +
-  theme(
+             size = 2) 
+  }
+}
+mapPlot <- mapPlot +
+  # scale_color_manual(name='',
+  # breaks=c(
+  # "East Madagascar",
+  # "West Madagascar",
+  # "West Africa",
+  # "Central Africa",
+  # "East/South Africa",
+  # "Central America",
+  # "Northern South America",
+  # "Southern South America",
+  # "West Asia",
+  # "Central/East Asia",
+  # "South Asia",
+  # "Asian islands"),
+  # values=c(
+  # "East Madagascar"=colourArea[1],
+  # "West Madagascar"=colourArea[1],
+  # "West Africa"=colourArea[1],
+  # "Central Africa"=colourArea[1],
+  # "East/South Africa"=colourArea[1],
+  # "Central America"=colourArea[1],
+  # "Northern South America"=colourArea[1],
+  # "Southern South America"=colourArea[1],
+  # "West Asia"=colourArea[1],
+  # "Central/East Asia"=colourArea[1],
+  # "South Asia"=colourArea[1],
+  # "Asian islands"=colourArea[1])
+  # )+
+    theme(
         text = element_text(size = 10),
         legend.key = element_rect(size = 4),
         legend.key.size = unit(1, 'lines'),
-        legend.position="bottom")
-map
+        legend.position="bottom",
+        axis.text=element_text(size=10),
+        axis.title=element_text(size=15,face="bold")
+        ) +
+  xlab("Longitude") +
+  ylab("Latitude") +
+  scale_x_continuous(breaks = c(seq(from=-165, to=-15, by=30), 0, seq(from=15, to=165, by=30)), expand = c(0, 0))# +
+  #scale_y_continuous(breaks = pretty(-66:66, n = 10))
 
+library(cowplot)
+# Create grid of plots
+plot_grid(mapPlot, 
+          my_legend,
+          ncol = 1,
+          rel_heights = c(2.25,1))
+
+##--------
+###OLD WAY
+##-------
+
+# map <- map +
+#   geom_sf(data = mergedArea.sf, aes(fill = colour)) +
+#   geom_sf_label(data = centroid.sf, aes(label = 1:nrow(centroid)),
+#              fill = c(colourArea[11], colourArea[12], rep("white", times=10)),
+#              col = c("black", "white", rep("black", times=10)),#colourArea[3:12]),
+#              nudge_y=centroid$nudge_y,
+#              label.r = unit(0.4, "lines"),
+#              size = 2) +
+#   coord_sf(crs = proj.map, expand = F) +
+#   scale_fill_manual(values = colourArea, labels=c("Central Africa", "South/East Africa", "West Africa", "Central America", "North of South America", "South of South America", "Central/East Asia", "Asian islands", "South Asia", "West Asia", "East Madagascar", "West Madagascar")) +
+#   labs(fill = "")  +
+#   theme(
+#         text = element_text(size = 10),
+#         legend.key = element_rect(size = 4),
+#         legend.key.size = unit(1, 'lines'),
+#         legend.position="bottom")
+# map
 # # #Just to see the difference as pinpointed by the warning
 # # # geosphere::areaPolygon(areaTransitory)
 # # # gArea(areaTransitory)
@@ -1153,7 +1296,7 @@ map
 
 \clearpage
 
-```{r phylogeny, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=7, fig.cap=paste("Current frugivorous primate sympatry pattern and phylogeny | Primate phylogeny from a consensus tree of 1000 possible trees from the 10kTrees project is depicted in the centre, together with abbreviated species name. The corresponding non-abbreviated names can be found using Appendix Figure \\@ref(fig:figdata). Co-occurring frugivorous (based on a frugivory threshold of ", frugivoryThresholdVector[1], "% and folivory of ", folivoryThresholdVector[1], "%) species are linked by lightgray lines. The geographic area occupied by a species is depicted by the coloured rectangles. Presence was assed given an overlap between the species range and the geographic area of ", geographicThresholdVector[1]*100, "%.", sep="")}
+```{r phylogeny, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=7, fig.cap=paste("Levels of sympatry significantly vary across the primate phylogeny | Primate phylogeny from a consensus tree of 1000 possible trees from the 10kTrees project is depicted in the centre, together with abbreviated species name. The corresponding non-abbreviated names can be found using Appendix Figure \\@ref(fig:figdata). Co-occurring frugivorous (based on a frugivory threshold of ", frugivoryThresholdVector[1], "% and folivory of ", folivoryThresholdVector[1], "%) species are linked by lightgray lines. The geographic area occupied by a species is depicted by the coloured rectangles. Presence was assed given an overlap between the species range and the geographic area of ", geographicThresholdVector[1]*100, "%.", sep="")}
 
 # ####
 # ## Fig interaction
@@ -1298,12 +1441,39 @@ circos.clear()
 
 \clearpage
 
-```{r figbrain, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=7, fig.cap=paste("(Left) EQ or relative brain size value among frugivorous primates (Right) Studied brain areas | (Left) The circular rows are indicated by the colours which match a specific brain area. The darker background emphasises when values are above average, while the lighter background emphasises when values are below average. The mean value (after scaling and based on one random sampling among possible values, but see \\@ref(fig:figvariabilitydata) for visualization of measure variability) for the Encephalization Quotient (EQ) or relative size of brain parts, when available, is depicted by a plain circle for frugivorous species. The frugivorous threshold was fixed to ", frugivoryThresholdVector[1], "% and folivory to ", folivoryThresholdVector[1], "%. (Right) A 3D brain from *Homo sapiens* is depicted (*neurobase* package [@neurobase], *misc3d* package [@misc3d]). The arrows indicate the sagital and frontal axes. Studied brain area are coloured, although the neocortex was not coloured for readability since it corresponds to the external layer of the cerebral hemisphere. In short, the MOB is involved in immediate olfactory information processing, the Neocortex and the Cerebellum support a working memory and memory consolidation processes [@wiltgen2004new; @koziol2014consensus; @sokolov2017cerebellum], and the Hippocampus supports a working memory and a long-term spatio-temporal memory [@burgess2002human]. The Striatum is involved in social information processing [@baez2013role].", sep="")}
+<!-- A 3D brain from *Homo sapiens* is depicted (*neurobase* package [@neurobase], *misc3d* package [@misc3d]). The arrows indicate the sagital and frontal axes.  -->
+<!-- , although the neocortex was not coloured for readability since it corresponds to the external layer of the cerebral hemisphere -->
+```{r figbrain, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=7, fig.cap=paste("Variations in relative brain size areas among frugivorous primates | (Left) The circular rows are indicated by the colours which match a specific brain area. The darker background emphasises when values are above average, while the lighter background emphasises when values are below average. The mean value (after scaling and based on one random sampling among possible values, but see \\@ref(fig:figvariabilitydata) for visualization of measure variability) for the Encephalization Quotient (EQ) or relative size of brain parts, when available, is depicted by a plain circle for frugivorous species. The frugivorous threshold was fixed to ", frugivoryThresholdVector[1], "% and folivory to ", folivoryThresholdVector[1], "%. (Right) The different studied brain areas. In short, the MOB is involved in immediate olfactory information processing, the Neocortex and the Cerebellum support a working memory and memory consolidation processes [@wiltgen2004new; @koziol2014consensus; @sokolov2017cerebellum], and the Hippocampus supports a working memory and a long-term spatio-temporal memory [@burgess2002human]. The Striatum is involved in social information processing [@baez2013role].", sep="")}
 
 library(RColorBrewer)
+
+colourEQ <- "gray"
+colourEQbis <- "lightgray"
+colourEQdark <- "black"
+
+colourHippocampus <- rgb(0,128,0,maxColorValue = 255)
+colourHippocampusbis <- rgb(95,211,95,maxColorValue = 255)#pastellize(colourHippocampus)
+colourHippocampusdark <- rgb(0,208,0,maxColorValue = 255)
+
+colourStriatum <- rgb(255,204,0,maxColorValue = 255)
+colourStriatumbis <- rgb(255,230,128,maxColorValue = 255)#pastellize(colourStriatum)
+colourStriatumdark <- "darkgoldenrod2"
+  
+colourNeocortex <- rgb(255,213,213,maxColorValue = 255)
+colourNeocortexbis <- "white"#rgb(255,213,213,maxColorValue = 255)#pastellize(colourNeocortex)
+colourNeocortexdark <- rgb(255,175,175,maxColorValue = 255)
+  
+colourCerebellum <- rgb(255,128,128,maxColorValue = 255)
+colourCerebellumbis <- rgb(255,170,170,maxColorValue = 255)#pastellize(colourCerebellum)
+colourCerebellumdark <- rgb(255,64,64,maxColorValue = 255)
+  
+colourMOB <- rgb(255,0,0,maxColorValue = 255)
+colourMOBbis <- rgb(255,95,95,maxColorValue = 255)#pastellize(colourMOB)
+colourMOBdark <- "darkred"
+  
 colourVector <- c("darkgrey", brewer.pal(n = 5, name = "Set1")[1:5])
 colourVectorbis <- c("lightgray", brewer.pal(n = 5, name = "Pastel1")[1:5])
-colour.circle.points <- c("black", "darkred", "darkblue", "darkgreen", "purple4", "orange4")
+colour.circle.points <- c("black", "darkred", "darkblue", "purple4", "darkgreen", "orange4")
 
 ###
 ## Fig brain values / circular
@@ -1344,57 +1514,57 @@ circos.track(ylim = c(0, 20), bg.border = NA, track.height = 0.05, track.margin=
              })
 #
 #Background
-circos.track(ylim = c(0, 1), bg.border = NA, panel.fun = function(x, y) {
-  circos.rect(0, 0, 1, 1, col=colourVector[1], border=colourVector[1])
+circos.track(ylim = c(0, 1), bg.border = colourEQ, panel.fun = function(x, y) {
+  circos.rect(0, 0, 1, 1, col=colourEQ, border=colourEQ)
 }, track.height = 1/15)
 
-circos.track(ylim = c(0, 1), bg.border = NA, panel.fun = function(x, y) {
-  circos.rect(0, 0, 1, 1, col=colourVectorbis[1], border=colourVectorbis[1])
-}, track.height = 1/15)
-
-#Background
-circos.track(ylim = c(0, 1), bg.border = NA, panel.fun = function(x, y) {
-  circos.rect(0, 0, 1, 1, col=colourVector[2], border=colourVector[2])
-}, track.height = 1/15)
-
-circos.track(ylim = c(0, 1), bg.border = NA, panel.fun = function(x, y) {
-  circos.rect(0, 0, 1, 1, col=colourVectorbis[2], border=colourVectorbis[2])
+circos.track(ylim = c(0, 1), bg.border = colourEQbis, panel.fun = function(x, y) {
+  circos.rect(0, 0, 1, 1, col=colourEQbis, border=colourEQbis)
 }, track.height = 1/15)
 
 #Background
-circos.track(ylim = c(0, 1), bg.border = NA, panel.fun = function(x, y) {
-  circos.rect(0, 0, 1, 1, col=colourVector[3], border=colourVector[3])
+circos.track(ylim = c(0, 1), bg.border = colourStriatum, panel.fun = function(x, y) {
+  circos.rect(0, 0, 1, 1, col=colourStriatum, border=colourStriatum)
 }, track.height = 1/15)
 
-circos.track(ylim = c(0, 1), bg.border = NA, panel.fun = function(x, y) {
-  circos.rect(0, 0, 1, 1, col=colourVectorbis[3], border=colourVectorbis[3])
-}, track.height = 1/15)
-
-#Background
-circos.track(ylim = c(0, 1), bg.border = NA, panel.fun = function(x, y) {
-  circos.rect(0, 0, 1, 1, col=colourVector[4], border=colourVector[4])
-}, track.height = 1/15)
-
-circos.track(ylim = c(0, 1), bg.border = NA, panel.fun = function(x, y) {
-  circos.rect(0, 0, 1, 1, col=colourVectorbis[4], border=colourVectorbis[4])
+circos.track(ylim = c(0, 1), bg.border = colourStriatumbis, panel.fun = function(x, y) {
+  circos.rect(0, 0, 1, 1, col=colourStriatumbis, border=colourStriatumbis)
 }, track.height = 1/15)
 
 #Background
-circos.track(ylim = c(0, 1), bg.border = NA, panel.fun = function(x, y) {
-  circos.rect(0, 0, 1, 1, col=colourVector[5], border=colourVector[5])
+circos.track(ylim = c(0, 1), bg.border = colourHippocampus, panel.fun = function(x, y) {
+  circos.rect(0, 0, 1, 1, col=colourHippocampus, border=colourHippocampus)
 }, track.height = 1/15)
 
-circos.track(ylim = c(0, 1), bg.border = NA, panel.fun = function(x, y) {
-  circos.rect(0, 0, 1, 1, col=colourVectorbis[5], border=colourVectorbis[5])
+circos.track(ylim = c(0, 1), bg.border = colourHippocampusbis, panel.fun = function(x, y) {
+  circos.rect(0, 0, 1, 1, col=colourHippocampusbis, border=colourHippocampusbis)
 }, track.height = 1/15)
 
 #Background
-circos.track(ylim = c(0, 1), bg.border = NA, panel.fun = function(x, y) {
-  circos.rect(0, 0, 1, 1, col=colourVector[6], border=colourVector[6])
+circos.track(ylim = c(0, 1), bg.border = colourMOB, panel.fun = function(x, y) {
+  circos.rect(0, 0, 1, 1, col=colourMOB, border=colourMOB)
 }, track.height = 1/15)
 
-circos.track(ylim = c(0, 1), bg.border = NA, panel.fun = function(x, y) {
-  circos.rect(0, 0, 1, 1, col=colourVectorbis[6], border=colourVectorbis[6])
+circos.track(ylim = c(0, 1), bg.border = colourMOBbis, panel.fun = function(x, y) {
+  circos.rect(0, 0, 1, 1, col=colourMOBbis, border=colourMOBbis)
+}, track.height = 1/15)
+
+#Background
+circos.track(ylim = c(0, 1), bg.border = colourCerebellum, panel.fun = function(x, y) {
+  circos.rect(0, 0, 1, 1, col=colourCerebellum, border=colourCerebellum)
+}, track.height = 1/15)
+
+circos.track(ylim = c(0, 1), bg.border = colourCerebellumbis, panel.fun = function(x, y) {
+  circos.rect(0, 0, 1, 1, col=colourCerebellumbis, border=colourCerebellumbis)
+}, track.height = 1/15)
+
+#Background
+circos.track(ylim = c(0, 1), bg.border = colourNeocortex, panel.fun = function(x, y) {
+  circos.rect(0, 0, 1, 1, col=colourNeocortex, border=colourNeocortex)
+}, track.height = 1/15)
+
+circos.track(ylim = c(0, 1), bg.border = colourNeocortexbis, panel.fun = function(x, y) {
+  circos.rect(0, 0, 1, 1, col=colourNeocortexbis, border=colourNeocortexbis)
 }, track.height = 1/15)
 
 
@@ -1418,12 +1588,12 @@ circos.track(ylim = c(0, 1), bg.border = NA, track.index=2, panel.fun = function
   #circos.rect(0, 0, 1, 1, col=colourPositive, border=colourPositive)
   if(is.na(relativeValueEQ[i])){}  else{
     if(relativeValueEQ[i] > 0 & dietSpecies[i]=="Fruit"){
-      circos.points(CELL_META$xcenter, relativeValueEQ[i]/absMax, pch=19, col=colour.circle.points[1], cex=0.7)
-      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueEQ[i]/absMax, col=colour.circle.points[1], lty=3)
+      #circos.points(CELL_META$xcenter, relativeValueEQ[i]/absMax, pch=19, col=colourEQdark, cex=0.7)
+      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueEQ[i]/absMax, col=colourEQdark, lty=3)
     }
     else if(relativeValueEQ[i] > 0 & dietSpecies[i]=="Leaf"){
-      circos.points(CELL_META$xcenter, relativeValueEQ[i]/absMax, pch=21, col=colour.circle.points[1], bg="white", cex=0.7)
-      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueEQ[i]/absMax, col=colour.circle.points[1], lty=3)
+      #circos.points(CELL_META$xcenter, relativeValueEQ[i]/absMax, pch=21, col=colourEQdark, bg="white", cex=0.7)
+      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueEQ[i]/absMax, col=colourEQdark, lty=3)
     }
     else{}
   }
@@ -1435,12 +1605,12 @@ circos.track(ylim = c(0, 1), bg.border = NA, track.index=3,  panel.fun = functio
   if(is.na(relativeValueEQ[i])){}  else{
     #circos.rect(0, 0, 1, 1, col=colourNegative, border=colourNegative)
     if(relativeValueEQ[i] <= 0 & dietSpecies[i]=="Fruit"){
-      circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueEQ[i]/absMax, col=colour.circle.points[1], lty=3)
-      circos.points(CELL_META$xcenter, 1 + relativeValueEQ[i]/absMax, pch=19, col=colour.circle.points[1], cex=0.7)
+      #circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueEQ[i]/absMax, col=colourEQdark, lty=3)
+      circos.points(CELL_META$xcenter, 1 + relativeValueEQ[i]/absMax, pch=19, col=colourEQdark, cex=0.7)
     }
     else if(relativeValueEQ[i] <= 0 & dietSpecies[i]=="Leaf"){
-      circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueEQ[i]/absMax, col=colour.circle.points[1], lty=3)
-      circos.points(CELL_META$xcenter, 1 + relativeValueEQ[i]/absMax, pch=21, col=colour.circle.points[1], bg="white", cex=0.7)
+      #circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueEQ[i]/absMax, col=colourEQdark, lty=3)
+      circos.points(CELL_META$xcenter, 1 + relativeValueEQ[i]/absMax, pch=21, col=colourEQdark, bg="white", cex=0.7)
     }
     else{}
   }
@@ -1454,12 +1624,12 @@ circos.track(ylim = c(0, 1), bg.border = NA, track.index=4, panel.fun = function
   #circos.rect(0, 0, 1, 1, col=colourPositive, border=colourPositive)
   if(is.na(relativeValueStriatum[i])){}  else{
     if(relativeValueStriatum[i] > 0 & dietSpecies[i]=="Fruit"){
-      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueStriatum[i]/absMax, col=colour.circle.points[2], lty=3)
-      circos.points(CELL_META$xcenter, relativeValueStriatum[i]/absMax, pch=19, col=colour.circle.points[2], cex=0.65)
+      #circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueStriatum[i]/absMax, col=colourStriatumdark, lty=3)
+      circos.points(CELL_META$xcenter, relativeValueStriatum[i]/absMax, pch=19, col=colourStriatumdark, cex=0.65)
     }
     else if(relativeValueStriatum[i] > 0 & dietSpecies[i]=="Leaf"){
-      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueStriatum[i]/absMax, col=colour.circle.points[2], lty=3)
-      circos.points(CELL_META$xcenter, relativeValueStriatum[i]/absMax, pch=21, col=colour.circle.points[2], bg="white", cex=0.65)
+      #circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueStriatum[i]/absMax, col=colourStriatumdark, lty=3)
+      circos.points(CELL_META$xcenter, relativeValueStriatum[i]/absMax, pch=21, col=colourStriatumdark, bg="white", cex=0.65)
     }
     else{}
   }
@@ -1471,30 +1641,32 @@ circos.track(ylim = c(0, 1), bg.border = NA, track.index=5,  panel.fun = functio
   if(is.na(relativeValueStriatum[i])){}  else{
     #circos.rect(0, 0, 1, 1, col=colourNegative, border=colourNegative)
     if(relativeValueStriatum[i] <= 0 & dietSpecies[i]=="Fruit"){
-      circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueStriatum[i]/absMax, col=colour.circle.points[2], lty=3)
-      circos.points(CELL_META$xcenter, 1 + relativeValueStriatum[i]/absMax, pch=19, col=colour.circle.points[2], cex=0.65)
+      #circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueStriatum[i]/absMax, col=colourStriatumdark, lty=3)
+      circos.points(CELL_META$xcenter, 1 + relativeValueStriatum[i]/absMax, pch=19, col=colourStriatumdark, cex=0.65)
     }
     else if(relativeValueStriatum[i] <= 0 & dietSpecies[i]=="Leaf"){
-      circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueStriatum[i]/absMax, col=colour.circle.points[2], lty=3)
-      circos.points(CELL_META$xcenter, 1 + relativeValueStriatum[i]/absMax, pch=21, col=colour.circle.points[2], bg="white", cex=0.65)
+      #circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueStriatum[i]/absMax, col=colourStriatumdark, lty=3)
+      circos.points(CELL_META$xcenter, 1 + relativeValueStriatum[i]/absMax, pch=21, col=colourStriatumdark, bg="white", cex=0.65)
     }
     else{}
   }
 }, track.height = 0.1)
 
-#MOB
-absMax <- max(abs(relativeValueMOB), na.rm=TRUE)
+
+
+#Hippocampus
+absMax <- max(abs(relativeValueHippocampus), na.rm=TRUE)
 circos.track(ylim = c(0, 1), bg.border = NA, track.index=6, panel.fun = function(x, y) {
   i=CELL_META$sector.numeric.index
   #circos.rect(0, 0, 1, 1, col=colourPositive, border=colourPositive)
-  if(is.na(relativeValueMOB[i])){}  else{
-    if(relativeValueMOB[i] > 0 & dietSpecies[i]=="Fruit"){
-      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueMOB[i]/absMax, col=colour.circle.points[3], lty=3)
-      circos.points(CELL_META$xcenter, relativeValueMOB[i]/absMax, pch=19, col=colour.circle.points[3], cex=0.65)
+  if(is.na(relativeValueHippocampus[i])){}  else{
+    if(relativeValueHippocampus[i] > 0 & dietSpecies[i]=="Fruit"){
+      #circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueHippocampus[i]/absMax, col=colourHippocampusdark, lty=3)
+      circos.points(CELL_META$xcenter, relativeValueHippocampus[i]/absMax, pch=19, col=colourHippocampusdark, cex=0.55)
     }
-    else if(relativeValueMOB[i] > 0 & dietSpecies[i]=="Leaf"){
-      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueMOB[i]/absMax, col=colour.circle.points[3], lty=3)
-      circos.points(CELL_META$xcenter, relativeValueMOB[i]/absMax, pch=21, col=colour.circle.points[3], bg="white", cex=0.65)
+    else if(relativeValueHippocampus[i] > 0 & dietSpecies[i]=="Leaf"){
+      #circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueHippocampus[i]/absMax, col=colourHippocampusdark, lty=3)
+      circos.points(CELL_META$xcenter, relativeValueHippocampus[i]/absMax, pch=21, col=colourHippocampusdark, bg="white", cex=0.55)
     }
     else{}
   }
@@ -1503,33 +1675,34 @@ circos.track(ylim = c(0, 1), bg.border = NA, track.index=6, panel.fun = function
 
 circos.track(ylim = c(0, 1), bg.border = NA, track.index=7,  panel.fun = function(x, y) {
   i=CELL_META$sector.numeric.index
-  if(is.na(relativeValueMOB[i])){}  else{
+  if(is.na(relativeValueHippocampus[i])){}  else{
     #circos.rect(0, 0, 1, 1, col=colourNegative, border=colourNegative)
-    if(relativeValueMOB[i] <= 0 & dietSpecies[i]=="Fruit"){
-      circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueMOB[i]/absMax, col=colour.circle.points[3], lty=3)
-      circos.points(CELL_META$xcenter, 1 + relativeValueMOB[i]/absMax, pch=19, col=colour.circle.points[3], cex=0.65)
+    if(relativeValueHippocampus[i] <= 0 & dietSpecies[i]=="Fruit"){
+      #circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueHippocampus[i]/absMax, col=colourHippocampusdark, lty=3)
+      circos.points(CELL_META$xcenter, 1 + relativeValueHippocampus[i]/absMax, pch=19, col=colourHippocampusdark, cex=0.55)
     }
-    else if(relativeValueMOB[i] <= 0 & dietSpecies[i]=="Leaf"){
-      circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueMOB[i]/absMax, col=colour.circle.points[3], lty=3)
-      circos.points(CELL_META$xcenter, 1 + relativeValueMOB[i]/absMax, pch=21, col=colour.circle.points[3], bg="white", cex=0.65)
+    else if(relativeValueHippocampus[i] <= 0 & dietSpecies[i]=="Leaf"){
+      #circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueHippocampus[i]/absMax, col=colourHippocampusdark, lty=3)
+      circos.points(CELL_META$xcenter, 1 + relativeValueHippocampus[i]/absMax, pch=21, col=colourHippocampusdark, bg="white", cex=0.55)
     }
     else{}
   }
 }, track.height = 0.1)
 
-#Neocortex
-absMax <- max(abs(relativeValueNeocortex), na.rm=TRUE)
+
+#MOB
+absMax <- max(abs(relativeValueMOB), na.rm=TRUE)
 circos.track(ylim = c(0, 1), bg.border = NA, track.index=8, panel.fun = function(x, y) {
   i=CELL_META$sector.numeric.index
   #circos.rect(0, 0, 1, 1, col=colourPositive, border=colourPositive)
-  if(is.na(relativeValueNeocortex[i])){}  else{
-    if(relativeValueNeocortex[i] > 0 & dietSpecies[i]=="Fruit"){
-      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueNeocortex[i]/absMax, col=colour.circle.points[4], lty=3)
-      circos.points(CELL_META$xcenter, relativeValueNeocortex[i]/absMax, pch=19, col=colour.circle.points[4], cex=0.6)
+  if(is.na(relativeValueMOB[i])){}  else{
+    if(relativeValueMOB[i] > 0 & dietSpecies[i]=="Fruit"){
+      #circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueMOB[i]/absMax, col=colourMOBdark, lty=3)
+      circos.points(CELL_META$xcenter, relativeValueMOB[i]/absMax, pch=19, col=colourMOBdark, cex=0.65)
     }
-    else if(relativeValueNeocortex[i] > 0 & dietSpecies[i]=="Leaf"){
-      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueNeocortex[i]/absMax, col=colour.circle.points[4], lty=3)
-      circos.points(CELL_META$xcenter, relativeValueNeocortex[i]/absMax, pch=21, col=colour.circle.points[4], bg="white", cex=0.6)
+    else if(relativeValueMOB[i] > 0 & dietSpecies[i]=="Leaf"){
+      #circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueMOB[i]/absMax, col=colourMOBdark, lty=3)
+      circos.points(CELL_META$xcenter, relativeValueMOB[i]/absMax, pch=21, col=colourMOBdark, bg="white", cex=0.65)
     }
     else{}
   }
@@ -1538,33 +1711,34 @@ circos.track(ylim = c(0, 1), bg.border = NA, track.index=8, panel.fun = function
 
 circos.track(ylim = c(0, 1), bg.border = NA, track.index=9,  panel.fun = function(x, y) {
   i=CELL_META$sector.numeric.index
-  if(is.na(relativeValueNeocortex[i])){}  else{
+  if(is.na(relativeValueMOB[i])){}  else{
     #circos.rect(0, 0, 1, 1, col=colourNegative, border=colourNegative)
-    if(relativeValueNeocortex[i] <= 0 & dietSpecies[i]=="Fruit"){
-      circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueNeocortex[i]/absMax, col=colour.circle.points[4], lty=3)
-      circos.points(CELL_META$xcenter, 1 + relativeValueNeocortex[i]/absMax, pch=19, col=colour.circle.points[4], cex=0.6)
+    if(relativeValueMOB[i] <= 0 & dietSpecies[i]=="Fruit"){
+      #circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueMOB[i]/absMax, col=colourMOBdark, lty=3)
+      circos.points(CELL_META$xcenter, 1 + relativeValueMOB[i]/absMax, pch=19, col=colourMOBdark, cex=0.65)
     }
-    else if(relativeValueNeocortex[i] <= 0 & dietSpecies[i]=="Leaf"){
-      circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueNeocortex[i]/absMax, col=colour.circle.points[4], lty=3)
-      circos.points(CELL_META$xcenter, 1 + relativeValueNeocortex[i]/absMax, pch=21, col=colour.circle.points[4], bg="white", cex=0.6)
+    else if(relativeValueMOB[i] <= 0 & dietSpecies[i]=="Leaf"){
+      #circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueMOB[i]/absMax, col=colourMOBdark, lty=3)
+      circos.points(CELL_META$xcenter, 1 + relativeValueMOB[i]/absMax, pch=21, col=colourMOBdark, bg="white", cex=0.65)
     }
     else{}
   }
 }, track.height = 0.1)
 
-#Hippocampus
-absMax <- max(abs(relativeValueHippocampus), na.rm=TRUE)
+
+#Cerebellum
+absMax <- max(abs(relativeValueCerebellum), na.rm=TRUE)
 circos.track(ylim = c(0, 1), bg.border = NA, track.index=10, panel.fun = function(x, y) {
   i=CELL_META$sector.numeric.index
   #circos.rect(0, 0, 1, 1, col=colourPositive, border=colourPositive)
-  if(is.na(relativeValueHippocampus[i])){}  else{
-    if(relativeValueHippocampus[i] > 0 & dietSpecies[i]=="Fruit"){
-      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueHippocampus[i]/absMax, col=colour.circle.points[5], lty=3)
-      circos.points(CELL_META$xcenter, relativeValueHippocampus[i]/absMax, pch=19, col=colour.circle.points[5], cex=0.55)
+  if(is.na(relativeValueCerebellum[i])){}  else{
+    if(relativeValueCerebellum[i] > 0 & dietSpecies[i]=="Fruit"){
+      #circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueCerebellum[i]/absMax, col=colourCerebellumdark, lty=3)
+      circos.points(CELL_META$xcenter, relativeValueCerebellum[i]/absMax, pch=19, col=colourCerebellumdark, cex=0.5)
     }
-    else if(relativeValueHippocampus[i] > 0 & dietSpecies[i]=="Leaf"){
-      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueHippocampus[i]/absMax, col=colour.circle.points[5], lty=3)
-      circos.points(CELL_META$xcenter, relativeValueHippocampus[i]/absMax, pch=21, col=colour.circle.points[5], bg="white", cex=0.55)
+    else if(relativeValueCerebellum[i] > 0 & dietSpecies[i]=="Leaf"){
+      #circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueCerebellum[i]/absMax, col=colourCerebellumdark, lty=3)
+      circos.points(CELL_META$xcenter, relativeValueCerebellum[i]/absMax, pch=21, col=colourCerebellumdark, bg="white", cex=0.5)
     }
     else{}
   }
@@ -1573,33 +1747,33 @@ circos.track(ylim = c(0, 1), bg.border = NA, track.index=10, panel.fun = functio
 
 circos.track(ylim = c(0, 1), bg.border = NA, track.index=11,  panel.fun = function(x, y) {
   i=CELL_META$sector.numeric.index
-  if(is.na(relativeValueHippocampus[i])){}  else{
+  if(is.na(relativeValueCerebellum[i])){}  else{
     #circos.rect(0, 0, 1, 1, col=colourNegative, border=colourNegative)
-    if(relativeValueHippocampus[i] <= 0 & dietSpecies[i]=="Fruit"){
-      circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueHippocampus[i]/absMax, col=colour.circle.points[5], lty=3)
-      circos.points(CELL_META$xcenter, 1 + relativeValueHippocampus[i]/absMax, pch=19, col=colour.circle.points[5], cex=0.55)
+    if(relativeValueCerebellum[i] <= 0 & dietSpecies[i]=="Fruit"){
+      #circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueCerebellum[i]/absMax, col=colourCerebellumdark, lty=3)
+      circos.points(CELL_META$xcenter, 1 + relativeValueCerebellum[i]/absMax, pch=19, col=colourCerebellumdark, cex=0.5)
     }
-    else if(relativeValueHippocampus[i] <= 0 & dietSpecies[i]=="Leaf"){
-      circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueHippocampus[i]/absMax, col=colour.circle.points[5], lty=3)
-      circos.points(CELL_META$xcenter, 1 + relativeValueHippocampus[i]/absMax, pch=21, col=colour.circle.points[5], bg="white", cex=0.55)
+    else if(relativeValueCerebellum[i] <= 0 & dietSpecies[i]=="Leaf"){
+      #circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueCerebellum[i]/absMax, col=colourCerebellumdark, lty=3)
+      circos.points(CELL_META$xcenter, 1 + relativeValueCerebellum[i]/absMax, pch=21, col=colourCerebellumdark, bg="white", cex=0.5)
     }
     else{}
   }
 }, track.height = 0.1)
 
-#Cerebellum
-absMax <- max(abs(relativeValueCerebellum), na.rm=TRUE)
+#Neocortex
+absMax <- max(abs(relativeValueNeocortex), na.rm=TRUE)
 circos.track(ylim = c(0, 1), bg.border = NA, track.index=12, panel.fun = function(x, y) {
   i=CELL_META$sector.numeric.index
   #circos.rect(0, 0, 1, 1, col=colourPositive, border=colourPositive)
-  if(is.na(relativeValueCerebellum[i])){}  else{
-    if(relativeValueCerebellum[i] > 0 & dietSpecies[i]=="Fruit"){
-      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueCerebellum[i]/absMax, col=colour.circle.points[6], lty=3)
-      circos.points(CELL_META$xcenter, relativeValueCerebellum[i]/absMax, pch=19, col=colour.circle.points[6], cex=0.5)
+  if(is.na(relativeValueNeocortex[i])){}  else{
+    if(relativeValueNeocortex[i] > 0 & dietSpecies[i]=="Fruit"){
+      #circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueNeocortex[i]/absMax, col=colourNeocortexdark, lty=3)
+      circos.points(CELL_META$xcenter, relativeValueNeocortex[i]/absMax, pch=19, col=colourNeocortexdark, cex=0.6)
     }
-    else if(relativeValueCerebellum[i] > 0 & dietSpecies[i]=="Leaf"){
-      circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueCerebellum[i]/absMax, col=colour.circle.points[6], lty=3)
-      circos.points(CELL_META$xcenter, relativeValueCerebellum[i]/absMax, pch=21, col=colour.circle.points[6], bg="white", cex=0.5)
+    else if(relativeValueNeocortex[i] > 0 & dietSpecies[i]=="Leaf"){
+      #circos.segments(CELL_META$xcenter, 0, CELL_META$xcenter, relativeValueNeocortex[i]/absMax, col=colourNeocortexdark, lty=3)
+      circos.points(CELL_META$xcenter, relativeValueNeocortex[i]/absMax, pch=21, col=colourNeocortexdark, bg="white", cex=0.6)
     }
     else{}
   }
@@ -1608,53 +1782,60 @@ circos.track(ylim = c(0, 1), bg.border = NA, track.index=12, panel.fun = functio
 
 circos.track(ylim = c(0, 1), bg.border = NA, track.index=13,  panel.fun = function(x, y) {
   i=CELL_META$sector.numeric.index
-  if(is.na(relativeValueCerebellum[i])){}  else{
+  if(is.na(relativeValueNeocortex[i])){}  else{
     #circos.rect(0, 0, 1, 1, col=colourNegative, border=colourNegative)
-    if(relativeValueCerebellum[i] <= 0 & dietSpecies[i]=="Fruit"){
-      circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueCerebellum[i]/absMax, col=colour.circle.points[6], lty=3)
-      circos.points(CELL_META$xcenter, 1 + relativeValueCerebellum[i]/absMax, pch=19, col=colour.circle.points[6], cex=0.5)
+    if(relativeValueNeocortex[i] <= 0 & dietSpecies[i]=="Fruit"){
+      #circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueNeocortex[i]/absMax, col=colourNeocortexdark, lty=3)
+      circos.points(CELL_META$xcenter, 1 + relativeValueNeocortex[i]/absMax, pch=19, col=colourNeocortexdark, cex=0.6)
     }
-    else if(relativeValueCerebellum[i] <= 0 & dietSpecies[i]=="Leaf"){
-      circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueCerebellum[i]/absMax, col=colour.circle.points[6], lty=3)
-      circos.points(CELL_META$xcenter, 1 + relativeValueCerebellum[i]/absMax, pch=21, col=colour.circle.points[6], bg="white", cex=0.5)
+    else if(relativeValueNeocortex[i] <= 0 & dietSpecies[i]=="Leaf"){
+      #circos.segments(CELL_META$xcenter, 1, CELL_META$xcenter, 1 + relativeValueNeocortex[i]/absMax, col=colourNeocortexdark, lty=3)
+      circos.points(CELL_META$xcenter, 1 + relativeValueNeocortex[i]/absMax, pch=21, col=colourNeocortexdark, bg="white", cex=0.6)
     }
     else{}
   }
 }, track.height = 0.1)
 
+
+
 #Empty plot
 par(mar=c(0, 0, 0, 0), mgp=c(2, 0.5, 0), xpd=TRUE)
-plot(0, 0, xlim=c(0,1), ylim=c(0,1), xlab="", ylab="", las=1, type="n", tcl=-0.25, bty="n",
-     xaxt="n",xaxs="i",yaxs="i", yaxt="n", xpd=TRUE)
+emptyPlot()
+# plot(0, 0, xlim=c(0,1), ylim=c(0,1), xlab="", ylab="", las=1, type="n", tcl=-0.25, bty="n",
+#      xaxt="n",xaxs="i",yaxs="i", yaxt="n", xpd=TRUE)
+# 
+#Add brain
+ library(png)
+brainIMG <- readPNG("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/brain_draw.png")
+addImg(brainIMG, x = 0.425, y = 0.5, width = 0.7)
 
-# #Add brain
-library(png)
-brainIMG <- readPNG("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Plots/3dplot.png")
-addImg(brainIMG, x = 0.425, y = 0.65, width = 1.3)
-
-#Add circle contour
-draw.circle(x=0.45,y=0.55,0.435, col=NA, border="lightgray", lwd=2)
-draw.circle(x=0.45,y=0.55,0.405, col=NA, border="lightgray", lwd=2)
+# brainIMG <- readPNG("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Plots/3dplot.png")
+# addImg(brainIMG, x = 0.425, y = 0.65, width = 1.3)
+# 
+# #Add circle contour
+# draw.circle(x=0.45,y=0.55,0.435, col=NA, border="lightgray", lwd=2)
+# draw.circle(x=0.45,y=0.55,0.405, col=NA, border="lightgray", lwd=2)
+# 
+# par(mar=c(0, 0, 0, 0), mgp=c(2, 0.5, 0), xpd=TRUE)
+# plot(0, 0, xlim=c(0,1), ylim=c(0,1), xlab="", ylab="", las=1, type="n", tcl=-0.25, bty="n",
+#      xaxt="n",xaxs="i",yaxs="i", yaxt="n", xpd=TRUE)
+# colourHip=colourHippocampus
+# colourCereb=colourCerebellum
+# colourOlf=colourMOB
+# colourStri=colourStriatum
 
 par(mar=c(0, 0, 0, 0), mgp=c(2, 0.5, 0), xpd=TRUE)
-plot(0, 0, xlim=c(0,1), ylim=c(0,1), xlab="", ylab="", las=1, type="n", tcl=-0.25, bty="n",
-     xaxt="n",xaxs="i",yaxs="i", yaxt="n", xpd=TRUE)
-
-colourHip=colourVector[5]
-colourCereb=colourVector[6]
-colourOlf=colourVector[3]
-colourStri=colourVector[2]
-
-legend(x=0.1, y=0.8, legend = c("EQ", "Striatum", "MOB",  "Hippocampus", "Neocortex", "Cerebellum", "Frugivorous species", "Folivorous species"), cex = 1, fill = c(colourVector, NA, NA), pch=c(NA, NA, NA, NA, NA, NA, 19, 1), border=c("black", "black", "black", "black", "black", "black", "white", "white"), col=c(NA, NA, NA, NA, NA, NA, "black", "black"), bty="n", seg.len=0.75)
+emptyPlot()
+legend(x=0.1, y=1, yjust=1, legend = c("EQ", "Striatum", "Hippocampus", "MOB", "Cerebellum", "Neocortex", "Frugivorous species", "Folivorous species"), cex = 1, fill = c(colourEQ, colourStriatum, colourHippocampus, colourMOB, colourCerebellum, colourNeocortex, NA, NA), pch=c(NA, NA, NA, NA, NA, NA, 19, 1), border=c("black", "black", "black", "black", "black", "black", "white", "white"), col=c(NA, NA, NA, NA, NA, NA, "black", "black"), bty="n", seg.len=0.75)
 
 ```
 
 \clearpage
 
-```{r figresultsevolution, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=6, fig.cap="Relative support of fitted models of trait evolution for each brain part | Plotted is the AICc weight, a measure of relative support for a given model, for non-competitive (BM, OU, EB) and competitive (MC, DD$_{lin}$, DD$_{exp}$) models. The points represent the average AICc weight obtained (when considering the six models from a same run), while the vertical bars indicate the standard deviation given all tested conditions (see [Models of trait evolution: does interspecific interactions shape brain size evolution?])."}
+```{r figresultsevolution, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=6, fig.cap="The evolution of the size of foraging-related brain areas is best fitted by models considering sympatry of trait evolution in frugivorous primates | Plotted is the AICc weight, a measure of relative support for a given model, for models discarding sympatry (BM, OU, EB) and considering sympatry (MC, DD$_{lin}$, DD$_{exp}$). The points represent the average AICc weight obtained (when considering the six models from a same run), while the vertical bars indicate the standard deviation given all tested conditions (see [Models of trait evolution: does interspecific interactions shape brain size evolution?])."}
 
 
-layout(mat=rbind(c(1,2,3), c(4,5,6)), widths=c(5,5,5), heights=c(5,5))
+layout(mat=rbind(c(1,2,3), c(4,5,6), c(7,7,7)), widths=c(5,5,5), heights=c(5,5,1))
 par(mar=c(3.5, 3, 2, 0.5), mgp=c(2, 0.5, 0), xpd=TRUE)
 #note: 1= second run for frugivory 20%
 #note: _2= first run for frugivory 20%
@@ -1662,21 +1843,27 @@ par(mar=c(3.5, 3, 2, 0.5), mgp=c(2, 0.5, 0), xpd=TRUE)
 ## EQ
 
 plot(
-  x=0, y=0, xlab="", ylab="AICc weight", cex.sub=1.6,
+  x=0, y=0, xlab="", ylab="", cex.sub=1.6,
   xlim=c(0,7), ylim=c(0,1.2),
   las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
   xaxt="n",xaxs="i",yaxs="i", yaxt="n")
 
+rect(xleft=0, xright=3.5, ybottom=0, ytop=1, col=adjustcolor("royalblue", alpha.f=0.2), border=NA)
+rect(xleft=3.5, xright=7, ybottom=0, ytop=1, col=adjustcolor("blue", alpha.f=0.2), border=NA)
+
 addGrid(xmin=0, xmax=7, xintsmall=0.25, xintbig=1, ymin=0, ymax=1, yintsmall=0.05, yintbig=0.2, axisPlot=FALSE)
 axis(side=2, at=seq(from=0, to=1, by=0.2), labels=seq(from=0, to=1, by=0.2), las=2, tcl=-0.25)
-text(x=1:6, y=rep(-0.1, times=6), labels=models, cex=0.8,  xpd=TRUE)
+mtext(side=2, line=2, at=0.5, text="AICc weight", cex=1)
+
+segments(x0 = 3.5, y0=0, x1=3.5, y1=1, lty=2)
+text(x=1:6, y=rep(-0.1, times=6), labels=models, cex=0.9,  xpd=TRUE)
 
 for(i in 1:6){
   meanPt <- mean(as.numcharac(summaryEQFrugivory[, ncol(summaryEQFrugivory)-6+i]))
   sd <- sd(as.numcharac(summaryEQFrugivory[, ncol(summaryEQFrugivory)-6+i]))
   #sd <- sd/nrow(summaryEQFrugivory) #error not sd
   errorBars(location=i, meanPt=meanPt, barValue=sd, refUnit=1, col="black", minValue=0, maxValue=1, horiz=FALSE)
-  points(x=i, y=meanPt, pch=19, col=colourModels[i], xpd=TRUE)
+  points(x=i, y=meanPt, pch=19, col="black", xpd=TRUE)
   
 }
 
@@ -1688,11 +1875,11 @@ text(x=c(4,5,6), y=c(-0.2, -0.2),
        "r ~",
        round(mean(as.numcharac(summaryEQFrugivory$DDlingeo.b)), digit=3),
        round(mean(as.numcharac(summaryEQFrugivory$DDexpgeo.r)), digit=3)
-     ), cex=0.75, xpd=TRUE)
+     ), cex=0.85, xpd=TRUE)
 
-draw.circle(x=0.3,y=1.1,0.25, col=colNum[1], border=NA)
-text(x=0.3, y=1.1, labels="1", xpd=TRUE, col="white", font=2)
-text(x=3.5, y=1.1, labels="EQ", xpd=TRUE, col="black", font=2, cex=1.5)
+draw.circle(x=0.3,y=1.1,0.35, col=colourEQ, border=NA)
+#text(x=0.3, y=1.1, cex=1.15, labels="1", xpd=TRUE, col="white", font=2)
+text(x=0.75, y=1.1, labels="EQ", xpd=TRUE, col="black", font=2, cex=1.15, adj=0)
 
 ##-------------
 
@@ -1705,22 +1892,26 @@ plot(
   las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
   xaxt="n",xaxs="i",yaxs="i", yaxt="n")
 
+rect(xleft=0, xright=3.5, ybottom=0, ytop=1, col=adjustcolor("royalblue", alpha.f=0.2), border=NA)
+rect(xleft=3.5, xright=7, ybottom=0, ytop=1, col=adjustcolor("blue", alpha.f=0.2), border=NA)
+
 addGrid(xmin=0, xmax=7, xintsmall=0.25, xintbig=1, ymin=0, ymax=1, yintsmall=0.05, yintbig=0.2, axisPlot=FALSE)
 #axis(side=2, at=seq(from=0, to=1, by=0.2), labels=seq(from=0, to=1, by=0.2), las=2, tcl=-0.25)
-segments(x0 = -1, x1 = -1, y0 = 0, y1 = 1, lty = 2, col = colNum[2])
-text(x=1:6, y=rep(-0.1, times=6), labels=models, cex=0.8, xpd=TRUE)
+#segments(x0 = -1, x1 = -1, y0 = 0, y1 = 1, lty = 2, col = colourStriatum)
+segments(x0 = 3.5, y0=0, x1=3.5, y1=1, lty=2)
+text(x=1:6, y=rep(-0.1, times=6), labels=models, cex=0.75, xpd=TRUE)
 for(i in 1:6){
   
   meanPt <- mean(as.numcharac(summaryStriatumFrugivory[, ncol(summaryStriatumFrugivory)-6+i]))
   sd <- sd(as.numcharac(summaryStriatumFrugivory[, ncol(summaryStriatumFrugivory)-6+i]))
   #sd <- sd/nrow(summaryStriatumFrugivory) #error not sd
   errorBars(location=i, meanPt=meanPt, barValue=sd, refUnit=1, col="black", minValue=0, maxValue=1, horiz=FALSE)
-  points(x=i, y=meanPt, pch=19, col=colourModels[i], xpd=TRUE)
+  points(x=i, y=meanPt, pch=19, col="black", xpd=TRUE)
   
 }
-draw.circle(x=0.3,y=1.1,0.25, col=colNum[2], border=NA)
-text(x=0.3, y=1.1, labels="2", xpd=TRUE, col="white", font=2)
-text(x=3.5, y=1.1, labels="Striatum", xpd=TRUE, col="black", font=2, cex=1.5)
+draw.circle(x=0.3,y=1.1,0.35, col=colourStriatum, border=NA)
+#text(x=0.3, y=1.1, cex=1.15, labels="2", xpd=TRUE, col="white", font=2)
+text(x=0.75, y=1.1, labels="Striatum", xpd=TRUE, col="black", font=2, cex=1.15, adj=0)
 
 #b and r are the rate for density dependance (DD) of the speciation rate. If positive, positive DD, otherwise, negative.
 #add their values below:
@@ -1730,8 +1921,50 @@ text(x=c(4,5,6), y=c(-0.2, -0.2),
        "r ~",
        round(mean(as.numcharac(summaryStriatumFrugivory$DDlingeo.b)), digit=3),
        round(mean(as.numcharac(summaryStriatumFrugivory$DDexpgeo.r)), digit=3)
-     ), cex=0.75, xpd=TRUE)
+     ), cex=0.85, xpd=TRUE)
 
+##------------
+
+##------------
+
+#Hippocampus
+
+plot(
+  x=0, y=0, xlab="", ylab="", cex.sub=1.6,
+  xlim=c(0,7), ylim=c(0,1.2),
+  las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
+  xaxt="n",xaxs="i",yaxs="i", yaxt="n")
+
+rect(xleft=0, xright=3.5, ybottom=0, ytop=1, col=adjustcolor("royalblue", alpha.f=0.2), border=NA)
+rect(xleft=3.5, xright=7, ybottom=0, ytop=1, col=adjustcolor("blue", alpha.f=0.2), border=NA)
+
+addGrid(xmin=0, xmax=7, xintsmall=0.25, xintbig=1, ymin=0, ymax=1, yintsmall=0.05, yintbig=0.2, axisPlot=FALSE)
+# axis(side=2, at=seq(from=0, to=1, by=0.2), labels=seq(from=0, to=1, by=0.2), las=2, tcl=-0.25)
+segments(x0 = 3.5, y0=0, x1=3.5, y1=1, lty=2)
+text(x=1:6, y=rep(-0.1, times=6), labels=models, cex=0.9,  xpd=TRUE)
+for(i in 1:6){
+  
+  meanPt <- mean(as.numcharac(summaryHippocampusFrugivory[, ncol(summaryHippocampusFrugivory)-6+i]))
+  sd <- sd(as.numcharac(summaryHippocampusFrugivory[, ncol(summaryHippocampusFrugivory)-6+i]))
+  #sd <- sd/nrow(summaryHippocampusFrugivory) #error not sd
+  errorBars(location=i, meanPt=meanPt, barValue=sd, refUnit=1, col="black", minValue=0, maxValue=1, horiz=FALSE)
+  points(x=i, y=meanPt, pch=19, col="black", xpd=TRUE)
+  
+}
+draw.circle(x=0.3,y=1.1,0.35, col=colourHippocampus, border=NA)
+#text(x=0.3, y=1.1, cex=1.15, labels="4", xpd=TRUE, col="white", font=2)
+text(x=0.75, y=1.1, labels="Hippocampus", xpd=TRUE, col="black", font=2, cex=1.15, adj=0)
+
+
+#b and r are the rate for density dependance (DD) of the speciation rate. If positive, positive DD, otherwise, negative.
+#add their values below:
+
+text(x=c(4,5,6), y=c(-0.2, -0.2),
+     labels=c(
+       "r ~",
+       round(mean(as.numcharac(summaryHippocampusFrugivory$DDlingeo.b)), digit=3),
+       round(mean(as.numcharac(summaryHippocampusFrugivory$DDexpgeo.r)), digit=3)
+     ), cex=0.85, xpd=TRUE)
 ##------------
 
 ##-------------
@@ -1743,22 +1976,27 @@ plot(
   las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
   xaxt="n",xaxs="i",yaxs="i", yaxt="n")
 
+rect(xleft=0, xright=3.5, ybottom=0, ytop=1, col=adjustcolor("royalblue", alpha.f=0.2), border=NA)
+rect(xleft=3.5, xright=7, ybottom=0, ytop=1, col=adjustcolor("blue", alpha.f=0.2), border=NA)
+
 addGrid(xmin=0, xmax=7, xintsmall=0.25, xintbig=1, ymin=0, ymax=1, yintsmall=0.05, yintbig=0.2, axisPlot=FALSE)
-#axis(side=2, at=seq(from=0, to=1, by=0.2), labels=seq(from=0, to=1, by=0.2), las=2, tcl=-0.25)
-segments(x0 = -1, x1 = -1, y0 = 0, y1 = 1, lty = 2, col = colNum[3])
-text(x=1:6, y=rep(-0.1, times=6), labels=models, cex=0.8,  xpd=TRUE)
+axis(side=2, at=seq(from=0, to=1, by=0.2), labels=seq(from=0, to=1, by=0.2), las=2, tcl=-0.25)
+mtext(side=2, line=2, at=0.5, text="AICc weight", cex=1)
+#segments(x0 = -1, x1 = -1, y0 = 0, y1 = 1, lty = 2, col = colourMOB)
+segments(x0 = 3.5, y0=0, x1=3.5, y1=1, lty=2)
+text(x=1:6, y=rep(-0.1, times=6), labels=models, cex=0.9,  xpd=TRUE)
 for(i in 1:6){
   
   meanPt <- mean(as.numcharac(summaryMOBFrugivory[, ncol(summaryMOBFrugivory)-6+i]))
   sd <- sd(as.numcharac(summaryMOBFrugivory[, ncol(summaryMOBFrugivory)-6+i]))
   #sd <- sd/nrow(summaryMOBFrugivory) #error not sd
   errorBars(location=i, meanPt=meanPt, barValue=sd, refUnit=1, col="black", minValue=0, maxValue=1, horiz=FALSE)
-  points(x=i, y=meanPt, pch=19, col=colourModels[i], xpd=TRUE)
+  points(x=i, y=meanPt, pch=19, col="black", xpd=TRUE)
   
 }
-draw.circle(x=0.3,y=1.1,0.25, col=colNum[3], border=NA)
-text(x=0.3, y=1.1, labels="3", xpd=TRUE, col="white", font=2)
-text(x=3.5, y=1.1, labels="MOB", xpd=TRUE, col="black", font=2, cex=1.5)
+draw.circle(x=0.3,y=1.1,0.35, col=colourMOB, border=NA)
+#text(x=0.3, y=1.1, cex=1.15, labels="3", xpd=TRUE, col="white", font=2)
+text(x=0.75, y=1.1, labels="MOB", xpd=TRUE, col="black", font=2, cex=1.15, adj=0)
 
 #b and r are the rate for density dependance (DD) of the speciation rate. If positive, positive DD, otherwise, negative.
 #add their values below:
@@ -1768,84 +2006,9 @@ text(x=c(4,5,6), y=c(-0.2, -0.2),
        "r ~",
        round(mean(as.numcharac(summaryMOBFrugivory$DDlingeo.b)), digit=3),
        round(mean(as.numcharac(summaryMOBFrugivory$DDexpgeo.r)), digit=3)
-     ), cex=0.75, xpd=TRUE)
+     ), cex=0.85, xpd=TRUE)
 ##------------
 
-##------------
-
-#Hippocampus
-
-plot(
-  x=0, y=0, xlab="", ylab="AICc weight", cex.sub=1.6,
-  xlim=c(0,7), ylim=c(0,1.2),
-  las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
-  xaxt="n",xaxs="i",yaxs="i", yaxt="n")
-
-addGrid(xmin=0, xmax=7, xintsmall=0.25, xintbig=1, ymin=0, ymax=1, yintsmall=0.05, yintbig=0.2, axisPlot=FALSE)
-axis(side=2, at=seq(from=0, to=1, by=0.2), labels=seq(from=0, to=1, by=0.2), las=2, tcl=-0.25)
-text(x=1:6, y=rep(-0.1, times=6), labels=models, cex=0.8,  xpd=TRUE)
-for(i in 1:6){
-  
-  meanPt <- mean(as.numcharac(summaryHippocampusFrugivory[, ncol(summaryHippocampusFrugivory)-6+i]))
-  sd <- sd(as.numcharac(summaryHippocampusFrugivory[, ncol(summaryHippocampusFrugivory)-6+i]))
-  #sd <- sd/nrow(summaryHippocampusFrugivory) #error not sd
-  errorBars(location=i, meanPt=meanPt, barValue=sd, refUnit=1, col="black", minValue=0, maxValue=1, horiz=FALSE)
-  points(x=i, y=meanPt, pch=19, col=colourModels[i], xpd=TRUE)
-  
-}
-draw.circle(x=0.3,y=1.1,0.25, col=colNum[4], border=NA)
-text(x=0.3, y=1.1, labels="6", xpd=TRUE, col="white", font=2)
-text(x=3.5, y=1.1, labels="Hippocampus", xpd=TRUE, col="black", font=2, cex=1.5)
-
-
-#b and r are the rate for density dependance (DD) of the speciation rate. If positive, positive DD, otherwise, negative.
-#add their values below:
-
-text(x=c(4,5,6), y=c(-0.2, -0.2),
-     labels=c(
-       "r ~",
-       round(mean(as.numcharac(summaryHippocampusFrugivory$DDlingeo.b)), digit=3),
-       round(mean(as.numcharac(summaryHippocampusFrugivory$DDexpgeo.r)), digit=3)
-     ), cex=0.75, xpd=TRUE)
-##------------
-
-##-------------
-#Neocortex
-
-plot(
-  x=0, y=0, xlab="", ylab="", cex.sub=1.6,
-  xlim=c(0,7), ylim=c(0,1.2),
-  las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
-  xaxt="n",xaxs="i",yaxs="i", yaxt="n")
-
-addGrid(xmin=0, xmax=7, xintsmall=0.25, xintbig=1, ymin=0, ymax=1, yintsmall=0.05, yintbig=0.2, axisPlot=FALSE)
-#axis(side=2, at=seq(from=0, to=1, by=0.2), labels=seq(from=0, to=1, by=0.2), las=2, tcl=-0.25)
-segments(x0 = -1, x1 = -1, y0 = 0, y1 = 1, lty = 2, col = colNum[5])
-text(x=1:6, y=rep(-0.1, times=6), labels=models, cex=0.8, xpd=TRUE)
-for(i in 1:6){
-  
-  meanPt <- mean(as.numcharac(summaryNeocortexFrugivory[, ncol(summaryNeocortexFrugivory)-6+i]))
-  sd <- sd(as.numcharac(summaryNeocortexFrugivory[, ncol(summaryNeocortexFrugivory)-6+i]))
-  #sd <- sd/nrow(summaryNeocortexFrugivory) #error not sd
-  errorBars(location=i, meanPt=meanPt, barValue=sd, refUnit=1, col="black", minValue=0, maxValue=1, horiz=FALSE)
-  points(x=i, y=meanPt, pch=19, col=colourModels[i], xpd=TRUE)
-  
-}
-draw.circle(x=0.3,y=1.1,0.25, col=colNum[5], border=NA)
-text(x=0.3, y=1.1, labels="5", xpd=TRUE, col="white", font=2)
-text(x=3.5, y=1.1, labels="Neocortex", xpd=TRUE, col="black", font=2, cex=1.5)
-
-#b and r are the rate for density dependance (DD) of the speciation rate. If positive, positive DD, otherwise, negative.
-#add their values below:
-
-text(x=c(4,5,6), y=c(-0.2, -0.2),
-     labels=c(
-       "r ~",
-       round(mean(as.numcharac(summaryNeocortexFrugivory$DDlingeo.b)), digit=3),
-       round(mean(as.numcharac(summaryNeocortexFrugivory$DDexpgeo.r)), digit=3)
-     ), cex=0.75, xpd=TRUE)
-
-##-------------
 
 ##-------------
 #Cerebellum 
@@ -1856,22 +2019,26 @@ plot(
   las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
   xaxt="n",xaxs="i",yaxs="i", yaxt="n")
 
+rect(xleft=0, xright=3.5, ybottom=0, ytop=1, col=adjustcolor("royalblue", alpha.f=0.2), border=NA)
+rect(xleft=3.5, xright=7, ybottom=0, ytop=1, col=adjustcolor("blue", alpha.f=0.2), border=NA)
+
 addGrid(xmin=0, xmax=7, xintsmall=0.25, xintbig=1, ymin=0, ymax=1, yintsmall=0.05, yintbig=0.2, axisPlot=FALSE)
 #axis(side=2, at=seq(from=0, to=1, by=0.2), labels=seq(from=0, to=1, by=0.2), las=2, tcl=-0.25)
-segments(x0 = -1, x1 = -1, y0 = 0, y1 = 1, lty = 2, col = colNum[6])
-text(x=1:6, y=rep(-0.1, times=6), labels=models, cex=0.8,  xpd=TRUE)
+#segments(x0 = -1, x1 = -1, y0 = 0, y1 = 1, lty = 2, col = colourCerebellum)
+segments(x0 = 3.5, y0=0, x1=3.5, y1=1, lty=2)
+text(x=1:6, y=rep(-0.1, times=6), labels=models, cex=0.9,  xpd=TRUE)
 for(i in 1:6){
   
   meanPt <- mean(as.numcharac(summaryCerebellumFrugivory[, ncol(summaryCerebellumFrugivory)-6+i]))
   sd <- sd(as.numcharac(summaryCerebellumFrugivory[, ncol(summaryCerebellumFrugivory)-6+i]))
   #sd <- sd/nrow(summaryCerebellumFrugivory) #error not sd
   errorBars(location=i, meanPt=meanPt, barValue=sd, refUnit=1, col="black", minValue=0, maxValue=1, horiz=FALSE)
-  points(x=i, y=meanPt, pch=19, col=colourModels[i], xpd=TRUE)
+  points(x=i, y=meanPt, pch=19, col="black", xpd=TRUE)
   
 }
-draw.circle(x=0.3,y=1.1,0.25, col=colNum[6], border=NA)
-text(x=0.3, y=1.1, labels="7", xpd=TRUE, col="white", font=2)
-text(x=3.5, y=1.1, labels="Cerebellum", xpd=TRUE, col="black", font=2, cex=1.5)
+draw.circle(x=0.3,y=1.1,0.35, col=colourCerebellum, border=NA)
+#text(x=0.3, y=1.1, cex=1.15, labels="6", xpd=TRUE, col="white", font=2)
+text(x=0.75, y=1.1, labels="Cerebellum", xpd=TRUE, col="black", font=2, cex=1.15, adj=0)
 
 
 #b and r are the rate for density dependance (DD) of the speciation rate. If positive, positive DD, otherwise, negative.
@@ -1882,8 +2049,56 @@ text(x=c(4,5,6), y=c(-0.2, -0.2),
        "r ~",
        round(mean(as.numcharac(summaryCerebellumFrugivory$DDlingeo.b)), digit=3),
        round(mean(as.numcharac(summaryCerebellumFrugivory$DDexpgeo.r)), digit=3)
-     ), cex=0.75, xpd=TRUE)
+     ), cex=0.85, xpd=TRUE)
 ###----------------------
+
+
+
+##-------------
+#Neocortex
+
+plot(
+  x=0, y=0, xlab="", ylab="", cex.sub=1.6,
+  xlim=c(0,7), ylim=c(0,1.2),
+  las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
+  xaxt="n",xaxs="i",yaxs="i", yaxt="n")
+
+rect(xleft=0, xright=3.5, ybottom=0, ytop=1, col=adjustcolor("royalblue", alpha.f=0.2), border=NA)
+rect(xleft=3.5, xright=7, ybottom=0, ytop=1, col=adjustcolor("blue", alpha.f=0.2), border=NA)
+
+addGrid(xmin=0, xmax=7, xintsmall=0.25, xintbig=1, ymin=0, ymax=1, yintsmall=0.05, yintbig=0.2, axisPlot=FALSE)
+#axis(side=2, at=seq(from=0, to=1, by=0.2), labels=seq(from=0, to=1, by=0.2), las=2, tcl=-0.25)
+#segments(x0 = -1, x1 = -1, y0 = 0, y1 = 1, lty = 2, col = colourNeocortex)
+segments(x0 = 3.5, y0=0, x1=3.5, y1=1, lty=2)
+text(x=1:6, y=rep(-0.1, times=6), labels=models, cex=0.75, xpd=TRUE)
+for(i in 1:6){
+  
+  meanPt <- mean(as.numcharac(summaryNeocortexFrugivory[, ncol(summaryNeocortexFrugivory)-6+i]))
+  sd <- sd(as.numcharac(summaryNeocortexFrugivory[, ncol(summaryNeocortexFrugivory)-6+i]))
+  #sd <- sd/nrow(summaryNeocortexFrugivory) #error not sd
+  errorBars(location=i, meanPt=meanPt, barValue=sd, refUnit=1, col="black", minValue=0, maxValue=1, horiz=FALSE)
+  points(x=i, y=meanPt, pch=19, col="black", xpd=TRUE)
+  
+}
+draw.circle(x=0.3,y=1.1,0.35, col=colourNeocortex, border=NA)
+#text(x=0.3, y=1.1, cex=1.15, labels="5", xpd=TRUE, col="white", font=2)
+text(x=0.75, y=1.1, labels="Neocortex", xpd=TRUE, col="black", font=2, cex=1.15, adj=0)
+
+#b and r are the rate for density dependence (DD) of the speciation rate. If positive, positive DD, otherwise, negative.
+#add their values below:
+
+text(x=c(4,5,6), y=c(-0.2, -0.2),
+     labels=c(
+       "r ~",
+       round(mean(as.numcharac(summaryNeocortexFrugivory$DDlingeo.b)), digit=3),
+       round(mean(as.numcharac(summaryNeocortexFrugivory$DDexpgeo.r)), digit=3)
+     ), cex=0.85, xpd=TRUE)
+
+##-------------
+
+par(mar=c(0, 0, 0, 0), mgp=c(2, 0.5, 0), xpd=TRUE)
+emptyPlot()
+legend(x=0.25, y=1, yjust=1, horiz=TRUE, fill=c(adjustcolor("royalblue", alpha.f=0.2), adjustcolor("blue", alpha.f=0.2)), legend=c("NO species interaction", "Species interaction"), bty="n", cex=1.35)
 ```
 
 \newpage
@@ -1926,7 +2141,7 @@ lines(x=thresholdPresenceRange, y=howManyDifferent)
 
 ### Sensitivity to variation in trait value
 
-```{r figvariabilitydata, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=10, fig.height=4, fig.cap="Supplementary Figure. Variation in trait values among reference datasets | Colours are associated to a specific trait: Brain, Hippocampus, Neocortex and Cerebellum refers to the volume of the area (in mm$^{3}$), Body refers to the body mass (in g), Frug. indicates the frugivory rate and Fol. indicates the folivory rate. (A) Correlation: The points depict the coefficient of correlation while the bar depicts the 95% confidence interval (CI). (B) Variability: The points depict the average of the mean ratio $m$ of the absolute of differences with paired values; If we reduce the equation, we have $m=|(v_{1}^{2}-v_{2}^{2})|/(2v_{1}v_{2})$, where $v_{1}$ and $v_{2}$ are the two paired values from two different datasets and are different from 0. If $v_{1}$ and $v_{2}$ equal 0, then $m=0$. If $v_{1}$ or $v_{2}$ equals 0 (case for the diet rates constrained between [0,1]), then we fixed the null value to 0.01. The bar depicts the standard error. (C) Repeatability: Repeatability was assessed for traits that were included in at least three datasets. Prior calculation, traits were pondered *within* species by the *within* species max value. The point represents the mean repeatability $r$ calculated as $\\sigma^{2}_{between}/(\\sigma^{2}_{between}+\\sigma^{2}_{within})$, with the $\\sigma^{2}_{between}$ and $\\sigma^{2}_{within}$ corresponding the variance *between* or *within* species. The bar depicts the standard error. For all graphics, sample sizes are indicated above the upper value of the CI/error interval."}
+```{r figvariabilitydata, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=10, fig.height=4, fig.cap="Variation in trait values among reference datasets | Colours are associated to a specific trait: Brain, Hippocampus, Neocortex and Cerebellum refers to the volume of the area (in mm$^{3}$), Body refers to the body mass (in g), Frug. indicates the frugivory rate and Fol. indicates the folivory rate. (A) Correlation: The points depict the coefficient of correlation while the bar depicts the 95% confidence interval (CI). (B) Variability: The points depict the average of the mean ratio $m$ of the absolute of differences with paired values; If we reduce the equation, we have $m=|(v_{1}^{2}-v_{2}^{2})|/(2v_{1}v_{2})$, where $v_{1}$ and $v_{2}$ are the two paired values from two different datasets and are different from 0. If $v_{1}$ and $v_{2}$ equal 0, then $m=0$. If $v_{1}$ or $v_{2}$ equals 0 (case for the diet rates constrained between [0,1]), then we fixed the null value to 0.01. The bar depicts the standard error. (C) Repeatability: Repeatability was assessed for traits that were included in at least three datasets. Before calculation, traits were pondered *within* species by the *within* species max value. The point represents the mean repeatability $r$ calculated as $\\sigma^{2}_{between}/(\\sigma^{2}_{between}+\\sigma^{2}_{within})$, with the $\\sigma^{2}_{between}$ and $\\sigma^{2}_{within}$ corresponding the variance *between* or *within* species. The bar depicts the standard error. For all graphics, sample sizes are indicated above the upper value of the CI/error interval."}
 
 layout(mat=t(c(1,2,3)), widths=c(5,5,3), heights=c(5))
 par(mar=c(4, 3, 2, 1), mgp=c(2, 0.5, 0), xpd=TRUE)
@@ -1953,7 +2168,7 @@ addToY <- c(
   rep(0, times=1)
 )
 
-colourWhatCompared <-  c("gray", brewer.pal(n = 9, name = "Pastel1")[c(1:5)], "black", brewer.pal(n = 9, name = "Pastel1")[7])#c(brewer.pal(n = length(unique(whatCompared)) - 1, name = "Pastel1"), "darkgrey")
+colourWhatCompared <-  c("gray", colourHippocampusbis, colourNeocortexbis, colourCerebellumbis, colourStriatumbis, "orange", "black", "lightgray")#c(brewer.pal(n = length(unique(whatCompared)) - 1, name = "Pastel1"), "darkgrey")
 
 ###------
 ### CORRELATION
@@ -2697,12 +2912,14 @@ summarySensitivityDiversification[,-c(1,2)] <- t(apply(summarySensitivityDiversi
 
 (a) Phylogenetic regressions: selection gradient
 
-
 ```{r tabledfsensitivity, include=TRUE}
 summarySensitivityGradient <- summarySensitivityGradient[-(1:4),]
+summarySensitivityGradient[,1] <- gsub("Overlap", "\\% of overlappend range", summarySensitivityGradient[,1])
+summarySensitivityGradient[,1] <- gsub("N co-occurrence", "Number of sympatric frugivores", summarySensitivityGradient[,1])
+
 rownames(summarySensitivityGradient) <- NULL
 knitr::kable(summarySensitivityGradient, escape=TRUE, booktabs = TRUE, #Remove brain 1:3
-             caption = "Sensitivity analysis of phylogenetic regressions to assess the relationship between speies sympatry and relative brain sizes | Depicted is the minimum and maximum of estimates when one observation was removed at a time (DfBetas) or when varying the used phylogenetic tree and the data sampling (Phylogeny/Data).") %>% 
+             caption = "Sensitivity analysis of phylogenetic regressions to assess the relationship between relative brain sizes and species sympatry | Depicted is the minimum and maximum of estimates when one observation was removed at a time (DfBetas) or when varying the used phylogenetic tree and the data sampling (Phylogeny/Data).") %>% 
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::kable_styling(latex_options="scale_down") %>%
   kableExtra::kable_styling(latex_options = "HOLD_position") %>%
@@ -2718,7 +2935,7 @@ knitr::kable(summarySensitivityGradient, escape=TRUE, booktabs = TRUE, #Remove b
 summarySensitivityDiversification <- summarySensitivityDiversification[-(1:3),]
 rownames(summarySensitivityDiversification) <- NULL
 knitr::kable(summarySensitivityDiversification[,-c(3,4,5)], escape=TRUE, booktabs = TRUE, #Remove brain 1:3
-             caption = "Sensitivity analysis of phylogenetic regressions to detect the assess the relationship between species diversifition and relative brain sizes| Depicted is the minimum and maximum of estimates when varying the used phylogenetic tree and the data sampling (Phylogeny/Data), or when the sampling fraction varied (Sampling fraction).") %>% 
+             caption = "Sensitivity analysis of phylogenetic regressions to detect the assess the relationship between species diversification and relative brain sizes | Depicted is the minimum and maximum of estimates when varying the used phylogenetic tree and the data sampling (Phylogeny/Data), or when the sampling fraction varied (Sampling fraction).") %>% 
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::kable_styling(latex_options="scale_down") %>%
   kableExtra::kable_styling(latex_options = "HOLD_position") %>%
@@ -2730,8 +2947,11 @@ knitr::kable(summarySensitivityDiversification[,-c(3,4,5)], escape=TRUE, booktab
 (b) Phylogenetic regressions: diversification and sympatry
 
 ```{r tabledfsensitivity3, include=TRUE}
+summarySensitivitydiversificationAndSympatry[,1] <- gsub("Overlap", "\\% of overlappend range", summarySensitivitydiversificationAndSympatry[,1])
+summarySensitivitydiversificationAndSympatry[,1] <- gsub("N co-occurrence", "Number of sympatric frugivores", summarySensitivitydiversificationAndSympatry[,1])
+
 knitr::kable(summarySensitivitydiversificationAndSympatry, escape=TRUE, booktabs = TRUE,
-             caption = "Sensitivity analysis of phylogenetic regressions to assess the selection diversificationAndSympatry direction | Depicted is the minimum and maximum of estimates when one observation was removed at a time (DfBetas) or when varying the used phylogenetic tree and the data sampling (Phylogeny/Data)") %>% 
+             caption = "Sensitivity analysis of phylogenetic regressions to assess the relationship between species diversification and sympatry | Depicted is the minimum and maximum of estimates when one observation was removed at a time (DfBetas) or when varying the used phylogenetic tree and the data sampling (Phylogeny/Data)") %>% 
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::kable_styling(latex_options="scale_down") %>%
   kableExtra::add_header_above(c("Model:" = 2, "DfBetas" = 3, "Phylogeny/Data" = 3, "Sampling fraction"))

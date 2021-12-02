@@ -1,6 +1,7 @@
 ---
 output: pdf_document
 #word_document
+geometry: "left=3cm,right=3cm,top=1cm,bottom=2cm"
 
 header-includes:
   - \usepackage{fontawesome5}
@@ -27,7 +28,14 @@ To the Editorial Board of \textit{`r journal`}
 \end{flushleft}
 
 \begin{flushright}
-On the `r Sys.Date()`
+\faEnvelope \hspace{0.01in} \href{mailto:benjamin.robira@normalesup.org}{benjamin.robira@normalesup.org}\\
+\faHome \hspace{0.01in} Université de Montpellier/CEFE/CNRS\\
+\faMapPin \hspace{0.01in} 1919, route de Mende, 34293 Montpellier cedex 5\\
+
+\hfill
+
+On the `r Sys.Date()`,\\
+
 \end{flushright}
 
 \hfill
@@ -40,19 +48,19 @@ Dear `r editor`,
 
 We hereby submit our manuscript entitled **"`r title`"**, by `r listOfAuthors`, for consideration as a Research Article to *`r journal`*. 
 
-|   The road to understanding the evolutionary history and significance of cognition is still little paved. Currently formulated theories generally oppose social to ecological drivers of cognition and are oten framed within a foraging-related context. These theories, nonetheless, give a priority to the challenges an individual faces with regards to its ecological environment, or its conspecifics from a same group and/or species. Yet, space is also shared with other species that might also shape the environment and be competitors or cooperators. Thus, it is likely that cognate species, with which dietary overlap occurs, are likely to affect the social and ecological environment a species evolves in. This should loop onto the selective pressures that apply to cognition. This facet remained unexplored.
+|   The road to understanding the evolutionary history of cognition is still little paved. Currently formulated theories generally oppose social and ecological drivers of cognition and are often framed within a foraging-related context. These theories, nonetheless, primarily focus on the challenges an individual faces with regards to its food spatio-temporal distribution, or to its conspecifics from a same group and/or species. Space is also shared with other species with similar ecological niche that might also shape the environment and be competitors or cooperators. Thus, it is likely that cognate species that share diet are likely to affect the social and ecological environment a species evolves in. This should therefore loop onto the selective pressures that apply to cognition. This facet remained unexplored.
 
-|   To help filling this gap, we provide a meta-analysis to investigate the role of sympatry in shaping animals' the size of different brain areas, and animals' evolutionary success. In particular, we focus on frugivorous primates because the consumption of fruits is highly tightened to advanced cognitive skills. Using recently developed evolutionary phylogenetic models accounting for competition or not with sympatric species, we retrace the evolution of the size of brain areas related to foraging or note. We also correlate brain size, diversification rate (a proxy for evolutionary success), and sympatry intensity.
+|   To help filling this gap, we perform a global-scale analysis to investigate the role of sympatry in shaping the size of different brain areas in animals, and shaping their evolutionary success. In particular, we focus on frugivorous primates because the consumption of fruits is highly tightened to advanced cognitive skills. Using recently developed phylogenetic models accounting for competition or not with sympatric species, we retrace the evolution of the size of brain areas related to foraging or not. We also correlate brain size, diversification rate (a proxy for evolutionary success), and sympatry intensity.
 
-|  We show that the evolutionary history of brain areas associated to foraging tasks is more accurately summarised when using competitive models. In particular, sympatry negatively affects their relative size. We additionally show that, despite these brain sizes are not related to diversification rate, this latter is reduced when sympatry rates increases. Altogether, these findings suggest that sympatry is associated to a relaxed selection for bigger brain, or even a positive selection for smaller brain. We speculate that this is due to an overcomplexification of the environment.
+|  We show that the evolutionary history of brain areas associated to foraging tasks is more accurately described by competitive models. In particular, sympatry negatively affects their relative size. We additionally show that, even if these brain sizes are not related to diversification rate, this latter is reduced when sympatry rates increases. Altogether, these findings suggest that sympatry is associated to a relaxed selection for bigger brain, or even a positive selection for smaller brain. We speculate that this is due to an over-complexification of the environment, which makes cognition not advantageous anymore.
 
-|  This study enlarges our understanding on the effect of space use and distribution in animal cognition, and show unprecedent evidence of direct and/or inderect effect of competition on cognition evolution, questioning proximate mechanisms at play. We strongly believe that this stands as an important complementary piece of meta-analyses that were already published in your journal that will be of interest to empiricists and theoreticians from ecological and evolutionary fields. On behalf of all authors, I certify that this is a completely novel contribution that has not been submitted elsewhere, and that all authors approved the manuscript and its submission to *`r journal`*.
+|  This study enlarges our understanding on the effect of space use and species distribution in animal cognition. It shows unprecedent evidence of direct and/or indirect effect of competition on cognition evolution, questioning proximate mechanisms at play. We strongly think that this stands as an important complementary piece of global analyses that were already published in your journal that will be of interest to empiricists and theoreticians from ecological and evolutionary fields. On behalf of all authors, I certify that this is a completely novel contribution that has not been submitted elsewhere, and that all authors approved the manuscript and its submission to *`r journal`*.
 
 \hfill
 
 \begin{flushright}
 Benjamin Robira, on behalf of all authors.\\
-\faEnvelope \hspace{0.01in} \href{mailto:benjamin.robira@normalesup.org}{benjamin.robira@normalesup.org}\\
+
 \vspace{0.1in}
 \includegraphics[width=0.55\textwidth]{T:/Saved_PhD/CV/signature.png}\\
 \end{flushright}
