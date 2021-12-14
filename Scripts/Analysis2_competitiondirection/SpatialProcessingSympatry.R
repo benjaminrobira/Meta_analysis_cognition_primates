@@ -342,7 +342,7 @@ for(i in 1:nrow(speciesLabels)){#for all species for which phylogeny is known
                   if(!is.null(intersectingArea)){
                     intersectingArea <- spTransform(intersectingArea, CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"))
                     speciesRangeTransitory <- spTransform(speciesRangeTransitory, CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"))#the initially correct proj
-                    overlapPair[j] <- geosphere::areaPolygon(intersectingArea)/geosphere::areaPolygon(speciesRangeTransitory)#counSpecies
+                    overlapPair[j] <- geosphere::areaPolygon(intersectingArea)/geosphere::areaPolygon(speciesRangeTransitory)#count Species
                   }
                 }
               }
