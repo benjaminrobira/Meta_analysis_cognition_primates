@@ -1,0 +1,1184 @@
+---
+title: "Supporting Information to: Species sympatry shapes brain size evolution in Primates"
+# date: "`r format(Sys.time(), '%B %d, %Y')`"
+
+#I follow: https://stackoverflow.com/questions/52918716/authors-and-affiliations-in-the-yaml-of-rmarkdown for author display
+author:
+#   - name: Benjamin Robira
+#     email: benjamin.robira@normalesup.org
+#     institute: [CEFE, MH]
+#     correspondence: true
+#   - name: Benoît Perez-Lamarque
+#     email: benoit.perez@ens.psl.eu
+#     institute: [ENS, MNHN]
+# institute:
+#   - CEFE: Centre d’Écologie Fonctionnelle et Évolutive, Université de Montpellier & CNRS, Montpellier, France.
+#   - MH: Eco-anthropologie (EA), Muséum National d'Histoire Naturelle, CNRS, Université de Paris, Musée de l'Homme, Paris, France.
+#   - ENS: Institut de Biologie de l’École Normale Supérieure (IBENS), École Normale Supérieure, CNRS, INSERM, Université PSL, Paris, France.
+#   - MNHN: Institut de Systématique, Évolution, Biodiversité (ISYEB), Muséum National d’Histoire Naturelle, CNRS, Sorbonne Université, EPHE, Université des Antilles, Paris, France.
+
+# output: 
+#  #      - '--lua-filter=scholarly-metadata.lua'
+#  #      - '--lua-filter=author-info-blocks.lua'
+#  bookdown::pdf_book:
+#  #bookdown::word_document2:
+#    number_sections: false
+#    toc: false
+#    #citation_package: natbib
+#    latex_engine: pdflatex
+#    fig_caption: true
+#    pandoc_args:
+#      - '--lua-filter=scholarly-metadata.lua'
+#      - '--lua-filter=author-info-blocks.lua'
+# 
+# bibliography: bibliographyarticlepackage.bib
+# csl: nature.csl
+# #biblio-style: apa
+# always_allow_html: true
+# link-citations: yes
+
+output: 
+ #      - '--lua-filter=scholarly-metadata.lua'
+ #      - '--lua-filter=author-info-blocks.lua'
+ bookdown::pdf_book:
+ #bookdown::word_document2:
+   number_sections: false
+   toc: false
+   citation_package: biblatex
+   latex_engine: pdflatex
+   fig_caption: true
+   #pandoc_args:
+     #- '--lua-filter=scholarly-metadata.lua'
+     #- '--lua-filter=author-info-blocks.lua'
+ keep_tex: true
+always_allow_html: true
+
+
+bibliography: bibliographyarticlepackage.bib
+biblio-style: apa
+biblatexoptions: [natbib=true]
+
+urlcolor: blue
+filecolor: blue
+linkcolor: blue
+fontsize: 12pt
+
+header-includes:
+  - \usepackage{lettrine}
+  # - \usepackage[nolists, nomarkers,tablesfirst]{endfloat} # For figures and tables at end
+  - \usepackage{lineno} # For line numbering
+  - \linenumbers # For line numbering
+  - \usepackage{setspace}\doublespacing
+  - \usepackage{fontawesome} #for fa symbols
+  - \usepackage{tcolorbox}
+  #- \pagenumbering{gobble} #for no page numbering
+  - \pagenumbering{arabic} #for no page numbering
+  - \setlength{\parskip}{0em} #to remove line gaps
+  - \DeclareUnicodeCharacter{2212}{-}
+  - \usepackage{caption}
+  - \captionsetup[figure]{font=small}
+  - \newcommand{\beginsupplement}{
+      \setcounter{table}{0}  
+      \renewcommand{\thetable}{S\arabic{table}} 
+      \setcounter{figure}{0} 
+      \renewcommand{\thefigure}{S\arabic{figure}}
+    } 
+  - \usepackage{titling}
+  - \pretitle{
+    \begin{flushleft}
+    \rule[-0.15in]{0.25\linewidth}{0.8ex}
+    \vspace{-0.8ex}
+    \hrule
+    \vspace{0.3in}
+    \begin{LARGE}
+    \noindent
+    \textbf
+    }
+  - \posttitle{
+    \end{LARGE}\newline
+    \rule[-0.15in]{0.25\linewidth}{0.8ex}
+    \hrule
+    \end{flushleft}
+    \vspace{0.2in}}
+---
+
+<!-- ------------------------------------------------------------------- -->
+<!-- ---------------------      LAYOUT       --------------------------- -->
+<!-- ------------------------------------------------------------------- -->
+
+<!-- TO PUT THE LETTRINE -->
+
+\newcommand{\initial}[1]{%
+	\lettrine[lraise=0, loversize=0.5,nindent=0em]{
+		\color{black}
+     		{\textsc{#1}}}{}}
+
+<!-- TO CREATE grey BOX -->
+
+\newtcolorbox{graybox}{
+  colback=lightgray!25,
+  colframe=lightgray!25,
+  coltext=black,
+  boxsep=3pt,
+  arc=0pt}
+
+<!-- ------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------- -->
+
+```{r setup, include=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(include=FALSE, echo=FALSE, message=FALSE)
+knitr::opts_chunk$set(dpi=300) # Fig. resolution and size out.width = '100%', 
+knitr::opts_chunk$set(fig.pos = 'p'#, fig.align = 'center'
+                      ) # Places figures on pages separate from text, centered
+knitr::opts_chunk$set(fig.env="figure") # Latex Fig. environment
+knitr::opts_knit$set(eval.after = "fig.cap") #To insert R code into R Fig. caption
+```
+
+
+```{r, echo=FALSE, results= 'hide'}
+#Import librairies
+
+library(readr)
+
+#Plot
+library(RColorBrewer)
+library(tidyr)
+library(stringr)
+library(svMisc)
+library(plotrix)
+library(circlize)
+
+#Spatial
+library(rworldmap) # World map
+library(cleangeo) #to clean it otherwise issues with intersection
+library(maps)
+library(rgeos) #for readOGR; gArea/gCentroid...
+library(sf) #for intersection
+library(rgdal)
+library(geosphere)
+
+#Phylogeny
+library(phytools)
+library(ape)
+library(phylolm)
+
+#Segmentation
+library(strucchange)
+
+library(tidyverse)
+#Import own function
+source("T:/Saved_PhD/Empirical_analysis/Scripts&Functions/Functions/toolbox.R", local = knitr::knit_global())
+
+#Create citation fusion between articles and package (based on toolbox function)
+citeR(
+bibliographyArticle="T:/Saved_PhD/Library_general/libraryMdf.bib",
+bibliographyOutput="C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Article/bibliographyarticlepackage.bib",
+rgeos,
+geosphere,
+phytools,
+geiger,
+RPANDA,
+caper,
+neurobase,
+misc3d,
+phylolm,
+nlme,
+MCMCglmm,
+coda,
+strucchange
+)
+
+#Load environments
+load("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/REnvironments/Data_spatial_primate.RData")
+load("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/REnvironments/geography_traits_biogeobears.RData")
+
+load("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/REnvironments/PGLSdiversification_withautocorr.RData")
+load("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/REnvironments/PGLSdirectionSelection.RData")
+load("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/REnvironments/PGLSdiversificationAndSympatry.RData")
+load("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/REnvironments/RDataforAppendix.RData")
+```
+
+
+# Data variability
+
+We present below the results of the assessments of data variability depending on the considered thresholds (for frugivory, folivory or overlap) and the data set that is used, specifically related to distribution ranges, or anatomical/behavioural traits.
+
+## Sensitivity to variation in distribution range
+
+The chosen biogeographic areas correspond to Central America, the North and the South of South America respectively, West Africa, Central Africa, and East/South Africa, East and West of Madagascar respectively, West Asia, Central/East Asia, South Asia, and the Asian Islands. The chosen scale for the areas is large because (i) retracing the history of a large number of areas necessitates considerable computational means. In addition, this drastically increases the computational time for fitting the phylogenetic models of brain trait evolution too. Furthermore (ii), all species and particularly primate species suffer(ed) from recent extinction [@pavoine2019mammal], with a reduction of ranging areas at an unprecedented speed rate. Finer geographic characterization would therefore give too much weight to such anthropogenic effect that recently altered species distribution [e.g. evidenced on the North American fauna in @pineda2021mammal]. 
+
+|   The overlap between a species range and a biogeographic area was used to assess whether the species occupied the area or not. We chose overlaps of `r geographicThresholdVector[1]*100` (low threshold) or `r geographicThresholdVector[2]*100`% (high threshold), to consider a species presence within a given area. We present now variations that occurred depending on the considered threshold.
+ 
+```{r figcomparison, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=4, fig.height=4, fig.cap=paste("Percentage of species with differently identified biogeographic areas in function of the overlap threshold (reference is an overlap threshold of ", geographicThresholdVector[2]/2*100,"%) | For a given species, a biogeographic area difference means that at least one biogeographic area considers absence/presence of the species while this was not the case with the ", geographicThresholdVector[2]/2*100, "% threshold. ", geographicThresholdVector[2]/2*100, "% was chosen as the reference since halfway to the chosen maximum of ", geographicThresholdVector[2]*100, "%. ", geographicThresholdVector[2]*100, "% was chosen as the maximum because based on current observations, a species occupied at best three different biogeographic areas.", sep="")}
+
+par(mar=c(3, 5, 2, 1), mgp=c(2, 0.5, 0), xpd=TRUE)
+plot(
+  x=0, y=0, xlab="Overlap threshold", ylab="Percentage of species with different biogeographic areas\ncompared to when a 15% overlap is used", 
+  xlim=c(thresholdPresenceRange[1],thresholdPresenceRange[length(thresholdPresenceRange)]), ylim=c(0,0.4),
+  las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
+  xaxt="n",xaxs="i",yaxs="i", yaxt="n")
+
+addGrid(xmin=5/100, xmax=30/100, xintsmall=2.5/200, xintbig=5/100, ymin=0, ymax=0.4, yintsmall=0.01, yintbig=0.1, axisPlot=FALSE)
+axis(side=2, at=seq(from=0, to=1, by=0.2), labels=seq(from=0, to=1, by=0.2), las=1, tcl=-0.25)
+axis(side=1, at=thresholdPresenceRange, labels=thresholdPresenceRange, las=1, tcl=-0.25)
+
+points(x=thresholdPresenceRange, y=howManyDifferent, pch=19, xpd=TRUE)
+lines(x=thresholdPresenceRange, y=howManyDifferent)
+
+
+```
+
+\clearpage
+
+## Sensitivity to variation in trait value
+
+```{r figvariabilitydata, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=10.5, fig.height=4, fig.cap="Variation in trait values among reference datasets | Colours are associated with a specific trait: Brain, Hippocampus, Neocortex, and Cerebellum refers to the volume of the area (in mm$^{3}$), Body refers to the body mass (in g), Frug. indicates the frugivory rate and Fol. indicates the folivory rate. (A) Correlation: The points depict the coefficient of correlation while the bar depicts the 95% confidence interval (CI). (B) Variability: The points depict the average of the mean ratio $m$ of the absolute of differences with paired values; If we reduce the equation, we have $m=|(v_{1}^{2}-v_{2}^{2})|/(2v_{1}v_{2})$, where $v_{1}$ and $v_{2}$ are the two paired values from two different datasets and are different from 0. If $v_{1}$ and $v_{2}$ equal 0, then $m=0$. If $v_{1}$ or $v_{2}$ equals 0 (case for the diet rates constrained between [0,1]), then we fixed the null value to 0.01. The bar depicts the standard error. (C) Repeatability: Repeatability was assessed for traits that were included in at least three datasets. Before calculation, traits were pondered *within* species by the *within* species max value. The point represents the mean repeatability $r$ calculated as $\\sigma^{2}_{between}/(\\sigma^{2}_{between}+\\sigma^{2}_{within})$, with the $\\sigma^{2}_{between}$ and $\\sigma^{2}_{within}$ corresponding the variance *between* or *within* species. The bar depicts the standard error. For all graphics, sample sizes are indicated above the upper value of the CI/error interval."}
+
+layout(mat=t(c(1,2,3)), widths=c(5,5,3), heights=c(5))
+par(mar=c(4, 3, 2, 1), mgp=c(2, 0.5, 0), xpd=TRUE)
+
+cexText <-  c(
+  rep(0.8, times=10),
+  rep(0.4, times=3),
+  rep(0.8, times=6),
+  rep(0.4, times=3),
+  rep(1, times=1),
+  rep(0.8, times=6),
+  rep(1, times=1),
+  rep(1, times=1)
+)
+
+addToY <- c(
+  rep(0, times=10),
+  rep(0, times=3),
+  rep(0, times=6),
+  rep(0, times=3),
+  rep(0, times=1),
+  rep(0, times=6),
+  rep(-0.05, times=1),
+  rep(0, times=1)
+)
+
+colourWhatCompared <-  c("gray", colourHippocampusbis, colourNeocortexbis, colourCerebellumbis, colourStriatumbis, "orange", "black", "lightgray")#c(brewer.pal(n = length(unique(whatCompared)) - 1, name = "Pastel1"), "darkgrey")
+
+###------
+## CORRELATION
+
+#Vectors to save results
+barLower <- rep(NA, times=length(colNumTest))
+barUpper <- rep(NA, times=length(colNumTest))
+meanCoeff <- rep(NA, times=length(colNumTest))
+N <- rep(NA, times=length(colNumTest))
+
+for (i in 1:length(colNumTest)){
+  test <- #abs(as.numeric(as.character(summaryData[,colNumTest[i]])) - as.numeric(as.character(summaryData[,colNumToCompare[i]])))
+    cor.test(as.numeric(as.character(summaryData[,colNumTest[i]])), 
+             as.numeric(as.character( summaryData[,colNumToCompare[i]])), method="pearson")
+  barLower[i] <- test$conf.int[1]
+  barUpper[i] <- test$conf.int[2]
+  meanCoeff[i] <- test$estimate[1]
+  N[i] <- nrow(summaryData[!is.na(summaryData[,colNumTest[i]])&!is.na(summaryData[,colNumToCompare[i]]),])
+}
+
+plot(
+  x=0, y=0, xlab="", ylab="Coefficient of correlation", cex.lab=1.5, 
+  xlim=c(0,length(meanCoeff)+1), ylim=c(0.6,1),
+  las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
+  xaxt="n",xaxs="i",yaxs="i", yaxt="n")
+
+addGrid(xmin=0, xmax=length(meanCoeff), xintsmall=0.5, xintbig=1, ymin=0.6, ymax=1, yintsmall=0.025, yintbig=0.1, axisPlot=FALSE)
+axis(side=2, at=seq(from=0.6, to=1, by=0.2), labels=seq(from=0.6, to=1, by=0.2), las=2, tcl=-0.25, cex.axis=1.25)
+addLabel(x=0.05, y=0.075, label="A", radius=0.75, circle=TRUE, circle.bg="black", font.col="white")
+
+#Comparison
+whatCompared <- c(
+  rep("Brain", times=10),
+  "Hippocampus",
+  "Hippocampus",
+  "Hippocampus",
+  "Neocortex",
+  "Neocortex",
+  "Neocortex",
+  "Neocortex",
+  "Neocortex",
+  "Neocortex",
+  "Cerebellum",
+  "Cerebellum",
+  "Cerebellum",
+  "Striatum",
+  rep("Body", times=6),
+  "Frug.",
+  "Fol."
+)
+
+#Plot legend of what is compared in coloured rectangles
+whereToPlot <- as.data.frame(table(whatCompared))
+whereToPlot$loc <- whereToPlot$Freq/2
+
+#Colour rectangle to indicate what is compared
+refLoc=0
+for (i in 1:length(whatCompared)){
+  rect(xleft=i-1,
+       xright=i,
+       ybottom=0.6-0.05*0.4,#-0.05,
+       ytop=0.6,#0,
+       border=colourWhatCompared[which(unique(whatCompared)==whatCompared[i])],
+       col=colourWhatCompared[which(unique(whatCompared)==whatCompared[i])],
+       xpd=TRUE
+  )
+  errorBars(location=i-0.5, meanPt=meanCoeff[i], refUnit=1, col="black", minValue=0, maxValue=1, upperBarValue=barUpper[i], lowerBarValue=barLower[i], horiz=FALSE, symmetrical=FALSE)
+  points(x=i-0.5, y=meanCoeff[i], pch=19, col=colourWhatCompared[which(unique(whatCompared)==whatCompared[i])],
+         xpd=TRUE)
+  text(x=i-0.5, y=barUpper[i]+0.015, labels=N[i], pch=19, col=colourWhatCompared[which(unique(whatCompared)==whatCompared[i])], cex=0.8,xpd=TRUE)
+  
+  if(i==length(whatCompared)|whatCompared[i]!=whatCompared[i+1]){
+    refLoc=refLoc+whereToPlot$loc[whereToPlot[,1]==whatCompared[i]]
+    if(whereToPlot$loc[whereToPlot[,1]==whatCompared[i]]<=1){
+      segments(x0=refLoc, x1=refLoc, y0=0.6-0.025*0.4,#-0.025,
+               y1=0.6-0.075*0.4 + addToY[i]*0.4,#-0.075,
+               col=colourWhatCompared[which(unique(whatCompared)==whatCompared[i])], xpd=TRUE)
+      text(x=refLoc, y=0.6-0.1*0.4 + addToY[i]*0.4,#-0.1, 
+           labels=whereToPlot[whereToPlot[,1]==whatCompared[i],1], col=colourWhatCompared[which(unique(whatCompared)==whatCompared[i])], cex=cexText[i], xpd=TRUE)
+    }
+    else{
+      text(x=refLoc, y=0.6-0.025*0.4,#-0.025, 
+           labels=whereToPlot[whereToPlot[,1]==whatCompared[i],1], col="black", cex=cexText[i], xpd=TRUE)
+    }
+    refLoc=refLoc+whereToPlot$loc[whereToPlot[,1]==whatCompared[i]]#add second time for having complete rectangle
+  }
+}
+
+###------
+## VARIABILITY
+
+#cbind(colnames(summaryData[colNumTest]), colnames(summaryData[colNumToCompare]))
+#Vectors to save results
+barLower <- rep(NA, times=length(colNumTest))
+barUpper <- rep(NA, times=length(colNumTest))
+meanCoeff <- rep(NA, times=length(colNumTest))
+N <- rep(NA, times=length(colNumTest))
+
+for (i in 1:length(colNumTest)){
+  transitoryinit <- as.data.frame(cbind(as.numeric(as.character(summaryData[,colNumTest[i]])),as.numeric(as.character(summaryData[,colNumToCompare[i]]))))
+  transitoryinit <- transitoryinit[!is.na(transitoryinit[,1])&!is.na(transitoryinit[,2]),]
+  
+  # transitoryinit <- transitoryinit/max(apply(transitoryinit, 2, max))
+  
+  transitory <- apply(transitoryinit, 1, function(v){abs(v[1]**2 - v[2]**2)/2/v[1]/v[2]}) #note= (abs((v1-v2))/v1 + abs((v2-v1))/v2)/2
+  
+  #When rate is 0 for both, gives NA, so to transform to 0
+  transitory[is.na(transitory)] <- 0
+  
+  transitory[!is.finite(transitory)] <- apply(transitoryinit[!is.finite(transitory),], 1, function(x) abs(max(x)**2 - 1**2)/2/max(x)/1)
+  
+  barLower[i] <- mean(transitory) - sd(transitory)/sqrt(length(transitory))#min(transitory)
+  barUpper[i] <- mean(transitory) + sd(transitory)/sqrt(length(transitory))#max(transitory)
+  meanCoeff[i] <- mean(transitory)
+  N[i] <- length(transitory)
+  
+}
+
+ymax <- 1#round((barUpper)/10)*10
+
+plot(
+  x=0, y=0, xlab="", ylab="Variability", cex.lab=1.5,
+  xlim=c(0,length(meanCoeff)+1), ylim=c(0,ymax),
+  las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
+  xaxt="n",xaxs="i",yaxs="i", yaxt="n")
+
+addGrid(xmin=0, xmax=length(meanCoeff), xintsmall=0.5, xintbig=1, ymin=0, ymax=ymax, yintsmall=0.05, yintbig=0.2, axisPlot=FALSE)
+axis(side=2, at=seq(from=0, to=ymax, by=0.2), labels=seq(from=0, to=ymax, by=0.2), las=2, tcl=-0.25, cex.axis=1.25)
+addLabel(x=0.05, y=0.075, label="B", radius=0.75, circle=TRUE, circle.bg="black", font.col="white")
+
+#Comparison
+whatCompared <- c(
+  rep("Brain", times=10),
+  "Hippocampus",
+  "Hippocampus",
+  "Hippocampus",
+  "Neocortex",
+  "Neocortex",
+  "Neocortex",
+  "Neocortex",
+  "Neocortex",
+  "Neocortex",
+  "Cerebellum",
+  "Cerebellum",
+  "Cerebellum",
+  "Striatum",
+  rep("Body", times=6),
+  "Frug.",
+  "Fol."
+)
+
+#Plot legend of what is compared in coloured rectangles
+whereToPlot <- as.data.frame(table(whatCompared))
+whereToPlot$loc <- whereToPlot$Freq/2
+
+#Colour rectangle to indicate what is compared
+refLoc=0
+
+for (i in 1:length(whatCompared)){
+  rect(xleft=i-1,
+       xright=i,
+       ybottom=-0.05,
+       ytop=0,
+       border=colourWhatCompared[which(unique(whatCompared)==whatCompared[i])],
+       col=colourWhatCompared[which(unique(whatCompared)==whatCompared[i])],
+       xpd=TRUE
+  )
+  errorBars(location=i-0.5, meanPt=meanCoeff[i], refUnit=1, col="black", minValue=0, maxValue=1, upperBarValue=barUpper[i], lowerBarValue=barLower[i], horiz=FALSE, symmetrical=FALSE)
+  points(x=i-0.5, y=meanCoeff[i], pch=19, col=colourWhatCompared[which(unique(whatCompared)==whatCompared[i])],
+         xpd=TRUE)
+  text(x=i-0.5, y=barUpper[i]+0.05, labels=N[i], pch=19, col=colourWhatCompared[which(unique(whatCompared)==whatCompared[i])], cex=0.8,xpd=TRUE)
+  
+  if(i==length(whatCompared)|whatCompared[i]!=whatCompared[i+1]){
+    refLoc=refLoc+whereToPlot$loc[whereToPlot[,1]==whatCompared[i]]
+    if(whereToPlot$loc[whereToPlot[,1]==whatCompared[i]]<=1){
+      segments(x0=refLoc, x1=refLoc, y0=-0.025,
+               y1=-0.075 + addToY[i],
+               col=colourWhatCompared[which(unique(whatCompared)==whatCompared[i])], xpd=TRUE)
+      text(x=refLoc, y=-0.1  + addToY[i], 
+           labels=whereToPlot[whereToPlot[,1]==whatCompared[i],1], col=colourWhatCompared[which(unique(whatCompared)==whatCompared[i])], cex=cexText[i], xpd=TRUE)
+    }
+    else{
+      text(x=refLoc, y=-0.025, 
+           labels=whereToPlot[whereToPlot[,1]==whatCompared[i],1], col="black", cex=cexText[i], xpd=TRUE)
+    }
+    refLoc=refLoc+whereToPlot$loc[whereToPlot[,1]==whatCompared[i]]#add second time for having complete rectangle
+  }
+}
+
+##----
+# Repeatability of measure
+
+
+colRep <- list(c(4, 14, 17, 22, 23),
+               c(5, 15, 18),
+               c(6, 12, 16, 19),
+               c(7, 13, 20),
+               #c(8, 21),
+               c(24, 25, 26, 27)#,
+               #c(29, 33),
+               #c(30, 34)
+)
+
+
+ymax <- 1
+
+plot(
+  x=0, y=0, xlab="", ylab="Repeatability", cex.lab=1.5,
+  xlim=c(0,length(colRep)+1), ylim=c(0,ymax),
+  las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
+  xaxt="n",xaxs="i",yaxs="i", yaxt="n")
+
+addGrid(xmin=0, xmax=length(colRep), xintsmall=0.5, xintbig=1, ymin=0, ymax=ymax, yintsmall=0.05, yintbig=0.2, axisPlot=FALSE)
+axis(side=2, at=seq(from=0, to=ymax, by=0.2), labels=seq(from=0, to=ymax, by=0.2), las=2, tcl=-0.25, cex.axis=1.25)
+addLabel(x=0.05*2, y=0.075, label="C", radius=0.75*length(colRep)/length(meanCoeff)*2, circle=TRUE, circle.bg="black", font.col="white")
+
+#Comparison
+whatCompared2 <- c(
+  "Brain",
+  "Hippocampus",
+  "Neocortex",
+  "Cerebellum",
+  #"Striatum",
+  "Body"#,
+  #"Fol.",
+  #"Frug."
+)
+
+for(i in 1:length(colRep)){
+  dataRdc <- summaryData[, colRep[[i]]]
+  
+  #Normalise by max for all species (i.e. by row)
+  maxVector <- apply(dataRdc, 1, function(x)max(x, na.rm=TRUE))
+  maxVector[!is.finite(maxVector)] <- NA
+  dataRdc <- apply(dataRdc, 2, function(x) x/maxVector) 
+  dataRdc <- as.data.frame(dataRdc)
+  
+  #Create common ID
+  dataRdc$id <- 1:nrow(dataRdc)
+  
+  #Switch to 1 row=1value
+  dataRdc <- pivot_longer(dataRdc, col=1:(ncol(dataRdc)-1), names_to="Dataset", values_to="Value")
+  
+  #Remove NAs
+  dataRdc <- dataRdc[!is.na(dataRdc$Value),]
+  
+  #Keep thos with multiple obs
+  whichKeep <- dataRdc %>% count(id)
+  whichKeep <- whichKeep$id[whichKeep$n > 2]
+  
+  dataRdc <- dataRdc[dataRdc$id %in% whichKeep,]
+  dataRdc <- pivot_wider(dataRdc, names_from="Dataset", values_from="Value")
+  
+  withinVariance <- apply(dataRdc[,2:ncol(dataRdc)], 1, function(x) var(x, na.rm=TRUE))
+  betweenVariance <- var(apply(dataRdc[,2:ncol(dataRdc)], 1, function(x) mean(x, na.rm=TRUE)), na.rm=TRUE)
+  
+  repeatability <- betweenVariance/(betweenVariance + withinVariance)
+  
+  #Plot mean +/- SE
+  errorBars(location=i-0.5, meanPt=mean(repeatability),
+            refUnit=1, col="black", minValue=0, maxValue=1, upperBarValue=mean(repeatability)+sd(repeatability)/sqrt(length(repeatability)),
+            lowerBarValue=mean(repeatability)-sd(repeatability)/sqrt(length(repeatability)), horiz=FALSE, symmetrical=FALSE)
+  
+  points(x=i-0.5, y=mean(repeatability), pch=19, col=colourWhatCompared[which(unique(whatCompared)==whatCompared2[i])],
+         xpd=TRUE)
+  text(x=i-0.5, y=mean(repeatability)+sd(repeatability)/sqrt(length(repeatability))+0.05, labels=length(repeatability), pch=19, col=colourWhatCompared[which(unique(whatCompared)==whatCompared2[i])], cex=0.8, xpd=TRUE)
+  
+  # library(rptR)
+  # repeatabilityTest <- rpt(Value ~ (1 | id), grname = "id", data = dataRdc, datatype = "Proportion", 
+  #   nboot = 10, npermut = 0)
+  # Too few data to do that way
+  
+}
+
+
+```
+
+```{r figdata, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=20, fig.height=25, fig.cap="Data availability | Black boxes indicate data availability while grey boxes indicate absence of data."}
+# 
+# plot(
+#   x=0, y=0, xlab="", ylab="", cex.sub=1.6,
+#   xlim=c(-10,ncol(dataForSample)-1), ylim=c(0,nrow(dataForSample)),
+#   las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
+#   xaxt="n",xaxs="i",yaxs="i", yaxt="n")
+# 
+# text(x=rep(-2, times=nrow(dataForSample)), y=1:nrow(dataForSample)-0.5, labels=dataForSample$SpeciesForPhylo, xpd=TRUE, cex=0.4)
+# text(x=rep(-0, times=nrow(dataForSample)), y=1:nrow(dataForSample)-0.5, labels=dataForSample$Species, xpd=TRUE, cex=0.4)
+# text(x=3:ncol(dataForSample)-1.5, y=rep(nrow(dataForSample)+3, times=length(3:ncol(dataForSample))), labels=colnames(dataForSample)[3:ncol(dataForSample)], xpd=TRUE, cex=0.4, srt=45)
+# 
+# for(i in 1:nrow(dataForSample)){
+#   for(j in 3:ncol(dataForSample)){
+#     if(!is.na(dataForSample[i,j])&dataForSample[i,j]==1){
+#       rect(
+#         xleft=j-2,
+#         xright=j-1,
+#         ybottom=i-1,
+#         ytop=i,
+#         border="black",
+#         col="black"
+#       )
+#     } else{
+#       rect(
+#         xleft=j-2,
+#         xright=j-1,
+#         ybottom=i-1,
+#         ytop=i,
+#         border="lightgrey",
+#         col="lightgrey"
+#       )
+#     }
+#   }
+# }
+# 
+# addGrid(xmin=1, xmax=ncol(dataForSample), xintsmall=1, xintbig=1, ymin=0, ymax=nrow(dataForSample), yintsmall=1, yintbig=1, colsmall="white", colbig="white", axisPlot=FALSE)
+# 
+# 
+# 
+# plot(
+#   x=0, y=0, xlab="", ylab="", cex.sub=1.6,
+#   xlim=c(-10,ncol(dataForSample)-1), ylim=c(0,nrow(dataForSample)),
+#   las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
+#   xaxt="n",xaxs="i",yaxs="i", yaxt="n")
+# 
+# text(x=rep(-2, times=nrow(dataForSample)), y=1:nrow(dataForSample)-0.5, labels=dataForSample$SpeciesForPhylo, xpd=TRUE, cex=0.4)
+# text(x=rep(-0, times=nrow(dataForSample)), y=1:nrow(dataForSample)-0.5, labels=dataForSample$Species, xpd=TRUE, cex=0.4)
+# text(x=3:ncol(dataForSample)-1.5, y=rep(nrow(dataForSample)+3, times=length(3:ncol(dataForSample))), labels=colnames(dataForSample)[3:ncol(dataForSample)], xpd=TRUE, cex=0.4, srt=45)
+# 
+# for(i in 1:nrow(dataForSample)){
+#   for(j in 3:ncol(dataForSample)){
+#     if(!is.na(dataForSample[i,j])&dataForSample[i,j]==1){
+#       rect(
+#         xleft=j-2,
+#         xright=j-1,
+#         ybottom=i-1,
+#         ytop=i,
+#         border="black",
+#         col="black"
+#       )
+#     } else{
+#       rect(
+#         xleft=j-2,
+#         xright=j-1,
+#         ybottom=i-1,
+#         ytop=i,
+#         border="lightgrey",
+#         col="lightgrey"
+#       )
+#     }
+#   }
+# }
+# 
+# addGrid(xmin=1, xmax=ncol(dataForSample), xintsmall=1, xintbig=1, ymin=0, ymax=nrow(dataForSample), yintsmall=1, yintbig=1, colsmall="white", colbig="white", axisPlot=FALSE)
+
+dataForSample <- dataForSample[dataForSample$SpeciesForPhylo != "Homo_sapiens",]
+dataForSample <- dataForSample[order(dataForSample$SpeciesForPhylo),]
+
+nbPlot=4
+
+layout(mat=t(c(1:nbPlot)), widths=rep(5, times=nbPlot), heights=c(5*nbPlot))
+par(mar=c(0, 0, 3, 0.5), mgp=c(2, 0.5, 0), xpd=TRUE)
+
+for(p in 1:nbPlot){
+  dataForSample_rdcplot <- dataForSample[(1+(p-1)*nrow(dataForSample)/nbPlot):(1+(p)*nrow(dataForSample)/nbPlot),]
+  plot(
+    x=0, y=0, xlab="", ylab="", cex.sub=1.6,
+    xlim=c(-10,ncol(dataForSample_rdcplot)-1), ylim=c(0,nrow(dataForSample_rdcplot)+3),
+    las=1, type="n", tcl=-0.25, frame.plot=FALSE, 
+    xaxt="n",xaxs="i",yaxs="i", yaxt="n")
+  
+  text(x=rep(-5, times=nrow(dataForSample_rdcplot)), y=1:nrow(dataForSample_rdcplot)-0.5, labels=dataForSample_rdcplot$SpeciesForPhylo, xpd=TRUE, cex=1.1)
+  text(x=rep(-0.5, times=nrow(dataForSample_rdcplot)), y=1:nrow(dataForSample_rdcplot)-0.5, labels=dataForSample_rdcplot$Species, xpd=TRUE, cex=1.1)
+  text(x=3:ncol(dataForSample_rdcplot)-1.5, y=rep(nrow(dataForSample_rdcplot)+2, times=length(3:ncol(dataForSample_rdcplot))), labels=colnames(dataForSample_rdcplot)[3:ncol(dataForSample_rdcplot)], xpd=TRUE, cex=1.1, srt=45)
+  
+  for(i in 1:nrow(dataForSample_rdcplot)){
+    for(j in 3:ncol(dataForSample_rdcplot)){
+      if(!is.na(dataForSample_rdcplot[i,j])&dataForSample_rdcplot[i,j]==1){
+        rect(
+          xleft=j-2,
+          xright=j-1,
+          ybottom=i-1,
+          ytop=i,
+          border="black",
+          col="black"
+        )
+      } else{
+        rect(
+          xleft=j-2,
+          xright=j-1,
+          ybottom=i-1,
+          ytop=i,
+          border="lightgrey",
+          col="lightgrey"
+        )
+      }
+    }
+  }
+  
+  addGrid(xmin=1, xmax=ncol(dataForSample_rdcplot), xintsmall=1, xintbig=1, ymin=0, ymax=nrow(dataForSample_rdcplot), yintsmall=1, yintbig=1, colsmall="white", colbig="white", axisPlot=FALSE)
+  #if(p==2){cat('\r\n\r\n')} #Allows to consider plot as a new Fig. at each step of the loop
+}
+
+```
+
+
+In addition to variability between datasets, we varied thresholds used to classify species diet. Illustratively, for example, if a species reached 30% of frugivory, and 65% of folivory (the rest being due, for instance, to insectivory), then, it would be categorized as, “frugivorous” if low thresholds are considered, or as “folivorous” in case high thresholds are considered. If we suppose now another species with 30% of frugivory and 50% of folivory, but considered by [@decasien2017primate] as frugivorous, then, the species would be “frugivorous” for low threshold, and still “frugivorous” with high thresholds.
+
+|   Frugivory was prioritized over folivory because we considered that since fruits are a highly palatable food source, it would be the key item that drives the foraging strategy (and associate consequence(s) on brain selection), even if less consumed. Additionally, to consider frugivory, we used a lower rate than for folivory for two reasons. First, such a static rate does not reflect potential seasonality in fruit-eating [e.g. @masi2009western], which is generally shorter, hence a lower overall frugivory rate. Second, the frugivory rate is likely to be underestimated in part because primates generally spend more time feeding on leaves than fruits, while rates are often based on relative feeding time, or observation frequency at the individual or group unit of feeding events. Finally, the methodology to obtain this rate could additionally vary (e.g. in addition to the two aforementioned estimations, one could also rely on the proportion of species targeted for their fruits/leaves). For all these reasons, we used two threshold levels (low, `r frugivoryThresholdVector[1]`%, or high, `r frugivoryThresholdVector[2]`%) to classify a species as frugivorous, as well as two threshold levels (low, `r folivoryThresholdVector[1]`%, or high, `r folivoryThresholdVector[2]`%) to classify a species as folivorous. 
+
+
+## Dealing with data uncertainty and parameterisation sensitivity in models of trait evolution
+
+\hfill
+
+In this analysis, uncertainty can stem from two sources. First, the evolutionary history (phylogeny, diet, and ranging) was reconstructed based on Bayesian inference. They are susceptible to be uncertain at some points. Thus, we used a consensus phylogenetic tree from the 10kTrees project, which averages the phylogeny among 1000 possible estimated trees, given that running the models on several trees was too computationally demanding. In addition, we repeated diet and ranging history reconstructions `r numberSimulations` times. 
+
+|   Second, for each species, trait estimates could vary slightly among datasets (see Fig. Appendix Fig. S2). Particularly, although correlations between measures from the different datasets seem good enough, it existed a variation in absolute measurements (Fig. Appendix Fig. S2). We are aware that this could contribute to blurring results [@Wartel2019; @Hooper2021]. In addition, this study is based on several arbitrary thresholds, namely (i) to assess species sympatry (see Appendix Fig. S1) and (ii) to assess the species dietary guild (see Fig. Appendix Fig. S2) which can cause sensitivity of the results to the chosen parameters. To account for these three sources of variability, we refitted several times the six models of trait evolution (BM, OU, EB, MC, DD$_{lin}$ and DD$_{exp}$) with (1) random samples of the dietary and brain traits in case of multiple values available (i.e. equal probability for each possible value to be selected), (2) used the low or high threshold for assessing frugivory, folivory, and species sympatry, and (3) various biogeography and dietary evolutionary history reconstructions.
+
+|   Eventually, it means that the results for each model represent the average of `r numberSimulations` (uncertainty on diet/ranging evolutionary reconstructions) x `r randomSampling` (uncertainty in brain/diet rate data) x `r length(geographicThresholdVector)` (geographic overlap threshold defining sympatry) x `r length(frugivoryThresholdVector)` (frugivory threshold) x `r length(folivoryThresholdVector)` (folivory threshold) = `r numberSimulations*randomSampling*length(geographicThresholdVector)*length(frugivoryThresholdVector)*length(folivoryThresholdVector)` sub-models. We stopped computations when the optimization of the likelihood was excessively long (> 1 week). The final sample size thus was of `r min(totModelsWorked[-2])*10` models that covered all the ranges of tested parameters.
+\clearpage
+
+## Primate diversification rate over time
+
+Lineage-specific diversification rates were estimated using an updated version of the *ClaDS* algorithm [@maliet2019model] boosted for computational speed based on data augmentation techniques [@maliet2020fast]. This Bayesian approach considers speciation rate heterogeneity by modelling small shifts in the rate at speciation events. In other words, the two new lineages are assumed to inherit new speciation rates that are sampled from a log-normal distribution with an expected mean value $log(\alpha \lambda)$ (where $\lambda$ represents the initial speciation rate and $\alpha$ is a trend parameter), and a standard deviation $\sigma$. Three independent chains were run until their convergence was validated by a Gelman-Rubin diagnostic criterion [@gelman1992inference]. The analysis relied on the use of a consensus tree of primate phylogeny from [@dos2018using]. The latter provides a robust phylogenetic tree for 367 primate species (while the 10kTrees primate phylogeny has only `r length(phylo_init$tip.label)` species). 
+
+|   Such analysis necessarily depends on a prior estimation of the sample representativeness, that is, the fraction of sampled taxa (present in the phylogenetic tree) among all possible existing ones. @estrada2017impending estimated that, given current knowledge, the primate clade should be composed of 504 species. This means that the current sampling fraction is around 73%. We thus parameterized the *ClaDS* algorithm with this value for the estimated sampling fraction. Yet, given that the extant number of primate species is subject to controversy, and because the estimated sampling fraction may affect diversification rate estimations, we replicated our analyses with a range of sampling fractions from 95% down to 60%. At the end of each run, we extracted the maximum of the *a posteriori* net diversification rate of each extant primate species, as well as the mean diversification rate (given all lineages) through time. 
+
+```{r figdiversificationTime, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=4.5, fig.height=4.5, fig.cap="\\footnotesize Net diversification rate over time in the Primate taxon | The average diversification rate estimated based on an assumed sampling fraction of primate species ranging from 60 to 95% (at a step of 10%; then 5% from 90%) is depicted by the plain line. The grey background depicts the standard deviation. The two breakpoints, depicted by the plain dots and the vertical dotted bars, were estimated based on a three-linear regression segmentation using the *strucchange* package [@strucchange1; @strucchange2; @strucchange3; see the vignette package for statistical details]. The three fitted regressions are displayed by the dashed lines. The choice of two breakpoints was first assessed by choosing the number of breakpoints minimizing the Bayesian Information Criterion. The identified breakpoints, coining with previous studies [@arbour2017major; @springer2012macroevolutionary], correspond to the emergence of more favourable environmental conditions stemming from a progressive warming after harsh temperature cooling that started earlier in the Oligocene until reaching a mid-Miocene Climatic Optimum [@fleagle2006biogeography]."}
+
+##Plot diversification in function of time
+xmin=floor(min(aggregatedSpeciationTime.mean[,1]/10))*10
+xmax=ceiling(max(aggregatedSpeciationTime.mean[,1]/10))*10
+ymin=floor(min(aggregatedSpeciationTime.mean[,2]*10))/10
+ymax=ceiling(max(aggregatedSpeciationTime.mean[,2]*10))/10
+
+plot(0, 0, xlab="Time before present (Myr)", ylab="Diversification rate",
+     xlim=c(xmin, xmax), ylim=c(ymin, ymax),
+     las=1, type="n", tcl=-0.25, bty="n",
+     xaxt="n",xaxs="i",yaxs="i", yaxt="n",
+     xpd=TRUE)
+
+#Add grid
+addGrid(
+  xmin=xmin, xmax=xmax, xintsmall=(xmax-xmin)/20, xintbig=(xmax-xmin)/5,
+  ymin=ymin, ymax=ymax, yintsmall=(ymax-ymin)/20, yintbig=(ymax-ymin)/5,
+  axisPlot=TRUE, round=TRUE, digit=c(2,2))
+axis(side=1, at=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), labels=round(seq(from=xmin, to=xmax, by=(xmax-xmin)/5), digit=1), las=1, tcl=-0.25)
+
+
+#Add background se
+polygon(
+  x=c(aggregatedSpeciationTime.mean[,1], rev(aggregatedSpeciationTime.mean[,1])),
+  y=c(aggregatedSpeciationTime.mean[,2]-aggregatedSpeciationTime.sd[,2], rev(aggregatedSpeciationTime.mean[,2]+aggregatedSpeciationTime.sd[,2])),
+  col=grey(level=0.5, alpha=0.15),
+  border=NA
+)
+
+#Add mean
+lines(aggregatedSpeciationTime.mean[,1], aggregatedSpeciationTime.mean[,2])
+
+library(strucchange)
+# confidence interval
+colnames(aggregatedSpeciationTime.mean) <- c("Time", "Diversification")
+
+yFirst <- aggregatedSpeciationTime.mean$Diversification[which((abs(aggregatedSpeciationTime.mean$Time+dateFirstRupt[2]))==min(abs(aggregatedSpeciationTime.mean$Time+dateFirstRupt[2])))]
+ySecond <- aggregatedSpeciationTime.mean$Diversification[which((abs(aggregatedSpeciationTime.mean$Time+dateSecondRupt[2]))==min(abs(aggregatedSpeciationTime.mean$Time+dateSecondRupt[2])))]
+
+# Rupture points and (CI too reduced to be plotted)
+points(c(-dateFirstRupt[2], -dateSecondRupt[2]), c(yFirst, ySecond), pch=19)
+# errorBars(location=c(yFirst), 
+#          meanPt=c(-dateFirstRupt[2]),
+#          barValue=c(0,0), refUnit=1, 
+#          minValue=-80, maxValue=80, 
+#          upperBarValue=c(-dateFirstRupt[1]), lowerBarValue=c(-dateFirstRupt[3]), 
+#          col="black", lty=1, 
+#          horiz=TRUE, symmetrical=FALSE)
+
+#Vertical bars
+segments(
+  x0=c(-dateFirstRupt[2], -dateSecondRupt[2]),
+  x1=c(-dateFirstRupt[2], -dateSecondRupt[2]),
+  y0=c(0,0),
+  y1=c(yFirst, ySecond),
+  lty=3
+)
+mtext(side=1, at=c(-dateFirstRupt[2], -dateSecondRupt[2]), line=0, text=c(-dateFirstRupt[2], -dateSecondRupt[2]), cex=0.8)
+
+#three fitted regressions
+fm1 <- lm(Diversification ~ breakfactor(bp.resp, breaks = 2)*Time, data=aggregatedSpeciationTime.mean)
+
+reg1 <- summary(fm1)$coefficients[1,1] + aggregatedSpeciationTime.mean$Time*summary(fm1)$coefficients[4,1]
+reg2 <- summary(fm1)$coefficients[1,1] + summary(fm1)$coefficients[2,1] + aggregatedSpeciationTime.mean$Time*(summary(fm1)$coefficients[4,1] + summary(fm1)$coefficients[5,1])
+reg3 <- summary(fm1)$coefficients[1,1] + summary(fm1)$coefficients[3,1] + aggregatedSpeciationTime.mean$Time*(summary(fm1)$coefficients[4,1] + summary(fm1)$coefficients[6,1])
+
+lines(aggregatedSpeciationTime.mean$Time, reg1, lty = 2)
+lines(aggregatedSpeciationTime.mean$Time[aggregatedSpeciationTime.mean$Time > -40], reg2[aggregatedSpeciationTime.mean$Time > -40], lty = 2)#truncaturate for readability
+lines(aggregatedSpeciationTime.mean$Time[aggregatedSpeciationTime.mean$Time > -16], reg3[aggregatedSpeciationTime.mean$Time > -16], lty = 2)#truncaturate for readability
+```
+
+# Phylogenetic regressions: results, stability, and assumption
+
+## Model results
+
+<!-- We present below the visual fit of phylogenetic regressions. -->
+
+(a) Phylogenetic regressions: effect of sympatry on brain sizes
+
+\clearpage
+
+```{=latex}
+\begin{figure}
+\centering\includegraphics[width=0.65\linewidth]{C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Plots/selectionGradientPGLS.pdf}
+\caption{\scriptsize{Phylogenetic regressions of relative brain size as a function of sympatry level indices | Left graphics show the effect of the number of sympatric species on the brain size, when the effect of the average percentage of overlapping range with sympatric frugivorous species  is averaged, while the right graphics do the opposite. Raw data are depicted with points, while the segments that link them correspond to the projected phylogenetic tree. The model fit is shown with the plain black line and the associated 95\% confidence interval is depicted by the transparent grey background.}}\label{fig:figRegressionGradient}
+\end{figure}
+```
+\clearpage
+
+(b) Phylogenetic regressions: diversification and brain size
+
+```{=latex}
+\begin{figure}
+\centering\includegraphics[width=0.7\linewidth]{C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Plots/diversificationPGLS.pdf}
+\caption{\scriptsize{Phylogenetic regressions of the net diversification rate as a function of the size of the different brain areas | Raw data are depicted with points, while the segments that link them correspond to the projected phylogenetic tree. The model fit is shown with the plain black line and the associated 95\% highest density posterior is depicted by the transparent grey background.}}\label{fig:figRegressionDiversification}
+\end{figure}
+```
+
+\clearpage
+
+(c) Phylogenetic regressions: diversification and sympatry
+
+```{=latex}
+\begin{figure}
+\centering\includegraphics[width=0.65\linewidth]{C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates/Plots/diversificationAndSympatryPGLS.pdf}
+\caption{\scriptsize{Phylogenetic regressions of the net diversification rate as a function of sympatry level indices | The left graphic depicts the effect of the number of sympatric species on the brain size, when the effect of the average percentage of overlapping range with sympatric frugivorous species is averaged, while the right graphic does the opposite. Raw data are depicted with points, while the segments that link them correspond to the projected phylogenetic tree. The model fit is shown with the plain black line and the associated 95\% confidence interval is depicted by the transparent grey background.}}\label{fig:figRegressionDiversificationSympatry}
+\end{figure}
+```
+
+\clearpage
+
+(d) Forest plot of estimates
+
+```{r forestPlot, fig.pos='H', include=TRUE, warning = FALSE, message = FALSE, fig.width=6.25, fig.height=6.25, fig.cap="Forest plot of the phylogenetic regressions | CI: 95\\% Confidence Interval, HDP: Highest Posterior Density (when brain size is the predictor, they are barely visible because reduced). Plain dots depict negative effects, open dots depict positive effects. "}
+
+source("T:/Saved_PhD/Empirical_analysis/Scripts&Functions/Functions/toolbox.R")
+par(mar=c(8, 8, 0.5, 2), mgp=c(2.5, 0.5, 0), xpd=TRUE)
+
+emptyPlot(xlim=c(-3,3), ylim=c(-3,3), asp=1)
+#Grid
+addGrid(
+  cexAxisX=1.15, cexAxisY=1.15,
+  xmin=-3, xmax=3, xintsmall=0.1, xintbig=0.5,
+  ymin=-3, ymax=3, yintsmall=0.1, yintbig=0.5,
+  axisPlot=FALSE, round=TRUE, digit=c(2,2), contour=TRUE)
+
+#0 line
+segments(x0=0, x1=0, y0=-3, y1=3, lty=2)
+
+#Xaxis
+axis(side=1, at=seq(-3, 3, 0.5), pos=-3, labels=seq(-3, 3, 0.5), las=1, tcl=-0.25)
+mtext(side=1, at=0, line=1, text="Model estimate (point) and 95% CI/HDP (segment)")
+
+#yAxis
+axis(side=2, at=c(2, 0, -2), pos=-3, labels=c("Overlap (%)", "N sympatric\nspecies", "Relative\nbrain size"), las=1, tcl=-0.25)
+mtext(side=2, at=0, line=6, text="PARAMETER", font=2)
+
+#Add the different values
+
+#Analysis of brain size and sympatry
+traitName_rdc=c("EQ (log)", #"Brain (/bodymass, log)",
+                "Striatum (/bodymass, log)",
+                "MOB (/bodymass, log)",
+                "Hippocampus (/bodymass, log)",
+                "Neocortex (/bodymass, log)", 
+                "Cerebellum (/bodymass, log)",
+                "DiversificationAndSympatry"
+)
+
+traitName_legend <- c("EQ", "Striatum", "MOB", "Hippocampus", "Neocortex", "Cerebellum", "Diversification")
+library(RColorBrewer)
+colourModelsReg <- c("darkgrey", brewer.pal(n = 5, name = "Set1")[1:5], "black")
+
+for(a in 1:length(traitName_rdc)){
+  
+  if(a!=length(traitName_rdc)){
+    model <- get(paste("modelBrain", traitName_rdc[a], sep="_"))
+  }else{
+    model <- get(paste("modelBrain", traitName_rdc[a], sep=""))
+  }
+  
+  #Overlap
+  errorBars(location=2.5-(a-1)*1/length(traitName_rdc), 
+            meanPt=cbind(model$bootmean, t(model$bootconfint95))[2,1], 
+            barValue=1, 
+            refUnit=0.75, 
+            minValue=-3, 
+            maxValue=3, 
+            upperBarValue=cbind(model$bootmean, t(model$bootconfint95))[2,2], 
+            lowerBarValue=cbind(model$bootmean, t(model$bootconfint95))[2,3], 
+            col=colourModelsReg[a], 
+            lty=1, 
+            horiz=TRUE, 
+            symmetrical=FALSE)
+  points(x=cbind(model$bootmean, t(model$bootconfint95))[2,1], y=2.5-(a-1)*1/length(traitName_rdc), pch=ifelse(cbind(model$bootmean, t(model$bootconfint95))[2,1]>0,21,19), bg="white", col=colourModelsReg[a])
+  if(a!=length(traitName_rdc)){
+    text(x=cbind(model$bootmean, t(model$bootconfint95))[2,3], y=2.5-(a-1)*1/length(traitName_rdc),
+       pos=4, col=colourModelsReg[a],
+       labels=pvalueToText(as.numcharac(results.df_gradient[grep(traitName_legend[a], results.df_gradient[,1]) + 2,7])), cex=0.75)
+  }else{
+    text(x=cbind(model$bootmean, t(model$bootconfint95))[2,3], y=2.5-(a-1)*1/length(traitName_rdc),
+         pos=4, col=colourModelsReg[a],
+         labels=pvalueToText(as.numcharac(results.df_diversificationAndSympatry[3,7])), cex=0.75)
+  }
+  
+  #N species
+  errorBars(location=0.5-(a-1)*1/length(traitName_rdc), 
+            meanPt=cbind(model$bootmean, t(model$bootconfint95))[3,1], 
+            barValue=1, 
+            refUnit=0.75, 
+            minValue=-3, 
+            maxValue=3, 
+            upperBarValue=cbind(model$bootmean, t(model$bootconfint95))[3,2], 
+            lowerBarValue=cbind(model$bootmean, t(model$bootconfint95))[3,3], 
+            col=colourModelsReg[a], 
+            lty=1, 
+            horiz=TRUE, 
+            symmetrical=FALSE)
+  points(x=cbind(model$bootmean, t(model$bootconfint95))[3,1], y=0.5-(a-1)*1/length(traitName_rdc), pch=ifelse(cbind(model$bootmean, t(model$bootconfint95))[3,1]>0,21,19), bg="white", col=colourModelsReg[a])
+  if(a!=length(traitName_rdc)){
+    text(x=cbind(model$bootmean, t(model$bootconfint95))[3,3], y=0.5-(a-1)*1/length(traitName_rdc),
+       pos=4, col=colourModelsReg[a],
+       labels=pvalueToText(as.numcharac(results.df_gradient[grep(traitName_legend[a], results.df_gradient[,1]) + 3,7])), cex=0.75)
+  }else{
+    text(x=cbind(model$bootmean, t(model$bootconfint95))[3,3], y=0.5-(a-1)*1/length(traitName_rdc),
+         pos=4, col=colourModelsReg[a],
+         labels=pvalueToText(as.numcharac(results.df_diversificationAndSympatry[4,7])), cex=0.75)
+  }
+  
+  #Analysis of diversification and brain size
+  if(a!=length(traitName_rdc)){
+    model <- get(paste("modelBrainDiversification", traitName[a], sep="_"))
+    
+    errorBars(location=-1.5-(a-1)*1/(length(traitName_rdc)-1), 
+              meanPt=as.data.frame(summary(model)$solutions[,1:3])[2,1], 
+              barValue=1, 
+              refUnit=0.75, 
+              minValue=-3, 
+              maxValue=3, 
+              upperBarValue=as.data.frame(summary(model)$solutions[,1:3])[2,2], 
+              lowerBarValue=as.data.frame(summary(model)$solutions[,1:3])[2,3], 
+              col=colourModelsReg[a], 
+              lty=1, 
+              horiz=TRUE, 
+              symmetrical=FALSE)
+    points(x=as.data.frame(summary(model)$solutions[,1:3])[2,1], y=-1.5-(a-1)*1/(length(traitName_rdc)-1), pch=ifelse(as.data.frame(summary(model)$solutions[,1:3])[2,1]>0,21,19), bg="white", col=colourModelsReg[a])
+    text(x=as.data.frame(summary(model)$solutions[,1:3])[2,3], y=-1.5-(a-1)*1/(length(traitName_rdc)-1),
+         pos=4, col=colourModelsReg[a],
+         labels=pvalueToText(as.numcharac(results.df_diversification[grep(traitName_legend[a], results.df_diversification[,1]) + 2,5])), cex=0.75)
+    
+  }
+}
+
+legend(x=3, y=0.5, 
+       pch=c(19,21), 
+       bg=c("white", "white"),
+       col=c("black", "black"),
+       legend=c("> 0", "< 0"),
+       #title="Output:",
+       bty="n", 
+       xjust=1,
+       xpd=TRUE)
+
+legend(x=-2.5, y=-4, 
+       pch=rep(19, times=length(traitName_rdc)), 
+       col=c(colourModelsReg),
+       legend=traitName_legend,
+       #title="Output:",
+       ncol=3,
+       bty="n", 
+       xpd=TRUE)
+
+```
+
+\clearpage
+
+\hfill
+
+###	Model implementation
+
+\hfill
+
+(i)	Effect of sympatry on brain sizes
+
+\hfill
+
+Models were fitted using the “phylolm” function from the *phylolm* package [@phylolm], with the lambda parameter (with $\lambda$ indicating the strength of the phylogenetic signal, where $\lambda$=1  corresponds to Brownian Motion, i.e. the maximal influence of the phylogenetic history on the trait evolution) estimated by maximum-likelihood (argument “model” set to “lambda”). Bootstrapping over `r repetitionBootstrap` independent replicates was done to obtain confidence intervals. Other function parameters were set to default. Prior to fitting, covariates were transformed so as to reach more symmetrical distributions when adequate. Necessary assumptions on the normal distribution of residuals and homoscedasticity were visually assessed and pointed out no violation (see Appendix [Model assumptions]). We did not observe correlation issue among predictors neither [VIF$_{max}$ < 2, @mundry2014statistical].
+
+\hfill
+
+(ii)	Diversification and brain size
+
+\hfill
+
+We could not compute phylogenetic regressions to link diversification and brain traits in frugivorous primates using a frequentist-based approach because it led to a violation of homoscedasticity. Instead, we fitted Bayesian phylogenetic regressions using the "MCMCglmm" function of the *MCMCglmm* package [@MCMCglmm]. Each chain was based on a burnin period of `r burnin` iterations, among a total of `r nitt` iterations, and was sampled every `r thin` iterations. We used the least informative priors. Fixed priors were let to default (Gaussian distribution of mean 0 and variance $10^{8}$). Priors on random effects and residuals were set to follow an inverse-Wishart distribution with a variance at a limit ($V$) of 1, and a degree of belief ($nu$) of 0.02. We checked model convergence by fitting three chains, and calculated the Gelman-Rubin criterion [max value < `r round(max(gelmanRubinValues), digit=4)`, @gelman1992inference], as well as checked autocorrelation (max absolute value < `r round(max(valueAutoCorr), digit=2)`) using the respective "gelman.diag" and "autocorr.diag" functions from the *coda* package [@coda]. In Appendix [Model assumptions], we present traces and distributions of posterior estimates. We further checked the quality of the posterior by visually assessing the Q-Q plot of the posterior with that of a Gaussian distribution of mean 0 and sd 1 (see Appendix [Model assumptions]). We present the estimate together with the 95% credibility interval centered on the mode (Highest Density Posterior, HDP), together with a MCMC p-value (pMCMC) that corresponds to the probability that the estimate ($\beta$) is positive if the mean estimate ($\hat{\beta}$) is negative (i.e. $P(\beta>0|\hat{\beta}<0)$), or if the mean estimate is positive, the probability that the estimate is negative (i.e. $P(\beta<0|\hat{\beta}>0)$). 
+
+\hfill
+
+(iii) Diversification and sympatry
+
+\hfill
+
+We fitted phylogenetic regression as explained in (i). In particular, verification of model assumption and stability pointed out no source of worry (see [Phylogenetic regressions: results, stability, and assumption]).
+
+
+## Model stability
+
+We present below statistical indicators related to changes in estimates when re-fitting the model considering sub-samples (i.e. DfBetas and Cook's distance), as well as when accounting for data variability (i.e. re-sampling among possible values given all datasets) or when using different parameterisation (i.e. "sampling fraction" of known species for diversification analyses).  
+
+|   To assess frequentist model stability with regards to singular points, we computed the DfBetas (variation in estimates) by discarding one observation at a time of the "standard" dataset used to fit the main model, based on the consensus tree .
+
+|   To assess the sensitivity to (i) the variability in data and (ii) phylogeny uncertainty, we refitted the models using `r repetitionTrees` phylogenetic trees among the 10000 possible trees from the 10kTrees project. For each of these trees, we fitted the model `r repetitionModels` times, allowing random sampling for data when we had multiple values (e.g. if body mass was provided by different datasets etc.). For the diversification analysis specifically, we also assessed the sensitivity to changes in primate sampling fraction by refitting the models for values ranging between 60 to 95% (as specified before), using the "standard" dataset and the consensus tree.
+
+|   The results of these assessments (min-max of estimates) are shown in Appendix [Model stability]. It emphasizes the weak sensitivity of the results.
+
+```{r correctSensitivityTable}
+#Include true estimator in the min-max range
+
+#1)Change min-max interval
+summarySensitivityGradient[,1:3+2] <- t(apply(summarySensitivityGradient[,1:3+2], 1, function(x){
+  x <- as.numeric(x)
+  if(x[1] > x[2]){
+   x[1] <- x[2] 
+  } else if (x[2] > x[3]){
+    x[3] <- x[2]
+  }else{}
+  return(x)
+}
+)
+)
+  
+summarySensitivityGradient[,4:6+2] <- t(apply(summarySensitivityGradient[,4:6+2], 1, function(x){
+  x <- as.numeric(x)
+  if(x[1] > x[2]){
+   x[1] <- x[2] 
+  } else if (x[2] > x[3]){
+    x[3] <- x[2]
+  }else{}
+  return(x)
+}
+)
+)
+
+#2) Re-round intelligent with scientific writing
+summarySensitivityGradient[, 1:6+2] <- t(apply(summarySensitivityGradient[, 1:6+2], 1, function(x)
+roundIntelligent(as.numcharac(x)))) 
+
+#1)Change min-max interval
+summarySensitivityDiversification[,1:3+2] <- t(apply(summarySensitivityDiversification[,1:3+2], 1, function(x){
+  x <- as.numeric(x)
+  if(x[1] > x[2]){
+   x[1] <- x[2] 
+  } else if (x[2] > x[3]){
+    x[3] <- x[2]
+  }else{}
+  return(x)
+}
+)
+)
+summarySensitivityDiversification[,4:6+2] <- t(apply(summarySensitivityDiversification[,4:6+2], 1, function(x){
+  x <- as.numeric(x)
+  if(x[1] > x[2]){
+   x[1] <- x[2] 
+  } else if (x[2] > x[3]){
+    x[3] <- x[2]
+  }else{}
+  return(x)
+}
+)
+)
+summarySensitivityDiversification[,7:9+2] <- t(apply(summarySensitivityDiversification[,7:9+2], 1, function(x){
+  x <- as.numeric(x)
+  if(x[1] > x[2]){
+   x[1] <- x[2] 
+  } else if (x[2] > x[3]){
+    x[3] <- x[2]
+  }else{}
+  return(x)
+}
+)  
+)
+  
+#2) Re-round intelligent with scientific writing
+summarySensitivityDiversification[,-c(1,2)] <- t(apply(summarySensitivityDiversification[,-c(1,2)], 1, function(x) roundIntelligent(as.numcharac(x)))) 
+```
+
+\hfill
+
+(a) Phylogenetic regressions: effect of sympatry on brain sizes
+
+```{r tabledfsensitivity, include=TRUE}
+summarySensitivityGradient <- summarySensitivityGradient[-(1:4),]
+summarySensitivityGradient[,2] <- gsub("Overlap", "\\% of overlapping range", summarySensitivityGradient[,2])
+summarySensitivityGradient[,2] <- gsub("N co-occurrence", "Number of sympatric frugivores", summarySensitivityGradient[,2])
+
+rownames(summarySensitivityGradient) <- NULL
+knitr::kable(summarySensitivityGradient, escape=TRUE, booktabs = TRUE, #Remove brain 1:3
+             caption = "Sensitivity analysis of phylogenetic regressions to assess the relationship between relative brain sizes and species sympatry | Depicted is the minimum and maximum of estimates when one observation was removed at a time (DfBetas) or when varying the used phylogenetic tree and the data sampling (Phylogeny/Data).") %>% 
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::kable_styling(latex_options="scale_down") %>%
+  kableExtra::kable_styling(latex_options = "HOLD_position") %>%
+  kableExtra::add_header_above(c("Regression" = 2, "DfBetas" = 3, "Phylogeny/Data" = 3))
+```
+
+\newpage
+
+(b) Phylogenetic regressions: diversification and brain size
+
+
+```{r tabledfsensitivity2, include=TRUE}
+summarySensitivityDiversification <- summarySensitivityDiversification[-(1:3),]
+rownames(summarySensitivityDiversification) <- NULL
+colnames(summarySensitivityDiversification)[9:11] <- c("Est. min.", "Est.", "Est. max.")
+
+knitr::kable(summarySensitivityDiversification[,-c(3:5)], escape=TRUE, booktabs = TRUE, #Remove brain 1:3
+             caption = "Sensitivity analysis of phylogenetic regressions to assess the relationship between species diversification and relative brain sizes | Depicted is the minimum and maximum of estimates when varying the used phylogenetic tree and the data sampling (Phylogeny/Data) or when the sampling fraction varied (Sampling fraction).") %>% 
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::kable_styling(latex_options="scale_down") %>%
+  kableExtra::kable_styling(latex_options = "HOLD_position") %>%
+  kableExtra::add_header_above(c("Regression" = 2, "Phylogeny/Data" = 3, "Sampling fraction" = 3))
+```
+
+\newpage
+
+(b) Phylogenetic regressions: diversification and sympatry
+
+```{r tabledfsensitivity3, include=TRUE}
+summarySensitivitydiversificationAndSympatry[,1] <- gsub("Overlap", "\\% of overlapping range", summarySensitivitydiversificationAndSympatry[,1])
+summarySensitivitydiversificationAndSympatry[,1] <- gsub("N co-occurrence", "Number of sympatric frugivores", summarySensitivitydiversificationAndSympatry[,1])
+
+knitr::kable(summarySensitivitydiversificationAndSympatry, escape=TRUE, booktabs = TRUE,
+             caption = "Sensitivity analysis of phylogenetic regressions to assess the relationship between species diversification and sympatry | Depicted is the minimum and maximum of estimates when one observation was removed at a time (DfBetas), when varying the used phylogenetic tree and the data sampling (Phylogeny/Data), or when the sampling fraction varied (Sampling fraction)") %>% 
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::kable_styling(latex_options="scale_down") %>%
+  kableExtra::add_header_above(c("Model" = 1, "DfBetas" = 3, "Phylogeny/Data" = 3, "Sampling fraction" = 3))
+
+```
+
+\newpage
+## Model assumptions
+
+We present below the visual assessment of linear modelling assumptions (histogram of residuals, Q-Q plot, and scatterplot of fitted values vs residuals). 
+
+(a) Phylogenetic regressions: effect of sympatry on brain sizes
+
+```{r modelAssumption, include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=4.5, fig.cap="Model assumption check 'Brain size and sympatry' | Depicted are the histogram of residuals, the Q-Q plot, and the scatter plot of the fitted values *vs* the residuals."}
+for(a in 1:length(traitName)){
+  if(a!=2){#Remove brain
+    model <- get(paste("modelBrain", traitName[a], sep="_"))
+    
+    diagnostics.plot(model)
+    text(x=0.85, y=0.15, paste("Model:\n",traitName[a], sep=""), xpd=TRUE)
+    
+    if(a/2==floor(a/2)){
+      cat('\n') #Break page for new figure
+    }
+  }
+}
+```
+
+\newpage
+
+(b) Phylogenetic regressions: diversification and brain size
+
+```{r modelAssumption2a, include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=4.5, fig.cap="Model assumption check 'Diversity and brain size' | Trace and density of posteriors"}
+for(a in 1:length(traitName)){
+  if(a!=2){#Remove brain
+    model <- get(paste("modelBrainDiversification", traitName[a], sep="_"))
+    
+    plot(model1$Sol)
+    mtext(paste("Fixed effects: ", traitName[a], sep=""), side = 3, line = -1, outer = TRUE, xpd=TRUE)
+    #cat('\n') #Break page for new figure
+    
+    plot(model1$VCV)
+    mtext(paste("Random/residuals: ", traitName[a], sep=""), side = 3, line = -1, outer = TRUE, xpd=TRUE)
+    #text(x=max(fitted(model)) + abs(min(fitted(model))), y=mean(residuals(model)), paste("Model:\n",traitName[a], sep=""), xpd=TRUE)
+    if(a/2==floor(a/2)){
+      cat('\n') #Break page for new figure
+    }
+  }
+}
+```
+
+```{r modelAssumption2b, include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=10, fig.cap="Model assumption check 'Diversity and brain size' | Q-Q plot of the posterior distribution and the expected Gaussian distribution"}
+
+layout(mat=matrix(1:(2*ceiling(length(traitName)/2)), ncol=2), widths=c(5,5), heights=rep(5, times=2*ceiling(length(traitName)/2)))
+par(mar=c(3, 3, 3, 1), mgp=c(2, 0.5, 0), xpd=TRUE)
+
+for(a in 1:length(traitName)){
+  if(a!=2){#Remove brain
+    model <- get(paste("modelBrainDiversification", traitName[a], sep="_"))
+    
+    posterior <- as.data.frame(model$Sol)
+    qqnorm(posterior$Trait, main=paste("Normal Q-Q Plot of the posterior distribution;\nModel:", traitName[a], sep=" "))
+    qqline(posterior$Trait)
+    #text(x=max(fitted(model)) + abs(min(fitted(model))), y=mean(residuals(model)), paste("Model:\n",traitName[a], sep=""), xpd=TRUE)
+    
+    #cat('\n') #Break page for new figure
+  }
+}
+```
+
+\newpage
+
+(b) Phylogenetic regressions: diversification and sympatry
+
+```{r modelAssumption3, include=TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=4.5, fig.cap="Model assumption check 'Diversity and sympatry'| Depicted are the histogram of residuals, the Q-Q plot, and the scatter plot of the fitted values *vs* the residuals."}
+    model <- get(paste("modelBrainDiversificationAndSympatry", sep="_"))
+    
+    diagnostics.plot(model)
+  
+```
+
+<!-- TC:endignore -->
