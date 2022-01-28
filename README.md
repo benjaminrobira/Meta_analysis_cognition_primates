@@ -31,7 +31,7 @@ It includes:
 
 ## [:file_folder: **Article**](Article)
 
-It includes the R markdown document that corresponds to the written version of the article ("Article.Rmd") and the associated bibtex file for article reference only (intern compilation for adding *R* packages; "biliograpphyarticle.bib"). Supplementary files (the .lua and the .csl) are added so as to allow correct compilation. They must be stored together with the .Rmd file.
+It includes the R markdown document that corresponds to the written version of the article ("Article_forsubmission.Rmd" & "Supplementary_material_forsubmission.Rmd") and the associated bibtex file for article reference only (intern compilation for adding *R* packages; "biliograpphyarticle.bib"). Supplementary files (the .lua and the .csl) are added so as to allow correct compilation. They must be stored together with the .Rmd file.
 
 :question: Please if encounter any issue or see any error in the code, have questions or would like to discuss about this topic, feel free to email me at [:e-mail:](mailto:benjamin.robira@normalesup.org) benjamin.robira@normalesup.org  
 
