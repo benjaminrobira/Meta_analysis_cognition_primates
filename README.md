@@ -29,11 +29,7 @@ It includes:
   - The script for conducting the PGLS analysis on diversification and sympatry (`PGLSdiversificationAndSympatry`).
   - The file with all inputs/outputs from the diversification analysis.
 
-## [:file_folder: **Article**](Article)
-
-It includes the R markdown document that corresponds to the written version of the article ("Article_forsubmission.Rmd" & "Supplementary_material_forsubmission.Rmd") and the associated bibtex file for article reference only (intern compilation for adding *R* packages; "biliograpphyarticle.bib"). Supplementary files (the .lua and the .csl) are added so as to allow correct compilation. They must be stored together with the .Rmd file.
-
-:question: Please if encounter any issue or see any error in the code, have questions or would like to discuss about this topic, feel free to email me at [:e-mail:](mailto:benjamin.robira@normalesup.org) benjamin.robira@normalesup.org  
+:question: Please if you encounter any issue or see any error in the code, have questions or would like to discuss about this topic, feel free to email me at [:e-mail:](mailto:benjamin.robira@normalesup.org) benjamin.robira@normalesup.org  
 
 My apology for English errors I have made,  
 Benjamin.
