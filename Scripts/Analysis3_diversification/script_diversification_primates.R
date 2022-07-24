@@ -256,8 +256,6 @@ plot_ClaDS_phylo <- function (phylo, rates, rates2 = NULL, same.scale = T, main 
 }
 
 
-setwd("/users/biodiv/bperez/data/others/Benji/diversification/")
-
 f="60"
 
 for (f in c( "95", "90", "80", "70", "60", "67")){
@@ -353,7 +351,6 @@ for (f in c( "95", "90", "80", "70", "60", "67")){
   
 }
 
-# scp bperez@jord.biologie.ens.fr:/users/biodiv/bperez/data/others/Benji/diversification/MAPS*  /Users/bperez/ownCloud/Recherche/These/ENS/Autres/Benjamin/diversification/
 
 
 ##################  Step 3: Look for correlations  ###################################################
@@ -361,8 +358,6 @@ for (f in c( "95", "90", "80", "70", "60", "67")){
 rm(list=ls())
 
 
-# setwd("/users/biodiv/bperez/data/others/Benji/Evolutionary_history/")
-# load("geography_traits_biogeobears_2.RData")
 
 setwd("/Users/bperez/ownCloud/Recherche/These/ENS/Autres/Benjamin/diversification/")
 
