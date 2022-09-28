@@ -66,14 +66,12 @@ progression=0
 ##--------
 
 # Set the frugivory and folivory threshold to consider:
-a=1
 for (a in c(1,2)){
-  print(c("a: ", a))
+print(c("a: ", a))
 frugivoryThreshold=frugivoryThresholdVector[a]
 
-b=2
 for (b in c(1,2)){
-  print(c("b: ", b))
+print(c("b: ", b))
 folivoryThreshold=folivoryThresholdVector[b] 
 
 ##------------
