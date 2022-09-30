@@ -39,8 +39,6 @@ summaryDataWeighting <- summaryDataWeighting %>%
   # filter(!is.na(ratio)) %>% 
   pivot_wider(names_from = weight, values_from = ratio)
 
-
-
 library(ape)
 library(phylolm)
 library(phytools)
@@ -52,7 +50,8 @@ resultsRdcLinearRegressionPerArea <- data.frame(
   area = unique(summaryDataWeighting$area),
   intercept = rep(NA, times = length(resultsLinearRegressioNPerArea)),
   est = rep(NA, times = length(resultsLinearRegressioNPerArea)),
-  r = rep(NA, times = length(resultsLinearRegressioNPerArea))
+  r = rep(NA, times = length(resultsLinearRegressioNPerArea)),
+  p = rep(NA, times = length(resultsLinearRegressioNPerArea))
 )
 
 for(i in 1:length(resultsLinearRegressioNPerArea)){
@@ -69,6 +68,7 @@ for(i in 1:length(resultsLinearRegressioNPerArea)){
   resultsRdcLinearRegressionPerArea$intercept[i] <- summary(model)$coefficients[1,1]
   resultsRdcLinearRegressionPerArea$est[i] <- summary(model)$coefficients[2,1]
   resultsRdcLinearRegressionPerArea$r[i] <- summary(model)$r.squared
+  resultsRdcLinearRegressionPerArea$p[i] <- summary(model)$coefficients[2,6]
 }
 
 
@@ -80,7 +80,7 @@ plotCorrelatioNBSandBM <- ggplot(summaryDataWeighting, aes(x = BM, y = BS, group
   # geom_smooth(method = "lm", colour = "black", fill = "gray") +
   # stat_cor(aes(label = ..rr.label..), color = "black", geom = "label", label.y.npc="top", label.x.npc = "left") +
   # Phylogenetic results
-  geom_label(data = resultsRdcLinearRegressionPerArea, aes(x = 0, y = 0.85, group = area, label = paste("R² =", round(r, digit = 2))), hjust = 0) +
+  geom_label(data = resultsRdcLinearRegressionPerArea, aes(x = 0, y = 0.85, group = area, label = paste("R² =", round(r, digit = 2), pvalueRound(p))), hjust = 0) +
   geom_abline(data = resultsRdcLinearRegressionPerArea,aes(intercept = intercept, slope = est)) +
   geom_point() +
   theme_bw() +
@@ -93,8 +93,8 @@ plotCorrelatioNBSandBM <- ggplot(summaryDataWeighting, aes(x = BM, y = BS, group
         panel.grid.major=element_line(colour="grey93"),
         strip.background = element_blank(),
         strip.text.x = element_text(face = "bold", size = 16)) +
-  xlab("Body mass") +
-  ylab("Body size")
+  xlab("Brain size - relative to whole body mass") +
+  ylab("Brain size - relative to whole brain size")
 plotCorrelatioNBSandBM
 
 saveRDS(plotCorrelatioNBSandBM, "REnvironments/plotCorrelationBSandBM.rds")

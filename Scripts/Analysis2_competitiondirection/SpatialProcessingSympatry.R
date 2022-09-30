@@ -376,3 +376,8 @@ write.table(dataRangePrimate, "dataRangePrimate.txt", col.names=TRUE)
 
 nrow(dataRangePrimate[!is.na(dataRangePrimate[,1])&!is.na(dataRangePrimate[,2]),])
 save.image("REnvironments/Data_spatial_primate.RData")
+
+## Sending data file to Benoit
+load("REnvironments/Data_spatial_primate.RData")
+write.table(dataRangePrimate, file = "Processed_data/dataRangePrimate.txt",
+            sep =",", quote = FALSE, row.names = FALSE, col.names = FALSE)

@@ -4,8 +4,6 @@
 
 # This script allows to perform PGLS analysis to assess the correlation of brain size with spatial co-occurrence data, specifically in areas for which competitive models were shown to fit the best.
 
-# THIS IS STILL IN PROGRESS; FURTHER CLEANING/COMPLETION NEEDED
-
 ###Set working directory
 setwd("C:/Users/robira/Documents/PhD/Meta_analysis/Meta_analysis_cognition_primates")
 
@@ -287,10 +285,10 @@ summaryData$ratioHippocampus <- summaryData$Hippocampus/summaryData$Bodymass
 summaryData$ratioHippocampus.log <- log(summaryData$ratioHippocampus)
 
 summaryData$ratioCerebellum <- summaryData$Cerebellum/summaryData$Bodymass
-summaryData$ratioCerebellum.log <- log(summaryData$ratioCerebellum )
+summaryData$ratioCerebellum.log <- log(summaryData$ratioCerebellum)
 
 summaryData$ratioStriatum <- summaryData$Striatum/summaryData$Bodymass
-summaryData$ratioStriatum.log <- log(summaryData$Striatum/summaryData$Bodymass)
+summaryData$ratioStriatum.log <- log(summaryData$ratioStriatum)
 
 summaryData$ratioMOB <- summaryData$MOB/summaryData$Bodymass
 summaryData$ratioMOB.log <- log(summaryData$ratioMOB)
