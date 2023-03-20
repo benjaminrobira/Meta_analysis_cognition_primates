@@ -1,6 +1,6 @@
 # Meta analysis of brain size in primates :monkey:
 
-This repository stores all material linked to "**Species sympatry shapes brain size evolution in Primates**" by *Benjamin Robira* and *Benoît Perez-Lamarque*.
+This repository stores all material linked to "**Primate sympatry shapes the evolution of their brain architecture**" by *Benjamin Robira* and *Benoît Perez-Lamarque*.
 
 It is divided into several folders:
 
